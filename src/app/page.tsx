@@ -13,7 +13,7 @@ export default function Home() {
     {
       title: 'Adventures',
       description: 'Discover exciting activities and adventures in Wilderness.',
-      image: '/images/home/adventures card.webp',
+      image: '/images/home/adventures-card.webp',
       link: '/adventure'
     },
     {
@@ -31,7 +31,7 @@ export default function Home() {
     {
       title: 'Facilities',
       description: 'Enjoy our bar, restaurant, kitchens, and social spaces with pool table and fire pit.',
-      image: '/images/home/facilities card.webp',
+      image: '/images/home/facilities-card.webp',
       link: '/facilities'
     },
     {
