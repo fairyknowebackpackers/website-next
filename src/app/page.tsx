@@ -7,37 +7,37 @@ export default function Home() {
     {
       title: 'Accommodation',
       description: 'Explore our comfortable rooms and unique accommodation options.',
-      image: '/images/Home Page/Accommodation Card.webp',
+      image: '/images/home/Accommodation Card.webp',
       link: '/accommodation'
     },
     {
       title: 'Adventures',
       description: 'Discover exciting activities and adventures in Wilderness.',
-      image: '/images/Home Page/adventures card.webp',
+      image: '/images/home/adventures card.webp',
       link: '/adventure'
     },
     {
       title: 'Entertainment',
       description: 'Join us for live music, open mic nights, and family markets.',
-      image: '/images/Home Page/Entertainment Card.webp',
+      image: '/images/home/Entertainment Card.webp',
       link: '/entertainment'
     },
     {
       title: 'Weddings & Events',
       description: 'Host your special occasion in our unique venue surrounded by nature.',
-      image: '/images/Home Page/Weddings & Events Card.webp',
+      image: '/images/home/Weddings & Events Card.webp',
       link: '/weddings-and-events'
     },
     {
       title: 'Facilities',
       description: 'Enjoy our bar, restaurant, kitchens, and social spaces with pool table and fire pit.',
-      image: '/images/Home Page/facilities card.webp',
+      image: '/images/home/facilities card.webp',
       link: '/facilities'
     },
     {
       title: 'Fairy Folk \'n Roll',
       description: 'Experience the magic of live music in our enchanting venue.',
-      image: '/images/Home Page/Fairy Folk \'n Roll Card.webp',
+      image: '/images/home/Fairy Folk \'n Roll Card.webp',
       link: '/fairy-folk-n-roll'
     }
   ]
@@ -45,7 +45,7 @@ export default function Home() {
   const galleryCard = {
     title: 'Gallery',
     description: 'View photos of our backpackers and beautiful surroundings.',
-    image: '/images/Home Page/gallery card.webp',
+    image: '/images/home/gallery card.webp',
     link: '/gallery'
   }
 
@@ -54,7 +54,7 @@ export default function Home() {
       {/* Hero Banner */}
       <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
-          src="/images/Home Page/Home page banner.webp"
+          src="/images/home/home-page-banner.webp"
           alt="Welcome to Fairy Knowe Backpackers"
           fill
           className="object-cover"
@@ -124,7 +124,7 @@ export default function Home() {
           <div className="mt-16 mb-8">
             <div className="relative w-full h-[400px] md:h-[500px]">
               <Image
-                src="/images/Home Page/Logo.png"
+                src="/images/home/Logo.png"
                 alt="Fairy Knowe Backpackers Logo"
                 fill
                 className="object-contain"

@@ -30,7 +30,7 @@ export default function RootLayout({
                   <Link href="/" className="flex items-center">
                     <div className="relative w-40 h-12">
                       <Image
-                        src="/images/Home Page/logo icon.png"
+                        src="/images/home/logo icon.png"
                         alt="Fairy Knowe Backpackers"
                         fill
                         className="object-contain"
