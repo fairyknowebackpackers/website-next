@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ThemeProvider } from './context/ThemeContext'
 import ThemeToggle from './components/ThemeToggle'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -155,6 +156,7 @@ export default function RootLayout({
             </div>
           </footer>
         </ThemeProvider>
+        <SpeedInsights/>
       </body>
     </html>
   )
