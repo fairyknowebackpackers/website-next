@@ -1,0 +1,9 @@
+{
+  "/not-found": "app/not-found.js",
+  "/accommodation/page": "app/accommodation/page.js",
+  "/adventure/page": "app/adventure/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/fairy-folk-n-roll/page": "app/fairy-folk-n-roll/page.js",
+  "/weddings-and-events/page": "app/weddings-and-events/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js"
+}
