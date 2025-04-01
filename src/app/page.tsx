@@ -130,7 +130,6 @@ export default function Home() {
                 alt="Fairy Knowe Backpackers Logo"
                 fill
                 className="object-contain"
-                priority
               />
             </div>
           </div>
