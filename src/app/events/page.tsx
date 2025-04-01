@@ -43,13 +43,13 @@ const eventTypes = [
   }
 ]
 
-export default function EventsAndWeddings() {
+export default function Events() {
   return (
     <div>
       {/* Hero Banner */}
       <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12">
         <Image
-          src="images\events\events-banner"
+          src="/images/events/events-banner.webp"
           alt="Beautiful garden setup for events and weddings"
           fill
           className="object-cover"

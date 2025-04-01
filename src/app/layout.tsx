@@ -124,8 +124,8 @@ export default function RootLayout({
                     <Link href="/entertainment" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Entertainment
                     </Link>
-                    <Link href="/weddings-and-events" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                      Weddings & Events
+                    <Link href="/events" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                      Events
                     </Link>
                     <Link href="/facilities" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Facilities
@@ -203,8 +203,8 @@ export default function RootLayout({
                 <Link href="/entertainment" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   Entertainment
                 </Link>
-                <Link href="/weddings-and-events" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
-                  Weddings & Events
+                <Link href="/events" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
+                  Events
                 </Link>
                 <Link href="/facilities" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   Facilities

@@ -23,7 +23,7 @@ export default function Home() {
       link: '/entertainment'
     },
     {
-      title: 'Weddings & Events',
+      title: 'Events',
       description: 'Host your special occasion in our charming venue surrounded by nature.',
       image: '/images/home/wedding-events-card.webp',
       link: '/weddings-and-events'

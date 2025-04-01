@@ -9,7 +9,7 @@ export async function GET() {
       'Adventures',
       'Entertainment',
       'Facilities',
-      'Weddings & Events',
+      'Events',
       'Fairy Folk \'n Roll'
     ];
 

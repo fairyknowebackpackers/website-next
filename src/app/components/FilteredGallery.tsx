@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ImageModal from './ImageModal';
 
-type Category = 'All' | 'Accommodation' | 'Adventures' | 'Entertainment' | 'Facilities' | 'Weddings & Events' | 'Fairy Folk \'n Roll';
+type Category = 'All' | 'Accommodation' | 'Adventures' | 'Entertainment' | 'Facilities' | 'Events' | 'Fairy Folk \'n Roll';
 
 interface GalleryImage {
   src: string;
@@ -18,7 +18,7 @@ const categories: Category[] = [
   'Adventures',
   'Entertainment',
   'Facilities',
-  'Weddings & Events',
+  'Events',
   'Fairy Folk \'n Roll'
 ];
 
