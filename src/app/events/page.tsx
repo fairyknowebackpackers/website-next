@@ -1,81 +1,72 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-const eventTypes = [
-  {
-    title: 'Weddings',
-    description: 'Host your special day in our enchanting garden venue. Perfect for intimate ceremonies and receptions surrounded by nature.',
-    features: [
-      'Garden ceremony space',
-      'Reception area',
-      'Catering options',
-      'Accommodation for guests',
-      'Wedding planning assistance',
-      'Beautiful photo opportunities'
-    ],
-    image: '/images/events/wedding.webp'
-  },
-  {
-    title: 'Private Parties',
-    description: 'Celebrate birthdays, anniversaries, or special occasions in our versatile spaces.',
-    features: [
-      'Indoor and outdoor venues',
-      'Bar service available',
-      'Sound system',
-      'Flexible seating arrangements',
-      'Decorating options',
-      'Catering packages'
-    ],
-    image: '/images/events/party.webp'
-  },
-  {
-    title: 'Corporate Events',
-    description: 'Perfect for team building retreats, workshops, and small conferences in a unique setting.',
-    features: [
-      'Meeting spaces',
-      'Team building activities',
-      'Adventure packages',
-      'Accommodation options',
-      'Catering services',
-      'Wi-Fi and basic equipment'
-    ],
-    image: '/images/events/corporate.webp'
-  }
-]
+export default function Entertainment() {
+  const events = [
+    {
+      title: "Open Mic Night",
+      schedule: "Every Wednesday 19:30 - 22:30",
+      description: "Step into the spotlight and let your talent shine! Whether you're an aspiring musician, poetic wordsmith, comedic genius, or not, our stage awaits your brilliance. Share your gift with the locals and fellow travelers alike, and create moments of magic in a space that celebrates creativity and connection.",
+      image: "/images/entertainment/open-mic-night-card.webp"
+    },
+    {
+      title: "Family Market",
+      schedule: "Every sunny Sunday 10:00 - 14:00",
+      description: "Explore the vibrant charm of our weekly market, where creativity and community come together in perfect harmony. Discover local arts and crafts, unique garments, delicious foods, or a one-of-a-kind souvenir, and connect with locals who bring this lively gathering to life.",
+      image: "/images/entertainment/family-market-card.webp"
+    }
+  ]
 
-export default function Events() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
-          src="/images/events/events-banner.webp"
-          alt="Beautiful garden setup for events and weddings"
+          src="/images/Entertainment/Entertainment Banner.webp"
+          alt="Upcoming Events at Fairy Knowe"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)]">
-              Events
-            </h1>
-          </div>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
+            Events
+          </h1>
         </div>
       </div>
 
       {/* Description */}
       <div className="text-center mb-12">
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-4 text-gray-600 dark:text-gray-300">
-          Create unforgettable memories in our unique venue surrounded by the natural beauty of Wilderness
+        From soul-stirring live music performances and inspiring open mic nights to lively, bustling markets filled with character, there's never a dull moment at the Knowe. It's a haven of creativity, connection, and vibrant energy where every visit promises something unique and unforgettable.
         </p>
       </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {eventTypes.map((event, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Live Music Card */}
+          <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
+            <div className="relative h-64">
+              <Image
+                src="/images/entertainment/live-gigs-card.webp"
+                alt="Live Music Events"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Immerse yourself in the magic of music with our regular live performances, showcasing an incredible array of talent from both local and traveling musicians. From intimate acoustic sessions to monstrous full-band spectacles, each event is a celebration of sound and artistry that will leave you spellbound.
+              </p>
+              <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
+            </div>
+          </div>
+
+          {/* Other Event Cards */}
+          {events.map((event, index) => (
+            <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
                   src={event.image}
@@ -84,36 +75,27 @@ export default function Events() {
                   className="object-cover"
                 />
               </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-2xl font-bold mb-2 dark:text-white">{event.title}</h2>
+              <div className="p-6">
+                <h2 className="text-2xl font-bold mb-4 dark:text-white">{event.title}</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
-                <div className="mt-auto">
-                  <h3 className="font-semibold mb-2 dark:text-white">Features:</h3>
-                  <ul className="grid grid-cols-2 gap-2">
-                    {event.features.map((feature, index) => (
-                      <li key={index} className="text-gray-600 dark:text-gray-300 text-sm flex items-center">
-                        <span className="text-primary mr-2">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <p className="text-primary font-semibold">{event.schedule}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Contact Section */}
+        {/* Want to Perform Section */}
         <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold mb-4 dark:text-white">Plan Your Event</h2>
+          <h2 className="text-3xl font-bold mb-4 dark:text-white">Want to Perform?</h2>
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us to discuss your event requirements and let us help you create a memorable experience.
+            We're always looking for talented musicians to join our lineup.
+            Contact us to discuss performance opportunities.
           </p>
           <Link 
             href="/booking"
             className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
           >
-            Enquire Now
+            Get in Touch
           </Link>
         </div>
       </div>

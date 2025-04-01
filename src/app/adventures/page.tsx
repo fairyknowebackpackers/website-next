@@ -135,7 +135,7 @@ export default function Adventure() {
             {activities.map((activity) => (
               <Link 
                 key={activity.id} 
-                href={`/adventure/${activity.name
+                href={`/adventures/${activity.name
                   .toLowerCase()
                   .replace(/\s+/g, '-')
                   .replace(/[^a-z0-9-]/g, '')}`}

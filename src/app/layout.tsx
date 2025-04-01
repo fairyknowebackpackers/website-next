@@ -22,18 +22,18 @@ const accommodationLinks = [
 ]
 
 const adventureLinks = [
-  { href: '/adventure/kayaking', label: 'Kayaking' },
-  { href: '/adventure/paragliding', label: 'Paragliding' },
-  { href: '/adventure/horseriding', label: 'Horseriding' },
-  { href: '/adventure/half-collared-kingfisher-trail', label: 'Half Collared Kingfisher Trail' },
-  { href: '/adventure/brown-hooded-kingfisher-trail', label: 'Brown Hooded Kingfisher Trail' },
-  { href: '/adventure/bosduif-trail', label: 'Bosduif Trail' },
-  { href: '/adventure/woodville-big-tree', label: 'Woodville Big Tree' },
-  { href: '/adventure/map-of-africa', label: 'Map of Africa' },
-  { href: '/adventure/wilderness-beach', label: 'Wilderness Beach' },
-  { href: '/adventure/bridge-jump', label: 'Bridge Jump' },
-  { href: '/adventure/fairy-labyrinth', label: 'Fairy Labyrinth' },
-  { href: '/adventure/lazy-library', label: 'Lazy Library' }
+  { href: '/adventures/kayaking', label: 'Kayaking' },
+  { href: '/adventures/paragliding', label: 'Paragliding' },
+  { href: '/adventures/horseriding', label: 'Horseriding' },
+  { href: '/adventures/half-collared-kingfisher-trail', label: 'Half Collared Kingfisher Trail' },
+  { href: '/adventures/brown-hooded-kingfisher-trail', label: 'Brown Hooded Kingfisher Trail' },
+  { href: '/adventures/bosduif-trail', label: 'Bosduif Trail' },
+  { href: '/adventures/woodville-big-tree', label: 'Woodville Big Tree' },
+  { href: '/adventures/map-of-africa', label: 'Map of Africa' },
+  { href: '/adventures/wilderness-beach', label: 'Wilderness Beach' },
+  { href: '/adventures/bridge-jump', label: 'Bridge Jump' },
+  { href: '/adventures/fairy-labyrinth', label: 'Fairy Labyrinth' },
+  { href: '/adventures/lazy-library', label: 'Lazy Library' }
 ]
 
 export default function RootLayout({
@@ -99,7 +99,7 @@ export default function RootLayout({
 
                     {/* Adventures Dropdown */}
                     <div className="relative group">
-                      <Link href="/adventure" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
+                      <Link href="/adventures" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
                         Adventures
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -122,25 +122,31 @@ export default function RootLayout({
                       </div>
                     </div>
 
-                    <Link href="/entertainment" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                      Entertainment
-                    </Link>
                     <Link href="/events" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Events
+                    </Link>
+                    <Link href="/venue" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                      Venue
                     </Link>
                     <Link href="/facilities" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Facilities
                     </Link>
-                    <Link href="/fairy-folk-n-roll" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                      Fairy Folk 'n Roll
-                    </Link>
                     <Link href="/gallery" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Gallery
                     </Link>
-                    <Link href="/booking" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                    <Link href="/contact" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                      Contact
+                    </Link>
+                  </div>
+                  <div className="ml-auto">
+                    <Link href="/fairy-folk-n-roll" title="Fairy Folk 'n Roll" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                      <span className="bg-gray-200 px-2 py-1">#fairyfolknroll</span>
+                    </Link>
+                    <Link href="/booking" className="bg-gray-700 text-white hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Book Now
                     </Link>
                   </div>
+
                 </div>
 
                 {/* Mobile menu button */}
