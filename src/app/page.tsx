@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import GalleryCarousel from './components/GalleryCarousel'
+// import GalleryCarousel from './components/GalleryCarousel'
 
 export default function Home() {
   const pages = [
@@ -97,8 +97,8 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Gallery Card with Carousel */}
-          <GalleryCarousel />
+          {/* Gallery Card with Carousel
+          <GalleryCarousel /> */}
 
           {/* Additional Description */}
           <div className="mt-12 mb-12 text-center">
