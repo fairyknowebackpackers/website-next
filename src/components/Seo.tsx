@@ -1,6 +1,11 @@
 import Head from "next/head";
 
-const SEO = ({ pageTitle, pageDescription }) => (
+interface SeoProps {
+    pageTitle: string;
+    pageDescription: string;
+}
+
+const SEO = ({ pageTitle, pageDescription }: SeoProps) => (
     <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />

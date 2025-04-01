@@ -57,7 +57,8 @@ export default function RootLayout({
                     <div className="relative w-12 h-12">
                       <Image
                         src="/images/home/logo-icon.png"
-                        alt="Fairy Knowe Backpackers"                        priority
+                        alt="Fairy Knowe Backpackers"
+                        priority
                         width={32}
                         height={32}
                         className="object-contain mt-1"
