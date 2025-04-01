@@ -111,6 +111,8 @@ export default function Accommodation() {
                     <Image
                       src={room.image}
                       alt={room.name}
+                      width={400}
+                      height={256}
                       fill
                       className="object-cover"
                     />
