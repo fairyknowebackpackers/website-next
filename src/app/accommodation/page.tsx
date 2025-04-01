@@ -113,7 +113,6 @@ export default function Accommodation() {
                       alt={room.name}
                       width={400}
                       height={256}
-                      fill
                       className="object-cover"
                     />
                   </div>
