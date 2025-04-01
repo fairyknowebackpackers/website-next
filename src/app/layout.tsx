@@ -54,7 +54,8 @@ export default function RootLayout({
             <div className="max-w-7xl mx-auto px-4">
               <div className="flex justify-between h-12">
                 <div className="flex items-center w-40">
-                  <Link href="/" className="flex items-center">
+                  <Link href="/" className="flex items-center" title="Fairy Knowe Backpackers"
+                  >
                     <div className="relative w-12 h-12">
                       <Image
                         src="/images/home/logo-icon.png"
