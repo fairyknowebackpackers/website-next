@@ -6,63 +6,63 @@ const roomTypes = [
     id: 1,
     name: 'Camping',
     description: 'Bring your own tent and enjoy our beautiful campsite with access to shared facilities.',
-    image: '/images/Accommodation/camping1.webp',
+    image: '/images/accommodation/camping1.webp',
     features: ['Shared bathroom facilities', 'Kitchen access', 'Sunny or shaded camping grounds']
   },
   {
     id: 2,
     name: 'Safari Tent',
     description: 'Experience glamping in our comfortable safari tent, perfect for those who want to be close to nature.',
-    image: '/images/Accommodation/safaritent1.webp',
+    image: '/images/accommodation/safaritent1.webp',
     features: ['Double bed', 'Shared bathroom facilities', 'Electricity']
   },
   {
     id: 3,
     name: 'Gypsy Caravan',
     description: 'Stay in our unique and charming gypsy caravan for a truly magical experience.',
-    image: '/images/Accommodation/caravan1.webp',
+    image: '/images/accommodation/caravan1.webp',
     features: ['Double bed + two sleeper couches', 'Secluded privacy', 'Electricity']
   },
   {
     id: 4,
     name: 'Mixed Dorm',
     description: 'Comfortable bunk beds in our mixed dormitory, perfect for solo travelers and backpackers.',
-    image: '/images/Accommodation/dorm1.webp',
+    image: '/images/accommodation/dorm1.webp',
     features: ['Bunk beds', 'Shared bathroom facilities', 'Towels available']
   },
   {
     id: 5,
     name: 'Twin Room',
     description: 'Cozy room with two single beds, ideal for friends traveling together.',
-    image: '/images/Accommodation/twin1.webp',
+    image: '/images/accommodation/twin1.webp',
     features: ['Two single beds', 'Shared bathroom facilities', 'Fresh linen']
   },
   {
     id: 6,
     name: 'Family Room',
     description: 'Spacious room perfect for families, featuring multiple beds and shared facilities.',
-    image: '/images/Accommodation/family1.webp',
+    image: '/images/accommodation/family1.webp',
     features: ['Double bed + bunk bed', 'Shared bathroom facilities', 'Family friendly']
   },
   {
     id: 7,
     name: 'Five Sleeper',
     description: 'Large room that comfortably accommodates up to five people, perfect for groups or families.',
-    image: '/images/Accommodation/fivesleeper1.webp',
+    image: '/images/accommodation/fivesleeper1.webp',
     features: ['Double bed + bunk bed + single bed', 'Shared bathroom facilities', 'Spacious layout']
   },
   {
     id: 8,
     name: 'Double En-suite',
     description: 'Private room with a queen size bed and en-suite bathroom for added comfort.',
-    image: '/images/Accommodation/doubleensuite1.webp',
+    image: '/images/accommodation/doubleensuite1.webp',
     features: ['Queen bed', 'Private bathroom', 'Extra comfort']
   },
   {
     id: 9,
     name: 'Family En-suite Rondawel',
     description: 'Traditional round African house with modern amenities, perfect for families seeking a unique stay.',
-    image: '/images/Accommodation/rondawel1.webp',
+    image: '/images/accommodation/rondawel1.webp',
     features: ['Queen bed + bunk bed', 'Private bathroom', 'Secluded privacy']
   }
 ]
