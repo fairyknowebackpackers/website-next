@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
-
+import SEO from '../components/Seo'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 const accommodationLinks = [
@@ -44,6 +44,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Head>
+        <SEO pageTitle={Fairy Knowe Backpackers} pageDescription={Adventure Backpackers in the heart of the Garden Route} /></>
+      </Head>
       <body className={`${inter.variable} font-sans bg-white transition-colors`}>
           <nav className="bg-white shadow-lg fixed w-full z-50 transition-colors h-12">
             <div className="max-w-7xl mx-auto px-4">
