@@ -13,9 +13,10 @@ export default function FairyFolkNRoll() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center">
-          <div className="text-center text-white">
-          </div>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-5xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
+            Fairy Folk 'n Roll
+          </h1>
         </div>
       </div>
 

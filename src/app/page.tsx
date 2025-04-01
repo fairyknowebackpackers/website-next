@@ -6,72 +6,65 @@ export default function Home() {
   const pages = [
     {
       title: 'Accommodation',
-      description: 'Explore our comfortable rooms and unique accommodation options.',
-      image: '/images/home/Accommodation Card.webp',
+      description: 'Explore our comfortable rooms and cozy accommodation options.',
+      image: '/images/home/accommodation-card.webp',
       link: '/accommodation'
     },
     {
       title: 'Adventures',
       description: 'Discover exciting activities and adventures in Wilderness.',
-      image: '/images/home/adventures-card.webp',
+      image: '/images/home/adventure-card.webp',
       link: '/adventure'
     },
     {
       title: 'Entertainment',
       description: 'Join us for live music, open mic nights, and family markets.',
-      image: '/images/home/Entertainment Card.webp',
+      image: '/images/home/entertainment-card.webp',
       link: '/entertainment'
     },
     {
       title: 'Weddings & Events',
-      description: 'Host your special occasion in our unique venue surrounded by nature.',
-      image: '/images/home/Weddings & Events Card.webp',
+      description: 'Host your special occasion in our charming venue surrounded by nature.',
+      image: '/images/home/wedding-events-card.webp',
       link: '/weddings-and-events'
     },
     {
       title: 'Facilities',
-      description: 'Enjoy our bar, restaurant, kitchens, and social spaces with pool table and fire pit.',
+      description: 'Enjoy our bar, restaurant, self catering kitchen and social spaces.',
       image: '/images/home/facilities-card.webp',
       link: '/facilities'
     },
     {
       title: 'Fairy Folk \'n Roll',
-      description: 'Experience the magic of live music in our enchanting venue.',
-      image: '/images/home/Fairy Folk \'n Roll Card.webp',
+      description: 'Explore our YouTube channel on the art of live music performance through digital media.',
+      image: '/images/home/ffr-card.webp',
       link: '/fairy-folk-n-roll'
     }
   ]
 
-  const galleryCard = {
-    title: 'Gallery',
-    description: 'View photos of our backpackers and beautiful surroundings.',
-    image: '/images/home/gallery card.webp',
-    link: '/gallery'
-  }
-
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
+      <div className="w-full mb-12">
         <Image
-          src="/images/home/home-page-banner.webp"
+          src="/images/home/home-banner.webp"
           alt="Welcome to Fairy Knowe Backpackers"
-          fill
-          className="object-cover"
+          width={1920}
+          height={1080}
+          className="w-full h-auto"
           priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white">
-          </div>
-        </div>
       </div>
 
       {/* Description */}
       <div className="max-w-7xl mx-auto px-4 mb-8">
-        <p className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300">
-          Your home away from home in the heart of Wilderness, offering comfortable accommodation,
-          exciting adventures, and a vibrant social atmosphere.
+        <p className="text-lg md:text-xl text-center text-gray-600 [font-style:italic!important]">
+        I dwell in forests deep and green, where few have seen and less have been.<br />
+        When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
+          I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
+          I bring the magic, most delight, yet vanish with the morning light.<br/>
+          <br/>
+          What am I?
         </p>
       </div>
 
@@ -92,10 +85,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col justify-between">
-                    <h2 className="text-2xl font-bold mb-2 group-hover:text-primary dark:text-white">
+                    <h2 className="text-2xl font-bold mb-2 group-hover:text-primary">
                       {page.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-600">
                       {page.description}
                     </p>
                   </div>
@@ -107,11 +100,19 @@ export default function Home() {
           {/* Gallery Card with Carousel */}
           <GalleryCarousel />
 
+          {/* Additional Description */}
+          <div className="mt-12 mb-12 text-center">
+            <p className="text-lg md:text-xl text-gray-600">
+              Your home away from home in the heart of Wilderness, offering comfortable accommodation,<br />
+              exciting adventures, and a vibrant social atmosphere.
+            </p>
+          </div>
+
           {/* Call to Action */}
           <div className="mt-16 text-center">
-            <h2 className="text-3xl font-bold mb-4 dark:text-white">Ready to Start Your Adventure?</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join us at Fairy Knowe Backpackers for an unforgettable experience in the beautiful Garden Route.
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.
             </p>
             <Link 
               href="/booking" 
@@ -125,7 +126,7 @@ export default function Home() {
           <div className="mt-16 mb-8">
             <div className="relative w-full h-[400px] md:h-[500px]">
               <Image
-                src="/images/home/Logo.png"
+                src="/images/home/logo.png"
                 alt="Fairy Knowe Backpackers Logo"
                 fill
                 className="object-contain"

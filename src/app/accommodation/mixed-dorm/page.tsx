@@ -1,114 +1,181 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ImageGallery from '@/app/components/ImageGallery'
 
 const images = [
   {
-    src: '/images/accommodation/166317.jpg',
-    alt: 'Mixed Dorm Room with Bunk Beds',
-    description: 'Spacious mixed dorm room with comfortable bunk beds and natural lighting'
+    src: '/mixed-dorm-1.jpg',
+    alt: 'Mixed Dorm Overview',
+    description: 'Our comfortable mixed dorm accommodation'
   },
   {
-    src: '/images/accommodation/166317.jpg',
-    alt: 'Mixed Dorm Room View',
-    description: 'Another view of our mixed dorm showing the comfortable layout'
+    src: '/mixed-dorm-2.jpg',
+    alt: 'Mixed Dorm Interior',
+    description: 'Clean and spacious dorm interior'
   },
   {
-    src: '/images/accommodation/166317.jpg',
-    alt: 'Mixed Dorm Windows',
-    description: 'Large windows provide plenty of natural light'
+    src: '/mixed-dorm-3.jpg',
+    alt: 'Mixed Dorm Beds',
+    description: 'Comfortable bunk beds'
   },
   {
-    src: '/images/accommodation/166317.jpg',
-    alt: 'Mixed Dorm Storage',
-    description: 'Personal lockers available for secure storage'
+    src: '/mixed-dorm-4.jpg',
+    alt: 'Mixed Dorm View',
+    description: 'Beautiful view from the dorm'
   }
 ]
 
 export default function MixedDormPage() {
   return (
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-6">Mixed Dorm</h1>
-        
-        {/* Main Image */}
-        <div className="relative h-[500px] mb-8 rounded-lg overflow-hidden">
-          <Image
-            src={images[0].src}
-            alt={images[0].alt}
-            fill
-            className="object-cover"
-            priority
-          />
+    <div className="min-h-screen">
+      {/* Hero Banner */}
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+        <Image
+          src="/images/accommodation/banners/mixed-dorm-banner.webp"
+          alt="Mixed Dorm Banner"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Mixed Dorm</h1>
         </div>
+      </div>
 
-        {/* Description */}
-        <div className="mb-12">
-          <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-            Our mixed dorm offers a comfortable and social atmosphere with clean, sturdy bunk beds 
-            and plenty of natural light. Perfect for backpackers looking to meet fellow travelers 
-            while enjoying a good night's rest.
+      {/* Content Section */}
+      <div className="py-6 px-4">
+        <div className="max-w-5xl mx-auto px-4 mb-12 mt-3">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          Discover affordable comfort in our cozy dorms, specially designed for backpackers and solo adventurers. Share stories and laughter with fellow travelers in a warm, social environment, while enjoying restful nights on our snug and inviting bunk beds.
           </p>
-        </div>
 
-        {/* Photo Gallery */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 dark:text-white">Photo Gallery</h2>
-          <ImageGallery images={images} />
-        </div>
+          {/* Main Features */}
+          <div className="mt-12 mb-12">
+            <div className="grid grid-cols-8 gap-4">
+            <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Bunk beds</p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Comfortable bedding</p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Shared room</p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Shared bathrooms</p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Towels available</p>
+              </div>
+              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Access to all facilities</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+            </div>
+          </div>
 
-        {/* Main Features */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">Main Features</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Comfortable bunk beds with fresh linens
-            </li>
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Individual reading lights
-            </li>
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Personal lockers for valuables
-            </li>
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Large windows for natural lighting
-            </li>
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Shared bathroom facilities
-            </li>
-            <li className="flex items-center text-gray-600 dark:text-gray-300">
-              <span className="text-primary mr-2">•</span>
-              Power outlets near each bed
-            </li>
-          </ul>
-        </div>
+          {/* Gallery Grid */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Row 1 */}
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/mixed-dorm-1.jpg"
+                  alt="Mixed Dorm Area 1"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/mixed-dorm-2.jpg"
+                  alt="Mixed Dorm Area 2"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/mixed-dorm-3.jpg"
+                  alt="Mixed Dorm Area 3"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/mixed-dorm-4.jpg"
+                  alt="Mixed Dorm Area 4"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              {/* Placeholder images */}
+              {[...Array(8)].map((_, i) => (
+                <div key={i} className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800">
+                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+                    Coming Soon
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Additional Information */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">Additional Information</h2>
-          <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-            <li>• Check-in time: 2:00 PM</li>
-            <li>• Check-out time: 10:00 AM</li>
-            <li>• Mixed gender dormitory</li>
-            <li>• Suitable for ages 18+</li>
-            <li>• Shared bathroom facilities</li>
-            <li>• Bed linen provided</li>
-          </ul>
-        </div>
+          {/* Rules of the Forest */}
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold mb-4">Rules of the Forest</h2>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+              <div className="mt-12 mb-12">
+                <div className="grid grid-cols-6 gap-4">
+                <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Quiet hours: 10PM - 6AM</p>
+                  </div>
+                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Keep your things off other beds</p>
+                  </div>
+                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Keep your space tidy</p>
+                  </div>
+                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">No smoking inside</p>
+                  </div>
+                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">No private alcohol</p>
+                  </div>
+                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
+                <p className="text-[#18442D] text-xs relative z-10">Be friendly to fellow wanderers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        {/* Booking Button */}
-        <div className="text-center">
-          <Link 
-            href="/booking" 
-            className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
-          >
-            Book Now
-          </Link>
+          {/* Booking Button */}
+          <div className="text-center mt-8">
+            <Link href="/booking">
+              <button className="bg-[#0E7D73] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold hover:bg-[#073F3A] transition-colors">
+                Book Now
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

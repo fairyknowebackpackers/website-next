@@ -18,7 +18,7 @@ export default function Entertainment() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
           src="/images/Entertainment/Entertainment Banner.webp"
           alt="Entertainment at Fairy Knowe"
@@ -26,20 +26,17 @@ export default function Entertainment() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-4">
-            <h1 className="text-4xl md:text-5xl font-bold drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)]">
-              Entertainment
-            </h1>
-          </div>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
+            Entertainment
+          </h1>
         </div>
       </div>
 
       {/* Description */}
       <div className="text-center mb-12">
         <p className="text-lg md:text-xl max-w-2xl mx-auto px-4 text-gray-600 dark:text-gray-300">
-          From live music and open mic nights to vibrant markets, there's always something happening at Fairy Knowe.
-          Join us for unforgettable evenings of entertainment and community.
+          From live music and open mic nights to vibrant markets, there's always something happening at the Knowe.
         </p>
       </div>
 

@@ -1,9 +1,8 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js",
   "/accommodation/page": "app/accommodation/page.js",
   "/adventure/page": "app/adventure/page.js",
-  "/entertainment/page": "app/entertainment/page.js",
-  "/weddings-and-events/page": "app/weddings-and-events/page.js",
-  "/facilities/page": "app/facilities/page.js"
+  "/adventure/kayaking/page": "app/adventure/kayaking/page.js",
+  "/adventure/brown-hooded-kingfisher-trail/page": "app/adventure/brown-hooded-kingfisher-trail/page.js",
+  "/page": "app/page.js"
 }

@@ -1,10 +1,5 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -16,30 +11,35 @@
       "static/chunks/main-app.js",
       "static/chunks/app/accommodation/page.js"
     ],
+    "/accommodation/camping/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/camping/page.js"
+    ],
     "/adventure/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventure/page.js"
     ],
-    "/entertainment/page": [
+    "/adventure/kayaking/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/entertainment/page.js"
+      "static/chunks/app/adventure/kayaking/page.js"
     ],
-    "/weddings-and-events/page": [
+    "/adventure/brown-hooded-kingfisher-trail/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/weddings-and-events/page.js"
+      "static/chunks/app/adventure/brown-hooded-kingfisher-trail/page.js"
     ],
-    "/facilities/page": [
+    "/accommodation/gypsy-caravan/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/facilities/page.js"
+      "static/chunks/app/accommodation/gypsy-caravan/page.js"
     ],
-    "/_not-found/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/page.js"
     ]
   }
 }

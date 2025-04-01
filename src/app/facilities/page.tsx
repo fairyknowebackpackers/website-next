@@ -4,8 +4,8 @@ const facilities = [
   {
     id: 1,
     name: 'Lively Bar',
-    description: 'Our vibrant bar is the perfect place to meet fellow travelers and enjoy a drink after a day of adventures.',
-    image: '/images/Facilities/Lively Bar Card.webp',
+    description: 'Our vibrant bar is the perfect place to meet fellow travelers and enjoy a drink after an adventurous day.',
+    image: '/images/facilities/lively-bar.webp',
     features: [
       'Local craft beers',
       'Wide selection of drinks',
@@ -19,13 +19,11 @@ const facilities = [
     id: 2,
     name: 'Restaurant Kitchen',
     description: 'Enjoy delicious meals prepared by our kitchen team, featuring local and international cuisine.',
-    image: '/images/Facilities/Restaurant Kitchen Card.webp',
+    image: '/images/facilities/restaurant-kitchen.webp',
     features: [
       'Breakfast service',
       'Dinner options',
-      'Special dietary needs',
       'Fresh ingredients',
-      'Local specialties',
       'Affordable meals'
     ]
   },
@@ -33,9 +31,9 @@ const facilities = [
     id: 3,
     name: 'Self Catering Kitchen',
     description: 'Fully equipped kitchen for guests who prefer to prepare their own meals.',
-    image: '/images/Facilities/Self Catering Kitchen Card.webp',
+    image: '/images/facilities/self-catering-kitchen.webp',
     features: [
-      'Gas stoves and ovens',
+      'Gas stovs and oven',
       'Refrigerators',
       'Cooking utensils',
       'Storage space',
@@ -47,13 +45,12 @@ const facilities = [
     id: 4,
     name: 'TV Lounge',
     description: 'Comfortable indoor space to relax, watch movies, or catch up on sports.',
-    image: '/images/Facilities/TV Lounge Card.webp',
+    image: '/images/facilities/tv-lounge.webp',
     features: [
       'Large screen TV',
       'Comfortable seating',
-      'DVD collection',
+      'Online streaming services',
       'Board games',
-      'Air conditioning',
       'Reading corner'
     ]
   },
@@ -61,7 +58,7 @@ const facilities = [
     id: 5,
     name: 'Outdoor Braai Area',
     description: 'Traditional South African barbecue area perfect for social gatherings.',
-    image: '/images/Facilities/Outdoor Braai Area Card.webp',
+    image: '/images/facilities/braai.webp',
     features: [
       'Multiple braai stations',
       'Outdoor seating',
@@ -74,22 +71,21 @@ const facilities = [
   {
     id: 6,
     name: 'Free Wi-Fi',
-    description: 'Stay connected with high-speed internet access throughout the property.',
-    image: '/images/Facilities/Free Wi-Fi Card.webp',
+    description: 'Stay connected with high-speed internet access in communal areas.',
+    image: '/images/facilities/wifi.webp',
     features: [
       'High-speed connection',
-      'Property-wide coverage',
+      'In communal areas',
       'Multiple devices',
       'Streaming capable',
       'Work spaces',
-      'Tech support available'
     ]
   },
   {
     id: 7,
     name: 'Laundry Services',
-    description: 'Keep your clothes fresh with our convenient laundry facilities.',
-    image: '/images/Facilities/Laundry Services Card.webp',
+    description: 'Keep your clothes fresh with our convenient laundry service.',
+    image: '/images/facilities/laundry.webp',
     features: [
       'Washing machines',
       'Dryers',
@@ -103,7 +99,7 @@ const facilities = [
     id: 8,
     name: 'Pool Table',
     description: 'Challenge your friends to a game of pool in our indoor entertainment area.',
-    image: '/images/Facilities/Pool Table Card.webp',
+    image: '/images/facilities/pool-table.webp',
     features: [
       'Professional table',
       'Equipment provided',
@@ -117,7 +113,7 @@ const facilities = [
     id: 9,
     name: 'Ping Pong',
     description: 'Enjoy a fast-paced game of table tennis with fellow travelers.',
-    image: '/images/Facilities/Ping Pong Card.webp',
+    image: '/images/facilities/ping-pong.webp',
     features: [
       'Quality table',
       'Paddles provided',
@@ -131,7 +127,7 @@ const facilities = [
     id: 10,
     name: 'Jungle Gym',
     description: 'A fun outdoor play area perfect for children to enjoy and explore.',
-    image: '/images/Facilities/Jungle Gym Card.webp',
+    image: '/images/facilities/jungle-gym.webp',
     features: [
       'Safe equipment',
       'Shaded area',
@@ -144,8 +140,8 @@ const facilities = [
   {
     id: 11,
     name: 'Secure Parking',
-    description: 'Safe and monitored parking area for all types of vehicles.',
-    image: '/images/Facilities/Secure Parking Card.webp',
+    description: 'Safe parking area for all types of vehicles.',
+    image: '/images/facilities/secure-parking.webp',
     features: [
       '24/7 security',
       'Well-lit area',
@@ -158,58 +154,83 @@ const facilities = [
   {
     id: 12,
     name: 'Communal Fire Pit',
-    description: 'Gather around the fire for storytelling and stargazing.',
-    image: '/images/Facilities/Communal Fire Pit Card.webp',
+    description: 'Gather around the fire for storytelling and memory sharing.',
+    image: '/images/facilities/fire-pit.webp',
     features: [
       'Nightly fires',
       'Seating area',
-      'Marshmallow roasting',
       'Social atmosphere',
       'Wood provided',
-      'Star viewing spot'
     ]
+  },
+  {
+    name: 'Pet Friendly',
+    title: "Pet Friendly",
+    description: "Four-footed furry friends welcome",
+    features: [
+      "Dogs welcome",
+      "Outdoor spaces for pets",
+      "Pet-friendly accommodation options",
+      "Please inform us in advance"
+    ],
+    image: "/images/facilities/pet-friendly.webp"
   }
 ]
 
 export default function Facilities() {
   return (
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen">
+      <div className="min-h-screen">
+        {/* Hero Banner */}
+        <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+          <Image
+            src="/images/facilities/facilities-banner.webp"
+            alt="Facilities at Fairy Knowe"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+            <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Facilities</h1>
+          </div>
+        </div>
         <h1 className="text-4xl font-bold text-center mb-6">Facilities</h1>
         <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
           Everything you need for a comfortable stay at Fairy Knowe Backpackers.
           Modern amenities in a relaxed, homely environment.
         </p>
 
-        {/* Facilities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {facilities.map((facility) => (
-            <div key={facility.id} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-48">
-                <Image
-                  src={facility.image}
-                  alt={facility.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-4">
-                <h2 className="text-xl font-bold mb-2 dark:text-white">{facility.name}</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">{facility.description}</p>
-                <div className="mb-4">
-                  <h3 className="font-semibold mb-2 dark:text-white text-sm">Features:</h3>
-                  <ul className="grid grid-cols-1 gap-1">
-                    {facility.features.map((feature, index) => (
-                      <li key={index} className="text-gray-600 dark:text-gray-300 text-xs flex items-center">
-                        <span className="text-primary mr-2">•</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+        {/* Facilities Cards Section */}
+        <div className="max-w-7xl mx-auto px-2 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+            {facilities.map((facility) => (
+              <div key={facility.id} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
+                <div className="relative h-56 w-full ">
+                  <Image
+                    src={facility.image}
+                    alt={facility.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h2 className="text-xl font-bold mb-2 dark:text-white">{facility.name}</h2>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">{facility.description}</p>
+                  <div className="mb-4">
+                    <h3 className="font-semibold mb-2 dark:text-white text-sm">Features:</h3>
+                    <ul className="grid grid-cols-1 gap-1">
+                      {facility.features.map((feature, index) => (
+                        <li key={index} className="text-gray-600 dark:text-gray-300 text-xs flex items-center">
+                          <span className="text-primary mr-2">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Additional Information */}

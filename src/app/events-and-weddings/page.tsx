@@ -49,7 +49,7 @@ export default function EventsAndWeddings() {
       {/* Hero Banner */}
       <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12">
         <Image
-          src="/images/events/events-banner.webp"
+          src="images\events\events-banner"
           alt="Beautiful garden setup for events and weddings"
           fill
           className="object-cover"
@@ -58,7 +58,7 @@ export default function EventsAndWeddings() {
         <div className="absolute inset-0 bg-black bg-opacity-25 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-[0_6px_6px_rgba(0,0,0,0.9)]">
-              Events & Weddings
+              Events
             </h1>
           </div>
         </div>
