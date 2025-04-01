@@ -45,10 +45,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <Head>
-        <SEO pageTitle={Fairy Knowe Backpackers} pageDescription={Adventure Backpackers in the heart of the Garden Route} /></>
-      </Head>
       <body className={`${inter.variable} font-sans bg-white transition-colors`}>
+      <Head>
+        <SEO pageTitle="Fairy Knowe Backpackers" pageDescription="Adventure Backpackers in the heart of the Garden Route" />
+      </Head>
           <nav className="bg-white shadow-lg fixed w-full z-50 transition-colors h-12">
             <div className="max-w-7xl mx-auto px-4">
               <div className="flex justify-between h-12">
