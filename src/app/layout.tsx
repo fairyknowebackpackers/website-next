@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import Head from 'next/head'
 import SEO from '../components/Seo'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
