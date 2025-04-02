@@ -54,6 +54,7 @@ export default function Home() {
           className="w-full h-auto"
           priority
           quality={100}
+          unoptimized
         />
       </div>
 
