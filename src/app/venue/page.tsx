@@ -1,64 +1,106 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function WeddingsAndEvents() {
-  const weddingImages = [
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m59s747.webp',
-      alt: 'Wedding at Fairy Knowe 1'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m19s649.webp',
-      alt: 'Wedding at Fairy Knowe 2'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h06m29s832.webp',
-      alt: 'Wedding at Fairy Knowe 3'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h06m00s459.webp',
-      alt: 'Wedding at Fairy Knowe 4'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h56m21s8101.webp',
-      alt: 'Wedding at Fairy Knowe 5'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h57m20s770.webp',
-      alt: 'Wedding at Fairy Knowe 6'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h56m21s810.webp',
-      alt: 'Wedding at Fairy Knowe 7'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h57m11s255.webp',
-      alt: 'Wedding at Fairy Knowe 8'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h47m57s761.webp',
-      alt: 'Wedding at Fairy Knowe 9'
-    },
-    {
-      src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h33m26s538.webp',
-      alt: 'Wedding at Fairy Knowe 10'
-    }
-  ]
+const eventTypes = [
+  {
+    title: 'Weddings',
+    description: 'Host your special day in our enchanting garden venue. Perfect for intimate ceremonies and receptions surrounded by nature.',
+    features: [
+      'Garden ceremony space',
+      'Reception area',
+      'Catering options',
+      'Accommodation for guests',
+      'Wedding planning assistance',
+      'Beautiful photo opportunities'
+    ],
+    image: '/images/events/wedding.webp'
+  },
+  {
+    title: 'Private Parties',
+    description: 'Celebrate birthdays, anniversaries, or special occasions in our versatile spaces.',
+    features: [
+      'Indoor and outdoor venues',
+      'Bar service available',
+      'Sound system',
+      'Flexible seating arrangements',
+      'Decorating options',
+      'Catering packages'
+    ],
+    image: '/images/events/party.webp'
+  },
+  {
+    title: 'Corporate Events',
+    description: 'Perfect for team building retreats, workshops, and small conferences in a unique setting.',
+    features: [
+      'Meeting spaces',
+      'Team building activities',
+      'Adventure packages',
+      'Accommodation options',
+      'Catering services',
+      'Wi-Fi and basic equipment'
+    ],
+    image: '/images/events/corporate.webp'
+  }
+]
 
+const weddingImages = [
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m59s747.webp',
+    alt: 'Wedding at Fairy Knowe 1'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m19s649.webp',
+    alt: 'Wedding at Fairy Knowe 2'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h06m29s832.webp',
+    alt: 'Wedding at Fairy Knowe 3'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h06m00s459.webp',
+    alt: 'Wedding at Fairy Knowe 4'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h56m21s8101.webp',
+    alt: 'Wedding at Fairy Knowe 5'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h57m20s770.webp',
+    alt: 'Wedding at Fairy Knowe 6'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h56m21s810.webp',
+    alt: 'Wedding at Fairy Knowe 7'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h57m11s255.webp',
+    alt: 'Wedding at Fairy Knowe 8'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h47m57s761.webp',
+    alt: 'Wedding at Fairy Knowe 9'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h33m26s538.webp',
+    alt: 'Wedding at Fairy Knowe 10'
+  }
+]
+
+export default function Venue() {
   return (
     <div>
       {/* Hero Banner */}
       <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
           src="/images/Weddings & Events/weddings & events banner.webp"
-          alt="Weddings & Events at Fairy Knowe"
+          alt="Venue Hire at Fairy Knowe"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
-            Events
+            Venue Hire
           </h1>
         </div>
       </div>
@@ -71,6 +113,37 @@ export default function WeddingsAndEvents() {
             Whether you're planning an intimate wedding, a corporate retreat, or a special celebration,
             Fairy Knowe Backpackers Lodge offers a unique and versatile venue that combines natural beauty with rustic charm.
           </p>
+        </div>
+
+        {/* Event Types Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {eventTypes.map((event, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
+              <div className="relative h-64">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h2 className="text-2xl font-bold mb-2 dark:text-white">{event.title}</h2>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
+                <div className="mt-auto">
+                  <h3 className="font-semibold mb-2 dark:text-white">Features:</h3>
+                  <ul className="grid grid-cols-2 gap-2">
+                    {event.features.map((feature, index) => (
+                      <li key={index} className="text-gray-600 dark:text-gray-300 text-sm flex items-center">
+                        <span className="text-primary mr-2">•</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Features Grid */}
@@ -129,7 +202,7 @@ export default function WeddingsAndEvents() {
           </div>
         </div>
 
-        {/* Accommodation Section */}
+        {/* Complete Package Section */}
         <div className="bg-card-light dark:bg-card-dark rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">
             Complete Package
@@ -148,12 +221,8 @@ export default function WeddingsAndEvents() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-6 dark:text-white">Ready to Plan Your Event?</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us to discuss your event requirements and check availability.
-          </p>
           <Link 
-            href="/booking" 
+            href="/booking"
             className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
           >
             Enquire Now
