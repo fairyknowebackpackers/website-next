@@ -20,7 +20,7 @@ const roomTypes = [
     id: 3,
     name: 'Gypsy Caravan',
     description: 'Stay in our unique and charming gypsy caravan for a truly magical experience.',
-    image: '/images/accommodation/caravan1.webp',
+    image: '/images/accommodation/rondawel2.webp',
     features: ['Double bed + two sleeper couches', 'Secluded privacy', 'Electricity']
   },
   {
@@ -78,6 +78,8 @@ export default function Accommodation() {
           fill
           className="object-cover"
           priority
+          quality={85}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
@@ -115,6 +117,7 @@ export default function Accommodation() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       priority={room.id <= 3}
                       loading={room.id <= 3 ? 'eager' : 'lazy'}
+                      quality={85}
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
