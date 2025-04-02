@@ -105,27 +105,28 @@ export default function Accommodation() {
                 href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="group"
               >
-                <div className="bg-[#C9DD94] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform duration-300 ease-in-out transform hover:scale-105 relative border border-gray-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                  <div className="relative h-64 z-10">
+                <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                  <div className="relative w-full h-[250px]">
                     <Image
                       src={room.image}
                       alt={room.name}
-                      width={400}
-                      height={256}
-                      className="object-cover"
+                      fill
+                      className="object-cover w-full"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={room.id <= 3}
+                      loading={room.id <= 3 ? 'eager' : 'lazy'}
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow relative z-10">
+                  <div className="p-6 flex flex-col flex-grow">
                     <div>
-                      <h2 className="text-[#18442D] font-bold mb-2 group-hover:text-[#00B487] transition-colors text-2xl">{room.name}</h2>
-                      <p className="text-[#18442D] mb-4">{room.description}</p>
+                      <h2 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{room.name}</h2>
+                      <p className="text-gray-600 dark:text-gray-300 mb-6 min-h-[3rem]">{room.description}</p>
                     </div>
                     <div className="mt-auto">
-                      <h3 className="font-semibold mb-3 text-[#18442D]">Features:</h3>
-                      <ul className="list-disc pl-5 space-y-2">
+                      <h3 className="font-semibold mb-3 text-gray-800 dark:text-gray-200">Features:</h3>
+                      <ul className="list-disc pl-5 space-y-1.5 text-gray-600 dark:text-gray-300">
                         {room.features.map((feature, index) => (
-                          <li key={index} className="text-[#18442D]">{feature}</li>
+                          <li key={index}>{feature}</li>
                         ))}
                       </ul>
                     </div>
