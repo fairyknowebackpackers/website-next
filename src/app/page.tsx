@@ -57,8 +57,8 @@ export default function Home() {
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4 mb-8">
-        <p className="text-lg md:text-xl text-center text-gray-600 [font-style:italic!important]">
+      <div className="max-w-7xl mx-auto px-4">
+        <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto [font-style:italic!important]">
         I dwell in forests deep and green, where few have seen and less have been.<br />
         When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
           I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
