@@ -132,6 +132,8 @@ export default function Home() {
                 alt="Fairy Knowe Backpackers Logo"
                 fill
                 className="object-contain"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
               />
             </div>
           </div>
