@@ -125,19 +125,15 @@ export default function Home() {
           </div>
 
           {/* Logo Section */}
-          <div className="mt-16 mb-8">
-            <div className="flex justify-center items-center">
-              <Image
-                src="/images/home/logo.png"
-                alt="Fairy Knowe Backpackers Logo"
-                width={600}
-                height={600}
-                className="max-w-full h-auto"
-                priority
-                quality={100}
-                unoptimized
-              />
-            </div>
+          <div className="mt-16 mb-8 flex justify-center">
+            <Image
+              src="/images/home/logo.webp"
+              alt="Fairy Knowe Backpackers Logo"
+              width={400}
+              height={400}
+              className="w-auto h-auto"
+              priority
+            />
           </div>
         </div>
       </div>
