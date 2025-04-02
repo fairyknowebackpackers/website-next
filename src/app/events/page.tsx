@@ -6,13 +6,13 @@ export default function Entertainment() {
     {
       title: "Open Mic Night",
       schedule: "Every Wednesday 19:30 - 22:30",
-      description: "Step into the spotlight and let your talent shine! Whether you're an aspiring musician, poetic wordsmith, comedic genius, or not, our stage awaits your brilliance. Share your gift with the locals and fellow travelers alike, and create moments of magic in a space that celebrates creativity and connection.",
+      description: "Step into the spotlight and share what you may dare. Whether you're an aspiring musician, poetic wordsmith, comedic genius, or not, the stage is yours to claim and fame is yours to gain.",
       image: "/images/entertainment/open-mic-night-card.webp"
     },
     {
       title: "Family Market",
       schedule: "Every sunny Sunday 10:00 - 14:00",
-      description: "Explore the vibrant charm of our weekly market, where creativity and community come together in perfect harmony. Discover local arts and crafts, unique garments, delicious foods, or a one-of-a-kind souvenir, and connect with locals who bring this lively gathering to life.",
+      description: "Explore our charming family market and discover locally crafted gems, tasty treats, unique garments and one-of-a-kind souvinirs. Connect with locals that bring together a community of creativity.",
       image: "/images/entertainment/family-market-card.webp"
     }
   ]
@@ -36,9 +36,9 @@ export default function Entertainment() {
       </div>
 
       {/* Description */}
-      <div className="text-center mb-12">
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-4 text-gray-600 dark:text-gray-300">
-        From soul-stirring live music performances and inspiring open mic nights to lively, bustling markets filled with character, there's never a dull moment at the Knowe. It's a haven of creativity, connection, and vibrant energy where every visit promises something unique and unforgettable.
+      <div className="text-center">
+        <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.
         </p>
       </div>
 
@@ -58,7 +58,7 @@ export default function Entertainment() {
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Immerse yourself in the magic of music with our regular live performances, showcasing an incredible array of talent from both local and traveling musicians. From intimate acoustic sessions to monstrous full-band spectacles, each event is a celebration of sound and artistry that will leave you spellbound.
+              Experience live music performances from local magical musicians and traveling musical magicians. From intimate folk melodies to monstrous full-band spectacles, every show is a journey into the extraordinary.
               </p>
               <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
             </div>

@@ -210,8 +210,8 @@ export default function RootLayout({
                 <Link href="/entertainment" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   Entertainment
                 </Link>
-                <Link href="/events" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
-                  Events
+                <Link href="/venue" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
+                  venue
                 </Link>
                 <Link href="/facilities" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   Facilities
