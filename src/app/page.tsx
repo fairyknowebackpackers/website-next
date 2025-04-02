@@ -99,8 +99,17 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Gallery Card with Carousel
-          <GalleryCarousel /> */}
+          {/* Logo Section */}
+          <div className="mt-16 mb-8 flex justify-center">
+            <Image
+              src="/images/home/logo.webp"
+              alt="Fairy Knowe Backpackers Logo"
+              width={400}
+              height={400}
+              className="w-auto h-auto"
+              priority
+            />
+          </div>
 
           {/* Additional Description */}
           <div className="mt-12 mb-12 text-center">
@@ -122,18 +131,6 @@ export default function Home() {
             >
               Book Your Stay Now
             </Link>
-          </div>
-
-          {/* Logo Section */}
-          <div className="mt-16 mb-8 flex justify-center">
-            <Image
-              src="/images/home/logo.webp"
-              alt="Fairy Knowe Backpackers Logo"
-              width={400}
-              height={400}
-              className="w-auto h-auto"
-              priority
-            />
           </div>
         </div>
       </div>
