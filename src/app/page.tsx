@@ -53,6 +53,8 @@ export default function Home() {
           height={1080}
           className="w-full h-auto"
           priority
+          quality={100}
+          unoptimized
         />
       </div>
 
