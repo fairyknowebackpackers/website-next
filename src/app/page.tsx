@@ -126,14 +126,16 @@ export default function Home() {
 
           {/* Logo Section */}
           <div className="mt-16 mb-8">
-            <div className="relative w-full h-[400px] md:h-[500px]">
+            <div className="flex justify-center items-center">
               <Image
                 src="/images/home/logo.png"
                 alt="Fairy Knowe Backpackers Logo"
-                fill
-                className="object-contain"
+                width={600}
+                height={600}
+                className="max-w-full h-auto"
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                quality={100}
+                unoptimized
               />
             </div>
           </div>
