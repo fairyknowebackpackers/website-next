@@ -7,7 +7,7 @@ interface GalleryImage {
   category: string;
 }
 
-type Category = 'All' | 'Accommodation' | 'Adventures' | 'Entertainment' | 'Facilities' | 'Weddings & Events' | 'Fairy Folk \'n Roll';
+type Category = 'All' | 'Accommodation' | 'Adventures' | 'Events' | 'Facilities' | 'Venue' | 'Fairy Folk \'n Roll';
 
 export default function FilteredGallery() {
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
@@ -18,7 +18,7 @@ export default function FilteredGallery() {
     // Fetch images logic here
   }, []);
 
-  const categories: Category[] = ['All', 'Accommodation', 'Adventures', 'Entertainment', 'Facilities', 'Weddings & Events', 'Fairy Folk \'n Roll'];
+  const categories: Category[] = ['All', 'Accommodation', 'Adventures', 'Events', 'Facilities', 'Venue', 'Fairy Folk \'n Roll'];
 
   const filteredImages = selectedCategory === 'All' 
     ? images 

@@ -207,8 +207,8 @@ export default function RootLayout({
                   </div>
                 </div>
 
-                <Link href="/entertainment" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
-                  Entertainment
+                <Link href="/events" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
+                  Events
                 </Link>
                 <Link href="/venue" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   venue

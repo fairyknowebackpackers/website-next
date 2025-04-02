@@ -17,16 +17,16 @@ export default function Home() {
       link: '/adventure'
     },
     {
-      title: 'Entertainment',
+      title: 'Events',
       description: 'Join us for live music, open mic nights, and family markets.',
       image: '/images/home/entertainment-card.webp',
-      link: '/entertainment'
+      link: '/events'
     },
     {
-      title: 'Events',
+      title: 'Venue',
       description: 'Host your special occasion in our charming venue surrounded by nature.',
       image: '/images/home/wedding-events-card.webp',
-      link: '/weddings-and-events'
+      link: '/venue'
     },
     {
       title: 'Facilities',

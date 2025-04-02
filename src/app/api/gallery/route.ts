@@ -7,9 +7,9 @@ export async function GET() {
     const categories = [
       'Accommodation',
       'Adventures',
-      'Entertainment',
-      'Facilities',
       'Events',
+      'Facilities',
+      'Venue',
       'Fairy Folk \'n Roll'
     ];
 
