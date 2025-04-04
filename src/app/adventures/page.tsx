@@ -76,9 +76,9 @@ const activities = [
   },
   {
     id: 10,
-    name: 'Bridge Jump',
-    description: 'Railroad bridge crossing over the Touw River. Fun to jump off for a swim. 5 minute walk from the backpackers.',
-    image: '/images/Adventures/bridge-jump-card.webp',
+    name: 'Water Under the Bridge',
+    description: 'Take a leap into the refreshing Touws River from our railway bridge jumping spot.',
+    image: '/images/Adventures/water-under-the-bridge-card.webp',
     category: 'Water Activities',
     features: ['Close to backpackers', 'Swimming', 'Adventure activity', 'Local favorite']
   },
@@ -92,7 +92,7 @@ const activities = [
   },
   {
     id: 12,
-    name: 'Lazy Library',
+    name: 'Ancient Archives',
     description: 'Rainy day or just feeling lazy? Swap out an old book for a new one from our extensive library selection.',
     image: '/images/Adventures/lazy-library-card.webp',
     category: 'Indoor Activities',
@@ -141,30 +141,25 @@ export default function Adventure() {
                   .replace(/[^a-z0-9-]/g, '')}`}
                 className="group"
               >
-                <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
                   <div className="relative h-64">
                     <Image
                       src={activity.image}
                       alt={activity.name}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div>
-                      <div className="mb-2">
-                        <span className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                          {activity.category}
-                        </span>
-                      </div>
-                      <h2 className="text-2xl font-bold mb-2 dark:text-white group-hover:text-primary transition-colors">{activity.name}</h2>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">{activity.description}</p>
+                      <h2 className="text-2xl font-bold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{activity.name}</h2>
+                      <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out mb-4">{activity.description}</p>
                     </div>
                     <div className="mt-auto">
-                      <h3 className="font-semibold mb-3 dark:text-white">Features:</h3>
+                      <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
                       <ul className="list-disc pl-5 space-y-2">
                         {activity.features.map((feature, index) => (
-                          <li key={index} className="text-gray-600 dark:text-gray-300">{feature}</li>
+                          <li key={`${activity.id}-feature-${index}`} className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">{feature}</li>
                         ))}
                       </ul>
                     </div>

@@ -31,9 +31,9 @@ const adventureLinks = [
   { href: '/adventures/woodville-big-tree', label: 'Woodville Big Tree' },
   { href: '/adventures/map-of-africa', label: 'Map of Africa' },
   { href: '/adventures/wilderness-beach', label: 'Wilderness Beach' },
-  { href: '/adventures/bridge-jump', label: 'Bridge Jump' },
+  { href: '/adventures/water-under-the-bridge', label: 'Water Under the Bridge' },
   { href: '/adventures/fairy-labyrinth', label: 'Fairy Labyrinth' },
-  { href: '/adventures/lazy-library', label: 'Lazy Library' }
+  { href: '/adventures/ancient-archives', label: 'Ancient Archives' },
 ]
 
 export default function RootLayout({
@@ -122,11 +122,11 @@ export default function RootLayout({
                       </div>
                     </div>
 
-                    <Link href="/events" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                      Events
+                    <Link href="/entertainment" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                      Entertainment
                     </Link>
                     <Link href="/venue" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                      Venue
+                      Venue Hire
                     </Link>
                     <Link href="/facilities" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       Facilities
@@ -207,11 +207,11 @@ export default function RootLayout({
                   </div>
                 </div>
 
-                <Link href="/events" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
-                  Events
+                <Link href="/entertainment" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
+                  Entertainment
                 </Link>
                 <Link href="/venue" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
-                  venue
+                  Venue Hire
                 </Link>
                 <Link href="/facilities" className="text-gray-900 hover:text-[#073F3A] block px-3 py-2 rounded-md text-base font-medium">
                   Facilities

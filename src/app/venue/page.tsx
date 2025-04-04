@@ -92,7 +92,7 @@ export default function Venue() {
       {/* Hero Banner */}
       <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
-          src="/images/Weddings & Events/weddings & events banner.webp"
+          src="/images/venue-hire/venue-hire-banner.webp"
           alt="Venue Hire at Fairy Knowe"
           fill
           className="object-cover"
@@ -106,12 +106,11 @@ export default function Venue() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Introduction */}
         <div className="text-center mb-16">
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-center">
-            Whether you're planning an intimate wedding, a corporate retreat, or a special celebration,
-            Fairy Knowe Backpackers Lodge offers a unique and versatile venue that combines natural beauty with rustic charm.
+          Whether you’re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
           </p>
         </div>
 

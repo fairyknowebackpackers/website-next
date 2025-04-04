@@ -17,13 +17,13 @@ export default function Home() {
       link: '/adventure'
     },
     {
-      title: 'Events',
+      title: 'Entertainment',
       description: 'Join us for live music, open mic nights, and family markets.',
       image: '/images/home/entertainment-card.webp',
-      link: '/events'
+      link: '/entertainment'
     },
     {
-      title: 'Venue',
+      title: 'Venue Hire',
       description: 'Host your special occasion in our charming venue surrounded by nature.',
       image: '/images/home/wedding-events-card.webp',
       link: '/venue'
@@ -43,7 +43,7 @@ export default function Home() {
   ]
 
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Hero Banner */}
       <div className="w-full mb-12">
         <Image
@@ -54,15 +54,14 @@ export default function Home() {
           className="w-full h-auto"
           priority
           quality={100}
-          unoptimized
         />
       </div>
 
       {/* Description */}
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto [font-style:italic!important]">
-        I dwell in forests deep and green, where few have seen and less have been.<br />
-        When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
+        <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto italic">
+          I dwell in forests deep and green, where few have seen and less have been.<br />
+          When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
           I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
           I bring the magic, most delight, yet vanish with the morning light.<br/>
           <br/>
@@ -114,7 +113,7 @@ export default function Home() {
           {/* Additional Description */}
           <div className="mt-12 mb-12 text-center">
             <p className="text-lg md:text-xl text-gray-600">
-              Your home away from home in the heart of Wilderness, offering comfortable accommodation,<br />
+              Your home away from home in the heart of Wilderness, offering comfortable accommodation,
               exciting adventures, and a vibrant social atmosphere.
             </p>
           </div>

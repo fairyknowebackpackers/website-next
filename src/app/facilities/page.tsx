@@ -182,7 +182,7 @@ export default function Facilities() {
     <div className="min-h-screen">
       <div className="min-h-screen">
         {/* Hero Banner */}
-        <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+        <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
           <Image
             src="/images/facilities/facilities-banner.webp"
             alt="Facilities at Fairy Knowe"
@@ -191,39 +191,40 @@ export default function Facilities() {
             priority
           />
           <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Facilities</h1>
+            <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">Facilities</h1>
           </div>
         </div>
-        <h1 className="text-4xl font-bold text-center mb-6">Facilities</h1>
-        <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-          Everything you need for a comfortable stay at Fairy Knowe Backpackers.
-          Modern amenities in a relaxed, homely environment.
-        </p>
+
+        {/* Description */}
+        <div className="px-4">
+          <div className="max-w-5xl mx-auto px-4">
+            <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto">
+              Everything you need to keep you clean, comfortable, connected, captivated, cozy and fed during your stay in the enchanted realms of the wood.
+            </p>
+          </div>
+        </div>
 
         {/* Facilities Cards Section */}
-        <div className="max-w-7xl mx-auto px-2 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
             {facilities.map((facility) => (
-              <div key={facility.id} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-56 w-full ">
+              <div key={facility.id} className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
+                <div className="relative h-56">
                   <Image
                     src={facility.image}
                     alt={facility.name}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                   />
                 </div>
                 <div className="p-4">
-                  <h2 className="text-xl font-bold mb-2 dark:text-white">{facility.name}</h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">{facility.description}</p>
-                  <div className="mb-4">
-                    <h3 className="font-semibold mb-2 dark:text-white text-sm">Features:</h3>
-                    <ul className="grid grid-cols-1 gap-1">
+                  <h2 className="text-xl font-bold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{facility.name}</h2>
+                  <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out mb-4 text-sm">{facility.description}</p>
+                  <div>
+                    <h3 className="font-semibold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out text-sm">Features:</h3>
+                    <ul className="list-disc pl-5 space-y-1">
                       {facility.features.map((feature, index) => (
-                        <li key={index} className="text-gray-600 dark:text-gray-300 text-xs flex items-center">
-                          <span className="text-primary mr-2">•</span>
-                          {feature}
-                        </li>
+                        <li key={`${facility.id}-feature-${index}`} className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out text-xs">{feature}</li>
                       ))}
                     </ul>
                   </div>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Events() {
+export default function Entertainment() {
   const events = [
     {
       title: "Open Mic Night",
@@ -30,7 +30,7 @@ export default function Events() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
-            Events
+            Entertainment
           </h1>
         </div>
       </div>

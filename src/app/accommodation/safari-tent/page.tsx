@@ -73,8 +73,8 @@ export default function SafariTentPage() {
               <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
                 <p className="text-white text-xs">Towels available</p>
               </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Access to all facilities</p>
+              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                <p className="text-[#202635] text-xs">Access to all facilities</p>
               </div>
               <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
@@ -136,17 +136,20 @@ export default function SafariTentPage() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
               <div className="mt-12 mb-12">
                 <div className="grid grid-cols-4 gap-4">
-                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                    <p className="text-white text-xs">Quiet hours: 10PM - 6AM</p>
+                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                    <p className="text-[#202635] text-xs">Quiet hours: 10PM - 6AM</p>
                   </div>
-                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                    <p className="text-white text-xs">No private alcohol</p>
+                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                    <p className="text-[#202635] text-xs">Keep your space tidy</p>
                   </div>
-                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                    <p className="text-white text-xs">Respect the forest</p>
+                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                    <p className="text-[#202635] text-xs">No private alcohol</p>
                   </div>
-                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                    <p className="text-white text-xs">Be friendly to fellow wanderers</p>
+                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                    <p className="text-[#202635] text-xs">Respect the forest</p>
+                  </div>
+                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
+                    <p className="text-[#202635] text-xs">Be friendly to fellow wanderers</p>
                   </div>
                 </div>
               </div>

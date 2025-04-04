@@ -107,7 +107,7 @@ export default function Accommodation() {
                 href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="group"
               >
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
+                <div className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
                   <div className="relative w-full h-[250px]">
                     <Image
                       src={room.image}
