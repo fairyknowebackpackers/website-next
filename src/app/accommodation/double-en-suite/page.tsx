@@ -52,32 +52,26 @@ export default function DoubleEnSuitePage() {
           {/* Main Features */}
           <div className="mt-12 mb-12">
             <div className="grid grid-cols-8 gap-4">
-            <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
+              <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Queen bed</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Queen bed</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Comfortable bedding</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Comfortable bedding</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">En-suite bathroom</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">En-suite bathroom</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Towels provided</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Towels provided</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Outdoor seating area</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Outdoor seating area</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Access to all facilities</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Access to all facilities</p>
               </div>
               <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
@@ -139,21 +133,17 @@ export default function DoubleEnSuitePage() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
               <div className="mt-12 mb-12">
                 <div className="grid grid-cols-4 gap-4">
-                <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Quiet hours: 10PM - 6AM</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Quiet hours: 10PM - 6AM</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">No smoking inside</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">No smoking inside</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">No private alcohol</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">No private alcohol</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Be friendly to fellow wanderers</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Be friendly to fellow wanderers</p>
                   </div>
                 </div>
               </div>

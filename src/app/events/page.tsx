@@ -60,7 +60,7 @@ export default function Events() {
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Experience live performances from local magical musicians and traveling musical magicians. From acoustic folk to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.
+                Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.
               </p>
               <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
             </div>

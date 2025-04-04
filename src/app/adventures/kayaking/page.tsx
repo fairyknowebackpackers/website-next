@@ -53,37 +53,30 @@ export default function KayakingPage() {
           {/* Main Features */}
           <div className="mt-12 mb-12">
             <div className="grid grid-cols-9 gap-4">
-            <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
               </div>
-            <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">4 hours</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">4 hours</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Moderate difficulty</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Moderate difficulty</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Available from 08:00 - 15:00</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Available from 08:00 - 15:00</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Equipment provided</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Equipment provided</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Life jackets available</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Life jackets available</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Swim in rock pools</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Swim in rock pools</p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Waterfall</p>
-                </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Waterfall</p>
+              </div>
               <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
               </div>

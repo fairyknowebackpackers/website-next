@@ -46,18 +46,40 @@ export default function BrownHoodedKingfisherTrailPage() {
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
-          Embark on a teeming 4.2-km out-and-back journey along the delightful Duiwe River. This quick and easy trail, typically completed in about 1 hour and 20 minutes, invites adventurers on a short and sweet stroll along the stream. Meandering across the river on well-crafted crossings, the path leads to a little rockpool waterfall - a refreshing haven at the trail's end. While beloved by many wonderful wanderers, moments of quiet solitude still await those who venture during the trail’s calmer hours.
+          Embark on a teeming 4.2-km out-and-back journey along the delightful Duiwe River. This quick and easy trail, typically completed in about 1 hour and 20 minutes, invites adventurers on a short and sweet stroll along the stream. Meandering across the river on well-crafted crossings, the path leads to a little rockpool waterfall - a refreshing haven at the trail's end. While beloved by many wonderful wanderers, moments of quiet solitude still await those who venture during the trail's calmer hours.
           </p>
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <ul className="list-disc pl-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <li className="text-gray-600 dark:text-gray-300">2 hours</li>
-              <li className="text-gray-600 dark:text-gray-300">Harder difficulty</li>
-              <li className="text-gray-600 dark:text-gray-300">Elevated viewpoints</li>
-              <li className="text-gray-600 dark:text-gray-300">Circluar trail</li>
-              <li className="text-gray-600 dark:text-gray-300">Beautiful scenery</li>
-            </ul>
+            <div className="grid grid-cols-9 gap-4">
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">4.2 km out-and-back</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">1.5 hours</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Easy difficulty</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">River crossings</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Rockpool waterfall</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Bird watching</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Scenic views</p>
+              </div>
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+            </div>
           </div>
 
           {/* Gallery Grid */}

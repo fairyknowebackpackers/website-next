@@ -54,13 +54,35 @@ export default function BosduifTrailPage() {
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <ul className="list-disc pl-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <li className="text-gray-600 dark:text-gray-300">2 hours</li>
-              <li className="text-gray-600 dark:text-gray-300">Harder difficulty</li>
-              <li className="text-gray-600 dark:text-gray-300">Elevated viewpoints</li>
-              <li className="text-gray-600 dark:text-gray-300">Circluar trail</li>
-              <li className="text-gray-600 dark:text-gray-300">Beautiful scenery</li>
-            </ul>
+            <div className="grid grid-cols-9 gap-4">
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">4.2 km loop</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">1.5 hours</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Moderate difficulty</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Sea views</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Bird watching</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Forest canopy</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Trail markers</p>
+              </div>
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+            </div>
           </div>
 
           {/* Gallery Grid */}

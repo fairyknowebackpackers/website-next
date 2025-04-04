@@ -52,13 +52,35 @@ export default function MapOfAfricaPage() {
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <ul className="list-disc pl-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <li className="text-gray-600 dark:text-gray-300">2 hours</li>
-              <li className="text-gray-600 dark:text-gray-300">Harder difficulty</li>
-              <li className="text-gray-600 dark:text-gray-300">Elevated viewpoints</li>
-              <li className="text-gray-600 dark:text-gray-300">Circluar trail</li>
-              <li className="text-gray-600 dark:text-gray-300">Beautiful scenery</li>
-            </ul>
+            <div className="grid grid-cols-9 gap-4">
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Iconic viewpoint</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">River bend</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Ocean views</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Beach panorama</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Wilderness views</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Sunset spot</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Photo opportunity</p>
+              </div>
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+            </div>
           </div>
 
           {/* Gallery Grid */}

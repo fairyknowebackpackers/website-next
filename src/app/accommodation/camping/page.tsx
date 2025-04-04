@@ -46,7 +46,7 @@ export default function CampingPage() {
       <div className="py-6 px-4">
         <div className="max-w-5xl mx-auto px-4 mb-12 mt-3">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
-          Pitch your tent and make yourself at home in our magical forest, where nature's embrace tucks you in at night. With access to all facilities, our camping area caters to every camper’s preference, offering a mix of sunny clearings and shaded hideaways beneath the trees.
+          Pitch your tent and make yourself at home in our magical forest, where nature's embrace tucks you in at night. With access to all facilities, our camping area caters to every camper's preference, offering a mix of sunny clearings and shaded hideaways beneath the trees.
           </p>
 
 
@@ -65,9 +65,8 @@ export default function CampingPage() {
               <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
               </div>
-              <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Access to all facilities</p>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Access to all facilities</p>
               </div>
               <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
                 <p className="text-gray-600 text-xs"></p>
@@ -171,25 +170,20 @@ export default function CampingPage() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
               <div className="mt-12 mb-12">
                 <div className="grid grid-cols-5 gap-4">
-                <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Quiet hours: 10PM - 6AM</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Quiet hours: 10PM - 6AM</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Keep your space tidy</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Keep your space tidy</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">No private alcohol</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">No private alcohol</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Respect the forest</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Respect the forest</p>
                   </div>
-                  <div className="bg-[#C9DD94] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden border border-gray-500">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C9DD94] to-[#5EBC97] pointer-events-none"></div>
-                <p className="text-[#18442D] text-xs relative z-10">Be friendly to fellow wanderers</p>
+                  <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                    <p className="text-white text-xs">Be friendly to fellow wanderers</p>
                   </div>
                 </div>
               </div>

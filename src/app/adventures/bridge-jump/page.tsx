@@ -51,12 +51,35 @@ export default function BridgeJumpPage() {
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <ul className="list-disc pl-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <li className="text-gray-600 dark:text-gray-300">Safe jumping platform</li>
-              <li className="text-gray-600 dark:text-gray-300">5 minute walk</li>
-              <li className="text-gray-600 dark:text-gray-300">Great swimming spot</li>
-              <li className="text-gray-600 dark:text-gray-300">Scenic location</li>
-            </ul>
+            <div className="grid grid-cols-9 gap-4">
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Safe jumping platform</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">5 minute walk</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Great swimming spot</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Scenic location</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Safety briefing</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Refreshments nearby</p>
+              </div>
+              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
+                <p className="text-white text-xs">Perfect for photos</p>
+              </div>
+              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
+                <p className="text-gray-600 text-xs"></p>
+              </div>
+            </div>
           </div>
 
           {/* Gallery Grid */}
