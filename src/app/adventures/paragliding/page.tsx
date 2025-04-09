@@ -59,7 +59,7 @@ const images = [
 
 export default function ParaglidingPage() {
   const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 10;
+  const imagesPerPage = 8;
   const totalPages = Math.ceil(images.length / imagesPerPage);
   const currentImages = images.slice(
     currentPage * imagesPerPage,
@@ -101,7 +101,7 @@ export default function ParaglidingPage() {
           {/* Gallery Grid */}
           <div className="mt-12 mb-12">
             <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {currentImages.map((image, index) => (
                 <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
@@ -142,7 +142,7 @@ export default function ParaglidingPage() {
 
           {/* Main Features - Moved to bottom */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Features</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
             <div className="grid grid-cols-8 gap-4">
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-700 text-xs">15 minutes</p>

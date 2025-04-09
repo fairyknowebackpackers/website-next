@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const eventTypes = [
   {
@@ -40,6 +43,19 @@ const eventTypes = [
       'Wi-Fi and basic equipment'
     ],
     image: '/images/events/corporate.webp'
+  },
+  {
+    title: 'Film Crews',
+    description: 'A magical setting for your next film or photo shoot. From fantasy films to nature documentaries, our location offers diverse backdrops.',
+    features: [
+      'Diverse natural settings',
+      'Power supply points',
+      'Equipment storage',
+      'Crew accommodation',
+      'Flexible shooting hours',
+      'Dedicated crew facilities'
+    ],
+    image: '/images/events/film.webp'
   }
 ]
 
@@ -83,10 +99,34 @@ const weddingImages = [
   {
     src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-15h33m26s538.webp',
     alt: 'Wedding at Fairy Knowe 10'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m59s747.webp',
+    alt: 'Wedding at Fairy Knowe 11'
+  },
+  {
+    src: '/images/Weddings & Events/Weddings/vlcsnap-2024-08-21-16h08m19s649.webp',
+    alt: 'Wedding at Fairy Knowe 12'
   }
 ]
 
 export default function Venue() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const imagesPerPage = 12;
+  const totalPages = Math.ceil(weddingImages.length / imagesPerPage);
+  const currentImages = weddingImages.slice(
+    currentPage * imagesPerPage,
+    (currentPage + 1) * imagesPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
   return (
     <div>
       {/* Hero Banner */}
@@ -110,12 +150,12 @@ export default function Venue() {
         {/* Introduction */}
         <div className="text-center mb-16">
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-center">
-          Whether you’re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
+          Whether you're planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
           </p>
         </div>
 
         {/* Event Types Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {eventTypes.map((event, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
               <div className="relative h-64">
@@ -145,62 +185,6 @@ export default function Venue() {
           ))}
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-3 dark:text-white">Venue Spaces</h3>
-            <ul className="text-gray-600 dark:text-gray-300 space-y-2">
-              <li>• Indoor reception area</li>
-              <li>• Outdoor garden venue</li>
-              <li>• Covered deck space</li>
-              <li>• Bar and lounge area</li>
-              <li>• Dance floor</li>
-            </ul>
-          </div>
-
-          <div className="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-3 dark:text-white">Event Types</h3>
-            <ul className="text-gray-600 dark:text-gray-300 space-y-2">
-              <li>• Weddings</li>
-              <li>• Corporate events</li>
-              <li>• Birthday celebrations</li>
-              <li>• Private functions</li>
-              <li>• Team building activities</li>
-            </ul>
-          </div>
-
-          <div className="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-bold mb-3 dark:text-white">Services</h3>
-            <ul className="text-gray-600 dark:text-gray-300 space-y-2">
-              <li>• Event planning assistance</li>
-              <li>• Catering options</li>
-              <li>• Sound system</li>
-              <li>• Accommodation packages</li>
-              <li>• Decor setup</li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Wedding Gallery */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
-            Wedding Gallery
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {weddingImages.map((image, index) => (
-              <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Complete Package Section */}
         <div className="bg-card-light dark:bg-card-dark rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">
@@ -218,11 +202,56 @@ export default function Venue() {
           </div>
         </div>
 
+        {/* Wedding Gallery */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
+            Wedding Gallery
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {currentImages.map((image, index) => (
+              <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Gallery Navigation */}
+          <div className="flex justify-center items-center mt-6 gap-4">
+            <button 
+              onClick={prevPage}
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+              aria-label="Previous page"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <span className="text-gray-700">
+              {currentPage + 1} of {totalPages}
+            </span>
+            <button 
+              onClick={nextPage}
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+              aria-label="Next page"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
         {/* Call to Action */}
-        <div className="text-center">
+        <div className="text-center mb-16">
           <Link 
             href="/booking"
-            className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
+            className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg transition-colors"
           >
             Enquire Now
           </Link>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 const facilities = [
   {
     id: 1,
-    name: 'Lively Bar',
+    name: 'Lively bar',
     description: 'Our vibrant bar is the perfect place to meet fellow travelers and enjoy a drink after an adventurous day.',
     image: '/images/facilities/lively-bar.webp',
     features: [
@@ -17,7 +17,7 @@ const facilities = [
   },
   {
     id: 2,
-    name: 'Restaurant Kitchen',
+    name: 'Restaurant kitchen',
     description: 'Enjoy delicious meals prepared by our kitchen team, featuring local and international cuisine.',
     image: '/images/facilities/restaurant-kitchen.webp',
     features: [
@@ -29,7 +29,7 @@ const facilities = [
   },
   {
     id: 3,
-    name: 'Self Catering Kitchen',
+    name: 'Self catering kitchen',
     description: 'Fully equipped kitchen for guests who prefer to prepare their own meals.',
     image: '/images/facilities/self-catering-kitchen.webp',
     features: [
@@ -43,7 +43,7 @@ const facilities = [
   },
   {
     id: 4,
-    name: 'TV Lounge',
+    name: 'Tv lounge',
     description: 'Comfortable indoor space to relax, watch movies, or catch up on sports.',
     image: '/images/facilities/tv-lounge.webp',
     features: [
@@ -56,7 +56,7 @@ const facilities = [
   },
   {
     id: 5,
-    name: 'Outdoor Braai Area',
+    name: 'Outdoor braai area',
     description: 'Traditional South African barbecue area perfect for social gatherings.',
     image: '/images/facilities/braai.webp',
     features: [
@@ -70,7 +70,7 @@ const facilities = [
   },
   {
     id: 6,
-    name: 'Free Wi-Fi',
+    name: 'Communal wi-fi',
     description: 'Stay connected with high-speed internet access in communal areas.',
     image: '/images/facilities/wifi.webp',
     features: [
@@ -83,7 +83,7 @@ const facilities = [
   },
   {
     id: 7,
-    name: 'Laundry Services',
+    name: 'Laundry services',
     description: 'Keep your clothes fresh with our convenient laundry service.',
     image: '/images/facilities/laundry.webp',
     features: [
@@ -97,7 +97,7 @@ const facilities = [
   },
   {
     id: 8,
-    name: 'Pool Table',
+    name: 'Pool table',
     description: 'Challenge your friends to a game of pool in our indoor entertainment area.',
     image: '/images/facilities/pool-table.webp',
     features: [
@@ -111,7 +111,7 @@ const facilities = [
   },
   {
     id: 9,
-    name: 'Ping Pong',
+    name: 'Ping pong',
     description: 'Enjoy a fast-paced game of table tennis with fellow travelers.',
     image: '/images/facilities/ping-pong.webp',
     features: [
@@ -125,7 +125,7 @@ const facilities = [
   },
   {
     id: 10,
-    name: 'Jungle Gym',
+    name: 'Jungle gym',
     description: 'A fun outdoor play area perfect for children to enjoy and explore.',
     image: '/images/facilities/jungle-gym.webp',
     features: [
@@ -139,7 +139,7 @@ const facilities = [
   },
   {
     id: 11,
-    name: 'Secure Parking',
+    name: 'Secure parking',
     description: 'Safe parking area for all types of vehicles.',
     image: '/images/facilities/secure-parking.webp',
     features: [
@@ -153,7 +153,7 @@ const facilities = [
   },
   {
     id: 12,
-    name: 'Communal Fire Pit',
+    name: 'Communal fire pit',
     description: 'Gather around the fire for storytelling and memory sharing.',
     image: '/images/facilities/fire-pit.webp',
     features: [
@@ -164,8 +164,8 @@ const facilities = [
     ]
   },
   {
-    name: 'Pet Friendly',
-    title: "Pet Friendly",
+    name: 'Pet friendly',
+    title: "Pet friendly",
     description: "Four-footed furry friends welcome",
     features: [
       "Dogs welcome",
@@ -174,6 +174,34 @@ const facilities = [
       "Please inform us in advance"
     ],
     image: "/images/facilities/pet-friendly.webp"
+  },
+  {
+    id: 13,
+    name: 'Board games',
+    description: 'A collection of classic and modern board games for all ages.',
+    image: '/images/facilities/board-games.webp',
+    features: [
+      'Various games available',
+      'Family friendly',
+      'Social activity',
+      'Indoor entertainment',
+      'All ages welcome',
+      'Perfect for rainy days'
+    ]
+  },
+  {
+    id: 14,
+    name: 'Musical instruments',
+    description: 'Express yourself with our selection of musical instruments.',
+    image: '/images/facilities/musical-instruments.webp',
+    features: [
+      'Guitars available',
+      'Percussion instruments',
+      'Indoor jamming area',
+      'Evening sessions',
+      'All skill levels',
+      'Social music making'
+    ]
   }
 ]
 
@@ -208,26 +236,17 @@ export default function Facilities() {
         <div className="max-w-7xl mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
             {facilities.map((facility) => (
-              <div key={facility.id} className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
+              <div key={facility.id} className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden">
                 <div className="relative h-56">
                   <Image
                     src={facility.image}
                     alt={facility.name}
                     fill
-                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-4">
-                  <h2 className="text-xl font-bold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{facility.name}</h2>
-                  <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out mb-4 text-sm">{facility.description}</p>
-                  <div>
-                    <h3 className="font-semibold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out text-sm">Features:</h3>
-                    <ul className="list-disc pl-5 space-y-1">
-                      {facility.features.map((feature, index) => (
-                        <li key={`${facility.id}-feature-${index}`} className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out text-xs">{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h2 className="text-xl font-bold text-center text-[#202635]">{facility.name}</h2>
                 </div>
               </div>
             ))}
@@ -239,9 +258,9 @@ export default function Facilities() {
           <div className="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-6 dark:text-white text-center">General Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-semibold mb-4 dark:text-white">House Rules</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 inline-block text-left">
                   <li>• Quiet hours: 10 PM - 6 AM</li>
                   <li>• Keep common areas clean</li>
                   <li>• Label and store food properly</li>
@@ -249,9 +268,9 @@ export default function Facilities() {
                   <li>• No smoking indoors</li>
                 </ul>
               </div>
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 inline-block text-left">
                   <li>• Monday - Sunday: 7 AM - 10 PM</li>
                   <li>• Check-in: 2 PM - 9 PM</li>
                   <li>• Check-out: by 10 AM</li>

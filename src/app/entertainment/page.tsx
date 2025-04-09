@@ -95,7 +95,7 @@ export default function Entertainment() {
           </p>
           <Link 
             href="/booking"
-            className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
+            className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg transition-colors"
           >
             Get in Touch
           </Link>

@@ -1,7 +1,30 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const images = [
+  {
+    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-1.jpg',
+    alt: 'Kingfisher Trail Adventure',
+    description: 'Trail along the Touw River'
+  },
+  {
+    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-2.jpg',
+    alt: 'Kingfisher Trail Experience',
+    description: 'Waterfall destination'
+  },
+  {
+    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-3.jpg',
+    alt: 'Kingfisher Trail Journey',
+    description: 'River views'
+  },
+  {
+    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-4.jpg',
+    alt: 'Kingfisher Trail Views',
+    description: 'Swimming spots'
+  },
   {
     src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-1.jpg',
     alt: 'Kingfisher Trail Adventure',
@@ -25,6 +48,22 @@ const images = [
 ]
 
 export default function HalfCollaredKingfisherTrailPage() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const imagesPerPage = 8;
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+  const currentImages = images.slice(
+    currentPage * imagesPerPage,
+    (currentPage + 1) * imagesPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -49,44 +88,11 @@ export default function HalfCollaredKingfisherTrailPage() {
           Embark on a delightful 7.6-km out-and-back trail that winds its way through a serene, shaded wonderland. This moderately easy route, typically completed in around 3 hours, invites you to stroll along wooden boardwalk that meanders its way to a magical waterfall, perfect for a refreshing swim and moment of bliss. Popular among adventurers, runners, and wanderers alike, this charming path brims with life, offering a likely chance to cross paths with friendly folk as you explore its natural splendor.
           </p>
 
-          {/* Main Features */}
-          <div className="mt-12 mb-12">
-            <div className="grid grid-cols-9 gap-4">
-              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">7.6 km out-and-back</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">3 hours</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Moderate difficulty</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Wooden boardwalk</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Waterfall</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Swimming spots</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Bird watching</p>
-              </div>
-              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-            </div>
-          </div>
-
           {/* Gallery Grid */}
-          <div className="mb-12">
+          <div className="mt-12 mb-12">
             <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {images.map((image, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {currentImages.map((image, index) => (
                 <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src={image.src}
@@ -96,13 +102,62 @@ export default function HalfCollaredKingfisherTrailPage() {
                   />
                 </div>
               ))}
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    Coming Soon
-                  </div>
-                </div>
-              ))}
+            </div>
+            
+            {/* Gallery Navigation */}
+            <div className="flex justify-center items-center mt-6 gap-4">
+              <button 
+                onClick={prevPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Previous page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <span className="text-gray-700">
+                {currentPage + 1} of {totalPages}
+              </span>
+              <button 
+                onClick={nextPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Next page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Main Features - Moved to bottom */}
+          <div className="mt-12 mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
+            <div className="grid grid-cols-8 gap-4">
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">7.6 km out-and-back</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">3 hours</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Moderate difficulty</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Wooden boardwalk</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Waterfall</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Swimming spots</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Bird watching</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Shaded path</p>
+              </div>
             </div>
           </div>
         </div>
