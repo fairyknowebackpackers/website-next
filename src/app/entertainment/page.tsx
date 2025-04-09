@@ -37,7 +37,7 @@ export default function Entertainment() {
 
       {/* Description */}
       <div className="px-4">
-        <div className="max-w-5xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto">
             From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.
           </p>

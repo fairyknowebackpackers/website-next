@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import MouseGradientCard from '../components/MouseGradientCard'
 
 const roomTypes = [
   {
@@ -89,8 +90,8 @@ export default function Accommodation() {
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4 mb-12">
-        <p className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 mb-6">
+        <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300">
           Nestled in the heart of Wilderness, our enchanting backpackers offers a magical retreat with room for every wandering soul. 
           With cozy beds for up to 50 guests and a sprawling campsite that welcomes twice as many adventurers, 
           we've created a space where lifelong friendships and unforgettable memories are made.
@@ -107,7 +108,7 @@ export default function Accommodation() {
                 href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="group"
               >
-                <div className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
+                <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
                   <div className="relative w-full h-[250px]">
                     <Image
                       src={room.image}
@@ -134,7 +135,7 @@ export default function Accommodation() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </MouseGradientCard>
               </Link>
             ))}
           </div>

@@ -29,4 +29,12 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   min-height: 100vh;
+}
+
+.gradient-enter {
+  transition: background-image 0.3s ease-in;
+}
+
+.gradient-exit {
+  transition: background-image 1.5s ease-out;
 } 

@@ -1,30 +1,69 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const images = [
   {
     src: '/images/Adventures/Kayaking/kayaking-1.jpg',
     alt: 'Kayaking Adventure',
-    description: 'Kayaking on the Touw River'
+    description: 'Paddling through the lagoon'
   },
   {
     src: '/images/Adventures/Kayaking/kayaking-2.jpg',
     alt: 'Kayaking Experience',
-    description: 'Beautiful river views'
+    description: 'Exploring the waterways'
   },
   {
     src: '/images/Adventures/Kayaking/kayaking-3.jpg',
     alt: 'Kayaking Journey',
-    description: 'Peaceful river paddling'
+    description: 'Scenic views from the water'
   },
   {
     src: '/images/Adventures/Kayaking/kayaking-4.jpg',
-    alt: 'Kayaking Destination',
-    description: 'Waterfall destination'
+    alt: 'Kayaking View',
+    description: 'Wildlife spotting'
+  },
+  {
+    src: '/images/Adventures/Kayaking/kayaking-1.jpg',
+    alt: 'Kayaking Adventure',
+    description: 'Paddling through the lagoon'
+  },
+  {
+    src: '/images/Adventures/Kayaking/kayaking-2.jpg',
+    alt: 'Kayaking Experience',
+    description: 'Exploring the waterways'
+  },
+  {
+    src: '/images/Adventures/Kayaking/kayaking-3.jpg',
+    alt: 'Kayaking Journey',
+    description: 'Scenic views from the water'
+  },
+  {
+    src: '/images/Adventures/Kayaking/kayaking-4.jpg',
+    alt: 'Kayaking View',
+    description: 'Wildlife spotting'
   }
 ]
 
 export default function KayakingPage() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const imagesPerPage = 8;
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+  const currentImages = images.slice(
+    currentPage * imagesPerPage,
+    (currentPage + 1) * imagesPerPage
+  );
+
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -46,48 +85,14 @@ export default function KayakingPage() {
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
-          Set off on an unforgettable 4-hour adventure that seamlessly blends the exhilaration of kayaking with the serenity of a scenic hike. Paddle through the enchanting Touws river, surrounded by nature's splendor, before venturing on foot to a breathtaking waterfall—a reward that will leave you in awe. An ideal escape for those with a passion for exploration and a love for the outdoors.
-
+          Paddle your way through the serene waters of the Garden Route with our guided kayaking adventures. Explore hidden coves, spot local wildlife, and experience the magic of the lagoon from a unique perspective. Perfect for both beginners and experienced paddlers.
           </p>
 
-          {/* Main Features */}
-          <div className="mt-12 mb-12">
-            <div className="grid grid-cols-9 gap-4">
-              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">4 hours</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Moderate difficulty</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Available from 08:00 - 15:00</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Equipment provided</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Life jackets available</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Swim in rock pools</p>
-              </div>
-              <div className="bg-gray-700 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-600 transition-colors">
-                <p className="text-white text-xs">Waterfall</p>
-              </div>
-              <div className="white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-            </div>
-          </div>
-
           {/* Gallery Grid */}
-          <div className="mb-12">
+          <div className="mt-12 mb-12">
             <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {images.map((image, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {currentImages.map((image, index) => (
                 <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
                     src={image.src}
@@ -97,13 +102,62 @@ export default function KayakingPage() {
                   />
                 </div>
               ))}
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    Coming Soon
-                  </div>
-                </div>
-              ))}
+            </div>
+            
+            {/* Gallery Navigation */}
+            <div className="flex justify-center items-center mt-6 gap-4">
+              <button 
+                onClick={prevPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Previous page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <span className="text-gray-700">
+                {currentPage + 1} of {totalPages}
+              </span>
+              <button 
+                onClick={nextPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Next page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Main Features - Moved to bottom */}
+          <div className="mt-12 mb-12">
+            <h2 className="text-2xl font-bold mb-6">Features</h2>
+            <div className="grid grid-cols-8 gap-4">
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">2 hours</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Harder difficulty</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Elevated viewpoints</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Circular trail</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Beautiful scenery</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Expert guides</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Safety equipment provided</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Wildlife spotting</p>
+              </div>
             </div>
           </div>
         </div>

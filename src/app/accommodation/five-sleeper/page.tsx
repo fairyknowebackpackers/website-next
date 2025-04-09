@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 const images = [
   {
@@ -21,10 +24,48 @@ const images = [
     src: '/five-sleeper-4.jpg',
     alt: 'Five Sleeper View',
     description: 'Beautiful view from the room'
+  },
+  // Additional images for pagination
+  {
+    src: '/five-sleeper-5.jpg',
+    alt: 'Five Sleeper Additional View 1',
+    description: 'Additional view of the room'
+  },
+  {
+    src: '/five-sleeper-6.jpg',
+    alt: 'Five Sleeper Additional View 2',
+    description: 'Another view of the room'
+  },
+  {
+    src: '/five-sleeper-7.jpg',
+    alt: 'Five Sleeper Additional View 3',
+    description: 'More views of the room'
+  },
+  {
+    src: '/five-sleeper-8.jpg',
+    alt: 'Five Sleeper Additional View 4',
+    description: 'Final view of the room'
   }
 ]
 
 export default function FiveSleeperPage() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const imagesPerPage = 8;
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+  
+  const nextPage = () => {
+    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
+  };
+  
+  const prevPage = () => {
+    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
+  };
+  
+  const currentImages = images.slice(
+    currentPage * imagesPerPage,
+    (currentPage + 1) * imagesPerPage
+  );
+
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -44,83 +85,71 @@ export default function FiveSleeperPage() {
 
       {/* Content Section */}
       <div className="py-6 px-4">
-        <div className="max-w-5xl mx-auto px-4 mb-12 mt-3">
+        <div className="max-w-7xl mx-auto px-4 mb-12 mt-3">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
           Our five sleeper room is an ideal retreat for larger families or groups seeking comfort and privacy. A welcoming space to relax and create lasting memories together during your stay.
           </p>
 
-          {/* Main Features */}
+          {/* Gallery Grid */}
           <div className="mt-12 mb-12">
-            <div className="grid grid-cols-8 gap-4">
-              <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Double bed + bunk bed + single bed</p>
-              </div>
-              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Comfortable bedding</p>
-              </div>
-              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Shared bathrooms</p>
-              </div>
-              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Towels available</p>
-              </div>
-              <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Access to all facilities</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg text-center flex items-center justify-center h-24">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {currentImages.map((image, index) => (
+                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+            
+            {/* Gallery Navigation */}
+            <div className="flex justify-center items-center mt-6 gap-4">
+              <button 
+                onClick={prevPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Previous page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <span className="text-gray-700">
+                {currentPage + 1} of {totalPages}
+              </span>
+              <button 
+                onClick={nextPage}
+                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
+                aria-label="Next page"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           </div>
 
-          {/* Gallery Grid */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* Row 1 */}
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/five-sleeper-1.jpg"
-                  alt="Five Sleeper Area 1"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+          {/* Features */}
+          <div className="mt-12 mb-12">
+            <h2 className="text-2xl font-bold mb-6">Features</h2>
+            <div className="grid grid-cols-5 gap-4">
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Double bed + bunk bed + single bed</p>
               </div>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/five-sleeper-2.jpg"
-                  alt="Five Sleeper Area 2"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Comfortable bedding</p>
               </div>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/five-sleeper-3.jpg"
-                  alt="Five Sleeper Area 3"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Shared bathrooms</p>
               </div>
-              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src="/five-sleeper-4.jpg"
-                  alt="Five Sleeper Area 4"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Towels available</p>
               </div>
-              {/* Placeholder images */}
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="relative aspect-square rounded-lg overflow-hidden shadow-lg bg-gray-100 dark:bg-gray-800">
-                  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                    Coming Soon
-                  </div>
-                </div>
-              ))}
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Access to all facilities</p>
+              </div>
             </div>
           </div>
 
@@ -129,18 +158,21 @@ export default function FiveSleeperPage() {
             <h2 className="text-2xl font-bold mb-4">Rules of the Forest</h2>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
               <div className="mt-12 mb-12">
-                <div className="grid grid-cols-4 gap-4">
-                <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Quiet hours: 10PM - 6AM</p>
+                <div className="grid grid-cols-5 gap-4">
+                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                    <p className="text-gray-700 text-xs">Quiet hours: 10PM - 6AM</p>
                   </div>
-                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">No smoking inside</p>
+                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                    <p className="text-gray-700 text-xs">No smoking inside</p>
                   </div>
-                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">No private alcohol</p>
+                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                    <p className="text-gray-700 text-xs">No private alcohol</p>
                   </div>
-                  <div className="bg-[#F3F4F6] p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-[#E5E7EB] transition-colors">
-                <p className="text-[#202635] text-xs">Be friendly to fellow wanderers</p>
+                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                    <p className="text-gray-700 text-xs">Be friendly to fellow wanderers</p>
+                  </div>
+                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                    <p className="text-gray-700 text-xs">Respect the forest</p>
                   </div>
                 </div>
               </div>

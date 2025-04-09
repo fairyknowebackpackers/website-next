@@ -197,7 +197,7 @@ export default function Facilities() {
 
         {/* Description */}
         <div className="px-4">
-          <div className="max-w-5xl mx-auto px-4">
+          <div className="max-w-7xl mx-auto px-4">
             <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto">
               Everything you need to keep you clean, comfortable, connected, captivated, cozy and fed during your stay in the enchanted realms of the wood.
             </p>

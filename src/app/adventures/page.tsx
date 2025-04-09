@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import MouseGradientCard from '../components/MouseGradientCard'
 
 const activities = [
   {
@@ -122,8 +123,8 @@ export default function Adventure() {
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4 mb-12">
-        <p className="text-lg md:text-xl text-center text-gray-500 dark:text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 mb-6">
+        <p className="text-sm md:text-base text-center text-gray-500 dark:text-gray-300">
           Explore the forest on horseback, take flight up to the sky, or grab a kayak and gently float on by.
         </p>
       </div>
@@ -141,7 +142,7 @@ export default function Adventure() {
                   .replace(/[^a-z0-9-]/g, '')}`}
                 className="group"
               >
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44]">
+                <MouseGradientCard className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
                   <div className="relative h-64">
                     <Image
                       src={activity.image}
@@ -164,7 +165,7 @@ export default function Adventure() {
                       </ul>
                     </div>
                   </div>
-                </div>
+                </MouseGradientCard>
               </Link>
             ))}
           </div>
