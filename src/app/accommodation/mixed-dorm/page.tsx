@@ -133,7 +133,7 @@ export default function MixedDormPage() {
 
           {/* Features */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Features</h2>
+            <h2 className="text-2xl font-bold mb-6  text-center">Features</h2>
             <div className="grid grid-cols-6 gap-4">
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-700 text-xs">Bunk beds</p>
@@ -157,30 +157,26 @@ export default function MixedDormPage() {
           </div>
 
           {/* Rules of the Forest */}
-          <div className="mt-12">
-            <h2 className="text-2xl font-bold mb-4">Rules of the Forest</h2>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-              <div className="mt-12 mb-12">
-                <div className="grid grid-cols-6 gap-4">
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">Quiet hours: 10PM - 6AM</p>
-                  </div>
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">Keep your space tidy</p>
-                  </div>
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">No smoking inside</p>
-                  </div>
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">No private alcohol</p>
-                  </div>
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">Be friendly to fellow wanderers</p>
-                  </div>
-                  <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                    <p className="text-gray-700 text-xs">Respect the forest</p>
-                  </div>
-                </div>
+          <div className="mt-12 mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-center">Rules of the Forest</h2>
+            <div className="grid grid-cols-6 gap-4">
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Quiet hours: 10PM - 6AM</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Keep your space tidy</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">No smoking inside</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">No private alcohol</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Be friendly to fellow wanderers</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-700 text-xs">Respect the forest</p>
               </div>
             </div>
           </div>

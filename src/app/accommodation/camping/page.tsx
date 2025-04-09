@@ -44,17 +44,12 @@ const images = [
     src: '/camping-8.jpg',
     alt: 'Camping Additional View 4',
     description: 'Final view of the camping area'
-  },
-  {
-    src: '/camping-1.jpg',
-    alt: 'Camping Ground Overview',
-    description: 'Our spacious camping ground surrounded by nature'
   }
 ]
 
 export default function CampingPage() {
   const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 9;
+  const imagesPerPage = 8;
   const totalPages = Math.ceil(images.length / imagesPerPage);
   
   const nextPage = () => {
@@ -97,7 +92,7 @@ export default function CampingPage() {
           {/* Gallery Grid */}
           <div className="mt-12 mb-12">
             <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {currentImages.map((image, index) => (
                 <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
@@ -138,39 +133,32 @@ export default function CampingPage() {
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Features</h2>
-            <div className="grid grid-cols-8 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Private spots</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Communal spots</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Shaded spots</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Sunny spots</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Access to all facilities</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
+            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
+            <div className="flex justify-center">
+              <div className="grid grid-cols-5 gap-4">
+                <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                  <p className="text-gray-600 text-xs">Private spots</p>
+                </div>
+                <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                  <p className="text-gray-600 text-xs">Communal spots</p>
+                </div>
+                <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                  <p className="text-gray-600 text-xs">Shaded spots</p>
+                </div>
+                <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                  <p className="text-gray-600 text-xs">Sunny spots</p>
+                </div>
+                <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                  <p className="text-gray-600 text-xs">Access to all facilities</p>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Rules */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Rules of the Forest</h2>
-            <div className="grid grid-cols-8 gap-4">
+            <h2 className="text-2xl font-bold mb-6 text-center">Rules of the Forest</h2>
+            <div className="grid grid-cols-5 gap-4">
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Quiet hours: 10PM - 6AM</p>
               </div>
@@ -185,15 +173,6 @@ export default function CampingPage() {
               </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Respect the forest</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
               </div>
             </div>
           </div>

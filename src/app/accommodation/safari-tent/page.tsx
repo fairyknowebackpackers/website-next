@@ -134,8 +134,8 @@ export default function SafariTentPage() {
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Features</h2>
-            <div className="grid grid-cols-8 gap-4">
+            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
+            <div className="grid grid-cols-6 gap-4">
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Double bed</p>
               </div>
@@ -149,24 +149,18 @@ export default function SafariTentPage() {
                 <p className="text-gray-600 text-xs">Towels available</p>
               </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+                <p className="text-gray-600 text-xs">Outdoor garden area</p>
+              </div>
+              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Access to all facilities</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Outdoor seating area</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Mosquito net</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Solar lighting</p>
               </div>
             </div>
           </div>
 
           {/* Rules */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Rules of the Forest</h2>
-            <div className="grid grid-cols-8 gap-4">
+            <h2 className="text-2xl font-bold mb-6 text-center">Rules of the Forest</h2>
+            <div className="grid grid-cols-5 gap-4">
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Quiet hours: 10PM - 6AM</p>
               </div>
@@ -181,15 +175,6 @@ export default function SafariTentPage() {
               </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-600 text-xs">Respect the forest</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs"></p>
               </div>
             </div>
           </div>
