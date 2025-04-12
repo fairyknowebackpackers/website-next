@@ -2,28 +2,28 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+// Helper function to check if a path exists and is a directory
+function isValidDirectory(dirPath: string): boolean {
+  try {
+    return fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory();
+  } catch {
+    return false;
+  }
+}
+
+// Helper function to check if a file exists
+function fileExists(filePath: string): boolean {
+  try {
+    return fs.existsSync(filePath);
+  } catch {
+    return false;
+  }
+}
+
 export async function GET() {
   try {
     const images: { category: string; src: string; alt: string; fullSize: string; subcategory?: string; }[] = [];
     const baseDir = path.join(process.cwd(), 'public', 'images');
-
-    // Helper function to check if a path exists and is a directory
-    const isValidDirectory = (dirPath: string) => {
-      try {
-        return fs.existsSync(dirPath) && fs.statSync(dirPath).isDirectory();
-      } catch {
-        return false;
-      }
-    };
-
-    // Helper function to check if a file exists
-    const fileExists = (filePath: string) => {
-      try {
-        return fs.existsSync(filePath);
-      } catch {
-        return false;
-      }
-    };
 
     // Process accommodation images
     const accommodationDir = path.join(baseDir, 'accommodation');
@@ -39,12 +39,12 @@ export async function GET() {
         const thumbnailsPath = path.join(roomPath, 'thumbnails');
         const fullPath = path.join(roomPath, 'full');
 
-        if (isValidDirectory(thumbnailsPath) && isValidDirectory(fullPath)) {
+        if (isValidDirectory(thumbnailsPath)) {
           const thumbnailFiles = fs.readdirSync(thumbnailsPath);
           
           thumbnailFiles.forEach(file => {
             if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
-              // Check if both thumbnail and full-size images exist
+              // Check if thumbnail exists
               const thumbnailFile = path.join(thumbnailsPath, file);
               const fullSizeFile = path.join(fullPath, file);
 
@@ -109,12 +109,12 @@ export async function GET() {
         const thumbnailsPath = path.join(adventurePath, 'thumbnails');
         const fullPath = path.join(adventurePath, 'full');
 
-        if (isValidDirectory(thumbnailsPath) && isValidDirectory(fullPath)) {
+        if (isValidDirectory(thumbnailsPath)) {
           const thumbnailFiles = fs.readdirSync(thumbnailsPath);
           
           thumbnailFiles.forEach(file => {
             if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
-              // Check if both thumbnail and full-size images exist
+              // Check if thumbnail exists
               const thumbnailFile = path.join(thumbnailsPath, file);
               const fullSizeFile = path.join(fullPath, file);
 
@@ -148,12 +148,12 @@ export async function GET() {
       const thumbnailsPath = path.join(venueDir, 'thumbnails');
       const fullPath = path.join(venueDir, 'full');
       
-      if (isValidDirectory(thumbnailsPath) && isValidDirectory(fullPath)) {
+      if (isValidDirectory(thumbnailsPath)) {
         const thumbnailFiles = fs.readdirSync(thumbnailsPath);
         
         thumbnailFiles.forEach(file => {
           if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
-            // Check if both thumbnail and full-size images exist
+            // Check if thumbnail exists
             const thumbnailFile = path.join(thumbnailsPath, file);
             const fullSizeFile = path.join(fullPath, file);
 
@@ -185,12 +185,12 @@ export async function GET() {
       const thumbnailsPath = path.join(eventsDir, 'thumbnails');
       const fullPath = path.join(eventsDir, 'full');
       
-      if (isValidDirectory(thumbnailsPath) && isValidDirectory(fullPath)) {
+      if (isValidDirectory(thumbnailsPath)) {
         const thumbnailFiles = fs.readdirSync(thumbnailsPath);
         
         thumbnailFiles.forEach(file => {
           if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
-            // Check if both thumbnail and full-size images exist
+            // Check if thumbnail exists
             const thumbnailFile = path.join(thumbnailsPath, file);
             const fullSizeFile = path.join(fullPath, file);
 
@@ -222,12 +222,12 @@ export async function GET() {
       const thumbnailsPath = path.join(facilitiesDir, 'thumbnails');
       const fullPath = path.join(facilitiesDir, 'full');
       
-      if (isValidDirectory(thumbnailsPath) && isValidDirectory(fullPath)) {
+      if (isValidDirectory(thumbnailsPath)) {
         const thumbnailFiles = fs.readdirSync(thumbnailsPath);
         
         thumbnailFiles.forEach(file => {
           if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
-            // Check if both thumbnail and full-size images exist
+            // Check if thumbnail exists
             const thumbnailFile = path.join(thumbnailsPath, file);
             const fullSizeFile = path.join(fullPath, file);
 
