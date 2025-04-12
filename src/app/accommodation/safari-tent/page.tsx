@@ -181,7 +181,7 @@ export default function SafariTentPage() {
 
           {/* Book Now Button */}
           <div className="flex justify-center mt-8 mb-12">
-            <Link href="/booking" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors">
+            <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors">
               Book Now
             </Link>
           </div>

@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 
 const facilities = [
@@ -29,7 +31,7 @@ const facilities = [
   },
   {
     id: 3,
-    name: 'Self catering kitchen',
+    name: 'Self-catering kitchen',
     description: 'Fully equipped kitchen for guests who prefer to prepare their own meals.',
     image: '/images/facilities/self-catering-kitchen.webp',
     features: [
@@ -43,7 +45,7 @@ const facilities = [
   },
   {
     id: 4,
-    name: 'Tv lounge',
+    name: 'TV lounge',
     description: 'Comfortable indoor space to relax, watch movies, or catch up on sports.',
     image: '/images/facilities/tv-lounge.webp',
     features: [
@@ -164,8 +166,8 @@ const facilities = [
     ]
   },
   {
+    id: 13,
     name: 'Pet friendly',
-    title: "Pet friendly",
     description: "Four-footed furry friends welcome",
     features: [
       "Dogs welcome",
@@ -176,7 +178,7 @@ const facilities = [
     image: "/images/facilities/pet-friendly.webp"
   },
   {
-    id: 13,
+    id: 14,
     name: 'Board games',
     description: 'A collection of classic and modern board games for all ages.',
     image: '/images/facilities/board-games.webp',
@@ -190,7 +192,7 @@ const facilities = [
     ]
   },
   {
-    id: 14,
+    id: 15,
     name: 'Musical instruments',
     description: 'Express yourself with our selection of musical instruments.',
     image: '/images/facilities/musical-instruments.webp',
@@ -254,30 +256,58 @@ export default function Facilities() {
         </div>
 
         {/* Additional Information */}
-        <div className="mt-16">
-          <div className="bg-card-light dark:bg-card-dark p-8 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-bold mb-6 dark:text-white text-center">General Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4 dark:text-white">House Rules</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 inline-block text-left">
-                  <li>• Quiet hours: 10 PM - 6 AM</li>
-                  <li>• Keep common areas clean</li>
-                  <li>• Label and store food properly</li>
-                  <li>• Respect other guests</li>
-                  <li>• No smoking indoors</li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 inline-block text-left">
-                  <li>• Monday - Sunday: 7 AM - 10 PM</li>
-                  <li>• Check-in: 2 PM - 9 PM</li>
-                  <li>• Check-out: by 10 AM</li>
-                  <li>• After hours: Security on site</li>
-                  <li>• Emergency contact available 24/7</li>
-                </ul>
-              </div>
+        <div className="max-w-7xl mx-auto px-4 py-16">
+          <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">General Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">House Rules</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <li className="flex items-center justify-end">
+                  Quiet hours: 10 PM - 6 AM
+                  <span className="text-primary ml-2">•</span>
+                </li>
+                <li className="flex items-center justify-end">
+                  Keep common areas clean
+                  <span className="text-primary ml-2">•</span>
+                </li>
+                <li className="flex items-center justify-end">
+                  Label and store food properly
+                  <span className="text-primary ml-2">•</span>
+                </li>
+                <li className="flex items-center justify-end">
+                  Respect other guests
+                  <span className="text-primary ml-2">•</span>
+                </li>
+                <li className="flex items-center justify-end">
+                  No smoking indoors
+                  <span className="text-primary ml-2">•</span>
+                </li>
+              </ul>
+            </div>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Monday - Sunday: 7 AM - 10 PM
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Check-in: 2 PM - 9 PM
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Check-out: by 10 AM
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  After hours: Security on site
+                </li>
+                <li className="flex items-center">
+                  <span className="text-primary mr-2">•</span>
+                  Emergency contact available 24/7
+                </li>
+              </ul>
             </div>
           </div>
         </div>

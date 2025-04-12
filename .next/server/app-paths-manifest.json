@@ -23,8 +23,11 @@
   "/adventures/water-under-the-bridge/page": "app/adventures/water-under-the-bridge/page.js",
   "/adventures/wilderness-beach/page": "app/adventures/wilderness-beach/page.js",
   "/adventures/woodville-big-tree/page": "app/adventures/woodville-big-tree/page.js",
+  "/api/gallery/route": "app/api/gallery/route.js",
+  "/contact/page": "app/contact/page.js",
   "/entertainment/page": "app/entertainment/page.js",
   "/facilities/page": "app/facilities/page.js",
+  "/gallery/page": "app/gallery/page.js",
   "/page": "app/page.js",
   "/venue/page": "app/venue/page.js"
 }

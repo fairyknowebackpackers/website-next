@@ -7,7 +7,7 @@ import { useState } from 'react'
 const eventTypes = [
   {
     title: 'Weddings',
-    description: 'Host your special day in our enchanting garden venue. Perfect for intimate ceremonies and receptions surrounded by nature.',
+    description: 'Host your special day in our enchanted fairy forest. Entwine yourselves in a space perfect for intimate ceremonies and receptions entangled in the trees.',
     features: [
       'Garden ceremony space',
       'Reception area',
@@ -20,7 +20,7 @@ const eventTypes = [
   },
   {
     title: 'Private Parties',
-    description: 'Celebrate birthdays, anniversaries, or special occasions in our versatile spaces.',
+    description: 'Celebrate lifes most treasured birthdays, anniversaries, or special occasions with a touch of fairy magic.',
     features: [
       'Indoor and outdoor venues',
       'Bar service available',
@@ -33,7 +33,7 @@ const eventTypes = [
   },
   {
     title: 'Corporate Events',
-    description: 'Perfect for team building retreats, workshops, and small conferences in a unique setting.',
+    description: 'With the ideal setting  to inspire collaboration and creativity, our venue provides a calming backdrop for productive and memorable corporate gatherings.',
     features: [
       'Meeting spaces',
       'Team building activities',
@@ -46,7 +46,7 @@ const eventTypes = [
   },
   {
     title: 'Film Crews',
-    description: 'A magical setting for your next film or photo shoot. From fantasy films to nature documentaries, our location offers diverse backdrops.',
+    description: 'A magical setting for your next film or photo shoot. From fantasy films to nature documentaries, our location offers diverse and dense backdrops.',
     features: [
       'Diverse natural settings',
       'Power supply points',
@@ -186,7 +186,7 @@ export default function Venue() {
         </div>
 
         {/* Complete Package Section */}
-        <div className="bg-card-light dark:bg-card-dark rounded-lg p-8 mb-16">
+        <div className="rounded-lg p-8 mb-16">
           <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">
             Complete Package
           </h2>

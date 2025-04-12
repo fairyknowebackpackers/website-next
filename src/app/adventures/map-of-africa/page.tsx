@@ -134,28 +134,28 @@ export default function MapOfAfricaPage() {
           <div className="mt-12 mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
             <div className="grid grid-cols-8 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Iconic viewpoint</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">River bend</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Ocean views</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Beach panorama</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Wilderness views</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Sunset spot</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Photo opportunity</p>
               </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
+              <div className="bg-white p-4 text-center flex items-center justify-center h-24 relative overflow-hidden">
                 <p className="text-gray-700 text-xs">Natural landmark</p>
               </div>
             </div>

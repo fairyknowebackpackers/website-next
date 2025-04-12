@@ -141,6 +141,63 @@ export default function Accommodation() {
           </div>
         </div>
       </div>
+
+      {/* Additional Information */}
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">General Information</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">House Rules</h3>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+              <li className="flex items-center justify-end">
+                Quiet hours: 10 PM - 6 AM
+                <span className="text-primary ml-2">•</span>
+              </li>
+              <li className="flex items-center justify-end">
+                Keep common areas clean
+                <span className="text-primary ml-2">•</span>
+              </li>
+              <li className="flex items-center justify-end">
+                Label and store food properly
+                <span className="text-primary ml-2">•</span>
+              </li>
+              <li className="flex items-center justify-end">
+                Respect other guests
+                <span className="text-primary ml-2">•</span>
+              </li>
+              <li className="flex items-center justify-end">
+                No smoking indoors
+                <span className="text-primary ml-2">•</span>
+              </li>
+            </ul>
+          </div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+              <li className="flex items-center">
+                <span className="text-primary mr-2">•</span>
+                Monday - Sunday: 8AM - 8PM
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary mr-2">•</span>
+                Check-in: 2PM - 8PM
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary mr-2">•</span>
+                Check-out: 10AM
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary mr-2">•</span>
+                After hours: Security on site
+              </li>
+              <li className="flex items-center">
+                <span className="text-primary mr-2">•</span>
+                Emergency contact available 24/7
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   )
 } 

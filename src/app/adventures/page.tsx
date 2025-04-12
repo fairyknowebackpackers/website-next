@@ -176,32 +176,32 @@ export default function Adventure() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">Adventure Safely</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-4 dark:text-white">Safety Guidelines</h3>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">Safety Guidelines</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="flex items-center justify-end">
                 Always follow guide instructions
+                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="flex items-center justify-end">
                 Check weather conditions before activities
+                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="flex items-center justify-end">
                 Wear appropriate clothing and footwear
+                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="flex items-center justify-end">
                 Stay hydrated and carry water
+                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="flex items-center justify-end">
                 Inform staff of any medical conditions
+                <span className="text-primary ml-2">•</span>
               </li>
             </ul>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4 dark:text-white">What to Bring</h3>
             <ul className="space-y-2 text-gray-600 dark:text-gray-300">
               <li className="flex items-center">
@@ -210,7 +210,7 @@ export default function Adventure() {
               </li>
               <li className="flex items-center">
                 <span className="text-primary mr-2">•</span>
-                Water bottle
+                Water and snacks
               </li>
               <li className="flex items-center">
                 <span className="text-primary mr-2">•</span>

@@ -190,7 +190,7 @@ export default function SafariTentPage() {
 
           {/* Booking Button */}
           <div className="text-center mt-8">
-            <Link href="/booking">
+            <Link href="https://www.book.nightsbridge.com/21082">
               <button className="bg-[#0E7D73] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold hover:bg-[#073F3A] transition-colors">
                 Book Now
               </button>

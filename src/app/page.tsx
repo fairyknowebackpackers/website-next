@@ -111,8 +111,8 @@ export default function Home() {
           </div>
 
           {/* Additional Description */}
-          <div className="mt-12 mb-12 text-center">
-            <p className="text-lg md:text-xl text-gray-600">
+          <div className="mt-12 mb-12 text-center px-8 md:px-16 lg:px-24">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Your home away from home in the heart of Wilderness, offering comfortable accommodation,
               exciting adventures, and a vibrant social atmosphere.
             </p>
@@ -125,8 +125,8 @@ export default function Home() {
               Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.
             </p>
             <Link 
-              href="/booking" 
-              className="inline-block bg-primary hover:bg-secondary text-white px-8 py-3 rounded-lg transition-colors"
+              href="https://book.nightsbridge.com/21082" 
+              className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Book Your Stay Now
             </Link>
