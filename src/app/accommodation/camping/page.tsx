@@ -2,69 +2,53 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define gallery images with the new naming convention
+const galleryImages = [
   {
-    src: '/camping-1.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping1.webp',
     alt: 'Camping Ground Overview',
-    description: 'Our spacious camping ground surrounded by nature'
+    fullSize: '/images/accommodation/camping/full/camping1.webp'
   },
   {
-    src: '/camping-2.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping2.webp',
     alt: 'Tent Setup Area',
-    description: 'Level ground with grass for comfortable tent setup'
+    fullSize: '/images/accommodation/camping/full/camping2.webp'
   },
   {
-    src: '/camping-3.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping3.webp',
     alt: 'Shared Kitchen',
-    description: 'Fully equipped shared kitchen for campers'
+    fullSize: '/images/accommodation/camping/full/camping3.webp'
   },
   {
-    src: '/camping-4.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping4.webp',
     alt: 'Bathroom Facilities',
-    description: 'Clean and well-maintained shared bathroom facilities'
+    fullSize: '/images/accommodation/camping/full/camping4.webp'
   },
   {
-    src: '/camping-5.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping5.webp',
     alt: 'Camping Additional View 1',
-    description: 'Additional view of the camping area'
+    fullSize: '/images/accommodation/camping/full/camping5.webp'
   },
   {
-    src: '/camping-6.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping6.webp',
     alt: 'Camping Additional View 2',
-    description: 'Another view of the camping area'
+    fullSize: '/images/accommodation/camping/full/camping6.webp'
   },
   {
-    src: '/camping-7.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping7.webp',
     alt: 'Camping Additional View 3',
-    description: 'More views of the camping area'
+    fullSize: '/images/accommodation/camping/full/camping7.webp'
   },
   {
-    src: '/camping-8.jpg',
+    src: '/images/accommodation/camping/thumbnails/camping8.webp',
     alt: 'Camping Additional View 4',
-    description: 'Final view of the camping area'
+    fullSize: '/images/accommodation/camping/full/camping8.webp'
   }
 ]
 
 export default function CampingPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  
-  const nextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-  
-  const prevPage = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
-  };
-  
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -89,46 +73,13 @@ export default function CampingPage() {
           Pitch your tent and make yourself at home in our magical forest, where nature's embrace tucks you in at night. With access to all facilities, our camping area caters to every camper's preference, offering a mix of sunny clearings and shaded hideaways beneath the trees.
           </p>
 
-          {/* Gallery Grid */}
+          {/* Gallery */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+            <ImageGallery 
+              images={galleryImages} 
+              title="Gallery" 
+              imagesPerPage={8} 
+            />
           </div>
 
           {/* Main Features */}

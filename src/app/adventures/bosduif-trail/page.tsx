@@ -2,68 +2,98 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define gallery images with thumbnails and full-size versions
+const galleryImages = [
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-1.jpg',
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif1.webp',
     alt: 'Bosduif Trail Adventure',
-    description: 'Forest canopy views'
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif1.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-2.jpg',
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif2.webp',
     alt: 'Bosduif Trail Experience',
-    description: 'Indigenous forest path'
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif2.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-3.jpg',
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif3.webp',
     alt: 'Bosduif Trail Journey',
-    description: 'Trail markers'
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif3.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-4.jpg',
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif4.webp',
     alt: 'Bosduif Trail Views',
-    description: 'Forest wildlife'
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif4.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-1.jpg',
-    alt: 'Bosduif Trail Adventure',
-    description: 'Forest canopy views'
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif5.webp',
+    alt: 'Bosduif Trail Additional View 1',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif5.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-2.jpg',
-    alt: 'Bosduif Trail Experience',
-    description: 'Indigenous forest path'
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif6.webp',
+    alt: 'Bosduif Trail Additional View 2',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif6.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-3.jpg',
-    alt: 'Bosduif Trail Journey',
-    description: 'Trail markers'
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif7.webp',
+    alt: 'Bosduif Trail Additional View 3',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif7.webp'
   },
   {
-    src: '/images/Adventures/Bosduif Trail/bosduif-4.jpg',
-    alt: 'Bosduif Trail Views',
-    description: 'Forest wildlife'
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif8.webp',
+    alt: 'Bosduif Trail Additional View 4',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif8.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif9.webp',
+    alt: 'Bosduif Trail Additional View 5',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif9.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif10.webp',
+    alt: 'Bosduif Trail Additional View 6',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif10.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif11.webp',
+    alt: 'Bosduif Trail Additional View 7',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif11.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif12.webp',
+    alt: 'Bosduif Trail Additional View 8',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif12.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif13.webp',
+    alt: 'Bosduif Trail Additional View 9',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif13.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif14.webp',
+    alt: 'Bosduif Trail Additional View 10',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif14.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif15.webp',
+    alt: 'Bosduif Trail Additional View 11',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif15.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif16.webp',
+    alt: 'Bosduif Trail Additional View 12',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif16.webp'
+  },
+  {
+    src: '/images/adventures/bosduif-trail/thumbnails/bosduif17.webp',
+    alt: 'Bosduif Trail Additional View 13',
+    fullSize: '/images/adventures/bosduif-trail/full/bosduif17.webp'
   }
 ]
 
 export default function BosduifTrailPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -86,51 +116,12 @@ export default function BosduifTrailPage() {
       {/* Content Section */}
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
           Set off on an endearing 4.2-km loop trail that gracefully branches off from the Half Collared Kingfisher Trail. Ascend through a steep landscape to reach breathtaking views of the sea, rivers, and valleys. This enchanting path, moderately challenging and typically completed in 1.5 hours, invites bird lovers, hikers, and runners to immerse themselves in nature's beauty. Though cherished by many, the trail still offers tranquil moments of solitude during quieter hours, making it a truly magical escape.
           </p>
 
-          {/* Gallery Grid */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Gallery */}
+          <ImageGallery images={galleryImages} />
 
           {/* Main Features - Moved to bottom */}
           <div className="mt-12 mb-12">

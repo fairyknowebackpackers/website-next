@@ -2,70 +2,53 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define gallery images with thumbnails and full-size versions
+const galleryImages = [
   {
-    src: '/five-sleeper-1.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper1.webp',
     alt: 'Five Sleeper Overview',
-    description: 'Our spacious five sleeper room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper1.webp'
   },
   {
-    src: '/five-sleeper-2.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper2.webp',
     alt: 'Five Sleeper Interior',
-    description: 'Clean and comfortable room interior'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper2.webp'
   },
   {
-    src: '/five-sleeper-3.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper3.webp',
     alt: 'Five Sleeper Beds',
-    description: 'Double bed, bunk bed, and single bed'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper3.webp'
   },
   {
-    src: '/five-sleeper-4.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper4.webp',
     alt: 'Five Sleeper View',
-    description: 'Beautiful view from the room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper4.webp'
   },
-  // Additional images for pagination
   {
-    src: '/five-sleeper-5.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper5.webp',
     alt: 'Five Sleeper Additional View 1',
-    description: 'Additional view of the room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper5.webp'
   },
   {
-    src: '/five-sleeper-6.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper6.webp',
     alt: 'Five Sleeper Additional View 2',
-    description: 'Another view of the room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper6.webp'
   },
   {
-    src: '/five-sleeper-7.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper7.webp',
     alt: 'Five Sleeper Additional View 3',
-    description: 'More views of the room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper7.webp'
   },
   {
-    src: '/five-sleeper-8.jpg',
+    src: '/images/accommodation/five-sleeper/thumbnails/fivesleeper8.webp',
     alt: 'Five Sleeper Additional View 4',
-    description: 'Final view of the room'
+    fullSize: '/images/accommodation/five-sleeper/full/fivesleeper8.webp'
   }
 ]
 
 export default function FiveSleeperPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  
-  const nextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-  
-  const prevPage = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
-  };
-  
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -86,50 +69,12 @@ export default function FiveSleeperPage() {
       {/* Content Section */}
       <div className="py-6 px-4">
         <div className="max-w-7xl mx-auto px-4 mb-12 mt-3 text-center">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
           Our five sleeper room is an ideal retreat for larger families or groups seeking comfort and privacy. A welcoming space to relax and create lasting memories together during your stay.
           </p>
 
-          {/* Gallery Grid */}
-          <div className="mt-12 mb-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Gallery */}
+          <ImageGallery images={galleryImages} />
 
           {/* Features */}
           <div className="mt-12 mb-12">

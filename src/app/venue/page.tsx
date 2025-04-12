@@ -39,7 +39,7 @@ const eventTypes = [
   },
   {
     title: 'Corporate Events',
-    description: 'With the ideal setting  to inspire collaboration and creativity, our venue provides a calming backdrop for productive and memorable corporate gatherings.',
+    description: 'With the ideal setting  to inspire collaboration and creativity, our venue provides a calming backdrop for productive corporate gatherings.',
     features: [
       'Meeting spaces',
       'Team building activities',

@@ -7,63 +7,63 @@ const roomTypes = [
     id: 1,
     name: 'Camping',
     description: 'Bring your own tent and enjoy our beautiful campsite with access to shared facilities.',
-    image: '/images/accommodation/camping1.webp',
+    image: '/images/accommodation/camping-card.webp',
     features: ['Shared bathroom facilities', 'Kitchen access', 'Sunny or shaded camping grounds']
   },
   {
     id: 2,
     name: 'Safari Tent',
     description: 'Experience glamping in our comfortable safari tent, perfect for those who want to be close to nature.',
-    image: '/images/accommodation/safaritent1.webp',
+    image: '/images/accommodation/safari-tent-card.webp',
     features: ['Double bed', 'Shared bathroom facilities', 'Electricity']
   },
   {
     id: 3,
     name: 'Gypsy Caravan',
     description: 'Stay in our unique and charming gypsy caravan for a truly magical experience.',
-    image: '/images/accommodation/rondawel2.webp',
+    image: '/images/accommodation/gypsy-caravan-card.webp',
     features: ['Double bed + two sleeper couches', 'Secluded privacy', 'Electricity']
   },
   {
     id: 4,
     name: 'Mixed Dorm',
     description: 'Comfortable bunk beds in our mixed dormitory, perfect for solo travelers and backpackers.',
-    image: '/images/accommodation/dorm1.webp',
+    image: '/images/accommodation/mixed-dorm-card.webp',
     features: ['Bunk beds', 'Shared bathroom facilities', 'Towels available']
   },
   {
     id: 5,
     name: 'Twin Room',
     description: 'Cozy room with two single beds, ideal for friends traveling together.',
-    image: '/images/accommodation/twin1.webp',
+    image: '/images/accommodation/twin-room-card.webp',
     features: ['Two single beds', 'Shared bathroom facilities', 'Fresh linen']
   },
   {
     id: 6,
     name: 'Family Room',
     description: 'Spacious room perfect for families, featuring multiple beds and shared facilities.',
-    image: '/images/accommodation/family1.webp',
+    image: '/images/accommodation/family-room-card.webp',
     features: ['Double bed + bunk bed', 'Shared bathroom facilities', 'Family friendly']
   },
   {
     id: 7,
     name: 'Five Sleeper',
     description: 'Large room that comfortably accommodates up to five people, perfect for groups or families.',
-    image: '/images/accommodation/fivesleeper1.webp',
+    image: '/images/accommodation/five-sleeper-card.webp',
     features: ['Double bed + bunk bed + single bed', 'Shared bathroom facilities', 'Spacious layout']
   },
   {
     id: 8,
     name: 'Double En-suite',
     description: 'Private room with a queen size bed and en-suite bathroom for added comfort.',
-    image: '/images/accommodation/doubleensuite1.webp',
+    image: '/images/accommodation/double-en-suite-card.webp',
     features: ['Queen bed', 'Private bathroom', 'Extra comfort']
   },
   {
     id: 9,
     name: 'Family En-suite Rondawel',
     description: 'Traditional round African house with modern amenities, perfect for families seeking a unique stay.',
-    image: '/images/accommodation/rondawel1.webp',
+    image: '/images/accommodation/family-en-suite-rondawel-card.webp',
     features: ['Queen bed + bunk bed', 'Private bathroom', 'Secluded privacy']
   }
 ]
@@ -138,63 +138,6 @@ export default function Accommodation() {
                 </MouseGradientCard>
               </Link>
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Additional Information */}
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">General Information</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">House Rules</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li className="flex items-center justify-end">
-                Quiet hours: 10 PM - 6 AM
-                <span className="text-primary ml-2">•</span>
-              </li>
-              <li className="flex items-center justify-end">
-                Keep common areas clean
-                <span className="text-primary ml-2">•</span>
-              </li>
-              <li className="flex items-center justify-end">
-                Label and store food properly
-                <span className="text-primary ml-2">•</span>
-              </li>
-              <li className="flex items-center justify-end">
-                Respect other guests
-                <span className="text-primary ml-2">•</span>
-              </li>
-              <li className="flex items-center justify-end">
-                No smoking indoors
-                <span className="text-primary ml-2">•</span>
-              </li>
-            </ul>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
-                Monday - Sunday: 8AM - 8PM
-              </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
-                Check-in: 2PM - 8PM
-              </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
-                Check-out: 10AM
-              </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
-                After hours: Security on site
-              </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
-                Emergency contact available 24/7
-              </li>
-            </ul>
           </div>
         </div>
       </div>

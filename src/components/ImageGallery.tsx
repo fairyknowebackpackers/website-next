@@ -17,7 +17,7 @@ interface ImageGalleryProps {
 
 export default function ImageGallery({ 
   images, 
-  title = "Gallery", 
+  title, 
   imagesPerPage = 8 
 }: ImageGalleryProps) {
   const [currentPage, setCurrentPage] = useState(0);

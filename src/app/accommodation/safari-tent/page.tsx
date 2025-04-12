@@ -2,70 +2,53 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define gallery images with thumbnails and full-size versions
+const galleryImages = [
   {
-    src: '/safari-tent-1.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent1.webp',
     alt: 'Safari Tent Overview',
-    description: 'Our cozy safari tent nestled in nature'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent1.webp'
   },
   {
-    src: '/safari-tent-2.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent2.webp',
     alt: 'Safari Tent Interior',
-    description: 'Comfortable double bed inside the tent'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent2.webp'
   },
   {
-    src: '/safari-tent-3.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent3.webp',
     alt: 'Safari Tent Exterior',
-    description: 'Relaxing outdoor seating area'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent3.webp'
   },
   {
-    src: '/safari-tent-4.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent4.webp',
     alt: 'Safari Tent Night',
-    description: 'Magical evening atmosphere'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent4.webp'
   },
-  // Additional images for pagination
   {
-    src: '/safari-tent-5.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent5.webp',
     alt: 'Safari Tent Additional View 1',
-    description: 'Additional view of the safari tent'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent5.webp'
   },
   {
-    src: '/safari-tent-6.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent6.webp',
     alt: 'Safari Tent Additional View 2',
-    description: 'Another view of the safari tent'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent6.webp'
   },
   {
-    src: '/safari-tent-7.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent7.webp',
     alt: 'Safari Tent Additional View 3',
-    description: 'More views of the safari tent'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent7.webp'
   },
   {
-    src: '/safari-tent-8.jpg',
+    src: '/images/accommodation/safari-tent/thumbnails/safaritent8.webp',
     alt: 'Safari Tent Additional View 4',
-    description: 'Final view of the safari tent'
+    fullSize: '/images/accommodation/safari-tent/full/safaritent8.webp'
   }
 ]
 
 export default function SafariTentPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  
-  const nextPage = () => {
-    setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-  };
-  
-  const prevPage = () => {
-    setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
-  };
-  
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -86,51 +69,12 @@ export default function SafariTentPage() {
       {/* Content Section */}
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
           Immerse yourself in the ideal blend of camping and comfort with our charming safari tent. A cozy double bed and all the essentials needed to create an unforgettable stay amidst nature's splendor.
           </p>
 
-          {/* Gallery Grid */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Gallery */}
+          <ImageGallery images={galleryImages} />
 
           {/* Main Features */}
           <div className="mt-12 mb-12">
