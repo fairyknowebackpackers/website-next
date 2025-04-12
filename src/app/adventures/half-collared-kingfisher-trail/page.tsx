@@ -2,68 +2,173 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define the gallery images
+const galleryImages = [
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-1.jpg',
-    alt: 'Kingfisher Trail Adventure',
-    description: 'Trail along the Touw River'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf1.webp',
+    alt: 'Half Collared Kingfisher Trail 1',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf1.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-2.jpg',
-    alt: 'Kingfisher Trail Experience',
-    description: 'Waterfall destination'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf2.webp',
+    alt: 'Half Collared Kingfisher Trail 2',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf2.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-3.jpg',
-    alt: 'Kingfisher Trail Journey',
-    description: 'River views'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf3.webp',
+    alt: 'Half Collared Kingfisher Trail 3',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf3.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-4.jpg',
-    alt: 'Kingfisher Trail Views',
-    description: 'Swimming spots'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf4.webp',
+    alt: 'Half Collared Kingfisher Trail 4',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf4.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-1.jpg',
-    alt: 'Kingfisher Trail Adventure',
-    description: 'Trail along the Touw River'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf5.webp',
+    alt: 'Half Collared Kingfisher Trail 5',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf5.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-2.jpg',
-    alt: 'Kingfisher Trail Experience',
-    description: 'Waterfall destination'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf6.webp',
+    alt: 'Half Collared Kingfisher Trail 6',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf6.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-3.jpg',
-    alt: 'Kingfisher Trail Journey',
-    description: 'River views'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf7.webp',
+    alt: 'Half Collared Kingfisher Trail 7',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf7.webp'
   },
   {
-    src: '/images/Adventures/Half Collared Kingfisher Trail/kingfisher-4.jpg',
-    alt: 'Kingfisher Trail Views',
-    description: 'Swimming spots'
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf8.webp',
+    alt: 'Half Collared Kingfisher Trail 8',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf8.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf9.webp',
+    alt: 'Half Collared Kingfisher Trail 9',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf9.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf10.webp',
+    alt: 'Half Collared Kingfisher Trail 10',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf10.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf11.webp',
+    alt: 'Half Collared Kingfisher Trail 11',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf11.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf12.webp',
+    alt: 'Half Collared Kingfisher Trail 12',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf12.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf13.webp',
+    alt: 'Half Collared Kingfisher Trail 13',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf13.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf14.webp',
+    alt: 'Half Collared Kingfisher Trail 14',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf14.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf15.webp',
+    alt: 'Half Collared Kingfisher Trail 15',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf15.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf16.webp',
+    alt: 'Half Collared Kingfisher Trail 16',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf16.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf17.webp',
+    alt: 'Half Collared Kingfisher Trail 17',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf17.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf18.webp',
+    alt: 'Half Collared Kingfisher Trail 18',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf18.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf19.webp',
+    alt: 'Half Collared Kingfisher Trail 19',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf19.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf20.webp',
+    alt: 'Half Collared Kingfisher Trail 20',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf20.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf21.webp',
+    alt: 'Half Collared Kingfisher Trail 21',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf21.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf22.webp',
+    alt: 'Half Collared Kingfisher Trail 22',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf22.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf23.webp',
+    alt: 'Half Collared Kingfisher Trail 23',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf23.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf24.webp',
+    alt: 'Half Collared Kingfisher Trail 24',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf24.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf25.webp',
+    alt: 'Half Collared Kingfisher Trail 25',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf25.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf26.webp',
+    alt: 'Half Collared Kingfisher Trail 26',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf26.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf27.webp',
+    alt: 'Half Collared Kingfisher Trail 27',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf27.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf28.webp',
+    alt: 'Half Collared Kingfisher Trail 28',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf28.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf29.webp',
+    alt: 'Half Collared Kingfisher Trail 29',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf29.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf30.webp',
+    alt: 'Half Collared Kingfisher Trail 30',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf30.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf31.webp',
+    alt: 'Half Collared Kingfisher Trail 31',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf31.webp'
+  },
+  {
+    src: '/images/adventures/half-collared-kingfisher-trail/thumbnails/kf32.webp',
+    alt: 'Half Collared Kingfisher Trail 32',
+    fullSize: '/images/adventures/half-collared-kingfisher-trail/full/kf32.webp'
   }
 ]
 
 export default function HalfCollaredKingfisherTrailPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -88,46 +193,13 @@ export default function HalfCollaredKingfisherTrailPage() {
           Embark on a delightful 7.6-km out-and-back trail that winds its way through a serene, shaded wonderland. This moderately easy route, typically completed in around 3 hours, invites you to stroll along wooden boardwalk that meanders its way to a magical waterfall, perfect for a refreshing swim and moment of bliss. Popular among adventurers, runners, and wanderers alike, this charming path brims with life, offering a likely chance to cross paths with friendly folk as you explore its natural splendor.
           </p>
 
-          {/* Gallery Grid */}
+          {/* Gallery */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+            <ImageGallery 
+              images={galleryImages} 
+              title="Gallery" 
+              imagesPerPage={8} 
+            />
           </div>
 
           {/* Main Features - Moved to bottom */}

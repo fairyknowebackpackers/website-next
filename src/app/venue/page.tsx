@@ -179,6 +179,7 @@ export default function Venue() {
           fill
           className="object-cover"
           priority
+          unoptimized={false}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
@@ -194,7 +195,7 @@ export default function Venue() {
           {/* Introduction */}
           <div className="text-center mb-16">
             <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-center">
-            Whether you're planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
+            Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
             </p>
           </div>
 
@@ -208,6 +209,7 @@ export default function Venue() {
                     alt={event.title}
                     fill
                     className="object-cover"
+                    unoptimized={false}
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -267,6 +269,7 @@ export default function Venue() {
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    unoptimized={false}
                   />
                 </div>
               );
@@ -352,6 +355,7 @@ export default function Venue() {
                   className="object-contain max-w-full max-h-full w-auto h-auto"
                   priority
                   quality={100}
+                  unoptimized={false}
                   onClick={(e) => e.stopPropagation()}
                 />
               </div>
