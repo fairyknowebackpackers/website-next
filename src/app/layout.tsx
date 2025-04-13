@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import SEO from '../components/Seo'
-import MobileMenu from '../components/MobileMenu'
+import MobileMenu from './components/MobileMenu'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 const accommodationLinks = [
