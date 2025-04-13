@@ -1,14 +1,1 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js",
-  "/accommodation/five-sleeper/page": "app/accommodation/five-sleeper/page.js",
-  "/accommodation/gypsy-caravan/page": "app/accommodation/gypsy-caravan/page.js",
-  "/accommodation/page": "app/accommodation/page.js",
-  "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js",
-  "/adventures/map-of-africa/page": "app/adventures/map-of-africa/page.js",
-  "/adventures/page": "app/adventures/page.js",
-  "/entertainment/page": "app/entertainment/page.js",
-  "/facilities/page": "app/facilities/page.js",
-  "/page": "app/page.js",
-  "/venue/page": "app/venue/page.js"
-}
+{}
