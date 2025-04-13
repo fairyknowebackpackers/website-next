@@ -1,10 +1,8 @@
 {
-  "/adventures/woodville-big-tree/page": "app/adventures/woodville-big-tree/page.js",
   "/adventures/bosduif-trail/page": "app/adventures/bosduif-trail/page.js",
   "/adventures/half-collared-kingfisher-trail/page": "app/adventures/half-collared-kingfisher-trail/page.js",
   "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js",
   "/gallery/page": "app/gallery/page.js",
-  "/api/gallery/route": "app/api/gallery/route.js",
-  "/facilities/page": "app/facilities/page.js",
-  "/venue/page": "app/venue/page.js"
+  "/venue/page": "app/venue/page.js",
+  "/api/gallery/route": "app/api/gallery/route.js"
 }
