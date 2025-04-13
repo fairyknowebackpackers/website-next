@@ -4,47 +4,47 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ImageGallery from '@/components/ImageGallery'
 
-// Define gallery images with thumbnails and full-size versions
+// Define gallery images with the new naming convention
 const galleryImages = [
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan1.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy1.webp',
     alt: 'Gypsy Caravan Overview',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan1.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy1.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan2.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy2.webp',
     alt: 'Gypsy Caravan Interior',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan2.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy2.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan3.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy3.webp',
     alt: 'Gypsy Caravan Bed',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan3.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy3.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan4.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy4.webp',
     alt: 'Gypsy Caravan View',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan4.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy4.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan5.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy5.webp',
     alt: 'Gypsy Caravan Additional View 1',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan5.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy5.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan6.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy6.webp',
     alt: 'Gypsy Caravan Additional View 2',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan6.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy6.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan7.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy7.webp',
     alt: 'Gypsy Caravan Additional View 3',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan7.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy7.webp'
   },
   {
-    src: '/images/accommodation/gypsy-caravan/thumbnails/caravan8.webp',
+    src: '/images/accommodation/gypsy-caravan/thumbnails/gypsy8.webp',
     alt: 'Gypsy Caravan Additional View 4',
-    fullSize: '/images/accommodation/gypsy-caravan/full/caravan8.webp'
+    fullSize: '/images/accommodation/gypsy-caravan/full/gypsy8.webp'
   }
 ]
 
@@ -52,7 +52,7 @@ export default function GypsyCaravanPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+      <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full bg-gray-900">
         <Image
           src="/images/accommodation/banners/caravan-banner.webp"
           alt="Gypsy Caravan"
@@ -62,73 +62,80 @@ export default function GypsyCaravanPage() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Gypsy Caravan</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">Gypsy Caravan</h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-6 px-4">
-        <div className="max-w-7xl mx-auto px-4 mb-12 mt-3">
+      <div className="py-12 px-4">
+        <div className="max-w-7xl mx-auto">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
             Experience a unique stay in our charming gypsy caravan, fitted with a double bed and two single sleeper couches, nestled in a secluded cozy corner of the forest.
           </p>
 
           {/* Gallery */}
-          <ImageGallery images={galleryImages} />
-
-          {/* Features */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
-            <div className="grid grid-cols-6 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Three-quarter bed</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Two sleeper couches</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Comfortable bedding</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Shared bathrooms</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Towels available</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Access to facilities</p>
+            <ImageGallery 
+              images={galleryImages} 
+              imagesPerPage={8} 
+            />
+          </div>
+
+          {/* Features and Rules */}
+          <div className="mt-12 mb-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">What's Included</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p>Three-quarter bed</p>
+                    <p>Two sleeper couches</p>
+                    <p>Comfortable bedding</p>
+                    <p>Towels available</p>
+                    <p>Access to facilities</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-center">Rules of the Forest</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p className="text-center">Quiet hours: 10PM - 6AM</p>
+                    <p className="text-center">No smoking inside</p>
+                    <p className="text-center">No private alcohol</p>
+                    <p className="text-center">Be friendly to fellow wanderers</p>
+                    <p className="text-center">Respect the forest</p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-right">Shared Facilities</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p className="text-right">Bathrooms</p>
+                    <p className="text-right">Hot showers</p>
+                    <p className="text-right">Common kitchen area</p>
+                    <p className="text-right">WiFi in common areas</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Rules of the Forest */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Rules of the Forest</h2>
-            <div className="grid grid-cols-5 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Quiet hours: 10PM - 6AM</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">No smoking inside</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">No private alcohol</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Be friendly to fellow wanderers</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Respect the forest</p>
-              </div>
-            </div>
+          {/* Logo Section */}
+          <div className="mt-16 mb-8 flex justify-center">
+            <Image
+              src="/images/home/logo.webp"
+              alt="Fairy Knowe Backpackers Logo"
+              width={400}
+              height={400}
+              className="w-auto h-auto"
+              priority
+            />
           </div>
 
-          {/* Booking Button */}
-          <div className="text-center mt-8">
-            <Link href="https://book.nightsbridge.com/21082">
-              <button className="bg-[#0E7D73] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold hover:bg-[#073F3A] transition-colors">
-                Book Now
-              </button>
+          {/* Book Now Button */}
+          <div className="flex justify-center mt-8 mb-12">
+            <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors">
+              Book Now
             </Link>
           </div>
         </div>

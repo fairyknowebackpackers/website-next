@@ -52,7 +52,7 @@ export default function SafariTentPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+      <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full bg-gray-900">
         <Image
           src="/images/accommodation/banners/safari-tent-banner.webp"
           alt="Safari Tent Banner"
@@ -62,7 +62,7 @@ export default function SafariTentPage() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Safari Tent</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">Safari Tent</h1>
         </div>
       </div>
 
@@ -70,57 +70,66 @@ export default function SafariTentPage() {
       <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
-          Immerse yourself in the ideal blend of camping and comfort with our charming safari tent. A cozy double bed and all the essentials needed to create an unforgettable stay amidst nature's splendor.
+            Immerse yourself in the ideal blend of camping and comfort with our charming safari tent. A cozy double bed and all the essentials needed to create an unforgettable stay amidst nature's splendor.
           </p>
 
           {/* Gallery */}
-          <ImageGallery images={galleryImages} />
-
-          {/* Main Features */}
           <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
-            <div className="grid grid-cols-6 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Double bed</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Comfortable bedding</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Shared bathrooms</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Towels available</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Outdoor garden area</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Access to all facilities</p>
+            <ImageGallery 
+              images={galleryImages} 
+              imagesPerPage={8} 
+            />
+          </div>
+
+          {/* Features and Rules */}
+          <div className="mt-12 mb-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-3 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">What's Included</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p>Double bed</p>
+                    <p>Comfortable bedding</p>
+                    <p>Towels available</p>
+                    <p>Electricity in the tent</p>
+                    <p>Access to all facilities</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-center">Rules of the Forest</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p className="text-center">Quiet hours: 10PM - 6AM</p>
+                    <p className="text-center">Keep your space tidy</p>
+                    <p className="text-center">No private alcohol</p>
+                    <p className="text-center">Be friendly to fellow wanderers</p>
+                    <p className="text-center">Respect the forest</p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-right">Shared Facilities</h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-300">
+                    <p className="text-right">Bathrooms</p>
+                    <p className="text-right">Hot showers</p>
+                    <p className="text-right">Common kitchen area</p>
+                    <p className="text-right">WiFi in common areas</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Rules */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Rules of the Forest</h2>
-            <div className="grid grid-cols-5 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Quiet hours: 10PM - 6AM</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Keep your space tidy</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">No private alcohol</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Be friendly to fellow wanderers</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-600 text-xs">Respect the forest</p>
-              </div>
-            </div>
+          {/* Logo Section */}
+          <div className="mt-16 mb-8 flex justify-center">
+            <Image
+              src="/images/home/logo.webp"
+              alt="Fairy Knowe Backpackers Logo"
+              width={400}
+              height={400}
+              className="w-auto h-auto"
+              priority
+            />
           </div>
 
           {/* Book Now Button */}

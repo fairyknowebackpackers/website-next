@@ -172,7 +172,7 @@ export default function Venue() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
+      <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mb-8 sm:mb-12 bg-gray-900">
         <Image
           src="/images/venue-hire/venue-hire-banner.webp"
           alt="Venue Hire at Fairy Knowe"
@@ -182,7 +182,7 @@ export default function Venue() {
           unoptimized={false}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Venue Hire
           </h1>
         </div>
@@ -190,189 +190,153 @@ export default function Venue() {
 
       {/* Main Content */}
       <div>
-        {/* Introduction and Event Types - max-w-5xl */}
-        <div className="max-w-5xl mx-auto px-4">
+        {/* Introduction and Event Types */}
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
           {/* Introduction */}
-          <div className="text-center mb-16">
-            <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto text-center">
-            Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
+          <div className="text-center mb-12 sm:mb-16">
+            <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto text-center text-sm sm:text-base">
+              Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
             </p>
           </div>
 
           {/* Event Types Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-16">
             {eventTypes.map((event, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden flex flex-col">
-                <div className="relative h-64">
+              <div 
+                key={index}
+                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="relative h-48 sm:h-56">
                   <Image
                     src={event.image}
                     alt={event.title}
                     fill
                     className="object-cover"
-                    unoptimized={false}
                   />
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <h2 className="text-2xl font-bold mb-2 dark:text-white">{event.title}</h2>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
-                  <div className="mt-auto">
-                    <h3 className="font-semibold mb-2 dark:text-white">Features:</h3>
-                    <ul className="grid grid-cols-2 gap-2">
-                      {event.features.map((feature, index) => (
-                        <li key={index} className="text-gray-600 dark:text-gray-300 text-sm flex items-center">
-                          <span className="text-primary mr-2">•</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
+                    {event.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {event.features.map((feature, featureIndex) => (
+                      <li 
+                        key={featureIndex}
+                        className="flex items-center text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                      >
+                        <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Complete Package Section */}
-          <div className="rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">
-              Complete Package
+          {/* Wedding Gallery */}
+          <div className="mb-16">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+              Wedding Gallery
             </h2>
-            <div className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-center">
-              <p className="mb-6">
-                Make your event truly special by booking our entire venue. With accommodation for up to 50 guests,
-                you can turn your celebration into a memorable weekend getaway.
-              </p>
-              <p className="mb-8">
-                Our unique setting in Wilderness provides the perfect backdrop for photos and creates an 
-                atmosphere that your guests will never forget.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Wedding Gallery - max-w-7xl */}
-        <div className="max-w-7xl mx-auto px-4 mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
-            Wedding Gallery
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {currentImages.map((image, index) => {
-              const globalIndex = currentPage * imagesPerPage + index;
-              return (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
+              {currentImages.map((image, index) => (
                 <div 
-                  key={index} 
-                  className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
-                  onClick={() => openImage(image, globalIndex)}
+                  key={index}
+                  className="relative aspect-square cursor-pointer group"
+                  onClick={() => openImage(image, currentPage * imagesPerPage + index)}
                 >
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    unoptimized={false}
+                    className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-lg" />
                 </div>
-              );
-            })}
-          </div>
-          
-          {/* Gallery Navigation */}
-          <div className="flex justify-center items-center mt-6 gap-4">
-            <button 
-              onClick={prevPage}
-              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-              aria-label="Previous page"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <span className="text-gray-700">
-              {currentPage + 1} of {totalPages}
-            </span>
-            <button 
-              onClick={nextPage}
-              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-              aria-label="Next page"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Image Modal */}
-        {selectedImage && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-0"
-            onClick={closeImage}
-          >
-            <div className="relative w-full h-full flex items-center justify-center">
+              ))}
+            </div>
+            
+            {/* Pagination Controls */}
+            <div className="flex justify-center items-center mt-6 space-x-4">
               <button
-                className="absolute top-6 right-6 text-white hover:text-[#00FF7F] transition-colors z-10"
-                onClick={closeImage}
+                onClick={prevPage}
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-              
-              {/* Left Navigation Button */}
-              <button
-                className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] p-4 rounded-full transition-colors z-10"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  prevImage();
-                }}
-                aria-label="Previous image"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
-              {/* Right Navigation Button */}
+              <span className="text-sm text-gray-600 dark:text-gray-300">
+                Page {currentPage + 1} of {totalPages}
+              </span>
               <button
-                className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] p-4 rounded-full transition-colors z-10"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  nextImage();
-                }}
-                aria-label="Next image"
+                onClick={nextPage}
+                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-              
-              <div className="w-full h-full flex items-center justify-center">
-                <Image
-                  src={selectedImage.fullSize}
-                  alt={selectedImage.alt}
-                  width={2560}
-                  height={1440}
-                  className="object-contain max-w-full max-h-full w-auto h-auto"
-                  priority
-                  quality={100}
-                  unoptimized={false}
-                  onClick={(e) => e.stopPropagation()}
-                />
-              </div>
             </div>
           </div>
-        )}
-
-        {/* Call to Action - max-w-5xl */}
-        <div className="max-w-5xl mx-auto px-4 text-center mb-16">
-          <Link 
-            href="/booking"
-            className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg transition-colors"
-          >
-            Enquire Now
-          </Link>
         </div>
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={closeImage}
+        >
+          <div className="relative w-full h-full max-w-6xl max-h-[90vh] flex flex-col">
+            <button
+              onClick={closeImage}
+              className="absolute top-4 right-4 p-2 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors"
+            >
+              <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            
+            <div className="relative flex-1">
+              <Image
+                src={selectedImage.fullSize}
+                alt={selectedImage.alt}
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <div className="flex justify-between items-center mt-4">
+              <button
+                onClick={prevImage}
+                className="p-3 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors"
+              >
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <span className="text-white text-sm">
+                {selectedImageIndex + 1} of {weddingImages.length}
+              </span>
+              <button
+                onClick={nextImage}
+                className="p-3 rounded-full bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors"
+              >
+                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 } 

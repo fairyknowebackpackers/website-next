@@ -167,7 +167,7 @@ export async function GET() {
                 ? `/images/venue-hire/full/${file}`
                 : `/images/venue-hire/thumbnails/${file}`;
               
-              images.push({
+            images.push({
                 category: 'Venue',
                 src: `/images/venue-hire/thumbnails/${file}`,
                 alt: altText,

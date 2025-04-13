@@ -223,13 +223,13 @@ export default function HalfCollaredKingfisherTrailPage() {
               </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-700 text-xs">Swimming spots</p>
-              </div>
+                </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-700 text-xs">Bird watching</p>
-              </div>
+                  </div>
               <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
                 <p className="text-gray-700 text-xs">Shaded path</p>
-              </div>
+                </div>
             </div>
           </div>
         </div>
