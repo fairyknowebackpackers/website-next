@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12 bg-gray-100">
+      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12 bg-white">
         <Image
           src="/images/home/home-banner-mobile.webp"
           alt="Welcome to Fairy Knowe Backpackers"
