@@ -77,7 +77,7 @@ export default function BrownHoodedKingfisherTrailPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
         <Image
           src="/images/adventures/banners/brown-hooded-kingfisher-trail-banner.webp"
           alt="Brown Hooded Kingfisher Trail"
@@ -87,51 +87,106 @@ export default function BrownHoodedKingfisherTrailPage() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Brown Hooded Kingfisher Trail</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font text-center px-4">Brown Hooded Kingfisher Trail</h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-12 px-4">
+      <div className="py-8 md:py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-4xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto text-sm md:text-base">
           Embark on a teeming 4.2-km out-and-back journey along the delightful Duiwe River. This quick and easy trail, typically completed in about 1 hour and 20 minutes, invites adventurers on a short and sweet stroll along the stream. Meandering across the river on well-crafted crossings, the path leads to a little rockpool waterfall - a refreshing haven at the trail's end. While beloved by many wonderful wanderers, moments of quiet solitude still await those who venture during the trail's calmer hours.
           </p>
 
           {/* Gallery */}
-          <ImageGallery images={galleryImages} />
+          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+            <ImageGallery images={galleryImages} />
+          </div>
 
-          {/* Main Features - Moved to bottom */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
-            <div className="grid grid-cols-8 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">4.2 km out-and-back</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">1.5 hours</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Easy difficulty</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">River crossings</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Rockpool waterfall</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Bird watching</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Scenic views</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Forest trail</p>
+          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {/* General Info Section - First on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center">
+                      Distance: 4.2 km out-and-back
+                    </li>
+                    <li className="text-center">
+                      Duration: 1.5 hours
+                    </li>
+                    <li className="text-center">
+                      Difficulty: Easy
+                    </li>
+                    <li className="text-center">
+                      River crossings
+                    </li>
+                    <li className="text-center">
+                      Rockpool waterfall
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* What to Bring - Second on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-right">
+                      Comfortable walking shoes
+                    </li>
+                    <li className="text-center md:text-right">
+                      Water and snacks
+                    </li>
+                    <li className="text-center md:text-right">
+                      Sunscreen and hat
+                    </li>
+                    <li className="text-center md:text-right">
+                      Camera for memories
+                    </li>
+                    <li className="text-center md:text-right">
+                      Swimwear if planning to swim
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Adventure Safely - Third on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-left">
+                      Stay on marked trails
+                    </li>
+                    <li className="text-center md:text-left">
+                      Check weather conditions before hiking
+                    </li>
+                    <li className="text-center md:text-left">
+                      Wear appropriate footwear
+                    </li>
+                    <li className="text-center md:text-left">
+                      Stay hydrated and carry water
+                    </li>
+                    <li className="text-center md:text-left">
+                      Be cautious near the waterfall
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Logo Section */}
+      <div className="mt-12 md:mt-16 mb-8 flex justify-center">
+        <Image
+          src="/images/home/logo.webp"
+          alt="Fairy Knowe Backpackers Logo"
+          width={300}
+          height={300}
+          className="w-auto h-auto"
+          priority
+        />
       </div>
     </div>
   )

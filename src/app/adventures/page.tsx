@@ -95,7 +95,7 @@ const activities = [
     id: 12,
     name: 'Ancient Archives',
     description: 'Rainy day or just feeling lazy? Swap out an old book for a new one from our extensive library selection.',
-    image: '/images/Adventures/lazy-library-card.webp',
+    image: '/images/Adventures/ancient-archives-card.webp',
     category: 'Indoor Activities',
     features: ['Book exchange', 'Comfortable seating', 'Wide selection', 'Perfect for rainy days']
   }

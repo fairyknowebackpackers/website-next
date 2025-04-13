@@ -177,34 +177,6 @@ const facilities = [
     ],
     image: "/images/facilities/pet-friendly.webp"
   },
-  {
-    id: 14,
-    name: 'Board games',
-    description: 'A collection of classic and modern board games for all ages.',
-    image: '/images/facilities/board-games.webp',
-    features: [
-      'Various games available',
-      'Family friendly',
-      'Social activity',
-      'Indoor entertainment',
-      'All ages welcome',
-      'Perfect for rainy days'
-    ]
-  },
-  {
-    id: 15,
-    name: 'Musical instruments',
-    description: 'Express yourself with our selection of musical instruments.',
-    image: '/images/facilities/musical-instruments.webp',
-    features: [
-      'Guitars available',
-      'Percussion instruments',
-      'Indoor jamming area',
-      'Evening sessions',
-      'All skill levels',
-      'Social music making'
-    ]
-  }
 ]
 
 export default function Facilities() {

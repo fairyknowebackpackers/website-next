@@ -3,162 +3,169 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import ImageGallery from '@/components/ImageGallery'
 
-const images = [
+// Define the gallery images
+const galleryImages = [
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-1.jpg',
-    alt: 'Fairy Labyrinth Adventure',
-    description: 'Mystical forest paths'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure1.webp',
+    alt: 'Fairy Labyrinth Adventure 1',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure1.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-2.jpg',
-    alt: 'Fairy Labyrinth Experience',
-    description: 'Natural sculptures'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure2.webp',
+    alt: 'Fairy Labyrinth Adventure 2',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure2.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-3.jpg',
-    alt: 'Fairy Labyrinth Journey',
-    description: 'Forest art'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure3.webp',
+    alt: 'Fairy Labyrinth Adventure 3',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure3.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-4.jpg',
-    alt: 'Fairy Labyrinth Views',
-    description: 'Enchanted garden'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure4.webp',
+    alt: 'Fairy Labyrinth Adventure 4',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure4.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-1.jpg',
-    alt: 'Fairy Labyrinth Adventure',
-    description: 'Mystical forest paths'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure5.webp',
+    alt: 'Fairy Labyrinth Adventure 5',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure5.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-2.jpg',
-    alt: 'Fairy Labyrinth Experience',
-    description: 'Natural sculptures'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure6.webp',
+    alt: 'Fairy Labyrinth Adventure 6',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure6.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-3.jpg',
-    alt: 'Fairy Labyrinth Journey',
-    description: 'Forest art'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure7.webp',
+    alt: 'Fairy Labyrinth Adventure 7',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure7.webp'
   },
   {
-    src: '/images/Adventures/Fairy Labyrinth/labyrinth-4.jpg',
-    alt: 'Fairy Labyrinth Views',
-    description: 'Enchanted garden'
+    src: '/images/adventures/fairy-labyrinth/thumbnails/adventure8.webp',
+    alt: 'Fairy Labyrinth Adventure 8',
+    fullSize: '/images/adventures/fairy-labyrinth/full/adventure8.webp'
   }
 ]
 
 export default function FairyLabyrinthPage() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 8;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
-  const currentImages = images.slice(
-    currentPage * imagesPerPage,
-    (currentPage + 1) * imagesPerPage
-  );
-
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
         <Image
           src="/images/adventures/banners/labyrinth-banner.webp"
           alt="Fairy Labyrinth"
           fill
           className="object-cover"
           priority
+          unoptimized={false}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font">Fairy Labyrinth</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font text-center px-4">Fairy Labyrinth</h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-12 px-4">
+      <div className="py-8 md:py-12 px-4">
         <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-300 text-center mb-8 md:mb-12 max-w-4xl mx-auto text-sm md:text-base">
             Take ten minutes of your time to let go of the rambles in your mind, as you amble through the labyrinth, loosen up and unwind.
           </p>
 
-          {/* Gallery Grid */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6">Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {currentImages.map((image, index) => (
-                <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-300"
-                  />
+          {/* Gallery */}
+          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+            <ImageGallery 
+              images={galleryImages} 
+              imagesPerPage={8} 
+            />
+          </div>
+
+          {/* Adventure Safely Section */}
+          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {/* General Info Section - First on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center">
+                      10-minute walk
+                    </li>
+                    <li className="text-center">
+                      Easy difficulty
+                    </li>
+                    <li className="text-center">
+                      Meditation path
+                    </li>
+                    <li className="text-center">
+                      Forest setting
+                    </li>
+                    <li className="text-center">
+                      Natural sculptures
+                    </li>
+                  </ul>
                 </div>
-              ))}
-            </div>
-            
-            {/* Gallery Navigation */}
-            <div className="flex justify-center items-center mt-6 gap-4">
-              <button 
-                onClick={prevPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Previous page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-gray-700">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button 
-                onClick={nextPage}
-                className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-4 py-2 rounded-lg transition-colors"
-                aria-label="Next page"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
+                
+                {/* What to Bring - Second on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-right">
+                      Comfortable shoes
+                    </li>
+                    <li className="text-center md:text-right">
+                      Water bottle
+                    </li>
+                    <li className="text-center md:text-right">
+                      Camera
+                    </li>
+                    <li className="text-center md:text-right">
+                      Open mind
+                    </li>
+                    <li className="text-center md:text-right">
+                      Sense of wonder
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Adventure Safely - Third on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-left">
+                      Stay on the path
+                    </li>
+                    <li className="text-center md:text-left">
+                      Respect the space
+                    </li>
+                    <li className="text-center md:text-left">
+                      Be mindful of others
+                    </li>
+                    <li className="text-center md:text-left">
+                      Watch your step
+                    </li>
+                    <li className="text-center md:text-left">
+                      Take your time
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Main Features - Moved to bottom */}
-          <div className="mt-12 mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-center">Features</h2>
-            <div className="grid grid-cols-8 gap-4">
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">10 minutes</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Easy walk</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Meditation path</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Forest setting</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Natural sculptures</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Peaceful atmosphere</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Mindful walking</p>
-              </div>
-              <div className="bg-gray-200 p-4 rounded-lg text-center flex items-center justify-center h-24 relative overflow-hidden shadow-lg hover:bg-gray-300 transition-colors">
-                <p className="text-gray-700 text-xs">Enchanted path</p>
-              </div>
-            </div>
+          {/* Logo Section */}
+          <div className="mt-12 md:mt-16 mb-8 flex justify-center">
+            <Image
+              src="/images/home/logo.webp"
+              alt="Fairy Knowe Backpackers Logo"
+              width={300}
+              height={300}
+              className="w-auto h-auto"
+              priority
+            />
           </div>
         </div>
       </div>

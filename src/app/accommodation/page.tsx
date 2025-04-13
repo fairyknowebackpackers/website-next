@@ -56,7 +56,7 @@ const roomTypes = [
     id: 8,
     name: 'Double En-suite',
     description: 'Private room with a queen size bed and en-suite bathroom for added comfort.',
-    image: '/images/accommodation/double-en-suite-card.webp',
+    image: '/images/accommodation/double-en-suite/thumbnails/doubleensuite1.webp',
     features: ['Queen bed', 'Private bathroom', 'Extra comfort']
   },
   {
