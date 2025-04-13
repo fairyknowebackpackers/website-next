@@ -50,6 +50,41 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/page.js"
+    ],
+    "/adventures/half-collared-kingfisher-trail/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/half-collared-kingfisher-trail/page.js"
+    ],
+    "/adventures/kayaking/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/kayaking/page.js"
+    ],
+    "/adventures/paragliding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/paragliding/page.js"
+    ],
+    "/adventures/horseriding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/horseriding/page.js"
+    ],
+    "/adventures/brown-hooded-kingfisher-trail/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/brown-hooded-kingfisher-trail/page.js"
+    ],
+    "/adventures/water-under-the-bridge/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/water-under-the-bridge/page.js"
+    ],
+    "/adventures/fairy-labyrinth/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/fairy-labyrinth/page.js"
     ]
   }
 }

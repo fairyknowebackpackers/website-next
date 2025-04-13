@@ -55,7 +55,7 @@ export default function WaterUnderTheBridgePage() {
       {/* Hero Banner */}
       <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
         <Image
-          src="/images/adventures/banners/water-bridge-banner.webp"
+          src="/images/adventures/banners/water-under-the-bridge-banner.webp"
           alt="Water Under the Bridge"
           fill
           className="object-cover"

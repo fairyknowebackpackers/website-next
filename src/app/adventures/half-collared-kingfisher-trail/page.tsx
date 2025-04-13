@@ -174,7 +174,7 @@ export default function HalfCollaredKingfisherTrailPage() {
       {/* Hero Banner */}
       <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
         <Image
-          src="/images/adventures/banners/kingfisher-banner.webp"
+          src="/images/adventures/banners/half-collared-kingfisher-trail-banner.webp"
           alt="Half Collared Kingfisher Trail"
           fill
           className="object-cover"

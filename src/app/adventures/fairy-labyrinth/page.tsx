@@ -55,7 +55,7 @@ export default function FairyLabyrinthPage() {
       {/* Hero Banner */}
       <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
         <Image
-          src="/images/adventures/banners/labyrinth-banner.webp"
+          src="/images/adventures/banners/fairy-labyrinth-banner.webp"
           alt="Fairy Labyrinth"
           fill
           className="object-cover"
