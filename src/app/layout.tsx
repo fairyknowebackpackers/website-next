@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Head from 'next/head'
 import SEO from '../components/Seo'
 import MobileMenu from './components/MobileMenu'
+
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 const accommodationLinks = [
@@ -34,24 +35,28 @@ const adventureLinks = [
   { href: '/adventures/ancient-archives', label: 'Ancient Archives' },
 ]
 
+export const metadata = {
+  title: 'Fairy Knowe Backpackers',
+  description: 'Adventure Backpackers in the heart of the Garden Route',
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.variable}>
       <head>
         <title>Fairy Knowe Backpackers</title>
         <meta name="description" content="Adventure Backpackers in the heart of the Garden Route" />
       </head>
-      <body className={`${inter.variable} font-sans bg-white transition-colors`}>
-          <nav className="bg-white shadow-lg fixed w-full z-50 transition-colors h-12">
+      <body className="font-sans bg-white">
+          <nav className="bg-white shadow-lg fixed w-full z-50 h-12">
             <div className="max-w-7xl mx-auto px-4">
               <div className="flex justify-between h-12">
                 <div className="flex items-center w-40">
-                  <Link href="/" className="flex items-center" title="Fairy Knowe Backpackers"
-                  >
+                  <Link href="/" className="flex items-center" title="Fairy Knowe Backpackers">
                     <div className="relative w-12 h-12">
                       <Image
                         src="/images/home/logo-icon.png"
@@ -142,7 +147,6 @@ export default function RootLayout({
                       Book Now
                     </Link>
                   </div>
-
                 </div>
 
                 {/* Mobile Menu Component */}

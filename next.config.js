@@ -3,7 +3,6 @@
 const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/website-next' : '',
   images: {
     domains: ['localhost'],
     remotePatterns: [
