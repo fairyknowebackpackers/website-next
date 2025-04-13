@@ -1,4 +1,5 @@
 {
+  "/not-found": "app/not-found.js",
   "/adventures/bosduif-trail/page": "app/adventures/bosduif-trail/page.js",
   "/adventures/half-collared-kingfisher-trail/page": "app/adventures/half-collared-kingfisher-trail/page.js",
   "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js",
