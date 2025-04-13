@@ -45,27 +45,34 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="w-full mb-12">
+      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12">
+        <Image
+          src="/images/home/home-banner-mobile.webp"
+          alt="Welcome to Fairy Knowe Backpackers"
+          width={800}
+          height={400}
+          className="w-full h-full lg:hidden object-cover"
+          priority
+          quality={100}
+          sizes="100vw"
+        />
         <Image
           src="/images/home/home-banner.webp"
           alt="Welcome to Fairy Knowe Backpackers"
           width={1920}
           height={1080}
-          className="w-full h-auto"
+          className="hidden lg:block w-full h-auto object-cover"
           priority
           quality={100}
+          sizes="100vw"
         />
       </div>
 
-      {/* Description */}
+      {/* Additional Description */}
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto italic">
-          I dwell in forests deep and green, where few have seen and less have been.<br />
-          When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
-          I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
-          I bring the magic, most delight, yet vanish with the morning light.<br/>
-          <br/>
-          What am I?
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+          Your home away from home in the heart of Wilderness, offering comfortable accommodation,
+          exciting adventures, and a vibrant social atmosphere.
         </p>
       </div>
 
@@ -105,21 +112,25 @@ export default function Home() {
               alt="Fairy Knowe Backpackers Logo"
               width={400}
               height={400}
-              className="w-auto h-auto"
+              className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
               priority
             />
           </div>
 
-          {/* Additional Description */}
+          {/* Riddle */}
           <div className="mt-12 mb-12 text-center px-8 md:px-16 lg:px-24">
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              Your home away from home in the heart of Wilderness, offering comfortable accommodation,
-              exciting adventures, and a vibrant social atmosphere.
+            <p className="text-gray-600 dark:text-gray-300 max-w-4xl mx-auto italic">
+              I dwell in forests deep and green, where few have seen and less have been.<br />
+              When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
+              I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
+              I bring the magic, most delight, yet vanish with the morning light.<br/>
+              <br/>
+              What am I?
             </p>
           </div>
 
           {/* Call to Action */}
-          <div className="mt-16 text-center">
+          <div className="mt-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.

@@ -164,7 +164,7 @@ export default function RootLayout({
 
           <footer className="relative">
             {/* Mobile Footer Content */}
-            <div className="relative pt-8 sm:hidden bg-white pb-4">
+            <div className="relative sm:hidden bg-white pb-4">
               {/* Contact Buttons */}
               <div className="flex justify-center space-x-6 mb-6">
                 {/* Phone Button */}
@@ -210,7 +210,7 @@ export default function RootLayout({
             </div>
 
             {/* Main Footer Content - Desktop Only */}
-            <div className="relative pt-8 hidden sm:block">
+            <div className="relative hidden sm:block">
               <div className="grid grid-cols-5">
                 <div></div>
                 
