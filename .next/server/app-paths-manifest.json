@@ -1,9 +1,10 @@
 {
-  "/accommodation/family-en-suite-rondawel/page": "app/accommodation/family-en-suite-rondawel/page.js",
   "/adventures/woodville-big-tree/page": "app/adventures/woodville-big-tree/page.js",
   "/adventures/bosduif-trail/page": "app/adventures/bosduif-trail/page.js",
   "/adventures/half-collared-kingfisher-trail/page": "app/adventures/half-collared-kingfisher-trail/page.js",
-  "/adventures/brown-hooded-kingfisher-trail/page": "app/adventures/brown-hooded-kingfisher-trail/page.js",
-  "/adventures/water-under-the-bridge/page": "app/adventures/water-under-the-bridge/page.js",
-  "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js"
+  "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/api/gallery/route": "app/api/gallery/route.js",
+  "/facilities/page": "app/facilities/page.js",
+  "/venue/page": "app/venue/page.js"
 }
