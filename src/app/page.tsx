@@ -45,23 +45,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12 bg-white">
-        <Image
-          src="/images/home/home-banner-mobile.webp"
-          alt="Welcome to Fairy Knowe Backpackers"
-          width={800}
-          height={400}
-          className="w-full h-full lg:hidden object-contain"
-          priority
-          quality={75}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 800px"
-        />
+      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12">
         <Image
           src="/images/home/home-banner.webp"
           alt="Welcome to Fairy Knowe Backpackers"
           width={1920}
           height={1080}
-          className="hidden lg:block w-full h-auto object-cover"
+          className="w-full h-full lg:h-auto object-cover"
           priority
           quality={100}
           sizes="100vw"
@@ -70,7 +60,7 @@ export default function Home() {
 
       {/* Additional Description */}
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
           Your home away from home in the heart of Wilderness, offering comfortable accommodation,
           exciting adventures, and a vibrant social atmosphere.
         </p>
@@ -83,13 +73,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pages.map((page) => (
               <Link href={page.link} key={page.title} className="group">
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-[360px] flex flex-col">
-                  <div className="relative h-56 flex-shrink-0">
+                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-auto lg:h-[360px] flex flex-col">
+                  <div className="relative aspect-video lg:h-56 flex-shrink-0 lg:bg-white">
                     <Image
                       src={page.image}
                       alt={page.title}
                       fill
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="object-fill lg:object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       quality={75}
                     />
@@ -116,8 +106,6 @@ export default function Home() {
               height={400}
               className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
               priority
-              quality={75}
-              sizes="(max-width: 640px) 200px, 250px"
             />
           </div>
 
