@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-12">
+      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-4 md:mb-12">
         <Image
           src="/images/home/home-banner.webp"
           alt="Welcome to Fairy Knowe Backpackers"
@@ -60,28 +60,26 @@ export default function Home() {
 
       {/* Additional Description */}
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Your home away from home in the heart of Wilderness, offering comfortable accommodation,
           exciting adventures, and a vibrant social atmosphere.
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="py-12 px-4">
+      <div className="py-6 lg:py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Pages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pages.map((page) => (
               <Link href={page.link} key={page.title} className="group">
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-auto lg:h-[360px] flex flex-col">
-                  <div className="relative aspect-video lg:h-56 flex-shrink-0 lg:bg-white">
+                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-[360px] flex flex-col">
+                  <div className="relative h-56 flex-shrink-0">
                     <Image
                       src={page.image}
                       alt={page.title}
                       fill
-                      className="object-fill lg:object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      quality={75}
+                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col justify-between">
@@ -111,7 +109,7 @@ export default function Home() {
 
           {/* Riddle */}
           <div className="mt-12 mb-12 text-center px-8 md:px-16 lg:px-24">
-            <p className="text-gray-600 dark:text-gray-300 max-w-4xl mx-auto italic">
+            <p className="text-xs md:text-gray-600 dark:text-gray-300 max-w-4xl mx-auto italic">
               I dwell in forests deep and green, where few have seen and less have been.<br />
               When the mind has sight, be seen I might, on wings that shimmer through the night.<br/>
               I guard the flowers, trees and streams, and live within your wildest dreams.<br/>
