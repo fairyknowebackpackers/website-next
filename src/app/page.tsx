@@ -85,10 +85,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col justify-between">
-                    <h2 className="text-2xl font-bold mb-1 md:mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">
+                    <h2 className="text-3xl md:text-2xl font-bold mb-1 md:mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out text-center md:text-left">
                       {page.title}
                     </h2>
-                    <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
+                    <p className="text-sm md:text-base text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out text-center md:text-left">
                       {page.description}
                     </p>
                   </div>
