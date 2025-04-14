@@ -53,8 +53,8 @@ export default function Home() {
           height={400}
           className="w-full h-full lg:hidden object-contain"
           priority
-          quality={100}
-          sizes="100vw"
+          quality={75}
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, 800px"
         />
         <Image
           src="/images/home/home-banner.webp"
@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* Additional Description */}
       <div className="max-w-7xl mx-auto px-4">
-        <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+        <p className="text-xs md:text-xl text-gray-600 max-w-3xl mx-auto text-center">
           Your home away from home in the heart of Wilderness, offering comfortable accommodation,
           exciting adventures, and a vibrant social atmosphere.
         </p>
@@ -90,6 +90,8 @@ export default function Home() {
                       alt={page.title}
                       fill
                       className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      quality={75}
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col justify-between">
@@ -114,6 +116,8 @@ export default function Home() {
               height={400}
               className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
               priority
+              quality={75}
+              sizes="(max-width: 640px) 200px, 250px"
             />
           </div>
 
