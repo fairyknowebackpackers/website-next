@@ -205,7 +205,7 @@ export default function RootLayout({
 
               {/* Address */}
               <div className="text-center mb-6">
-                <p className="text-gray-900 text-sm">1 Dumbleton Road, Wilderness, Garden Route, South Africa</p>
+                <p className="text-xs md:text-sm text-gray-900">1 Dumbleton Road, Wilderness, Garden Route, South Africa</p>
               </div>
             </div>
 

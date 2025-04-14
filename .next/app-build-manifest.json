@@ -10,6 +10,36 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/adventures/kayaking/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/kayaking/page.js"
+    ],
+    "/adventures/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/page.js"
+    ],
+    "/adventures/paragliding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/paragliding/page.js"
+    ],
+    "/accommodation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/page.js"
+    ],
+    "/accommodation/mixed-dorm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/mixed-dorm/page.js"
+    ],
+    "/adventures/half-collared-kingfisher-trail/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/half-collared-kingfisher-trail/page.js"
     ]
   }
 }

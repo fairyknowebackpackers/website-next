@@ -74,16 +74,18 @@ export default function Home() {
             {pages.map((page) => (
               <Link href={page.link} key={page.title} className="group">
                 <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-[360px] flex flex-col">
-                  <div className="relative h-56 flex-shrink-0">
+                  <div className="relative aspect-video md:h-56 flex-shrink-0">
                     <Image
                       src={page.image}
                       alt={page.title}
                       fill
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="object-fill md:object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      quality={75}
                     />
                   </div>
                   <div className="p-6 flex-1 flex flex-col justify-between">
-                    <h2 className="text-2xl font-bold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">
+                    <h2 className="text-2xl font-bold mb-1 md:mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">
                       {page.title}
                     </h2>
                     <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
