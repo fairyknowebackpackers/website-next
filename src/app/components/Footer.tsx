@@ -15,7 +15,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Content */}
-      <div className="bg-gray-800 text-white">
+      <div className="text-white">
         {/* Your existing footer content */}
       </div>
     </footer>

@@ -162,7 +162,7 @@ export default function RootLayout({
             {children}
           </main>
 
-          <footer className="relative">
+          <footer className="relative mt-4">
             {/* Mobile Footer Content */}
             <div className="relative sm:hidden bg-white pb-4">
               {/* Contact Buttons */}
@@ -294,7 +294,6 @@ export default function RootLayout({
                 priority
                 sizes="100vw"
               />
-              <div className="absolute inset-0 hidden sm:block bg-black bg-opacity-50"></div>
             </div>
           </footer>
       </body>

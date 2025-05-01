@@ -56,6 +56,12 @@ export default function Home() {
           quality={100}
           sizes="100vw"
         />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font text-center px-4">
+            Fairy Knowe Backpackers
+          </h1>
+        </div>
       </div>
 
       {/* Additional Description */}
@@ -122,7 +128,7 @@ export default function Home() {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-8 text-center">
+          <div className="mt-32 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.

@@ -1,7 +1,7 @@
 {
   "/page": "app/page.js",
   "/accommodation/page": "app/accommodation/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js",
   "/accommodation/mixed-dorm/page": "app/accommodation/mixed-dorm/page.js",
-  "/adventures/page": "app/adventures/page.js",
-  "/adventures/half-collared-kingfisher-trail/page": "app/adventures/half-collared-kingfisher-trail/page.js"
+  "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js"
 }
