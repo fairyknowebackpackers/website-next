@@ -188,8 +188,8 @@ export default function HalfCollaredKingfisherTrailPage() {
 
       {/* Content Section */}
       <div className="py-8 md:py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Embark on a delightful 7.6-km out-and-back trail that winds its way through a serene, shaded wonderland. This moderately easy route, typically completed in around 3 hours, invites you to stroll along wooden boardwalk that meanders its way to a magical waterfall, perfect for a refreshing swim and moment of bliss. Popular among adventurers, runners, and wanderers alike, this charming path brims with life, offering a likely chance to cross paths with friendly folk as you explore its natural splendor.
           </p>
 

@@ -69,8 +69,8 @@ export default function HorseridingPage() {
 
       {/* Content Section */}
       <div className="py-8 md:py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-2 max-w-4xl mx-auto text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Set out on a tranquil 1.5-hour horseback adventure through the spellbinding forests of Wilderness Heights. Guided by experienced hosts, this journey is perfect for riders of all skill levels, offering a serene and immersive way to connect with the breathtaking beauty of the area. Let the rhythmic pace of your steed and the enchanting woodland surroundings create memories to treasure.
           </p>
 

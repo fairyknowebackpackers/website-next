@@ -132,8 +132,8 @@ export default function DoubleEnSuitePage() {
 
       {/* Content Section */}
       <div className="py-8 sm:py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-8 sm:mb-12 max-w-4xl mx-auto text-sm sm:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Indulge in the crème de la crème of comfort, ideal for couples or individuals who appreciate a touch of coziness. With privacy and extra amenities, this retreat offers the perfect sanctuary for a truly special and relaxing stay.
           </p>
 

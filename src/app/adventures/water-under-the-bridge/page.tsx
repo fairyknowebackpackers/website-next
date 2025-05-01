@@ -70,8 +70,8 @@ export default function WaterUnderTheBridgePage() {
 
       {/* Content Section */}
       <div className="py-8 md:py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-8 md:mb-12 max-w-4xl mx-auto text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Let your adrenaline loose as you leap from the railway bridge into the cool, rejuvenating waters of the Touws River. Just a short 5-minute stroll from your home away from home, this adventure promises the perfect blend of thrills and chills — a true memory-maker for those seeking a quick dash of excitement in their day.
           </p>
 

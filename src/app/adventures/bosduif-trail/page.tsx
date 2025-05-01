@@ -115,8 +115,8 @@ export default function BosduifTrailPage() {
 
       {/* Content Section */}
       <div className="py-8 md:py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-gray-600 dark:text-gray-300 text-center mb-8 md:mb-12 max-w-4xl mx-auto text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Set off on an endearing 4.2-km loop trail that gracefully branches off from the Half Collared Kingfisher Trail. Ascend through a steep landscape to reach breathtaking views of the sea, rivers, and valleys. This enchanting path, moderately challenging and typically completed in 1.5 hours, invites bird lovers, hikers, and runners to immerse themselves in nature's beauty. Though cherished by many, the trail still offers tranquil moments of solitude during quieter hours, making it a truly magical escape.
           </p>
 

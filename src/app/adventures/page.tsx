@@ -107,7 +107,7 @@ export default function Adventure() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-4 md:mb-12 bg-gray-900">
         <Image
           src="/images/Adventures/adventures-banner.webp"
           alt="Adventures at Fairy Knowe"
@@ -123,8 +123,8 @@ export default function Adventure() {
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4 mb-6">
-        <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300">
+      <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Explore the forest on horseback, take flight up to the sky, or grab a kayak and gently float on by.
         </p>
       </div>

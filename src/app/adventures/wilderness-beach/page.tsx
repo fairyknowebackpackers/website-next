@@ -72,8 +72,8 @@ export default function WildernessBeachPage() {
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4">
         {/* Description */}
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-8 max-w-3xl mx-auto text-center text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Bask in the sun on the golden shores of Wilderness Beach, a Blue Flag gem renowned for its beauty and charm. Whether you&apos;re diving for a volleyball, soaking up the sunshine, wafting through the waters, or crafting a kingdom of sandcastles, this beach promises a day filled with joy and seaside smiles.
           </p>
         </div>

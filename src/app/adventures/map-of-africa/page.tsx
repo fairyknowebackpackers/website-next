@@ -72,8 +72,8 @@ export default function MapOfAfrica() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4">
         {/* Description */}
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-gray-600 dark:text-gray-300 mb-4 md:mb-8 max-w-4xl mx-auto text-center text-sm md:text-base">
+        <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             The Map of Africa offers a spellbinding viewpoint, where nature's artistry is unveiled in the form of a river that gracefully sculpts the shape of the African continent into the valley below. Just across the way, another mesmerizing vantage point awaits, offering sweeping views of the ocean's endless expanse, golden sands of the beach, and the picturesque charm of Wilderness itself.
           </p>
         </div>

@@ -72,7 +72,7 @@ export default function Accommodation() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-4 md:mb-12 bg-gray-900">
         <Image
           src="/images/accommodation/banner.webp"
           alt="Fairy Knowe Accommodation"
@@ -90,8 +90,8 @@ export default function Accommodation() {
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4 mb-6">
-        <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300">
+      <div className="max-w-7xl mx-auto px-4">
+        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Nestled in the heart of Wilderness, our enchanting backpackers offers a magical retreat with room for every wandering soul. 
           With cozy beds for up to 50 guests and a sprawling campsite that welcomes twice as many adventurers, 
           we've created a space where lifelong friendships and unforgettable memories are made.
