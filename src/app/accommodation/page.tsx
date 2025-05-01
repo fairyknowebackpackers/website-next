@@ -72,7 +72,7 @@ export default function Accommodation() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-4 md:mb-12 bg-gray-900">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
           src="/images/accommodation/banner.webp"
           alt="Fairy Knowe Accommodation"
@@ -83,62 +83,62 @@ export default function Accommodation() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Accommodation
           </h1>
         </div>
       </div>
 
       {/* Description */}
-      <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Nestled in the heart of Wilderness, our enchanting backpackers offers a magical retreat with room for every wandering soul. 
-          With cozy beds for up to 50 guests and a sprawling campsite that welcomes twice as many adventurers, 
-          we've created a space where lifelong friendships and unforgettable memories are made.
-        </p>
+      <div className="px-2">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Nestled in the heart of Wilderness, our enchanting backpackers offers a magical retreat with room for every wandering soul. 
+            With cozy beds for up to 50 guests and a sprawling campsite that welcomes twice as many adventurers, 
+            we've created a space where lifelong friendships and unforgettable memories are made.
+          </p>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="py-8 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {roomTypes.map((room) => (
-              <Link 
-                key={room.id} 
-                href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
-                className="group"
-              >
-                <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
-                  <div className="relative w-full h-[250px]">
-                    <Image
-                      src={room.image}
-                      alt={room.name}
-                      fill
-                      className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      priority={room.id <= 3}
-                      loading={room.id <= 3 ? 'eager' : 'lazy'}
-                      quality={85}
-                    />
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {roomTypes.map((room) => (
+            <Link 
+              key={room.id} 
+              href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
+              className="group"
+            >
+              <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
+                <div className="relative w-full h-[250px]">
+                  <Image
+                    src={room.image}
+                    alt={room.name}
+                    fill
+                    className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority={room.id <= 3}
+                    loading={room.id <= 3 ? 'eager' : 'lazy'}
+                    quality={85}
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div>
+                    <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{room.name}</h2>
+                    <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{room.description}</p>
                   </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div>
-                      <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{room.name}</h2>
-                      <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{room.description}</p>
-                    </div>
-                    <div className="mt-auto">
-                      <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
-                      <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
-                        {room.features.map((feature, index) => (
-                          <li key={index}>{feature}</li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="mt-auto">
+                    <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
+                    <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
+                      {room.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
                   </div>
-                </MouseGradientCard>
-              </Link>
-            ))}
-          </div>
+                </div>
+              </MouseGradientCard>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

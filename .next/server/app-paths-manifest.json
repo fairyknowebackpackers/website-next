@@ -1,9 +1,16 @@
 {
   "/not-found": "app/not-found.js",
-  "/accommodation/camping/page": "app/accommodation/camping/page.js",
-  "/entertainment/page": "app/entertainment/page.js",
-  "/adventures/map-of-africa/page": "app/adventures/map-of-africa/page.js",
   "/venue/page": "app/venue/page.js",
-  "/accommodation/page": "app/accommodation/page.js",
-  "/adventures/page": "app/adventures/page.js"
+  "/adventures/page": "app/adventures/page.js",
+  "/facilities/page": "app/facilities/page.js",
+  "/gallery/page": "app/gallery/page.js",
+  "/api/gallery/route": "app/api/gallery/route.js",
+  "/contact/page": "app/contact/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js",
+  "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
+  "/accommodation/gypsy-caravan/page": "app/accommodation/gypsy-caravan/page.js",
+  "/accommodation/mixed-dorm/page": "app/accommodation/mixed-dorm/page.js",
+  "/adventures/kayaking/page": "app/adventures/kayaking/page.js",
+  "/adventures/brown-hooded-kingfisher-trail/page": "app/adventures/brown-hooded-kingfisher-trail/page.js",
+  "/accommodation/page": "app/accommodation/page.js"
 }
