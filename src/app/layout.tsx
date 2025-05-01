@@ -162,11 +162,11 @@ export default function RootLayout({
             {children}
           </main>
 
-          <footer className="relative mt-4">
+          <footer className="relative mt-2">
             {/* Mobile Footer Content */}
-            <div className="relative sm:hidden bg-white pb-4">
+            <div className="relative sm:hidden bg-white pb-2">
               {/* Contact Buttons */}
-              <div className="flex justify-center space-x-6 mb-6">
+              <div className="flex justify-center space-x-6 mb-4">
                 {/* Phone Button */}
                 <a href="tel:+27834438384" className="text-gray-900 hover:text-primary transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -210,38 +210,18 @@ export default function RootLayout({
             </div>
 
             {/* Main Footer Content - Desktop Only */}
-            <div className="relative hidden sm:block">
+            <div className="relative hidden sm:block bg-[#0E7D73]">
               <div className="grid grid-cols-5">
                 <div></div>
-                
-                {/* Contact Us - Column 2 */}
-                <div className="text-white">
-                  <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-                  <p>mobile: +27 83 443 8384</p>
-                  <p>Email: info@wildernessbackpackers.com</p>
-                </div>
-
                 <div></div>
-
-                {/* Follow Us - Column 4 */}
-                <div className="text-white text-right">
-                  <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-                  <p>Facebook</p>
-                  <p>Instagram</p>
-                  <p>YouTube</p>
-                </div>
-
+                <div></div>
+                <div></div>
                 <div></div>
               </div>
             </div>
 
-            {/* Copyright - Desktop Only */}
-            <div className="absolute bottom-0 w-full text-center mb-6 text-white pb-2 hidden sm:block">
-              <p>1 Dumbleton Road, Wilderness, Garden Route, South Africa</p>
-            </div>
-
             {/* Desktop Contact Buttons - Added above the background image */}
-            <div className="hidden sm:flex justify-center space-x-6 mb-6 relative z-10">
+            <div className="hidden sm:flex justify-center space-x-6 mb-4 relative z-10">
               {/* Phone Button */}
               <a href="tel:+27834438384" className="text-black hover:text-primary transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

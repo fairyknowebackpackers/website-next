@@ -128,7 +128,7 @@ export default function Home() {
           </div>
 
           {/* Call to Action */}
-          <div className="mt-32 text-center">
+          <div className="mt-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.

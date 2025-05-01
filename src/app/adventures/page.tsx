@@ -107,7 +107,7 @@ export default function Adventure() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[500px] w-full mb-12">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
           src="/images/Adventures/adventures-banner.webp"
           alt="Adventures at Fairy Knowe"
@@ -116,7 +116,7 @@ export default function Adventure() {
           priority
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)]" style={{ fontFamily: 'Hestrial' }}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
             Adventures
           </h1>
         </div>
@@ -124,7 +124,7 @@ export default function Adventure() {
 
       {/* Description */}
       <div className="max-w-7xl mx-auto px-4 mb-6">
-        <p className="text-sm md:text-base text-center text-gray-500 dark:text-gray-300">
+        <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300">
           Explore the forest on horseback, take flight up to the sky, or grab a kayak and gently float on by.
         </p>
       </div>
@@ -142,25 +142,29 @@ export default function Adventure() {
                   .replace(/[^a-z0-9-]/g, '')}`}
                 className="group"
               >
-                <MouseGradientCard className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
-                  <div className="relative h-64">
+                <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
+                  <div className="relative w-full h-[250px]">
                     <Image
                       src={activity.image}
                       alt={activity.name}
                       fill
-                      className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={activity.id <= 3}
+                      loading={activity.id <= 3 ? 'eager' : 'lazy'}
+                      quality={85}
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <div>
-                      <h2 className="text-2xl font-bold mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{activity.name}</h2>
-                      <p className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out mb-4">{activity.description}</p>
+                      <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{activity.name}</h2>
+                      <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{activity.description}</p>
                     </div>
                     <div className="mt-auto">
                       <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
-                      <ul className="list-disc pl-5 space-y-2">
+                      <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
                         {activity.features.map((feature, index) => (
-                          <li key={`${activity.id}-feature-${index}`} className="text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">{feature}</li>
+                          <li key={`${activity.id}-feature-${index}`}>{feature}</li>
                         ))}
                       </ul>
                     </div>
@@ -175,53 +179,43 @@ export default function Adventure() {
       {/* Safety Information */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">Adventure Safely</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">Safety Guidelines</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li className="flex items-center justify-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+            <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">Safety Guidelines</h3>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+              <li className="text-center md:text-right">
                 Always follow guide instructions
-                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center justify-end">
+              <li className="text-center md:text-right">
                 Check weather conditions before activities
-                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center justify-end">
+              <li className="text-center md:text-right">
                 Wear appropriate clothing and footwear
-                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center justify-end">
+              <li className="text-center md:text-right">
                 Stay hydrated and carry water
-                <span className="text-primary ml-2">•</span>
               </li>
-              <li className="flex items-center justify-end">
+              <li className="text-center md:text-right">
                 Inform staff of any medical conditions
-                <span className="text-primary ml-2">•</span>
               </li>
             </ul>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-4 dark:text-white">What to Bring</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+            <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+              <li className="text-center md:text-left">
                 Sunscreen and hat
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="text-center md:text-left">
                 Water and snacks
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="text-center md:text-left">
                 Comfortable walking shoes
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="text-center md:text-left">
                 Camera for memories
               </li>
-              <li className="flex items-center">
-                <span className="text-primary mr-2">•</span>
+              <li className="text-center md:text-left">
                 Small backpack for essentials
               </li>
             </ul>

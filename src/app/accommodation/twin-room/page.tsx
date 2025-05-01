@@ -284,13 +284,13 @@ export default function TwinRoomPage() {
           </div>
 
           {/* Logo Section */}
-          <div className="mt-12 sm:mt-16 mb-6 sm:mb-8 flex justify-center">
+          <div className="mt-16 mb-8 flex justify-center">
             <Image
               src="/images/home/logo.webp"
               alt="Fairy Knowe Backpackers Logo"
-              width={300}
-              height={300}
-              className="w-auto h-auto"
+              width={400}
+              height={400}
+              className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
               priority
             />
           </div>

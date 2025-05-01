@@ -155,18 +155,18 @@ export default function WaterUnderTheBridgePage() {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Logo Section */}
-          <div className="mt-12 md:mt-16 mb-8 flex justify-center">
-            <Image
-              src="/images/home/logo.webp"
-              alt="Fairy Knowe Backpackers Logo"
-              width={300}
-              height={300}
-              className="w-auto h-auto"
-              priority
-            />
-          </div>
+        {/* Logo Section */}
+        <div className="mt-12 mb-8 flex justify-center">
+          <Image
+            src="/images/home/logo.webp"
+            alt="Fairy Knowe Backpackers Logo"
+            width={400}
+            height={400}
+            className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
+            priority
+          />
         </div>
       </div>
     </div>
