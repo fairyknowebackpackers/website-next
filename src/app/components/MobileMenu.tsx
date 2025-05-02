@@ -79,7 +79,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                                link.label === "Family En-suite Rondawel" ? "/images/menu/family-en-suite-rondawel.webp" : 
                                "/images/placeholder-square.png"} 
                           alt={link.label} 
-                          className="w-full h-full object-cover rounded-t-lg" 
+                          className="w-full h-full object-contain rounded-t-lg" 
                           width="120" 
                           height="120" 
                         />
@@ -108,11 +108,23 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                       className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center w-full aspect-square mt-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="w-full h-24 -mt-3">
+                      <div className="w-full aspect-square -mt-3">
                         <img 
-                          src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
+                          src={link.label === "Kayaking" ? "/images/menu/kayaking.webp" : 
+                               link.label === "Paragliding" ? "/images/menu/paragliding.webp" : 
+                               link.label === "Horseriding" ? "/images/menu/horseriding.webp" : 
+                               link.label === "Half Collared Kingfisher Trail" ? "/images/menu/half-collared-kingfisher-trail.webp" : 
+                               link.label === "Brown Hooded Kingfisher Trail" ? "/images/menu/brown-hooded-kingfisher-trail.webp" : 
+                               link.label === "Bosduif Trail" ? "/images/menu/bosduif-trail.webp" : 
+                               link.label === "Woodville Big Tree" ? "/images/menu/woodville-big-tree.webp" : 
+                               link.label === "Map of Africa" ? "/images/menu/map-of-africa.webp" : 
+                               link.label === "Wilderness Beach" ? "/images/menu/wilderness-beach.webp" : 
+                               link.label === "Water Under the Bridge" ? "/images/menu/water-under-the-bridge.webp" : 
+                               link.label === "Fairy Labyrinth" ? "/images/menu/fairy-labyrinth.webp" : 
+                               link.label === "Ancient Archives" ? "/images/menu/ancient-archives.webp" : 
+                               "/images/placeholder-square.png"} 
                           alt={link.label} 
-                          className="w-full h-full object-cover rounded-t-lg" 
+                          className="w-full h-full object-contain rounded-t-lg" 
                           width="120" 
                           height="120" 
                         />
