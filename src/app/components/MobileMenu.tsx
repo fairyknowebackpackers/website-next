@@ -129,7 +129,9 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                           height="120" 
                         />
                       </div>
-                      <span className="mt-0.5 font-medium">{link.label}</span>
+                      <div className="w-full h-10 flex items-center justify-center">
+                        <span className="font-medium px-2">{link.label}</span>
+                      </div>
                     </Link>
                   ))}
                 </div>
