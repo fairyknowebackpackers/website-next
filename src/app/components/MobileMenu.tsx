@@ -49,21 +49,21 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
             </div>
 
             {/* Mobile menu items */}
-            <div className="space-y-3 pb-8">
+            <div className="space-y-3 pb-8 text-center">
               <div className="space-y-2">
                 <Link 
                   href="/accommodation" 
-                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Accommodation
                 </Link>
-                <div className="pl-4 space-y-1">
+                <div className="space-y-1">
                   {accommodationLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors"
+                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
@@ -75,17 +75,17 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="space-y-2">
                 <Link 
                   href="/adventures" 
-                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Adventures
                 </Link>
-                <div className="pl-4 space-y-1">
+                <div className="space-y-1">
                   {adventureLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors"
+                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
@@ -96,35 +96,35 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
               <Link 
                 href="/entertainment" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Entertainment
               </Link>
               <Link 
                 href="/venue" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Venue Hire
               </Link>
               <Link 
                 href="/facilities" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Facilities
               </Link>
               <Link 
                 href="/fairy-folk-n-roll" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Fairy Folk 'n Roll
               </Link>
               <Link 
                 href="/gallery" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors"
+                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setIsOpen(false)}
               >
                 Gallery
