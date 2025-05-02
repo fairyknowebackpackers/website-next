@@ -53,19 +53,22 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="space-y-2">
                 <Link 
                   href="/accommodation" 
-                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center mb-2"
                   onClick={() => setIsOpen(false)}
                 >
                   Accommodation
                 </Link>
-                <div className="space-y-1">
+                <div className="grid grid-cols-3 gap-2 justify-center">
                   {accommodationLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-2 py-3 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
+                      <div className="w-20 h-20 mb-2 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
+                        <img src="/images/placeholder-square.png" alt="" className="object-cover w-full h-full" width="120" height="120" />
+                      </div>
                       {link.label}
                     </Link>
                   ))}
@@ -75,60 +78,74 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="space-y-2">
                 <Link 
                   href="/adventures" 
-                  className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center mb-2"
                   onClick={() => setIsOpen(false)}
                 >
                   Adventures
                 </Link>
-                <div className="space-y-1">
+                <div className="grid grid-cols-3 gap-2 justify-center">
                   {adventureLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="text-gray-600 hover:text-[#073F3A] block px-4 py-2.5 text-sm rounded-lg hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-2 py-3 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
+                      <div className="w-20 h-20 mb-2 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
+                        <img src="/images/placeholder-square.png" alt="" className="object-cover w-full h-full" width="120" height="120" />
+                      </div>
                       {link.label}
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <Link 
-                href="/entertainment" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Entertainment
-              </Link>
-              <Link 
-                href="/venue" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Venue Hire
-              </Link>
-              <Link 
-                href="/facilities" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Facilities
-              </Link>
-              <Link 
-                href="/fairy-folk-n-roll" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Fairy Folk 'n Roll
-              </Link>
-              <Link 
-                href="/gallery" 
-                className="text-gray-900 hover:text-[#073F3A] block px-4 py-3 rounded-lg text-base font-medium bg-gray-50 hover:bg-gray-100 transition-colors text-center"
-                onClick={() => setIsOpen(false)}
-              >
-                Gallery
-              </Link>
+              {/* 2-column grid for next 6 items */}
+              <div className="grid grid-cols-2 gap-2 justify-center mb-4">
+                <Link 
+                  href="/entertainment" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Entertainment
+                </Link>
+                <Link 
+                  href="/venue" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Venue Hire
+                </Link>
+                <Link 
+                  href="/facilities" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Facilities
+                </Link>
+                <Link 
+                  href="/fairy-folk-n-roll" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Fairy Folk 'n Roll
+                </Link>
+                <Link 
+                  href="/gallery" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Gallery
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
+                </Link>
+              </div>
+
               <Link 
                 href="/booking" 
                 className="text-white bg-[#073F3A] hover:bg-[#052A26] block px-4 py-3 rounded-lg text-base font-medium text-center transition-colors"

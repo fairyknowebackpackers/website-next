@@ -172,7 +172,7 @@ export default function Venue() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mb-8 sm:mb-12 bg-gray-900">
+      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mb-8 sm:mb-12 bg-gray-900">
         <Image
           src="/images/venue-hire/venue-hire-banner.webp"
           alt="Venue Hire at Fairy Knowe"
@@ -182,7 +182,7 @@ export default function Venue() {
           unoptimized={false}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Venue Hire
           </h1>
         </div>
