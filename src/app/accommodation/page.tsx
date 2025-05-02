@@ -131,7 +131,7 @@ export default function Accommodation() {
                     <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
                     <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
                       {room.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
+                        <li key={`${room.id}-feature-${index}`}>{feature}</li>
                       ))}
                     </ul>
                   </div>
@@ -139,6 +139,19 @@ export default function Accommodation() {
               </MouseGradientCard>
             </Link>
           ))}
+        </div>
+      </div>
+
+      {/* Logo Section */}
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="flex justify-center">
+          <Image
+            src="/images/logo.webp"
+            alt="Fairy Knowe Logo"
+            width={200}
+            height={200}
+            className="w-32 h-32 object-contain"
+          />
         </div>
       </div>
     </div>

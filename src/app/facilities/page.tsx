@@ -184,7 +184,7 @@ export default function Facilities() {
     <div className="min-h-screen">
       <div className="min-h-screen">
         {/* Hero Banner */}
-        <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
+        <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-8 sm:mb-12 bg-gray-900">
           <Image
             src="/images/facilities/facilities-banner.webp"
             alt="Facilities at Fairy Knowe"
@@ -198,20 +198,20 @@ export default function Facilities() {
         </div>
 
         {/* Description */}
-        <div className="px-4">
+        <div className="px-2">
           <div className="max-w-7xl mx-auto px-4">
-            <p className="text-gray-600 dark:text-gray-300 text-center max-w-4xl mx-auto">
-              Everything you need to keep you clean, comfortable, connected, captivated, cozy and fed during your stay in the enchanted realms of the wood.
+            <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+              Everything you need to keep clean, comfortable, connected, captivated, cozy, fed and feeling good during your stay in the enchanted realms of the wood.
             </p>
           </div>
         </div>
 
         {/* Facilities Cards Section */}
-        <div className="max-w-7xl mx-auto px-4 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-9 sm:py-12">
+          <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-3">
             {facilities.map((facility) => (
               <div key={facility.id} className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden">
-                <div className="relative h-56">
+                <div className="relative aspect-square">
                   <Image
                     src={facility.image}
                     alt={facility.name}
@@ -220,7 +220,7 @@ export default function Facilities() {
                   />
                 </div>
                 <div className="p-4">
-                  <h2 className="text-xl font-bold text-center text-[#202635]">{facility.name}</h2>
+                  <h2 className="text-xs sm:text-xl font-bold text-center text-[#202635]">{facility.name}</h2>
                 </div>
               </div>
             ))}
@@ -231,52 +231,42 @@ export default function Facilities() {
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">General Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 dark:text-white text-right">House Rules</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                <li className="flex items-center justify-end">
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">House Rules</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                <li className="text-center md:text-right">
                   Quiet hours: 10 PM - 6 AM
-                  <span className="text-primary ml-2">•</span>
                 </li>
-                <li className="flex items-center justify-end">
+                <li className="text-center md:text-right">
                   Keep common areas clean
-                  <span className="text-primary ml-2">•</span>
                 </li>
-                <li className="flex items-center justify-end">
+                <li className="text-center md:text-right">
                   Label and store food properly
-                  <span className="text-primary ml-2">•</span>
                 </li>
-                <li className="flex items-center justify-end">
+                <li className="text-center md:text-right">
                   Respect other guests
-                  <span className="text-primary ml-2">•</span>
                 </li>
-                <li className="flex items-center justify-end">
+                <li className="text-center md:text-right">
                   No smoking indoors
-                  <span className="text-primary ml-2">•</span>
                 </li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4 dark:text-white">Reception Hours</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-primary mr-2">•</span>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">Reception Hours</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                <li className="text-center">
                   Monday - Sunday: 7 AM - 10 PM
                 </li>
-                <li className="flex items-center">
-                  <span className="text-primary mr-2">•</span>
+                <li className="text-center">
                   Check-in: 2 PM - 9 PM
                 </li>
-                <li className="flex items-center">
-                  <span className="text-primary mr-2">•</span>
+                <li className="text-center">
                   Check-out: by 10 AM
                 </li>
-                <li className="flex items-center">
-                  <span className="text-primary mr-2">•</span>
+                <li className="text-center">
                   After hours: Security on site
                 </li>
-                <li className="flex items-center">
-                  <span className="text-primary mr-2">•</span>
+                <li className="text-center">
                   Emergency contact available 24/7
                 </li>
               </ul>

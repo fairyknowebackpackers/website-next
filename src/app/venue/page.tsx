@@ -188,102 +188,101 @@ export default function Venue() {
         </div>
       </div>
 
-      {/* Main Content */}
-      <div>
-        {/* Introduction and Event Types */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          {/* Introduction */}
-          <div className="text-center mb-12 sm:mb-16">
-            <p className="text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto text-center text-sm sm:text-base">
-              Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
-            </p>
-          </div>
+      {/* Description */}
+      <div className="px-2">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
+          </p>
+        </div>
+      </div>
 
-          {/* Event Types Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-16">
-            {eventTypes.map((event, index) => (
+      {/* Main Content */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-9 sm:py-12">
+        {/* Event Types Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+          {eventTypes.map((event, index) => (
+            <div 
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="relative h-48 sm:h-56">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  {event.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
+                  {event.description}
+                </p>
+                <ul className="space-y-2">
+                  {event.features.map((feature, featureIndex) => (
+                    <li 
+                      key={featureIndex}
+                      className="flex items-center text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                    >
+                      <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Wedding Gallery */}
+        <div className="mt-16 mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+            Wedding Gallery
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
+            {currentImages.map((image, index) => (
               <div 
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="relative aspect-square cursor-pointer group"
+                onClick={() => openImage(image, currentPage * imagesPerPage + index)}
               >
-                <div className="relative h-48 sm:h-56">
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-4">
-                    {event.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {event.features.map((feature, featureIndex) => (
-                      <li 
-                        key={featureIndex}
-                        className="flex items-center text-gray-600 dark:text-gray-300 text-sm sm:text-base"
-                      >
-                        <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-lg" />
               </div>
             ))}
           </div>
-
-          {/* Wedding Gallery */}
-          <div className="mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-              Wedding Gallery
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4">
-              {currentImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative aspect-square cursor-pointer group"
-                  onClick={() => openImage(image, currentPage * imagesPerPage + index)}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300 rounded-lg" />
-                </div>
-              ))}
-            </div>
-            
-            {/* Pagination Controls */}
-            <div className="flex justify-center items-center mt-6 space-x-4">
-              <button
-                onClick={prevPage}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              >
-                <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-sm text-gray-600 dark:text-gray-300">
-                Page {currentPage + 1} of {totalPages}
-              </span>
-              <button
-                onClick={nextPage}
-                className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-              >
-                <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
+          
+          {/* Pagination Controls */}
+          <div className="flex justify-center items-center mt-6 space-x-4">
+            <button
+              onClick={prevPage}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+            >
+              <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <span className="text-sm text-gray-600 dark:text-gray-300">
+              Page {currentPage + 1} of {totalPages}
+            </span>
+            <button
+              onClick={nextPage}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+            >
+              <svg className="h-5 w-5 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

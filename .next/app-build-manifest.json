@@ -1,15 +1,30 @@
 {
   "pages": {
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/accommodation/camping/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/accommodation/camping/page.js"
+    ],
+    "/accommodation/safari-tent/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/safari-tent/page.js"
+    ],
+    "/accommodation/gypsy-caravan/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/gypsy-caravan/page.js"
     ],
     "/accommodation/page": [
       "static/chunks/webpack.js",
@@ -25,16 +40,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/kayaking/page.js"
-    ],
-    "/accommodation/safari-tent/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/safari-tent/page.js"
-    ],
-    "/accommodation/camping/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/camping/page.js"
     ],
     "/adventures/map-of-africa/page": [
       "static/chunks/webpack.js",
@@ -61,30 +66,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/gallery/page.js"
     ],
-    "/contact/page": [
+    "/booking/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/accommodation/gypsy-caravan/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/gypsy-caravan/page.js"
-    ],
-    "/accommodation/mixed-dorm/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/mixed-dorm/page.js"
-    ],
-    "/adventures/brown-hooded-kingfisher-trail/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/brown-hooded-kingfisher-trail/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/app/booking/page.js"
     ]
   }
 }
