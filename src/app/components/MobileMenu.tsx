@@ -63,19 +63,19 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-2 py-3 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="w-20 h-20 mb-2 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
+                      <div className="w-full h-24 -mt-3 rounded-t-lg overflow-hidden">
                         <img 
                           src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
                           alt={link.label} 
-                          className="object-cover w-full h-full" 
+                          className="w-full h-full object-cover" 
                           width="120" 
                           height="120" 
                         />
                       </div>
-                      {link.label}
+                      <span className="mt-0.5 font-medium">{link.label}</span>
                     </Link>
                   ))}
                 </div>
@@ -94,13 +94,19 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-2 py-3 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="w-20 h-20 mb-2 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
-                        <img src="/images/placeholder-square.png" alt="" className="object-cover w-full h-full" width="120" height="120" />
+                      <div className="w-full h-24 -mt-3 rounded-t-lg overflow-hidden">
+                        <img 
+                          src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
+                          alt={link.label} 
+                          className="w-full h-full object-cover" 
+                          width="120" 
+                          height="120" 
+                        />
                       </div>
-                      {link.label}
+                      <span className="mt-0.5 font-medium">{link.label}</span>
                     </Link>
                   ))}
                 </div>
