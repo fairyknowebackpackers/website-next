@@ -1,7 +1,4 @@
 {
-  "/accommodation/page": "app/accommodation/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/venue/page": "app/venue/page.js",
-  "/page": "app/page.js",
-  "/facilities/page": "app/facilities/page.js"
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js"
 }

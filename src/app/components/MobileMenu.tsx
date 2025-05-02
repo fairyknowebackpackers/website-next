@@ -67,7 +67,13 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                       onClick={() => setIsOpen(false)}
                     >
                       <div className="w-20 h-20 mb-2 flex items-center justify-center bg-gray-100 rounded-md overflow-hidden">
-                        <img src="/images/placeholder-square.png" alt="" className="object-cover w-full h-full" width="120" height="120" />
+                        <img 
+                          src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
+                          alt={link.label} 
+                          className="object-cover w-full h-full" 
+                          width="120" 
+                          height="120" 
+                        />
                       </div>
                       {link.label}
                     </Link>
