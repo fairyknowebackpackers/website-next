@@ -73,7 +73,7 @@ export default function Accommodation() {
     <div>
       {/* Hero Banner */}
       {/* Mobile Banner */}
-      <div className="relative h-[200px] w-full mb-12 bg-gray-900 block md:hidden">
+      <div className="relative w-full aspect-[9/5] mb-12 bg-gray-900 block md:hidden">
         <Image
           src="/images/home/mobile/accommodation-banner.webp"
           alt="Fairy Knowe Accommodation Mobile Banner"
