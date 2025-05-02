@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/accommodation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/accommodation/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,25 +11,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/accommodation/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/page.js"
-    ],
-    "/adventures/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/page.js"
-    ],
     "/accommodation/camping/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/accommodation/camping/page.js"
-    ],
-    "/accommodation/gypsy-caravan/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/gypsy-caravan/page.js"
     ]
   }
 }

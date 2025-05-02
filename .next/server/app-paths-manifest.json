@@ -1,7 +1,4 @@
 {
-  "/page": "app/page.js",
   "/accommodation/page": "app/accommodation/page.js",
-  "/adventures/page": "app/adventures/page.js",
-  "/accommodation/camping/page": "app/accommodation/camping/page.js",
-  "/accommodation/gypsy-caravan/page": "app/accommodation/gypsy-caravan/page.js"
+  "/accommodation/camping/page": "app/accommodation/camping/page.js"
 }
