@@ -53,7 +53,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Banner */}
       {/* Mobile Banner */}
-      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
+      <div className="relative w-full aspect-[9/5] mb-8 bg-gray-900 block md:hidden">
         <Image
           src="/images/home/mobile/home-banner.webp"
           alt="Fairy Knowe Home Mobile Banner"
@@ -70,7 +70,7 @@ export default function Home() {
         </div>
       </div>
       {/* Desktop Banner */}
-      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900 hidden md:block">
         <Image
           src="/images/home/home-banner.webp"
           alt="Fairy Knowe Home"
@@ -88,7 +88,7 @@ export default function Home() {
       </div>
 
       {/* Additional Description */}
-      <div className="px-2">
+      <div className="mb-8">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Your home away from home in the heart of Wilderness, offering comfortable accommodation,
@@ -98,7 +98,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="py-12 px-4">
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Pages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
