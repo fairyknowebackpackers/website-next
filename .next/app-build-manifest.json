@@ -20,6 +20,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/accommodation/camping/page.js"
+    ],
+    "/accommodation/gypsy-caravan/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/gypsy-caravan/page.js"
     ]
   }
 }

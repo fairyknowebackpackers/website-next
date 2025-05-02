@@ -68,7 +68,11 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     >
                       <div className="w-full h-24 -mt-3 rounded-t-lg overflow-hidden">
                         <img 
-                          src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
+                          src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : 
+                               link.label === "Camping" ? "/images/menu/camping.webp" : 
+                               link.label === "Safari Tent" ? "/images/menu/safari-tent.webp" : 
+                               link.label === "Gypsy Caravan" ? "/images/menu/gypsy-caravan.webp" : 
+                               "/images/placeholder-square.png"} 
                           alt={link.label} 
                           className="w-full h-full object-cover" 
                           width="120" 
