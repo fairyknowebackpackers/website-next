@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
 
 export default function Home() {
@@ -8,36 +9,42 @@ export default function Home() {
       title: 'Accommodation',
       description: 'Explore our comfortable rooms and cozy accommodation options.',
       image: '/images/home/accommodation-card.webp',
+      mobileImage: '/images/home/mobile/accommodation-banner.webp',
       link: '/accommodation'
     },
     {
       title: 'Adventures',
       description: 'Discover exciting activities and adventures in Wilderness.',
       image: '/images/home/adventure-card.webp',
+      mobileImage: '/images/home/mobile/adventure-banner.webp',
       link: '/adventure'
     },
     {
       title: 'Entertainment',
       description: 'Join us for live music, open mic nights, and family markets.',
       image: '/images/home/entertainment-card.webp',
+      mobileImage: '/images/home/mobile/entertainment-banner.webp',
       link: '/entertainment'
     },
     {
       title: 'Venue Hire',
       description: 'Host your special occasion in our charming venue surrounded by nature.',
       image: '/images/home/wedding-events-card.webp',
+      mobileImage: '/images/home/mobile/venue-banner.webp',
       link: '/venue'
     },
     {
       title: 'Facilities',
       description: 'Enjoy our bar, restaurant, self catering kitchen and social spaces.',
       image: '/images/home/facilities-card.webp',
+      mobileImage: '/images/home/mobile/facilities-banner.webp',
       link: '/facilities'
     },
     {
       title: 'Fairy Folk \'n Roll',
       description: 'Visit our YouTube channel exploring the art of live music performance through digital media.',
       image: '/images/home/ffr-card.webp',
+      mobileImage: '/images/home/mobile/ffr-banner.webp',
       link: '/fairy-folk-n-roll'
     }
   ]
@@ -45,35 +52,35 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-auto w-full mb-4 md:mb-12">
+      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900">
         <Image
           src="/images/home/home-banner.webp"
-          alt="Welcome to Fairy Knowe Backpackers"
-          width={1920}
-          height={1080}
-          className="w-full h-full lg:h-auto object-cover"
+          alt="Fairy Knowe Backpackers"
+          fill
+          className="object-cover"
           priority
-          quality={100}
+          quality={85}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font text-center px-4">
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Fairy Knowe Backpackers
           </h1>
         </div>
       </div>
 
       {/* Additional Description */}
-      <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Your home away from home in the heart of Wilderness, offering comfortable accommodation,
-          exciting adventures, and a vibrant social atmosphere.
-        </p>
+      <div className="px-2">
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Your home away from home in the heart of Wilderness, offering comfortable accommodation,
+            exciting adventures, and a vibrant social atmosphere.
+          </p>
+        </div>
       </div>
 
       {/* Main Content */}
-      <div className="py-6 lg:py-12 px-4">
+      <div className="py-12 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Pages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
