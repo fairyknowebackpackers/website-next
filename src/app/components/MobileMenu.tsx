@@ -58,28 +58,35 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                 >
                   Accommodation
                 </Link>
-                <div className="grid grid-cols-3 gap-2 justify-center">
+                <div className="grid grid-cols-3 gap-2 justify-center mt-4">
                   {accommodationLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center w-full aspect-square mt-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="w-full h-24 -mt-3 rounded-t-lg overflow-hidden">
+                      <div className="w-full aspect-square -mt-3">
                         <img 
                           src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : 
                                link.label === "Camping" ? "/images/menu/camping.webp" : 
                                link.label === "Safari Tent" ? "/images/menu/safari-tent.webp" : 
                                link.label === "Gypsy Caravan" ? "/images/menu/gypsy-caravan.webp" : 
+                               link.label === "Twin Room" ? "/images/menu/twin-room.webp" : 
+                               link.label === "Family Room" ? "/images/menu/family-room.webp" : 
+                               link.label === "Five Sleeper" ? "/images/menu/five-sleeper.webp" : 
+                               link.label === "Double En-suite" ? "/images/menu/double-en-suite.webp" : 
+                               link.label === "Family En-suite Rondawel" ? "/images/menu/family-en-suite-rondawel.webp" : 
                                "/images/placeholder-square.png"} 
                           alt={link.label} 
-                          className="w-full h-full object-cover" 
+                          className="w-full h-full object-cover rounded-t-lg" 
                           width="120" 
                           height="120" 
                         />
                       </div>
-                      <span className="mt-0.5 font-medium">{link.label}</span>
+                      <div className="w-full h-12 flex items-center justify-center">
+                        <span className="font-medium px-2">{link.label}</span>
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -98,14 +105,14 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-xs rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center w-full aspect-square mt-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      <div className="w-full h-24 -mt-3 rounded-t-lg overflow-hidden">
+                      <div className="w-full h-24 -mt-3">
                         <img 
                           src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : "/images/placeholder-square.png"} 
                           alt={link.label} 
-                          className="w-full h-full object-cover" 
+                          className="w-full h-full object-cover rounded-t-lg" 
                           width="120" 
                           height="120" 
                         />
