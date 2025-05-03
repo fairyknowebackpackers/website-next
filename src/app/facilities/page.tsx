@@ -237,7 +237,7 @@ export default function Facilities() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {facilityCategories.map((category) => (
-              <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
+              <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200 flex flex-col h-full">
                 {category.title === 'Food & Drink' ? (
                   <>
                     {/* Mobile Image */}
@@ -272,9 +272,9 @@ export default function Facilities() {
                     />
                   </div>
                 )}
-                <div className="p-6">
-                  <h2 className="text-xl font-bold mb-4 text-gray-900">{category.title}</h2>
-                  <ul className="space-y-2 text-gray-600">
+                <div className="p-6 flex flex-col flex-1">
+                  <h2 className="text-xl font-bold mb-4 text-gray-900 min-h-[3rem]">{category.title}</h2>
+                  <ul className="space-y-2 text-gray-600 text-center md:text-left flex-1">
                     {category.facilities.map((facility) => (
                       <li key={facility.name} className="flex items-start">
                         <span className="mr-2">•</span>
