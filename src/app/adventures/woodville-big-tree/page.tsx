@@ -60,22 +60,43 @@ export default function WoodvilleBigTreePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
+      {/* Mobile Banner */}
+      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
         <Image
-          src="/images/adventures/banners/woodville-big-tree-banner.webp"
-          alt="Woodville Big Tree"
+          src="/images/home/mobile/woodville-big-tree-banner.webp"
+          alt="Fairy Knowe Woodville Big Tree Mobile Banner"
           fill
           className="object-cover"
           priority
+          quality={85}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font text-center px-4">Woodville Big Tree</h1>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Woodville Big Tree
+          </h1>
+        </div>
+      </div>
+      {/* Desktop Banner */}
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+        <Image
+          src="/images/adventures/banners/woodville-big-tree-banner.webp"
+          alt="Fairy Knowe Woodville Big Tree"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Woodville Big Tree
+          </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-8 md:py-12 px-4">
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Marvel at the majestic Outeniqua Yellowwood, a sentinel of time standing for nearly a thousand years. Choose between a 2.2-km or 7-km loop trail that wind through an ancient forest brimming with life, where countless species of mushrooms dot the forest surfaces like jewels of nature&apos;s treasure. This iconic wonder has become a cherished highlight of the indigenous Wilderness forests, captivating the hearts of all who visit. Its sprawling crown serves as a sanctuary for birds like the Knysna Turaco and Cape Parrot, while its bountiful fruit provides sustenance to bats and bush pigs alike. The essence of this enchanting tree and its surroundings is nothing short of magical.

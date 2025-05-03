@@ -53,23 +53,43 @@ export default function WaterUnderTheBridgePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full">
+      {/* Mobile Banner */}
+      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
         <Image
-          src="/images/adventures/banners/water-under-the-bridge-banner.webp"
-          alt="Water Under the Bridge"
+          src="/images/home/mobile/water-under-the-bridge-banner.webp"
+          alt="Fairy Knowe Water Under the Bridge Mobile Banner"
           fill
           className="object-cover"
           priority
-          unoptimized={false}
+          quality={85}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 drop-shadow-[0_5px_9px_rgba(1,1,1,1)] hestrial-font text-center px-4">Water Under the Bridge</h1>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Water Under the Bridge
+          </h1>
+        </div>
+      </div>
+      {/* Desktop Banner */}
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+        <Image
+          src="/images/adventures/banners/water-under-the-bridge-banner.webp"
+          alt="Fairy Knowe Water Under the Bridge"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Water Under the Bridge
+          </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-8 md:py-12 px-4">
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Let your adrenaline loose as you leap from the railway bridge into the cool, rejuvenating waters of the Touws River. Just a short 5-minute stroll from your home away from home, this adventure promises the perfect blend of thrills and chills — a true memory-maker for those seeking a quick dash of excitement in their day.
