@@ -55,8 +55,8 @@ export default function Home() {
       {/* Mobile Banner */}
       <div className="relative w-full aspect-[9/5] mb-8 bg-gray-900 block md:hidden">
         <Image
-          src="/images/home/mobile/safari-tent-banner.webp"
-          alt="Fairy Knowe Safari Tent Mobile Banner"
+          src="/images/home/mobile/home-banner.webp"
+          alt="Fairy Knowe Home Mobile Banner"
           fill
           className="object-cover"
           priority
