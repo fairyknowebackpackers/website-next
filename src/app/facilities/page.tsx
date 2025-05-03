@@ -204,7 +204,7 @@ export default function Facilities() {
       {/* Desktop Banner */}
       <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
         <Image
-          src="/images/facilities/banners/facilities-banner.webp"
+          src="/images/facilities/facilities-banner.webp"
           alt="Fairy Knowe Facilities"
           fill
           className="object-cover"
@@ -229,10 +229,10 @@ export default function Facilities() {
         </div>
 
         {/* Facilities Cards Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-9 sm:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-5 gap-3">
             {facilities.map((facility) => (
-              <div key={facility.id} className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden">
+              <div key={facility.id} className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
                 <div className="relative aspect-square">
                   <Image
                     src={facility.image}
@@ -241,8 +241,8 @@ export default function Facilities() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-4">
-                  <h2 className="text-xs sm:text-xl font-bold text-center text-[#202635]">{facility.name}</h2>
+                <div className="p-2 h-12 flex items-center justify-center">
+                  <h2 className="text-[10px] sm:text-lg text-center text-gray-900">{facility.name}</h2>
                 </div>
               </div>
             ))}
@@ -253,9 +253,9 @@ export default function Facilities() {
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold mb-6 text-center dark:text-white">General Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
-              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">House Rules</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+            <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 text-center md:text-right">House Rules</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
                 <li className="text-center md:text-right">
                   Quiet hours: 10 PM - 6 AM
                 </li>
@@ -273,22 +273,22 @@ export default function Facilities() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
-              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">Reception Hours</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                <li className="text-center">
+            <div className="bg-white border border-gray-200 rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900 text-center md:text-left">Reception Hours</h3>
+              <ul className="space-y-2 text-gray-600 text-sm">
+                <li className="text-center md:text-left">
                   Monday - Sunday: 7 AM - 10 PM
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-left">
                   Check-in: 2 PM - 9 PM
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-left">
                   Check-out: by 10 AM
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-left">
                   After hours: Security on site
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-left">
                   Emergency contact available 24/7
                 </li>
               </ul>
