@@ -172,24 +172,43 @@ export default function Venue() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mb-8 sm:mb-12 bg-gray-900">
+      {/* Mobile Banner */}
+      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
         <Image
-          src="/images/venue-hire/venue-hire-banner.webp"
-          alt="Venue Hire at Fairy Knowe"
+          src="/images/home/mobile/venue-hire-banner.webp"
+          alt="Fairy Knowe Venue Mobile Banner"
           fill
           className="object-cover"
           priority
-          unoptimized={false}
+          quality={85}
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Venue Hire
+          </h1>
+        </div>
+      </div>
+      {/* Desktop Banner */}
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+        <Image
+          src="/images/venue-hire/venue-hire-banner.webp"
+          alt="Fairy Knowe Venue Hire"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Venue Hire
           </h1>
         </div>
       </div>
 
-      {/* Description */}
-      <div className="px-2">
+      {/* Content Section */}
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Whether you&apos;re planning an intimate wedding amongst the trees, a captivating film shoot for the next Peter Pan, a corporate retreat where nature fuels inspiration, or a special celebration glowing with fairy-tale splendor, Fairy Knowe Backpackers Lodge opens the door to magical moments. Nestled against a backdrop of natural beauty, this rustic haven of enchanting wonder creates unforgettable memories for all those who wander.
@@ -198,7 +217,7 @@ export default function Venue() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-9 sm:py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Event Types Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {eventTypes.map((event, index) => (
