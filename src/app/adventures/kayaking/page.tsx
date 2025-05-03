@@ -71,7 +71,7 @@ export default function KayakingPage() {
       <div className="py-8 md:py-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Paddle your way through the serene waters of the Garden Route with our guided kayaking adventures. Explore hidden coves, spot local wildlife, and experience the magic of the lagoon from a unique perspective. Perfect for both beginners and experienced paddlers.
+          Paddle your way over serene waters, dyed red and orange by the tannins in the ground, through the Wilderness National Park. A wonderful walk and magnificent waterfall wait on the other side.
           </p>
 
           {/* Gallery */}

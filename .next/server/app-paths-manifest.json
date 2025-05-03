@@ -3,5 +3,6 @@
   "/accommodation/mixed-dorm/page": "app/accommodation/mixed-dorm/page.js",
   "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
   "/accommodation/twin-room/page": "app/accommodation/twin-room/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/adventures/brown-hooded-kingfisher-trail/page": "app/adventures/brown-hooded-kingfisher-trail/page.js"
 }

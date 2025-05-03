@@ -81,7 +81,7 @@ export default function ParaglidingPage() {
       <div className="py-8 md:py-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Fly like a fairy or glide like a goblin through the skies with a breathtaking 15-minute tandem paragliding experience above the spectacular Garden Route coastline. Feel the power of levitation as you float through the air with expert pilots, taking in awe-inspiring views of the endless ocean, lush forests, and majestic mountains.
+          Fly like a fairy or glide like a goblin with the power of levitation as you float through the air with expert pilots, taking in awe-inspiring views of the endless ocean, lush forests, and majestic mountains.
           </p>
 
           {/* Gallery */}
