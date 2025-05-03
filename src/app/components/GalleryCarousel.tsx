@@ -5,20 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const images = [
-  '/images/Gallery/Carousel/Family Room Card.webp',
-  '/images/Gallery/Carousel/Twin Room Card.webp',
-  '/images/Gallery/Carousel/Mixed Dorm Card.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-15h33m26s538.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-15h47m57s761.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-15h56m21s810.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-15h57m11s255.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-15h57m20s770.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-16h06m00s459.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-16h06m29s832.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-16h08m19s649.webp',
-  '/images/Gallery/Carousel/vlcsnap-2024-08-21-16h08m59s747.webp',
-  '/images/Gallery/Carousel/Nightlife.webp',
-  '/images/Gallery/Carousel/Live Music Gigs Card.webp',
+  '/images/gallery/carousel/Family Room Card.webp',
+  '/images/gallery/carousel/Twin Room Card.webp',
+  '/images/gallery/carousel/Mixed Dorm Card.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-15h33m26s538.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-15h47m57s761.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-15h56m21s810.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-15h57m11s255.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-15h57m20s770.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-16h06m00s459.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-16h06m29s832.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-16h08m19s649.webp',
+  '/images/gallery/carousel/vlcsnap-2024-08-21-16h08m59s747.webp',
+  '/images/gallery/carousel/Nightlife.webp',
+  '/images/gallery/carousel/Live Music Gigs Card.webp',
   '/images/Gallery/Carousel/Lively Bar Card.webp'
 ];
 
