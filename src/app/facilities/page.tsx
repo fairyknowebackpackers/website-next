@@ -248,6 +248,10 @@ export default function Facilities() {
                         fill
                         className="object-cover"
                         sizes="100vw"
+                        onError={(e) => {
+                          e.currentTarget.src = '/images/facilities/restaurant-kitchen.webp';
+                          console.error('Failed to load mobile image for Food & Drink card');
+                        }}
                       />
                     </div>
                     {/* Desktop Image */}
@@ -269,6 +273,10 @@ export default function Facilities() {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      onError={(e) => {
+                        e.currentTarget.src = '/images/facilities/pet-friendly.webp';
+                        console.error('Failed to load image for', category.title);
+                      }}
                     />
                   </div>
                 )}

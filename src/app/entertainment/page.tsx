@@ -40,7 +40,7 @@ export default function Entertainment() {
       {/* Desktop Banner */}
       <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
         <Image
-          src="/images/entertainment/banners/entertainment-banner.webp"
+          src="/images/entertainment/entertainment-banner.webp"
           alt="Fairy Knowe Entertainment"
           fill
           className="object-cover"
@@ -65,7 +65,7 @@ export default function Entertainment() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Live Music Card */}
           <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
