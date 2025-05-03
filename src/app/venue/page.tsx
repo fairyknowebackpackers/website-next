@@ -62,6 +62,19 @@ const eventTypes = [
       'Dedicated crew facilities'
     ],
     image: '/images/venue-hire/film-crews-card.webp'
+  },
+  {
+    title: 'Skill Trades & Workshops',
+    description: 'Share, learn, or host hands-on workshops and skill trades in a creative, collaborative environment. Perfect for artists, makers, and lifelong learners.',
+    features: [
+      'Artisan workshops',
+      'Skill-sharing sessions',
+      'Craft & DIY events',
+      'Guest instructors welcome',
+      'Flexible indoor/outdoor spaces',
+      'Community-driven learning'
+    ],
+    image: '/images/venue-hire/skill-trades-workshops-card.webp'
   }
 ]
 
@@ -221,9 +234,9 @@ export default function Venue() {
         {/* Event Types Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {eventTypes.map((event, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300${eventTypes.length % 2 === 1 && index === eventTypes.length - 1 ? ' sm:col-span-2 sm:mx-auto sm:max-w-md' : ''}`}
             >
               <div className="relative h-48 sm:h-56">
                 <Image
