@@ -115,23 +115,43 @@ export default function DoubleEnSuitePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+      {/* Mobile Banner */}
+      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
         <Image
-          src="/images/accommodation/banners/doube-en-suite-banner.webp"
-          alt="Double En-suite Banner"
+          src="/images/home/mobile/double-en-suite-banner.webp"
+          alt="Fairy Knowe Double En-suite Mobile Banner"
           fill
           className="object-cover"
           priority
-          unoptimized={false}
+          quality={85}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">Double En-suite</h1>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Double En-Suite
+          </h1>
+        </div>
+      </div>
+      {/* Desktop Banner */}
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+        <Image
+          src="/images/accommodation/banners/doube-en-suite-banner.webp"
+          alt="Fairy Knowe Accommodation Double En-Suite"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Double En-Suite
+          </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-8 sm:py-12 px-4">
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Indulge in the crème de la crème of comfort, ideal for couples or individuals who appreciate a touch of coziness. With privacy and extra amenities, this retreat offers the perfect sanctuary for a truly special and relaxing stay.

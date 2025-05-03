@@ -115,23 +115,43 @@ export default function FamilyEnSuiteRondawelPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[500px] w-full bg-gray-900">
+      {/* Mobile Banner */}
+      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
         <Image
-          src="/images/accommodation/banners/rondawel-banner.webp"
-          alt="Family En-suite Rondawel Banner"
+          src="/images/home/mobile/family-en-suite-rondawel-banner.webp"
+          alt="Fairy Knowe Family En-suite Rondawel Mobile Banner"
           fill
           className="object-cover"
           priority
-          unoptimized={false}
+          quality={85}
+          sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">Family En-suite Rondawel</h1>
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Family En-Suite Rondawel
+          </h1>
+        </div>
+      </div>
+      {/* Desktop Banner */}
+      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
+        <Image
+          src="/images/accommodation/banners/rondawel-banner.webp"
+          alt="Fairy Knowe Accommodation Family En-Suite Rondawel"
+          fill
+          className="object-cover"
+          priority
+          quality={85}
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
+            Family En-Suite Rondawel
+          </h1>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="py-8 sm:py-12 px-4">
+      <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             The forest's very own penthouse suite - A luxurious traditional African-style round house with modern amenities. Perfect for families seeking a private and authentic experience with all the comforts of home.

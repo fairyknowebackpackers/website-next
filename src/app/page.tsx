@@ -55,8 +55,8 @@ export default function Home() {
       {/* Mobile Banner */}
       <div className="relative w-full aspect-[9/5] mb-8 bg-gray-900 block md:hidden">
         <Image
-          src="/images/home/mobile/home-banner.webp"
-          alt="Fairy Knowe Home Mobile Banner"
+          src="/images/home/mobile/safari-tent-banner.webp"
+          alt="Fairy Knowe Safari Tent Mobile Banner"
           fill
           className="object-cover"
           priority
@@ -90,7 +90,7 @@ export default function Home() {
       {/* Additional Description */}
       <div className="mb-8">
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center leading-relaxed">
             Your home away from home in the heart of Wilderness, offering comfortable accommodation,
             exciting adventures, and a vibrant social atmosphere.
           </p>

@@ -1,7 +1,8 @@
 {
-  "/page": "app/page.js",
-  "/accommodation/page": "app/accommodation/page.js",
+  "/accommodation/family-room/page": "app/accommodation/family-room/page.js",
+  "/accommodation/five-sleeper/page": "app/accommodation/five-sleeper/page.js",
+  "/accommodation/gypsy-caravan/page": "app/accommodation/gypsy-caravan/page.js",
+  "/accommodation/mixed-dorm/page": "app/accommodation/mixed-dorm/page.js",
   "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
-  "/accommodation/camping/page": "app/accommodation/camping/page.js",
-  "/adventures/brown-hooded-kingfisher-trail/page": "app/adventures/brown-hooded-kingfisher-trail/page.js"
+  "/accommodation/twin-room/page": "app/accommodation/twin-room/page.js"
 }
