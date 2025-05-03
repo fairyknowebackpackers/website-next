@@ -19,7 +19,7 @@ const images = [
   '/images/gallery/carousel/vlcsnap-2024-08-21-16h08m59s747.webp',
   '/images/gallery/carousel/Nightlife.webp',
   '/images/gallery/carousel/Live Music Gigs Card.webp',
-  '/images/Gallery/Carousel/Lively Bar Card.webp'
+  '/images/gallery/carousel/Lively Bar Card.webp'
 ];
 
 const CHANGE_INTERVAL = 2000; // 2 seconds between each section change
