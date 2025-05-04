@@ -40,7 +40,7 @@ export default function Entertainment() {
       {/* Desktop Banner */}
       <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
         <Image
-          src="/images/Entertainment/entertainment-banner.webp"
+          src="/images/entertainment/entertainment-banner.webp"
           alt="Fairy Knowe Entertainment"
           fill
           className="object-cover"
