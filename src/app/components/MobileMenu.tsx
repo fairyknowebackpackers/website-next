@@ -53,7 +53,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="space-y-2">
                 <Link 
                   href="/accommodation" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center mb-2"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center mb-2"
                   onClick={() => setIsOpen(false)}
                 >
                   Accommodation
@@ -63,7 +63,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center w-full aspect-square mt-2"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center w-full aspect-square mt-2"
                       onClick={() => setIsOpen(false)}
                     >
                       <div className="w-full aspect-square -mt-3">
@@ -95,7 +95,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="space-y-2">
                 <Link 
                   href="/adventures" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center mb-2"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center mb-2"
                   onClick={() => setIsOpen(false)}
                 >
                   Adventures
@@ -105,7 +105,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center w-full aspect-square mt-2"
+                      className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center w-full aspect-square mt-2"
                       onClick={() => setIsOpen(false)}
                     >
                       <div className="w-full aspect-square -mt-3">
@@ -141,42 +141,42 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="grid grid-cols-2 gap-2 justify-center mb-4">
                 <Link 
                   href="/entertainment" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Entertainment
                 </Link>
                 <Link 
                   href="/venue" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Venue Hire
                 </Link>
                 <Link 
                   href="/facilities" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Facilities
                 </Link>
                 <Link 
                   href="/fairy-folk-n-roll" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Fairy Folk 'n Roll
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-white border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-lg shadow-sm hover:bg-gray-50 transition-colors text-center"
+                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
