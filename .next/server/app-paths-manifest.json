@@ -1,4 +1,8 @@
 {
-  "/entertainment/page": "app/entertainment/page.js",
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js",
+  "/page": "app/page.js",
+  "/accommodation/twin-room/page": "app/accommodation/twin-room/page.js",
+  "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js",
+  "/accommodation/page": "app/accommodation/page.js"
 }

@@ -75,6 +75,19 @@ const eventTypes = [
       'Community-driven learning'
     ],
     image: '/images/venue-hire/skill-trades-workshops-card.webp'
+  },
+  {
+    title: 'Expo Events',
+    description: 'Host your next trade show, exhibition, or product launch in our versatile event space. Perfect for showcasing products, networking, and creating memorable brand experiences.',
+    features: [
+      'Spacious exhibition areas',
+      'Professional lighting & sound',
+      'Customizable booth layouts',
+      'Catering services available',
+      'High-speed WiFi',
+      'On-site support staff'
+    ],
+    image: '/images/venue-hire/expo-events-card.webp'
   }
 ]
 
@@ -238,7 +251,7 @@ export default function Venue() {
               key={index}
               className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300${eventTypes.length % 2 === 1 && index === eventTypes.length - 1 ? ' sm:col-span-2 sm:mx-auto sm:max-w-md' : ''}`}
             >
-              <div className="relative h-48 sm:h-56">
+              <div className="relative h-64 sm:h-72">
                 <Image
                   src={event.image}
                   alt={event.title}
