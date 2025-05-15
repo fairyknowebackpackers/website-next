@@ -62,19 +62,27 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     className="ml-2 text-lg cursor-pointer z-10"
                     onClick={e => { e.stopPropagation(); setOpenDropdown(openDropdown === 'accommodation' ? null : 'accommodation'); }}
                   >
-                    {openDropdown === 'accommodation' ? '▲' : '▼'}
+                    {openDropdown === 'accommodation' ? (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
                   </span>
                 </button>
                 {openDropdown === 'accommodation' && (
-                  <div className="grid grid-cols-3 gap-2 justify-center mt-5 mb-4">
+                  <div className="grid grid-cols-3 gap-2 mt-5 mb-4">
                     {accommodationLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center w-full aspect-square"
+                        className="flex flex-col h-full items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                         onClick={() => setIsOpen(false)}
                       >
-                        <div className="w-full aspect-square -mt-3">
+                        <div className="flex-1 w-full overflow-hidden rounded-xl">
                           <img 
                             src={link.label === "Mixed Dorm" ? "/images/menu/mixed-dorm.webp" : 
                                  link.label === "Camping" ? "/images/menu/camping.webp" : 
@@ -87,9 +95,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                                  link.label === "Family En-suite Rondawel" ? "/images/menu/family-en-suite-rondawel.webp" : 
                                  "/images/placeholder-square.png"} 
                             alt={link.label} 
-                            className="w-full h-full object-contain rounded-t-lg" 
-                            width="120" 
-                            height="120" 
+                            className="w-full h-full object-cover"
                           />
                         </div>
                         <div className="w-full h-12 flex items-center justify-center">
@@ -112,19 +118,27 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                     className="ml-2 text-lg cursor-pointer z-10"
                     onClick={e => { e.stopPropagation(); setOpenDropdown(openDropdown === 'adventures' ? null : 'adventures'); }}
                   >
-                    {openDropdown === 'adventures' ? '▲' : '▼'}
+                    {openDropdown === 'adventures' ? (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
                   </span>
                 </button>
                 {openDropdown === 'adventures' && (
-                  <div className="grid grid-cols-3 gap-2 justify-center mt-5 mb-4">
+                  <div className="grid grid-cols-3 gap-2 mt-5 mb-4">
                     {adventureLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="flex flex-col items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-0 py-1.5 text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center w-full aspect-square"
+                        className="flex flex-col h-full items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
                         onClick={() => setIsOpen(false)}
                       >
-                        <div className="w-full aspect-square -mt-3">
+                        <div className="flex-1 w-full overflow-hidden rounded-xl">
                           <img 
                             src={link.label === "Kayaking" ? "/images/menu/kayaking.webp" : 
                                  link.label === "Paragliding" ? "/images/menu/paragliding.webp" : 
@@ -140,9 +154,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                                  link.label === "Ancient Archives" ? "/images/menu/ancient-archives.webp" : 
                                  "/images/placeholder-square.png"} 
                             alt={link.label} 
-                            className="w-full h-full object-contain rounded-t-lg" 
-                            width="120" 
-                            height="120" 
+                            className="w-full h-full object-cover"
                           />
                         </div>
                         <div className="w-full h-10 flex items-center justify-center">
