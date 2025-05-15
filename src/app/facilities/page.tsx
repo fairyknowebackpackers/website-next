@@ -151,6 +151,7 @@ const facilityCategories = [
     id: 4,
     title: 'Social & Gathering Spaces',
     image: '/images/facilities/lively-bar.webp',
+    mobileImage: '/images/facilities/restaurant-kitchen.webp',
     facilities: [
       {
         name: 'Communal fire pit',
@@ -280,12 +281,12 @@ export default function Facilities() {
                     />
                   </div>
                 )}
-                <div className="p-6 flex flex-col flex-1">
-                  <h2 className="text-xl font-bold mb-4 text-gray-900 min-h-[3rem]">{category.title}</h2>
-                  <ul className="space-y-2 text-gray-600 text-center md:text-left flex-1">
+                <div className="p-4 sm:p-6 flex flex-col flex-1">
+                  <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 text-gray-900 min-h-[2.5rem] sm:min-h-[3rem]">{category.title}</h2>
+                  <ul className="space-y-1 sm:space-y-2 text-gray-600 text-center md:text-left flex-1">
                     {category.facilities.map((facility) => (
-                      <li key={facility.name} className="flex items-start">
-                        <span className="mr-2">•</span>
+                      <li key={facility.name} className="flex items-start text-sm sm:text-base">
+                        <span className="mr-1 sm:mr-2">•</span>
                         <span className="text-gray-900">{facility.name}</span>
                       </li>
                     ))}
