@@ -169,10 +169,10 @@ export default function Accommodation() {
       </div>
 
       {/* Logo Section */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-center">
           <Image
-            src="/images/logo.webp"
+            src="/images/home/logo.webp"
             alt="Fairy Knowe Logo"
             width={200}
             height={200}
