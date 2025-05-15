@@ -7,7 +7,8 @@ const activities = [
     id: 1,
     name: 'Kayaking',
     description: '3 hour return trip to the waterfall and back, totaling around 2 hours paddling and 1 hour hiking.',
-    image: '/images/adventures/kayaking-card.webp',
+    image: '/images/adventures/cards/desktop/kayaking-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/kayaking-card.webp',
     category: 'Water Activities',
     features: ['Equipment provided', 'Life jackets included', 'Moderate fitness required', 'Beautiful scenery']
   },
@@ -15,7 +16,8 @@ const activities = [
     id: 2,
     name: 'Paragliding',
     description: '15 minutes in the air with beautiful views of the ocean and surrounding forests and mountains.',
-    image: '/images/adventures/paragliding-card.webp',
+    image: '/images/adventures/cards/desktop/paragliding-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/paragliding-card.webp',
     category: 'Air Activities',
     features: ['Professional instructor', 'All equipment included', 'Weather dependent', 'Camera rental available']
   },
@@ -23,7 +25,8 @@ const activities = [
     id: 3,
     name: 'Horseriding',
     description: '1.5 hour trail through the forests of the Wilderness Heights.',
-    image: '/images/adventures/horseriding-card.webp',
+    image: '/images/adventures/cards/desktop/horseriding-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/horseriding-card.webp',
     category: 'Land Activities',
     features: ['Experienced guides', 'Suitable for beginners', 'Helmets provided', 'Beautiful forest views']
   },
@@ -31,7 +34,8 @@ const activities = [
     id: 4,
     name: 'Half Collared Kingfisher Trail',
     description: '3 hour trail along the Touw River, leading to the waterfall. Great for swimming.',
-    image: '/images/adventures/half-collared-kingfisher-trail-card.webp',
+    image: '/images/adventures/cards/desktop/half-collared-kingfisher-trail-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/half-collared-kingfisher-trail-card.webp',
     category: 'Hiking',
     features: ['Well-marked trail', 'Swimming spots', 'Moderate difficulty', 'Beautiful scenery']
   },
@@ -39,7 +43,8 @@ const activities = [
     id: 5,
     name: 'Bosduif Trail',
     description: '2 hour loop trail up to breath-taking viewpoints above the Touw River, and back down again.',
-    image: '/images/adventures/bosduif-trail-card.webp',
+    image: '/images/adventures/cards/desktop/bosduif-trail-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/bosduif-trail-card.webp',
     category: 'Hiking',
     features: ['Scenic viewpoints', 'Loop trail', 'Moderate difficulty', 'Forest environment']
   },
@@ -47,7 +52,8 @@ const activities = [
     id: 6,
     name: 'Brown Hooded Kingfisher Trail',
     description: '2 hour trail crossing multiple times over the Duiwe River.',
-    image: '/images/adventures/brown-hooded-kingfisher-trail-card.webp',
+    image: '/images/adventures/cards/desktop/brown-hooded-kingfisher-trail-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/brown-hooded-kingfisher-trail-card.webp',
     category: 'Hiking',
     features: ['River crossings', 'Bird watching', 'Easy to moderate', 'Shaded route']
   },
@@ -55,7 +61,8 @@ const activities = [
     id: 7,
     name: 'Woodville Big Tree',
     description: 'Visit a 1000 year old Yellow Wood tree and marvel at its size and glory. 3km and 7km trails looping back around.',
-    image: '/images/adventures/woodville-big-tree-card.webp',
+    image: '/images/adventures/cards/desktop/woodville-big-tree-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/woodville-big-tree-card.webp',
     category: 'Nature',
     features: ['Historic site', 'Choice of trails', 'Family friendly', 'Forest environment']
   },
@@ -63,7 +70,8 @@ const activities = [
     id: 8,
     name: 'Map of Africa',
     description: 'A sight to behold.',
-    image: '/images/adventures/map-of-africa-card.webp',
+    image: '/images/adventures/cards/desktop/map-of-africa-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/map-of-africa-card.webp',
     category: 'Viewpoints',
     features: ['Spectacular views', 'Photo opportunity', 'Easy access', 'Paragliding launch site']
   },
@@ -71,7 +79,8 @@ const activities = [
     id: 9,
     name: 'Wilderness Beach',
     description: 'Blue Flag beach perfect for a nice sunny day.',
-    image: '/images/adventures/wilderness-beach-card.webp',
+    image: '/images/adventures/cards/desktop/wilderness-beach-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/wilderness-beach-card.webp',
     category: 'Beach',
     features: ['Blue Flag status', 'Swimming', 'Sunbathing', 'Long walks']
   },
@@ -79,7 +88,8 @@ const activities = [
     id: 10,
     name: 'Water Under the Bridge',
     description: 'Take a leap into the refreshing Touws River from our railway bridge jumping spot.',
-    image: '/images/adventures/water-under-the-bridge-card.webp',
+    image: '/images/adventures/cards/desktop/water-under-the-bridge-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/water-under-the-bridge-card.webp',
     category: 'Water Activities',
     features: ['Close to backpackers', 'Swimming', 'Adventure activity', 'Local favorite']
   },
@@ -87,7 +97,8 @@ const activities = [
     id: 11,
     name: 'Fairy Labyrinth',
     description: 'Something on your mind? Unravel and unwind.',
-    image: '/images/adventures/fairy-labyrinth-card.webp',
+    image: '/images/adventures/cards/desktop/fairy-labyrinth-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/fairy-labyrinth-card.webp',
     category: 'Relaxation',
     features: ['Meditation space', 'Peaceful setting', 'Spiritual experience', 'Garden environment']
   },
@@ -95,7 +106,8 @@ const activities = [
     id: 12,
     name: 'Ancient Archives',
     description: 'Rainy day or just feeling lazy? Swap out an old book for a new one from our extensive library selection.',
-    image: '/images/Adventures/ancient-archives-card.webp',
+    image: '/images/adventures/cards/desktop/ancient-archives-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/ancient-archives-card.webp',
     category: 'Indoor Activities',
     features: ['Book exchange', 'Comfortable seating', 'Wide selection', 'Perfect for rainy days']
   }

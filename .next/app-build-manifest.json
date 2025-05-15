@@ -11,25 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/accommodation/camping/page": [
+    "/adventures/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/camping/page.js"
+      "static/chunks/app/adventures/page.js"
     ],
-    "/accommodation/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/page.js"
-    ],
-    "/accommodation/twin-room/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/twin-room/page.js"
-    ],
-    "/accommodation/double-en-suite/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/double-en-suite/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
