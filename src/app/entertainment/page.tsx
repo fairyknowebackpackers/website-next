@@ -94,7 +94,7 @@ export default function Entertainment() {
                   src={event.image}
                   alt={event.title}
                   fill
-                  className="object-cover"
+                  className={`${event.title === "Open Mic Night" ? "object-cover object-top" : "object-cover"}`}
                 />
               </div>
               <div className="p-6">

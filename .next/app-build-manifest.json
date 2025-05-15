@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/entertainment/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/entertainment/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,55 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/venue/page": [
+    "/facilities/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/venue/page.js"
+      "static/chunks/app/facilities/page.js"
     ],
-    "/adventures/kayaking/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/adventures/kayaking/page.js"
-    ],
-    "/adventures/brown-hooded-kingfisher-trail/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/brown-hooded-kingfisher-trail/page.js"
-    ],
-    "/accommodation/camping/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/camping/page.js"
-    ],
-    "/adventures/horseriding/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/horseriding/page.js"
-    ],
-    "/accommodation/safari-tent/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/safari-tent/page.js"
-    ],
-    "/accommodation/gypsy-caravan/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/gypsy-caravan/page.js"
-    ],
-    "/accommodation/mixed-dorm/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/mixed-dorm/page.js"
-    ],
-    "/accommodation/double-en-suite/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/double-en-suite/page.js"
-    ],
-    "/accommodation/family-en-suite-rondawel/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/family-en-suite-rondawel/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
