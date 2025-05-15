@@ -68,7 +68,7 @@ export default function Entertainment() {
 
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto px-4">
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.
           </p>
@@ -111,7 +111,7 @@ export default function Entertainment() {
         ))}
       </div>
       {/* Desktop: original grid and display */}
-      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
         {events.map((event, index) => (
           <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
             <div className="relative h-[256px]">
@@ -122,7 +122,7 @@ export default function Entertainment() {
                 className="object-cover"
               />
             </div>
-            <div className="p-6">
+            <div className="p-6 flex flex-col flex-grow">
               <h2 className="text-2xl font-bold mb-4 dark:text-white">{event.title}</h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
               <p className="text-primary font-semibold">{event.schedule}</p>

@@ -1,6 +1,9 @@
+"use client";
+
 import Image from 'next/image'
 import Link from 'next/link'
 import MouseGradientCard from '../components/MouseGradientCard'
+import { useState } from 'react'
 
 const activities = [
   {
@@ -116,6 +119,7 @@ const activities = [
 const categories = ['All', 'Water Activities', 'Air Activities', 'Land Activities', 'Hiking', 'Nature', 'Viewpoints', 'Beach', 'Relaxation', 'Indoor Activities']
 
 export default function Adventure() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <div>
       {/* Hero Banner */}
@@ -145,7 +149,44 @@ export default function Adventure() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Mobile Expandable List */}
+        <div className="block sm:hidden">
+          {activities.map((activity, idx) => (
+            <div key={activity.id} className="mb-4 rounded-xl shadow-lg border bg-[#F3F4F6] overflow-hidden">
+              <button
+                className="w-full flex flex-col items-center text-left focus:outline-none"
+                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                aria-expanded={openIndex === idx}
+              >
+                <div className="py-3 w-full text-center">{activity.name}</div>
+              </button>
+              {openIndex === idx && (
+                <div>
+                  <div className="w-full aspect-square overflow-hidden rounded-t-xl">
+                    <Image
+                      src={activity.image}
+                      alt={activity.name}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div className="px-4 pb-4 pt-2">
+                    <p className="text-gray-600 mb-4 text-center">{activity.description}</p>
+                    <h3 className="font-semibold mb-2 text-[#202635] text-center">Features:</h3>
+                    <ul className="list-disc pl-5 space-y-1.5 text-gray-600 text-left">
+                      {activity.features.map((feature, index) => (
+                        <li key={`${activity.id}-feature-${index}`}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        {/* Desktop Grid */}
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {activities.map((activity) => (
             <Link 
               key={activity.id} 
