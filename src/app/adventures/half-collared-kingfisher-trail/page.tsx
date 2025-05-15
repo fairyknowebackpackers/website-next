@@ -213,87 +213,88 @@ export default function HalfCollaredKingfisherTrailPage() {
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Embark on a delightful 7.6-km out-and-back trail that winds its way through a serene, shaded wonderland. This moderately easy route, typically completed in around 3 hours, invites you to stroll along wooden boardwalk that meanders its way to a magical waterfall, perfect for a refreshing swim and moment of bliss. Popular among adventurers, runners, and wanderers alike, this charming path brims with life, offering a likely chance to cross paths with friendly folk as you explore its natural splendor.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery 
-              images={galleryImages} 
-              imagesPerPage={8} 
-            />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-          {/* Safety Information - Replacing Features Section */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* General Info Section - First on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center">
-                      Distance: 7.6 km out-and-back
-                    </li>
-                    <li className="text-center">
-                      Duration: 3 hours
-                    </li>
-                    <li className="text-center">
-                      Difficulty: Moderate
-                    </li>
-                    <li className="text-center">
-                      Wooden boardwalk sections
-                    </li>
-                    <li className="text-center">
-                      Waterfall at the end
-                    </li>
-                  </ul>
+        {/* Safety Information - Replacing Features Section */}
+        <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* General Info Section - First on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center">
+                    Distance: 7.6 km out-and-back
+                  </li>
+                  <li className="text-center">
+                    Duration: 3 hours
+                  </li>
+                  <li className="text-center">
+                    Difficulty: Moderate
+                  </li>
+                  <li className="text-center">
+                    Wooden boardwalk sections
+                  </li>
+                  <li className="text-center">
+                    Waterfall at the end
+                  </li>
+                </ul>
+              </div>
+              
+              {/* What to Bring - Second on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center md:text-right">
+                    Comfortable walking shoes
+                  </li>
+                  <li className="text-center md:text-right">
+                    Water and snacks
+                  </li>
+                  <li className="text-center md:text-right">
+                    Sunscreen and hat
+                  </li>
+                  <li className="text-center md:text-right">
+                    Camera for memories
+                  </li>
+                  <li className="text-center md:text-right">
+                    Swimwear if planning to swim
+                  </li>
+                </ul>
                 </div>
-                
-                {/* What to Bring - Second on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-right">
-                      Comfortable walking shoes
-                    </li>
-                    <li className="text-center md:text-right">
-                      Water and snacks
-                    </li>
-                    <li className="text-center md:text-right">
-                      Sunscreen and hat
-                    </li>
-                    <li className="text-center md:text-right">
-                      Camera for memories
-                    </li>
-                    <li className="text-center md:text-right">
-                      Swimwear if planning to swim
-                    </li>
-                  </ul>
-                  </div>
-                
-                {/* Adventure Safely - Third on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-left">
-                      Stay on marked trails
-                    </li>
-                    <li className="text-center md:text-left">
-                      Check weather conditions before hiking
-                    </li>
-                    <li className="text-center md:text-left">
-                      Wear appropriate footwear
-                    </li>
-                    <li className="text-center md:text-left">
-                      Stay hydrated and carry water
-                    </li>
-                    <li className="text-center md:text-left">
-                      Be cautious near the waterfall
-                    </li>
-                  </ul>
-                </div>
+              
+              {/* Adventure Safely - Third on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center md:text-left">
+                    Stay on marked trails
+                  </li>
+                  <li className="text-center md:text-left">
+                    Check weather conditions before hiking
+                  </li>
+                  <li className="text-center md:text-left">
+                    Wear appropriate footwear
+                  </li>
+                  <li className="text-center md:text-left">
+                    Stay hydrated and carry water
+                  </li>
+                  <li className="text-center md:text-left">
+                    Be cautious near the waterfall
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         {/* Logo Section */}
@@ -305,9 +306,8 @@ export default function HalfCollaredKingfisherTrailPage() {
             height={400}
             className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
             priority
-          />
-        </div>
-      </div>
-    </div>
-  )
-} 
+            />
+            </div>
+          </div>
+      )
+    }

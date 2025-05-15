@@ -2,54 +2,61 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import ImageGallery from '@/components/ImageGallery'
 
-// Define the gallery images
+// Define gallery images with thumbnails and full-size versions
 const galleryImages = [
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure1.webp',
-    alt: 'Map of Africa Adventure 1',
+    alt: 'Map of Africa Adventure',
+    description: 'Panoramic views from the top',
     fullSize: '/images/adventures/map-of-africa/full/adventure1.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure2.webp',
-    alt: 'Map of Africa Adventure 2',
+    alt: 'Map of Africa Experience',
+    description: 'Hiking trail views',
     fullSize: '/images/adventures/map-of-africa/full/adventure2.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure3.webp',
-    alt: 'Map of Africa Adventure 3',
+    alt: 'Map of Africa Journey',
+    description: 'Scenic overlook',
     fullSize: '/images/adventures/map-of-africa/full/adventure3.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure4.webp',
-    alt: 'Map of Africa Adventure 4',
+    alt: 'Map of Africa Views',
+    description: 'Mountain landscape',
     fullSize: '/images/adventures/map-of-africa/full/adventure4.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure5.webp',
-    alt: 'Map of Africa Adventure 5',
+    alt: 'Map of Africa Adventure',
+    description: 'Panoramic views from the top',
     fullSize: '/images/adventures/map-of-africa/full/adventure5.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure6.webp',
-    alt: 'Map of Africa Adventure 6',
+    alt: 'Map of Africa Experience',
+    description: 'Hiking trail views',
     fullSize: '/images/adventures/map-of-africa/full/adventure6.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure7.webp',
-    alt: 'Map of Africa Adventure 7',
+    alt: 'Map of Africa Journey',
+    description: 'Scenic overlook',
     fullSize: '/images/adventures/map-of-africa/full/adventure7.webp'
   },
   {
     src: '/images/adventures/map-of-africa/thumbnails/adventure8.webp',
-    alt: 'Map of Africa Adventure 8',
+    alt: 'Map of Africa Views',
+    description: 'Mountain landscape',
     fullSize: '/images/adventures/map-of-africa/full/adventure8.webp'
   }
 ]
 
-export default function MapOfAfrica() {
+export default function MapOfAfricaPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -91,87 +98,89 @@ export default function MapOfAfrica() {
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-            The Map of Africa offers a spellbinding viewpoint, where nature's artistry is unveiled in the form of a river that gracefully sculpts the shape of the African continent into the valley below. Just across the way, another mesmerizing vantage point awaits, offering sweeping views of the ocean's endless expanse, golden sands of the beach, and the picturesque charm of Wilderness itself.
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Embark on a journey to the iconic Map of Africa viewpoint, where nature has sculpted the landscape into a remarkable resemblance of the African continent. This moderate 6.5-km hike offers breathtaking panoramic views of the Wilderness coastline and the Indian Ocean. The trail winds through indigenous fynbos vegetation, home to a diverse array of bird species and unique plant life. As you reach the viewpoint, you&apos;ll be rewarded with a spectacular vista that perfectly captures the outline of Africa, making it a photographer&apos;s paradise and a must-visit destination for nature enthusiasts.
           </p>
         </div>
 
         {/* Gallery */}
-        <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
           <ImageGallery 
             images={galleryImages} 
             imagesPerPage={8} 
           />
         </div>
 
-        {/* Adventure Safely Section */}
-        <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {/* General Info Section - First on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center">
-                    30-minute steep hike
-                  </li>
-                  <li className="text-center">
-                    Moderate difficulty level
-                  </li>
-                  <li className="text-center">
-                    Best at sunrise/sunset
-                  </li>
-                  <li className="text-center">
-                    Panoramic coastal views
-                  </li>
-                  <li className="text-center">
-                    Perfect photo spot
-                  </li>
-                </ul>
-              </div>
-              
-              {/* What to Bring - Second on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center md:text-right">
-                    Hiking shoes
-                  </li>
-                  <li className="text-center md:text-right">
-                    Water bottle
-                  </li>
-                  <li className="text-center md:text-right">
-                    Sun protection
-                  </li>
-                  <li className="text-center md:text-right">
-                    Camera
-                  </li>
-                  <li className="text-center md:text-right">
-                    Light snacks
-                  </li>
-                </ul>
-              </div>
-              
-              {/* Adventure Safely - Third on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center md:text-left">
-                    Stay on marked trails
-                  </li>
-                  <li className="text-center md:text-left">
-                    Check weather conditions
-                  </li>
-                  <li className="text-center md:text-left">
-                    Wear appropriate footwear
-                  </li>
-                  <li className="text-center md:text-left">
-                    Keep safe distance from edges
-                  </li>
-                  <li className="text-center md:text-left">
-                    Hike with a companion
-                  </li>
-                </ul>
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Safety Information - Replacing Features Section */}
+          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {/* General Info Section - First on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center">
+                      Distance: 6.5 km round trip
+                    </li>
+                    <li className="text-center">
+                      Duration: 2-3 hours
+                    </li>
+                    <li className="text-center">
+                      Difficulty: Moderate
+                    </li>
+                    <li className="text-center">
+                      Panoramic ocean views
+                    </li>
+                    <li className="text-center">
+                      Iconic Map of Africa formation
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* What to Bring - Second on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-right">
+                      Sturdy hiking shoes
+                    </li>
+                    <li className="text-center md:text-right">
+                      Water and snacks
+                    </li>
+                    <li className="text-center md:text-right">
+                      Sunscreen and hat
+                    </li>
+                    <li className="text-center md:text-right">
+                      Camera for the views
+                    </li>
+                    <li className="text-center md:text-right">
+                      Light jacket for wind
+                    </li>
+                  </ul>
+                </div>
+                
+                {/* Adventure Safely - Third on mobile */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                    <li className="text-center md:text-left">
+                      Stay on marked trails
+                    </li>
+                    <li className="text-center md:text-left">
+                      Check weather conditions
+                    </li>
+                    <li className="text-center md:text-left">
+                      Watch for strong winds
+                    </li>
+                    <li className="text-center md:text-left">
+                      Stay hydrated
+                    </li>
+                    <li className="text-center md:text-left">
+                      Keep safe distance from edges
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

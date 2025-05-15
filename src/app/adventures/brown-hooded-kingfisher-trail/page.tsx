@@ -118,81 +118,79 @@ export default function BrownHoodedKingfisherTrailPage() {
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Embark on a teeming 4.2-km out-and-back journey along the delightful Duiwe River. This quick and easy trail, typically completed in about 1 hour and 20 minutes, invites adventurers on a short and sweet stroll along the stream. Meandering across the river on well-crafted crossings, the path leads to a little rockpool waterfall - a refreshing haven at the trail's end. While beloved by many wonderful wanderers, moments of quiet solitude still await those who venture during the trail's calmer hours.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery images={galleryImages} />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery images={galleryImages} />
+        </div>
 
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* General Info Section - First on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center">
-                      Distance: 4.2 km out-and-back
-                    </li>
-                    <li className="text-center">
-                      Duration: 1.5 hours
-                    </li>
-                    <li className="text-center">
-                      Difficulty: Easy
-                    </li>
-                    <li className="text-center">
-                      River crossings
-                    </li>
-                    <li className="text-center">
-                      Rockpool waterfall
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* What to Bring - Second on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-right">
-                      Comfortable walking shoes
-                    </li>
-                    <li className="text-center md:text-right">
-                      Water and snacks
-                    </li>
-                    <li className="text-center md:text-right">
-                      Sunscreen and hat
-                    </li>
-                    <li className="text-center md:text-right">
-                      Camera for memories
-                    </li>
-                    <li className="text-center md:text-right">
-                      Swimwear if planning to swim
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Adventure Safely - Third on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-left">
-                      Stay on marked trails
-                    </li>
-                    <li className="text-center md:text-left">
-                      Check weather conditions before hiking
-                    </li>
-                    <li className="text-center md:text-left">
-                      Wear appropriate footwear
-                    </li>
-                    <li className="text-center md:text-left">
-                      Stay hydrated and carry water
-                    </li>
-                    <li className="text-center md:text-left">
-                      Be cautious near the waterfall
-                    </li>
-                  </ul>
-                </div>
-              </div>
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* General Info Section - First on mobile */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                <li className="text-center">
+                  Distance: 4.2 km out-and-back
+                </li>
+                <li className="text-center">
+                  Duration: 1.5 hours
+                </li>
+                <li className="text-center">
+                  Difficulty: Easy
+                </li>
+                <li className="text-center">
+                  River crossings
+                </li>
+                <li className="text-center">
+                  Rockpool waterfall
+                </li>
+              </ul>
+            </div>
+            
+            {/* What to Bring - Second on mobile */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                <li className="text-center md:text-right">
+                  Comfortable walking shoes
+                </li>
+                <li className="text-center md:text-right">
+                  Water and snacks
+                </li>
+                <li className="text-center md:text-right">
+                  Sunscreen and hat
+                </li>
+                <li className="text-center md:text-right">
+                  Camera for memories
+                </li>
+                <li className="text-center md:text-right">
+                  Swimwear if planning to swim
+                </li>
+              </ul>
+            </div>
+            
+            {/* Adventure Safely - Third on mobile */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                <li className="text-center md:text-left">
+                  Stay on marked trails
+                </li>
+                <li className="text-center md:text-left">
+                  Check weather conditions before hiking
+                </li>
+                <li className="text-center md:text-left">
+                  Wear appropriate footwear
+                </li>
+                <li className="text-center md:text-left">
+                  Stay hydrated and carry water
+                </li>
+                <li className="text-center md:text-left">
+                  Be cautious near the waterfall
+                </li>
+              </ul>
             </div>
           </div>
         </div>

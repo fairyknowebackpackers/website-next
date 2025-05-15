@@ -2,49 +2,56 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import ImageGallery from '@/components/ImageGallery'
 
-// Define the gallery images
+// Define gallery images with thumbnails and full-size versions
 const galleryImages = [
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure1.webp',
-    alt: 'Fairy Labyrinth Adventure 1',
+    alt: 'Fairy Labyrinth Adventure',
+    description: 'Mystical forest path',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure1.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure2.webp',
-    alt: 'Fairy Labyrinth Adventure 2',
+    alt: 'Fairy Labyrinth Experience',
+    description: 'Ancient tree formations',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure2.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure3.webp',
-    alt: 'Fairy Labyrinth Adventure 3',
+    alt: 'Fairy Labyrinth Journey',
+    description: 'Enchanted pathways',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure3.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure4.webp',
-    alt: 'Fairy Labyrinth Adventure 4',
+    alt: 'Fairy Labyrinth Views',
+    description: 'Magical forest scenes',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure4.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure5.webp',
-    alt: 'Fairy Labyrinth Adventure 5',
+    alt: 'Fairy Labyrinth Adventure',
+    description: 'Mystical forest path',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure5.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure6.webp',
-    alt: 'Fairy Labyrinth Adventure 6',
+    alt: 'Fairy Labyrinth Experience',
+    description: 'Ancient tree formations',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure6.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure7.webp',
-    alt: 'Fairy Labyrinth Adventure 7',
+    alt: 'Fairy Labyrinth Journey',
+    description: 'Enchanted pathways',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure7.webp'
   },
   {
     src: '/images/adventures/fairy-labyrinth/thumbnails/adventure8.webp',
-    alt: 'Fairy Labyrinth Adventure 8',
+    alt: 'Fairy Labyrinth Views',
+    description: 'Magical forest scenes',
     fullSize: '/images/adventures/fairy-labyrinth/full/adventure8.webp'
   }
 ]
@@ -91,19 +98,21 @@ export default function FairyLabyrinthPage() {
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-            Take ten minutes of your time to let go of the rambles in your mind, as you amble through the labyrinth, loosen up and unwind.
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Step into a world of enchantment at the Fairy Labyrinth, a magical 1.5-km trail that winds through an ancient forest filled with towering trees and mystical formations. This easy, family-friendly walk offers a perfect blend of adventure and wonder, with winding paths that lead through a natural maze of giant tree roots and moss-covered rocks. The trail is alive with the sounds of forest birds and the gentle rustling of leaves, creating an atmosphere straight out of a fairy tale. Whether you&apos;re seeking a peaceful nature walk or a magical adventure with children, the Fairy Labyrinth provides an unforgettable experience in the heart of Wilderness&apos;s mystical forests.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery 
-              images={galleryImages} 
-              imagesPerPage={8} 
-            />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-          {/* Adventure Safely Section */}
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Safety Information - Replacing Features Section */}
           <div className="mt-8 md:mt-12 mb-8 md:mb-12">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -112,19 +121,19 @@ export default function FairyLabyrinthPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center">
-                      10-minute walk
+                      Distance: 1.5 km round trip
                     </li>
                     <li className="text-center">
-                      Easy difficulty
+                      Duration: 45-60 minutes
                     </li>
                     <li className="text-center">
-                      Meditation path
+                      Difficulty: Easy
                     </li>
                     <li className="text-center">
-                      Forest setting
+                      Family-friendly trail
                     </li>
                     <li className="text-center">
-                      Natural sculptures
+                      Ancient forest setting
                     </li>
                   </ul>
                 </div>
@@ -134,16 +143,16 @@ export default function FairyLabyrinthPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Comfortable shoes
+                      Comfortable walking shoes
                     </li>
                     <li className="text-center md:text-right">
                       Water bottle
                     </li>
                     <li className="text-center md:text-right">
-                      Camera
+                      Camera for memories
                     </li>
                     <li className="text-center md:text-right">
-                      Open mind
+                      Light jacket
                     </li>
                     <li className="text-center md:text-right">
                       Sense of wonder
@@ -156,19 +165,19 @@ export default function FairyLabyrinthPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-left">
-                      Stay on the path
+                      Stay on marked trails
                     </li>
                     <li className="text-center md:text-left">
-                      Respect the space
+                      Watch for tree roots
                     </li>
                     <li className="text-center md:text-left">
-                      Be mindful of others
+                      Keep children supervised
                     </li>
                     <li className="text-center md:text-left">
-                      Watch your step
+                      Respect the forest
                     </li>
                     <li className="text-center md:text-left">
-                      Take your time
+                      Check weather conditions
                     </li>
                   </ul>
                 </div>

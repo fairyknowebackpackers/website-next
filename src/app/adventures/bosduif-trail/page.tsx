@@ -2,94 +2,55 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 import ImageGallery from '@/components/ImageGallery'
 
-// Define gallery images with thumbnails and full-size versions
+// Define the gallery images
 const galleryImages = [
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif1.webp',
-    alt: 'Bosduif Trail Adventure',
+    alt: 'Bosduif Trail View 1',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif1.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif2.webp',
-    alt: 'Bosduif Trail Experience',
+    alt: 'Bosduif Trail View 2',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif2.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif3.webp',
-    alt: 'Bosduif Trail Journey',
+    alt: 'Bosduif Trail View 3',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif3.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif4.webp',
-    alt: 'Bosduif Trail Views',
+    alt: 'Bosduif Trail View 4',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif4.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif5.webp',
-    alt: 'Bosduif Trail Additional View 1',
+    alt: 'Bosduif Trail View 5',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif5.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif6.webp',
-    alt: 'Bosduif Trail Additional View 2',
+    alt: 'Bosduif Trail View 6',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif6.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif7.webp',
-    alt: 'Bosduif Trail Additional View 3',
+    alt: 'Bosduif Trail View 7',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif7.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif8.webp',
-    alt: 'Bosduif Trail Additional View 4',
+    alt: 'Bosduif Trail View 8',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif8.webp'
   },
   {
     src: '/images/adventures/bosduif-trail/thumbnails/bosduif9.webp',
-    alt: 'Bosduif Trail Additional View 5',
+    alt: 'Bosduif Trail View 9',
     fullSize: '/images/adventures/bosduif-trail/full/bosduif9.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif10.webp',
-    alt: 'Bosduif Trail Additional View 6',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif10.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif11.webp',
-    alt: 'Bosduif Trail Additional View 7',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif11.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif12.webp',
-    alt: 'Bosduif Trail Additional View 8',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif12.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif13.webp',
-    alt: 'Bosduif Trail Additional View 9',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif13.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif14.webp',
-    alt: 'Bosduif Trail Additional View 10',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif14.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif15.webp',
-    alt: 'Bosduif Trail Additional View 11',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif15.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif16.webp',
-    alt: 'Bosduif Trail Additional View 12',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif16.webp'
-  },
-  {
-    src: '/images/adventures/bosduif-trail/thumbnails/bosduif17.webp',
-    alt: 'Bosduif Trail Additional View 13',
-    fullSize: '/images/adventures/bosduif-trail/full/bosduif17.webp'
   }
 ]
 
@@ -117,7 +78,7 @@ export default function BosduifTrailPage() {
       {/* Desktop Banner */}
       <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
         <Image
-          src="/images/adventures/banners/bosduif-banner.webp"
+          src="/images/adventures/banners/bosduif-trail-banner.webp"
           alt="Fairy Knowe Bosduif Trail"
           fill
           className="object-cover"
@@ -135,19 +96,21 @@ export default function BosduifTrailPage() {
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Set off on an endearing 4.2-km loop trail that gracefully branches off from the Half Collared Kingfisher Trail. Ascend through a steep landscape to reach breathtaking views of the sea, rivers, and valleys. This enchanting path, moderately challenging and typically completed in 1.5 hours, invites bird lovers, hikers, and runners to immerse themselves in nature's beauty. Though cherished by many, the trail still offers tranquil moments of solitude during quieter hours, making it a truly magical escape.
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Embark on a 2-hour loop trail that takes you up to breathtaking viewpoints above the Touw River. Experience the perfect blend of forest exploration and scenic vistas as you make your way back down through the enchanting landscape.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery 
-              images={galleryImages} 
-              imagesPerPage={8} 
-            />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-          {/* Safety Information - Replacing Features Section */}
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Adventure Safely Section */}
           <div className="mt-8 md:mt-12 mb-8 md:mb-12">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -156,19 +119,19 @@ export default function BosduifTrailPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center">
-                      Distance: 4.2 km loop
+                      2-hour loop trail
                     </li>
                     <li className="text-center">
-                      Duration: 1.5 hours
+                      Moderate difficulty
                     </li>
                     <li className="text-center">
-                      Difficulty: Moderate
+                      Scenic viewpoints
                     </li>
                     <li className="text-center">
-                      Sea and valley views
+                      Forest environment
                     </li>
                     <li className="text-center">
-                      Bird watching opportunities
+                      River views
                     </li>
                   </ul>
                 </div>
@@ -178,19 +141,19 @@ export default function BosduifTrailPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Sturdy walking shoes
+                      Comfortable hiking shoes
                     </li>
                     <li className="text-center md:text-right">
-                      Water and snacks
+                      Water bottle
                     </li>
                     <li className="text-center md:text-right">
                       Sunscreen and hat
                     </li>
                     <li className="text-center md:text-right">
-                      Camera for memories
+                      Camera
                     </li>
                     <li className="text-center md:text-right">
-                      Binoculars for bird watching
+                      Snacks
                     </li>
                   </ul>
                 </div>
@@ -203,16 +166,16 @@ export default function BosduifTrailPage() {
                       Stay on marked trails
                     </li>
                     <li className="text-center md:text-left">
-                      Check weather conditions before hiking
+                      Watch your step
                     </li>
                     <li className="text-center md:text-left">
-                      Wear appropriate footwear
+                      Stay hydrated
                     </li>
                     <li className="text-center md:text-left">
-                      Stay hydrated and carry water
+                      Check weather conditions
                     </li>
                     <li className="text-center md:text-left">
-                      Be cautious on steep sections
+                      Hike with a buddy
                     </li>
                   </ul>
                 </div>

@@ -2,49 +2,56 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import ImageGallery from '@/components/ImageGallery'
 
-// Define the gallery images
+// Define gallery images with thumbnails and full-size versions
 const galleryImages = [
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure1.webp',
-    alt: 'Ancient Archives Adventure 1',
+    alt: 'Ancient Archives Adventure',
+    description: 'Historic library views',
     fullSize: '/images/adventures/ancient-archives/full/adventure1.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure2.webp',
-    alt: 'Ancient Archives Adventure 2',
+    alt: 'Ancient Archives Experience',
+    description: 'Book collection',
     fullSize: '/images/adventures/ancient-archives/full/adventure2.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure3.webp',
-    alt: 'Ancient Archives Adventure 3',
+    alt: 'Ancient Archives Journey',
+    description: 'Reading spaces',
     fullSize: '/images/adventures/ancient-archives/full/adventure3.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure4.webp',
-    alt: 'Ancient Archives Adventure 4',
+    alt: 'Ancient Archives Views',
+    description: 'Library atmosphere',
     fullSize: '/images/adventures/ancient-archives/full/adventure4.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure5.webp',
-    alt: 'Ancient Archives Adventure 5',
+    alt: 'Ancient Archives Adventure',
+    description: 'Historic library views',
     fullSize: '/images/adventures/ancient-archives/full/adventure5.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure6.webp',
-    alt: 'Ancient Archives Adventure 6',
+    alt: 'Ancient Archives Experience',
+    description: 'Book collection',
     fullSize: '/images/adventures/ancient-archives/full/adventure6.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure7.webp',
-    alt: 'Ancient Archives Adventure 7',
+    alt: 'Ancient Archives Journey',
+    description: 'Reading spaces',
     fullSize: '/images/adventures/ancient-archives/full/adventure7.webp'
   },
   {
     src: '/images/adventures/ancient-archives/thumbnails/adventure8.webp',
-    alt: 'Ancient Archives Adventure 8',
+    alt: 'Ancient Archives Views',
+    description: 'Library atmosphere',
     fullSize: '/images/adventures/ancient-archives/full/adventure8.webp'
   }
 ]
@@ -91,19 +98,21 @@ export default function AncientArchivesPage() {
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-          Step into our enchanted archives, where stories of old and new await your discovery. Trade in your finished tale for another, and let your journey continue with the pages of a new adventure waiting to unfold. With stories for every soul and swaps to keep the exploration alive, our library is your perfect rainy-day retreat.
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+            Discover the Ancient Archives, a treasure trove of knowledge and history nestled within our hostel. This unique space houses a carefully curated collection of books, maps, and artifacts that tell the story of Wilderness and its surrounding areas. From local history to travel guides, nature books to adventure stories, the archives offer a quiet retreat for book lovers and history enthusiasts. Whether you&apos;re researching your next adventure, seeking inspiration for your journey, or simply looking for a peaceful place to read, the Ancient Archives provides a perfect sanctuary for learning and discovery.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery 
-              images={galleryImages} 
-              imagesPerPage={8} 
-            />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-          {/* Adventure Safely Section */}
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Safety Information - Replacing Features Section */}
           <div className="mt-8 md:mt-12 mb-8 md:mb-12">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -112,19 +121,19 @@ export default function AncientArchivesPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center">
-                      Book swap available
+                      Open daily
                     </li>
                     <li className="text-center">
-                      Cozy reading nooks
+                      Quiet reading space
                     </li>
                     <li className="text-center">
-                      Garden views
+                      Free access
                     </li>
                     <li className="text-center">
-                      Rainy day retreat
+                      Historical collection
                     </li>
                     <li className="text-center">
-                      Diverse collection
+                      Travel resources
                     </li>
                   </ul>
                 </div>
@@ -134,19 +143,19 @@ export default function AncientArchivesPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Books to swap
-                    </li>
-                    <li className="text-center md:text-right">
                       Reading glasses
                     </li>
                     <li className="text-center md:text-right">
                       Notebook
                     </li>
                     <li className="text-center md:text-right">
-                      Curiosity
+                      Camera for photos
                     </li>
                     <li className="text-center md:text-right">
-                      Imagination
+                      Water bottle
+                    </li>
+                    <li className="text-center md:text-right">
+                      Curiosity
                     </li>
                   </ul>
                 </div>
@@ -159,34 +168,34 @@ export default function AncientArchivesPage() {
                       Handle books with care
                     </li>
                     <li className="text-center md:text-left">
+                      Keep voices low
+                    </li>
+                    <li className="text-center md:text-left">
                       Return books to shelves
                     </li>
                     <li className="text-center md:text-left">
-                      Keep the space clean
+                      Respect quiet space
                     </li>
                     <li className="text-center md:text-left">
-                      Be mindful of others
-                    </li>
-                    <li className="text-center md:text-left">
-                      Respect quiet zones
+                      No food or drinks
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Logo Section */}
-          <div className="mt-12 mb-8 flex justify-center">
-            <Image
-              src="/images/home/logo.webp"
-              alt="Fairy Knowe Backpackers Logo"
-              width={400}
-              height={400}
-              className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
-              priority
-            />
-          </div>
+        {/* Logo Section */}
+        <div className="mt-12 mb-8 flex justify-center">
+          <Image
+            src="/images/home/logo.webp"
+            alt="Fairy Knowe Backpackers Logo"
+            width={400}
+            height={400}
+            className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
+            priority
+          />
         </div>
       </div>
     </div>

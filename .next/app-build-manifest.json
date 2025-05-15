@@ -11,20 +11,50 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/adventures/page": [
+    "/adventures/half-collared-kingfisher-trail/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/adventures/page.js"
+      "static/chunks/app/adventures/half-collared-kingfisher-trail/page.js"
     ],
-    "/accommodation/page": [
+    "/adventures/brown-hooded-kingfisher-trail/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/page.js"
+      "static/chunks/app/adventures/brown-hooded-kingfisher-trail/page.js"
     ],
-    "/facilities/page": [
+    "/adventures/bosduif-trail/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/facilities/page.js"
+      "static/chunks/app/adventures/bosduif-trail/page.js"
+    ],
+    "/adventures/kayaking/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/kayaking/page.js"
+    ],
+    "/adventures/woodville-big-tree/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/woodville-big-tree/page.js"
+    ],
+    "/adventures/map-of-africa/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/map-of-africa/page.js"
+    ],
+    "/adventures/wilderness-beach/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/wilderness-beach/page.js"
+    ],
+    "/adventures/water-under-the-bridge/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/water-under-the-bridge/page.js"
+    ],
+    "/adventures/fairy-labyrinth/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/adventures/fairy-labyrinth/page.js"
     ]
   }
 }

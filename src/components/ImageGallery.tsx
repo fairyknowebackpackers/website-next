@@ -123,7 +123,7 @@ export default function ImageGallery({
   }, [selectedImage, selectedImageIndex]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 mb-16">
+    <div className="max-w-7xl mx-auto px-1 sm:px-4 mb-16">
       {title && (
         <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
           {title}

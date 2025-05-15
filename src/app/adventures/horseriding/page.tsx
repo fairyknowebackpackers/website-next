@@ -94,87 +94,88 @@ export default function HorseridingPage() {
         <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
           Set out on a tranquil 1.5-hour horseback adventure through the spellbinding forests of Wilderness Heights. Guided by experienced hosts, this journey is perfect for riders of all skill levels, offering a serene and immersive way to connect with the breathtaking beauty of the area. Let the rhythmic pace of your steed and the enchanting woodland surroundings create memories to treasure.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <ImageGallery 
-              images={galleryImages} 
-              imagesPerPage={8} 
-            />
-          </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-          {/* Safety Information - Replacing Features Section */}
-          <div className="mt-8 md:mt-12 mb-8 md:mb-12">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* General Info Section - First on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center">
-                      Duration: 1.5 hours
-                    </li>
-                    <li className="text-center">
-                      All skill levels welcome
-                    </li>
-                    <li className="text-center">
-                      Experienced guides
-                    </li>
-                    <li className="text-center">
-                      Safety equipment provided
-                    </li>
-                    <li className="text-center">
-                      Well-trained horses
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* What to Bring - Second on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-right">
-                      Long pants and closed shoes
-                    </li>
-                    <li className="text-center md:text-right">
-                      Water and snacks
-                    </li>
-                    <li className="text-center md:text-right">
-                      Sunscreen and hat
-                    </li>
-                    <li className="text-center md:text-right">
-                      Camera for memories
-                    </li>
-                    <li className="text-center md:text-right">
-                      Small backpack for essentials
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Adventure Safely - Third on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-left">
-                      Always follow guide instructions
-                    </li>
-                    <li className="text-center md:text-left">
-                      Check weather conditions before activities
-                    </li>
-                    <li className="text-center md:text-left">
-                      Wear appropriate clothing and footwear
-                    </li>
-                    <li className="text-center md:text-left">
-                      Stay hydrated and carry water
-                    </li>
-                    <li className="text-center md:text-left">
-                      Inform staff of any medical conditions
-                    </li>
-                  </ul>
-                </div>
+        {/* Safety Information - Replacing Features Section */}
+        <div className="mt-8 md:mt-12 mb-8 md:mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* General Info Section - First on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center">
+                    Duration: 1.5 hours
+                  </li>
+                  <li className="text-center">
+                    All skill levels welcome
+                  </li>
+                  <li className="text-center">
+                    Experienced guides
+                  </li>
+                  <li className="text-center">
+                    Safety equipment provided
+                  </li>
+                  <li className="text-center">
+                    Well-trained horses
+                  </li>
+                </ul>
+              </div>
+              
+              {/* What to Bring - Second on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center md:text-right">
+                    Long pants and closed shoes
+                  </li>
+                  <li className="text-center md:text-right">
+                    Water and snacks
+                  </li>
+                  <li className="text-center md:text-right">
+                    Sunscreen and hat
+                  </li>
+                  <li className="text-center md:text-right">
+                    Camera for memories
+                  </li>
+                  <li className="text-center md:text-right">
+                    Small backpack for essentials
+                  </li>
+                </ul>
+              </div>
+              
+              {/* Adventure Safely - Third on mobile */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
+                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
+                  <li className="text-center md:text-left">
+                    Always follow guide instructions
+                  </li>
+                  <li className="text-center md:text-left">
+                    Check weather conditions before activities
+                  </li>
+                  <li className="text-center md:text-left">
+                    Wear appropriate clothing and footwear
+                  </li>
+                  <li className="text-center md:text-left">
+                    Stay hydrated and carry water
+                  </li>
+                  <li className="text-center md:text-left">
+                    Inform staff of any medical conditions
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         {/* Logo Section */}
@@ -186,9 +187,8 @@ export default function HorseridingPage() {
             height={400}
             className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
             priority
-          />
-        </div>
-      </div>
-    </div>
-  )
-} 
+            />
+            </div>
+          </div>
+      )
+    }
