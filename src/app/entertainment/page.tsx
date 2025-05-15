@@ -1,7 +1,11 @@
+"use client"
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Entertainment() {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const events = [
     {
       title: "Open Mic Night",
@@ -65,34 +69,36 @@ export default function Entertainment() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Live Music Card */}
-          <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-            <div className="relative h-64">
-              <Image
-                src="/images/entertainment/live-gigs-card.webp"
-                alt="Live Music Events"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.
-              </p>
-              <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
-            </div>
+      {/* Mobile: 2-column expandable cards */}
+      <div className="grid grid-cols-2 gap-4 px-4 sm:hidden">
+        {/* Live Music Gigs Card for mobile */}
+        <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div className="relative h-40">
+            <Image
+              src="/images/entertainment/live-gigs-card.webp"
+              alt="Live Music Events"
+              fill
+              className="object-cover"
+            />
           </div>
-
-          {/* Other Event Cards */}
-          {events.map((event, index) => (
-            <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
+          <div className="p-4 flex items-center justify-center">
+            <h2 className="text-base font-bold dark:text-white mb-0 text-center w-full">Live Music Gigs</h2>
+          </div>
+        </div>
+        {events.map((event, index) => {
+          const isExpanded = expandedCard === index;
+          const isFamilyMarket = event.title === "Family Market";
+          return (
+            <div
+              key={index}
+              className={`bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer${isExpanded ? ' col-span-2 z-20 relative' : ''}${isFamilyMarket && !isExpanded ? ' col-span-2 mx-auto max-w-[160px] w-full' : ''}`}
+              onClick={() => setExpandedCard(isExpanded ? null : index)}
+              style={isExpanded ? { position: 'relative' } : {}}
+            >
               {event.title === "Open Mic Night" ? (
                 <>
                   {/* Mobile Image */}
-                  <div className="relative h-[256px] sm:hidden">
+                  <div className={isExpanded ? "relative h-[256px]" : "relative h-40"}>
                     <Image
                       src="/images/entertainment/open-mic-night-card-mobile.webp"
                       alt={event.title}
@@ -100,18 +106,9 @@ export default function Entertainment() {
                       className="object-cover object-top"
                     />
                   </div>
-                  {/* Desktop Image */}
-                  <div className="relative h-[256px] hidden sm:block">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
                 </>
               ) : (
-                <div className="relative h-[256px]">
+                <div className={isExpanded ? "relative h-[256px]" : "relative h-40"}>
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -120,29 +117,73 @@ export default function Entertainment() {
                   />
                 </div>
               )}
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4 dark:text-white">{event.title}</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
-                <p className="text-primary font-semibold">{event.schedule}</p>
+              <div className={isExpanded ? 'p-4' : 'p-4 flex items-center justify-center'}>
+                <h2 className="text-base font-bold dark:text-white mb-0 text-center w-full">{event.title}</h2>
+                {isExpanded && (
+                  <>
+                    <p className="text-gray-600 dark:text-gray-300 text-xs mb-4 mt-4">{event.description}</p>
+                    <p className="text-primary font-semibold">{event.schedule}</p>
+                  </>
+                )}
               </div>
             </div>
-          ))}
+          );
+        })}
+      </div>
+      {/* Desktop: original grid and display */}
+      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Live Music Card */}
+        <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
+          <div className="relative h-64">
+            <Image
+              src="/images/entertainment/live-gigs-card.webp"
+              alt="Live Music Events"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-6">
+            <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.
+            </p>
+            <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
+          </div>
         </div>
 
-        {/* Want to Perform Section */}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold mb-4 dark:text-white">Want to Perform?</h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented musicians to join our lineup.
-            Contact us to discuss performance opportunities.
-          </p>
-          <Link 
-            href="/booking"
-            className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg transition-colors"
-          >
-            Get in Touch
-          </Link>
-        </div>
+        {/* Other Event Cards */}
+        {events.map((event, index) => (
+          <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
+            <div className="relative h-[256px]">
+              <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-bold mb-4 dark:text-white">{event.title}</h2>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
+              <p className="text-primary font-semibold">{event.schedule}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Want to Perform Section */}
+      <div className="mt-16 text-center px-4">
+        <h2 className="text-3xl font-bold mb-4 dark:text-white">Want to Perform?</h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          We're always looking for talented musicians to join our lineup.
+          Contact us to discuss performance opportunities.
+        </p>
+        <Link 
+          href="/booking"
+          className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg transition-colors"
+        >
+          Get in Touch
+        </Link>
       </div>
     </div>
   )

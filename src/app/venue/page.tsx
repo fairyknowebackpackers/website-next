@@ -148,6 +148,7 @@ export default function Venue() {
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedImage, setSelectedImage] = useState<WeddingImage | null>(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number>(-1);
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const imagesPerPage = 12;
   const totalPages = Math.ceil(weddingImages.length / imagesPerPage);
   const currentImages = weddingImages.slice(
@@ -244,12 +245,60 @@ export default function Venue() {
 
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Event Types Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+        {/* Mobile: 2-column expandable cards */}
+        <div className="grid grid-cols-2 gap-4 sm:hidden">
+          {eventTypes.map((event, index) => {
+            const isExpanded = expandedCard === index;
+            return (
+              <div
+                key={index}
+                className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer${isExpanded ? ' col-span-2 z-20 relative' : ''}`}
+                onClick={() => setExpandedCard(isExpanded ? null : index)}
+                style={isExpanded ? { position: 'relative' } : {}}
+              >
+                <div className={isExpanded ? 'relative h-[400px]' : 'relative h-40'}>
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className={isExpanded ? 'p-4' : 'p-4 flex items-center justify-center'}>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white mb-0 text-center w-full">
+                    {event.title}
+                  </h3>
+                  {isExpanded && (
+                    <>
+                      <p className="text-gray-600 dark:text-gray-300 text-xs mb-4 mt-4">
+                        {event.description}
+                      </p>
+                      <ul className="space-y-2">
+                        {event.features.map((feature, featureIndex) => (
+                          <li 
+                            key={featureIndex}
+                            className="flex items-center text-gray-600 dark:text-gray-300 text-xs"
+                          >
+                            <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            </svg>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        {/* Desktop: original grid and display */}
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {eventTypes.map((event, index) => (
             <div
               key={index}
-              className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300${eventTypes.length % 2 === 1 && index === eventTypes.length - 1 ? ' sm:col-span-2 sm:mx-auto sm:max-w-md' : ''}`}
+              className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300`}
             >
               <div className="relative h-64 sm:h-[256px]">
                 <Image
