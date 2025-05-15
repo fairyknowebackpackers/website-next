@@ -1,8 +1,7 @@
 {
-  "/adventures/horseriding/page": "app/adventures/horseriding/page.js",
   "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
   "/accommodation/gypsy-caravan/page": "app/accommodation/gypsy-caravan/page.js",
   "/accommodation/mixed-dorm/page": "app/accommodation/mixed-dorm/page.js",
-  "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js",
-  "/accommodation/family-en-suite-rondawel/page": "app/accommodation/family-en-suite-rondawel/page.js"
+  "/accommodation/family-en-suite-rondawel/page": "app/accommodation/family-en-suite-rondawel/page.js",
+  "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js"
 }
