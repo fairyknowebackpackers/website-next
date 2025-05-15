@@ -89,7 +89,7 @@ export default function Entertainment() {
           {/* Other Event Cards */}
           {events.map((event, index) => (
             <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64">
+              <div className="relative h-[256px]">
                 <Image
                   src={event.image}
                   alt={event.title}
