@@ -8,10 +8,17 @@ export default function Entertainment() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const events = [
     {
+      title: "Live Music Gigs",
+      schedule: "Every Friday and Saturday 19:30 - 22:30",
+      description: "Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.",
+      image: "/images/entertainment/live-gigs-card.webp"
+    },
+    {
       title: "Open Mic Night",
       schedule: "Every Wednesday 19:30 - 22:30",
       description: "Step into the spotlight and share what you may dare. Whether you're an aspiring artist, poetic wordsmith, comedic genius, or not, the stage is yours to claim and fame is yours to gain.",
-      image: "/images/entertainment/open-mic-night-card.webp"
+      image: "/images/entertainment/open-mic-night-card.webp",
+      mobileImage: "/images/entertainment/open-mic-night-card-mobile.webp"
     },
     {
       title: "Family Market",
@@ -69,89 +76,42 @@ export default function Entertainment() {
       </div>
 
       {/* Main Content */}
-      {/* Mobile: 2-column expandable cards */}
-      <div className="grid grid-cols-2 gap-4 px-4 sm:hidden">
-        {/* Live Music Gigs Card for mobile */}
-        <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-          <div className="relative h-40">
-            <Image
-              src="/images/entertainment/live-gigs-card.webp"
-              alt="Live Music Events"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-4 flex items-center justify-center">
-            <h2 className="text-base font-bold dark:text-white mb-0 text-center w-full">Live Music Gigs</h2>
-          </div>
-        </div>
-        {events.map((event, index) => {
-          const isExpanded = expandedCard === index;
-          const isFamilyMarket = event.title === "Family Market";
-          return (
-            <div
-              key={index}
-              className={`bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer${isExpanded ? ' col-span-2 z-20 relative' : ''}${isFamilyMarket && !isExpanded ? ' col-span-2 mx-auto max-w-[160px] w-full' : ''}`}
-              onClick={() => setExpandedCard(isExpanded ? null : index)}
-              style={isExpanded ? { position: 'relative' } : {}}
+      {/* Mobile: button list with expandable cards */}
+      <div className="flex flex-col gap-4 px-4 sm:hidden">
+        {events.map((event, idx) => (
+          <div key={idx}>
+            <button
+              className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left"
+              onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
             >
-              {event.title === "Open Mic Night" ? (
-                <>
-                  {/* Mobile Image */}
-                  <div className={isExpanded ? "relative h-[256px]" : "relative h-40"}>
-                    <Image
-                      src="/images/entertainment/open-mic-night-card-mobile.webp"
-                      alt={event.title}
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
-                </>
-              ) : (
-                <div className={isExpanded ? "relative h-[256px]" : "relative h-40"}>
+              <span className="font-bold">{event.title}</span>
+              <svg className={`h-5 w-5 ml-2 transition-transform ${expandedCard === idx ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {expandedCard === idx && (
+              <div className="bg-white rounded-b-xl shadow-sm overflow-hidden border border-t-0 border-gray-200 flex flex-col h-full mt-0">
+                <div className="relative w-full aspect-square">
                   <Image
-                    src={event.image}
+                    src={event.mobileImage || event.image}
                     alt={event.title}
                     fill
                     className="object-cover"
+                    sizes="100vw"
                   />
                 </div>
-              )}
-              <div className={isExpanded ? 'p-4' : 'p-4 flex items-center justify-center'}>
-                <h2 className="text-base font-bold dark:text-white mb-0 text-center w-full">{event.title}</h2>
-                {isExpanded && (
-                  <>
-                    <p className="text-gray-600 dark:text-gray-300 text-xs mb-4 mt-4">{event.description}</p>
-                    <p className="text-primary font-semibold">{event.schedule}</p>
-                  </>
-                )}
+                <div className="p-4 flex flex-col flex-1">
+                  <h2 className="text-lg font-bold mb-2 text-gray-900 min-h-[2.5rem]">{event.title}</h2>
+                  <p className="text-gray-600 text-sm mb-4">{event.description}</p>
+                  <p className="text-primary font-semibold mb-2">{event.schedule}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            )}
+          </div>
+        ))}
       </div>
       {/* Desktop: original grid and display */}
       <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Live Music Card */}
-        <div className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-          <div className="relative h-64">
-            <Image
-              src="/images/entertainment/live-gigs-card.webp"
-              alt="Live Music Events"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4 dark:text-white">Live Music Gigs</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.
-            </p>
-            <p className="text-primary font-semibold">Every Friday and Saturday 19:30 - 22:30</p>
-          </div>
-        </div>
-
-        {/* Other Event Cards */}
         {events.map((event, index) => (
           <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
             <div className="relative h-[256px]">

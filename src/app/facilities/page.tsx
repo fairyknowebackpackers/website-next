@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 
 const facilityCategories = [
   {
@@ -188,6 +189,8 @@ const facilityCategories = [
 ]
 
 export default function Facilities() {
+  const [expandedCard, setExpandedCard] = useState<number | null>(null);
+
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -236,51 +239,59 @@ export default function Facilities() {
 
         {/* Facilities Categories */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {facilityCategories.map((category) => (
-              <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200 flex flex-col h-full">
-                {category.title === 'Food & Drink' ? (
-                  <>
-                    {/* Mobile Image */}
-                    <div className="relative w-full aspect-square block md:hidden">
+          {/* Mobile: button list with expandable cards */}
+          <div className="flex flex-col gap-4 sm:hidden">
+            {facilityCategories.map((category, idx) => (
+              <div key={category.id}>
+                <button
+                  className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left"
+                  onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
+                >
+                  <span className="font-bold">{category.title}</span>
+                  <svg className={`h-5 w-5 ml-2 transition-transform ${expandedCard === idx ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {expandedCard === idx && (
+                  <div className="bg-white rounded-b-xl shadow-sm overflow-hidden border border-t-0 border-gray-200 flex flex-col h-full mt-0">
+                    <div className="relative w-full aspect-square">
                       <Image
-                        src="/images/facilities/self-catering-kitchen.webp"
+                        src={category.image}
                         alt={category.title}
                         fill
                         className="object-cover"
                         sizes="100vw"
-                        onError={(e) => {
-                          e.currentTarget.src = '/images/facilities/restaurant-kitchen.webp';
-                          console.error('Failed to load mobile image for Food & Drink card');
-                        }}
                       />
                     </div>
-                    {/* Desktop Image */}
-                    <div className="relative w-full aspect-square hidden md:block">
-                      <Image
-                        src="/images/facilities/restaurant-kitchen.webp"
-                        alt={category.title}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 1200px) 50vw, 25vw"
-                      />
+                    <div className="p-4 flex flex-col flex-1">
+                      <h2 className="text-lg font-bold mb-2 text-gray-900 min-h-[2.5rem]">{category.title}</h2>
+                      <ul className="space-y-1 text-gray-600 text-center flex-1">
+                        {category.facilities.map((facility) => (
+                          <li key={facility.name} className="flex items-start text-sm">
+                            <span className="mr-1">•</span>
+                            <span className="text-gray-900">{facility.name}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </>
-                ) : (
-                  <div className="relative w-full aspect-square">
-                    <Image
-                      src={category.image}
-                      alt={category.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      onError={(e) => {
-                        e.currentTarget.src = '/images/facilities/pet-friendly.webp';
-                        console.error('Failed to load image for', category.title);
-                      }}
-                    />
                   </div>
                 )}
+              </div>
+            ))}
+          </div>
+          {/* Desktop: original grid */}
+          <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {facilityCategories.map((category) => (
+              <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200 flex flex-col h-full">
+                <div className="relative w-full aspect-square">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
+                </div>
                 <div className="p-4 sm:p-6 flex flex-col flex-1">
                   <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 text-gray-900 min-h-[2.5rem] sm:min-h-[3rem]">{category.title}</h2>
                   <ul className="space-y-1 sm:space-y-2 text-gray-600 text-center md:text-left flex-1">
