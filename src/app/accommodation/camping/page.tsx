@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import ImageGallery from '@/components/ImageGallery'
 
 // Define gallery images with the new naming convention
@@ -20,24 +19,6 @@ const galleryImages = [
 ]
 
 export default function CampingPage() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-
-  const handlePrevImage = () => {
-    if (selectedImage === null) return;
-    setSelectedImage((prev) => {
-      if (prev === null) return 0;
-      return prev === 0 ? galleryImages.length - 1 : prev - 1;
-    });
-  };
-
-  const handleNextImage = () => {
-    if (selectedImage === null) return;
-    setSelectedImage((prev) => {
-      if (prev === null) return 0;
-      return prev === galleryImages.length - 1 ? 0 : prev + 1;
-    });
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
@@ -79,110 +60,20 @@ export default function CampingPage() {
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
-        <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
+          <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Pitch your tent and make yourself at home in our magical forest, where nature's embrace tucks you in at night. With access to all facilities, our camping area caters to every camper's preference, offering a mix of sunny clearings and shaded hideaways beneath the trees.
           </p>
+        </div>
 
-          {/* Gallery */}
-          <div className="mt-8 sm:mt-12 mb-8 sm:mb-12">
-            {/* Mobile Gallery - 2 images per row */}
-            <div className="grid grid-cols-2 gap-2 sm:hidden">
-              {galleryImages.map((image, index) => (
-                <div 
-                  key={index}
-                  className="relative aspect-[4/3] cursor-pointer"
-                  onClick={() => setSelectedImage(index)}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 640px) 50vw"
-                  />
-                </div>
-              ))}
-            </div>
+        {/* Gallery */}
+        <div className="w-full px-0 sm:px-4 mt-8 md:mt-12 mb-8 md:mb-12">
+          <ImageGallery 
+            images={galleryImages} 
+            imagesPerPage={8} 
+          />
+        </div>
 
-            {/* Desktop Gallery */}
-            <div className="hidden sm:block">
-              <ImageGallery 
-                images={galleryImages} 
-                imagesPerPage={2} 
-              />
-            </div>
-          </div>
-
-          {/* Mobile Image Modal */}
-          {selectedImage !== null && (
-            <div 
-              className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center sm:hidden"
-              onClick={() => setSelectedImage(null)}
-            >
-              <div className="relative w-full h-full flex items-center justify-center p-4">
-                {/* Close Button */}
-                <button
-                  className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
-                  onClick={() => setSelectedImage(null)}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-
-                {/* Previous button */}
-                <button 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handlePrevImage();
-                  }}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-
-                {/* Image */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={galleryImages[selectedImage].fullSize}
-                    alt={galleryImages[selectedImage].alt}
-                    fill
-                    className="object-contain"
-                    sizes="100vw"
-                    priority
-                  />
-                </div>
-
-                {/* Next button */}
-                <button 
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 z-10 p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-75"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleNextImage();
-                  }}
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                {/* Image counter */}
-                <div className="absolute bottom-4 left-0 right-0 text-center text-white text-xs opacity-50">
-                  {selectedImage + 1} / {galleryImages.length}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Mobile Book Now Button - Only visible on mobile */}
-          <div className="flex justify-center mt-6 mb-8 sm:hidden">
-            <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base">
-              Book Now
-            </Link>
-          </div>
-
+        <div className="max-w-7xl mx-auto px-4">
           {/* Features and Rules */}
           <div className="mt-8 sm:mt-12 mb-8 sm:mb-12">
             <div className="max-w-6xl mx-auto">

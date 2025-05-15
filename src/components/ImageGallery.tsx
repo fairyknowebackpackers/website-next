@@ -123,7 +123,7 @@ export default function ImageGallery({
   }, [selectedImage, selectedImageIndex]);
 
   return (
-    <div className="max-w-7xl mx-auto px-1 sm:px-4 mb-16">
+    <div className="max-w-7xl mx-auto px-0 sm:px-4 mb-16">
       {title && (
         <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
           {title}
@@ -131,7 +131,7 @@ export default function ImageGallery({
       )}
       
       <div className="relative overflow-hidden">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
           {/* Current page images */}
           {currentImages.map((image, index) => {
             const globalIndex = currentPage * imagesPerPage + index;
