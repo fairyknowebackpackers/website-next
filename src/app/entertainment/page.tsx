@@ -89,14 +89,37 @@ export default function Entertainment() {
           {/* Other Event Cards */}
           {events.map((event, index) => (
             <div key={index} className="bg-card-light dark:bg-card-dark rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-[256px]">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  fill
-                  className={`${event.title === "Open Mic Night" ? "object-cover object-top" : "object-cover"}`}
-                />
-              </div>
+              {event.title === "Open Mic Night" ? (
+                <>
+                  {/* Mobile Image */}
+                  <div className="relative h-[256px] sm:hidden">
+                    <Image
+                      src="/images/entertainment/open-mic-night-card-mobile.webp"
+                      alt={event.title}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  {/* Desktop Image */}
+                  <div className="relative h-[256px] hidden sm:block">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      className="object-cover object-top"
+                    />
+                  </div>
+                </>
+              ) : (
+                <div className="relative h-[256px]">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-4 dark:text-white">{event.title}</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
