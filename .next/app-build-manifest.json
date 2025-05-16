@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/entertainment/page": [
+    "/adventures/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/entertainment/page.js"
+      "static/chunks/app/adventures/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,35 +11,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/facilities/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/facilities/page.js"
-    ],
-    "/venue/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/venue/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/accommodation/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/accommodation/page.js"
     ],
-    "/adventures/page": [
+    "/accommodation/twin-room/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/adventures/page.js"
+      "static/chunks/app/accommodation/twin-room/page.js"
     ],
-    "/gallery/page": [
+    "/accommodation/double-en-suite/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/gallery/page.js"
+      "static/chunks/app/accommodation/double-en-suite/page.js"
+    ],
+    "/accommodation/camping/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/camping/page.js"
+    ],
+    "/venue/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/venue/page.js"
     ]
   }
 }

@@ -134,9 +134,9 @@ export default function Accommodation() {
         {/* Mobile Expandable List */}
         <div className="block sm:hidden">
           {roomTypes.map((room, idx) => (
-            <div key={room.id} className="mb-4 rounded-xl shadow-lg border bg-[#F3F4F6] overflow-hidden">
+            <div key={room.id} className={`mb-4 rounded-xl shadow-lg border overflow-hidden ${openIndex === idx ? 'bg-white text-[#0E7D73]' : 'bg-gradient-to-b from-[#00B69D] to-[#0E7D73] text-[#C9DD94]'}`}>
               <button
-                className="w-full flex flex-col items-center text-left focus:outline-none"
+                className={`w-full flex flex-col items-center text-left focus:outline-none ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#C9DD94]'}`}
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
@@ -154,9 +154,16 @@ export default function Accommodation() {
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className="text-gray-600 mb-4 text-center">{room.description}</p>
-                    <h3 className="font-semibold mb-2 text-[#202635] text-center">Features:</h3>
-                    <ul className="list-disc pl-5 space-y-1.5 text-gray-600 text-left">
+                    <p className={`mb-4 text-center ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#C9DD94]'}`}>{room.description}</p>
+                    <div className="flex justify-center">
+                      <Link
+                        href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="inline-block mb-2 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
+                      >
+                        View
+                      </Link>
+                    </div>
+                    <ul className={`pl-0 space-y-1.5 text-center text-xs ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#C9DD94]'}`} style={{ listStyleType: 'none' }}>
                       {room.features.map((feature, index) => (
                         <li key={`${room.id}-feature-${index}`}>{feature}</li>
                       ))}

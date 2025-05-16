@@ -152,9 +152,9 @@ export default function Adventure() {
         {/* Mobile Expandable List */}
         <div className="block sm:hidden">
           {activities.map((activity, idx) => (
-            <div key={activity.id} className="mb-4 rounded-xl shadow-lg border bg-[#F3F4F6] overflow-hidden">
+            <div key={activity.id} className="mb-4 rounded-xl shadow-lg border bg-[#1F2937] overflow-hidden">
               <button
-                className="w-full flex flex-col items-center text-left focus:outline-none"
+                className="w-full flex flex-col items-center text-left focus:outline-none text-white"
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
@@ -172,9 +172,16 @@ export default function Adventure() {
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className="text-gray-600 mb-4 text-center">{activity.description}</p>
-                    <h3 className="font-semibold mb-2 text-[#202635] text-center">Features:</h3>
-                    <ul className="list-disc pl-5 space-y-1.5 text-gray-600 text-left">
+                    <p className="text-gray-300 mb-4 text-center">{activity.description}</p>
+                    <div className="flex justify-center">
+                      <Link
+                        href={`/adventures/${activity.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
+                        className="inline-block mb-2 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
+                      >
+                        View
+                      </Link>
+                    </div>
+                    <ul className="pl-0 space-y-1.5 text-gray-300 text-center text-xs" style={{ listStyleType: 'none' }}>
                       {activity.features.map((feature, index) => (
                         <li key={`${activity.id}-feature-${index}`}>{feature}</li>
                       ))}
