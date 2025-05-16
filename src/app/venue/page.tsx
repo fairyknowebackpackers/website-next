@@ -36,7 +36,8 @@ const eventTypes = [
       'Decorating options',
       'Catering packages'
     ],
-    image: '/images/venue-hire/private-parties-card.webp'
+    image: '/images/venue-hire/private-parties-card.webp',
+    imageMobile: '/images/venue-hire/mobile/private-parties-card.webp'
   },
   {
     title: 'Corporate Events',
@@ -49,7 +50,8 @@ const eventTypes = [
       'Catering services',
       'Wi-Fi and basic equipment'
     ],
-    image: '/images/venue-hire/corporate-events-card.webp'
+    image: '/images/venue-hire/corporate-events-card.webp',
+    imageMobile: '/images/venue-hire/mobile/corporate-events-card.webp'
   },
   {
     title: 'Film Crews',
@@ -62,7 +64,8 @@ const eventTypes = [
       'Flexible shooting hours',
       'Dedicated crew facilities'
     ],
-    image: '/images/venue-hire/film-crews-card.webp'
+    image: '/images/venue-hire/film-crews-card.webp',
+    imageMobile: '/images/venue-hire/mobile/film-crews-card.webp'
   },
   {
     title: 'Skill Trades & Workshops',
@@ -75,7 +78,8 @@ const eventTypes = [
       'Flexible indoor/outdoor spaces',
       'Community-driven learning'
     ],
-    image: '/images/venue-hire/skill-trades-workshops-card.webp'
+    image: '/images/venue-hire/skill-trades-workshops-card.webp',
+    imageMobile: '/images/venue-hire/mobile/skill-trades-workshops-card.webp'
   },
   {
     title: 'Expo Events',
@@ -88,7 +92,8 @@ const eventTypes = [
       'High-speed WiFi',
       'On-site support staff'
     ],
-    image: '/images/venue-hire/expo-events-card.webp'
+    image: '/images/venue-hire/expo-events-card.webp',
+    imageMobile: '/images/venue-hire/mobile/expo-events-card.webp'
   }
 ]
 
