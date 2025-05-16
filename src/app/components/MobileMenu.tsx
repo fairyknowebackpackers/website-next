@@ -36,7 +36,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
       {/* Mobile menu */}
       {isOpen && (
         <div className="fixed inset-0 z-50 bg-white overflow-y-auto">
-          <div className="min-h-screen px-4 pt-4 pb-6 space-y-2">
+          <div className="min-h-screen pt-4 pb-6 space-y-2">
             {/* Close button */}
             <div className="flex justify-end mb-4 sticky top-0 bg-white z-10">
               <button
@@ -53,13 +53,13 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
             <div className="space-y-3 pb-8 text-center">
               <div className="space-y-2">
                 <button
-                  className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-normal rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left mb-2"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/accommodation'; }}
                   type="button"
                 >
-                  <span>Accommodation</span>
+                  <span className="w-full text-center">Accommodation</span>
                   <span
-                    className="ml-2 text-lg cursor-pointer z-10"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-lg cursor-pointer z-10"
                     onClick={e => { e.stopPropagation(); setOpenDropdown(openDropdown === 'accommodation' ? null : 'accommodation'); }}
                   >
                     {openDropdown === 'accommodation' ? (
@@ -109,13 +109,13 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
               <div className="space-y-2">
                 <button
-                  className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-normal rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left mb-2"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/adventures'; }}
                   type="button"
                 >
-                  <span>Adventures</span>
+                  <span className="w-full text-center">Adventures</span>
                   <span
-                    className="ml-2 text-lg cursor-pointer z-10"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-lg cursor-pointer z-10"
                     onClick={e => { e.stopPropagation(); setOpenDropdown(openDropdown === 'adventures' ? null : 'adventures'); }}
                   >
                     {openDropdown === 'adventures' ? (
@@ -167,45 +167,45 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               </div>
 
               {/* 2-column grid for next 6 items */}
-              <div className="grid grid-cols-2 gap-2 justify-center mb-4">
+              <div className="flex flex-col w-full mb-4">
                 <Link 
                   href="/entertainment" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Entertainment
                 </Link>
                 <Link 
                   href="/venue" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Venue Hire
                 </Link>
                 <Link 
                   href="/facilities" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Facilities
                 </Link>
                 <Link 
                   href="/fairy-folk-n-roll" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Fairy Folk 'n Roll
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="flex flex-col items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-sm rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
@@ -214,7 +214,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
               <Link 
                 href="/booking" 
-                className="text-white bg-[#073F3A] hover:bg-[#052A26] block px-4 py-3 rounded-lg text-base font-medium text-center transition-colors"
+                className="text-white bg-[#073F3A] hover:bg-[#052A26] block px-4 py-3 rounded-lg text-base font-medium text-center transition-colors mx-4"
                 onClick={() => setIsOpen(false)}
               >
                 Book Now

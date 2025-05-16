@@ -152,9 +152,18 @@ export default function Adventure() {
         {/* Mobile Expandable List */}
         <div className="block sm:hidden">
           {activities.map((activity, idx) => (
-            <div key={activity.id} className="mb-4 rounded-xl shadow-lg border bg-[#1F2937] overflow-hidden">
+            <div
+              key={activity.id}
+              className={
+                `${openIndex === idx
+                  ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635]'
+                  : 'w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white to-[#E5E7EB] text-[#202635]'}
+                `
+              }
+              style={openIndex === idx ? {} : { borderRadius: 0 }}
+            >
               <button
-                className="w-full flex flex-col items-center text-left focus:outline-none text-white"
+                className={`w-full flex flex-col items-center text-left focus:outline-none text-[#202635]`}
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
@@ -162,7 +171,7 @@ export default function Adventure() {
               </button>
               {openIndex === idx && (
                 <div>
-                  <div className="w-full aspect-square overflow-hidden rounded-t-xl">
+                  <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
                     <Image
                       src={activity.image}
                       alt={activity.name}
@@ -172,7 +181,7 @@ export default function Adventure() {
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className="text-gray-300 mb-4 text-center">{activity.description}</p>
+                    <p className="mb-4 text-center text-[#202635]">{activity.description}</p>
                     <div className="flex justify-center">
                       <Link
                         href={`/adventures/${activity.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
@@ -181,7 +190,7 @@ export default function Adventure() {
                         View
                       </Link>
                     </div>
-                    <ul className="pl-0 space-y-1.5 text-gray-300 text-center text-xs" style={{ listStyleType: 'none' }}>
+                    <ul className="pl-0 space-y-1.5 text-center text-xs text-[#202635]" style={{ listStyleType: 'none' }}>
                       {activity.features.map((feature, index) => (
                         <li key={`${activity.id}-feature-${index}`}>{feature}</li>
                       ))}

@@ -138,14 +138,14 @@ export default function Accommodation() {
               key={room.id}
               className={
                 `${openIndex === idx
-                  ? 'mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#0E7D73]'
+                  ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635]'
                   : 'w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white to-[#E5E7EB] text-[#202635]'}
                 `
               }
               style={openIndex === idx ? {} : { borderRadius: 0 }}
             >
               <button
-                className={`w-full flex flex-col items-center text-left focus:outline-none ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#202635]'}`}
+                className={`w-full flex flex-col items-center text-left focus:outline-none text-[#202635]`}
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
@@ -153,7 +153,7 @@ export default function Accommodation() {
               </button>
               {openIndex === idx && (
                 <div>
-                  <div className="w-full aspect-square overflow-hidden rounded-t-xl">
+                  <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
                     <Image
                       src={room.image}
                       alt={room.name}
@@ -163,7 +163,7 @@ export default function Accommodation() {
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className={`mb-4 text-center ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#202635]'}`}>{room.description}</p>
+                    <p className="mb-4 text-center text-[#202635]">{room.description}</p>
                     <div className="flex justify-center">
                       <Link
                         href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -172,7 +172,7 @@ export default function Accommodation() {
                         View
                       </Link>
                     </div>
-                    <ul className={`pl-0 space-y-1.5 text-center text-xs ${openIndex === idx ? 'text-[#0E7D73]' : 'text-[#202635]'}`} style={{ listStyleType: 'none' }}>
+                    <ul className="pl-0 space-y-1.5 text-center text-xs text-[#202635]" style={{ listStyleType: 'none' }}>
                       {room.features.map((feature, index) => (
                         <li key={`${room.id}-feature-${index}`}>{feature}</li>
                       ))}
