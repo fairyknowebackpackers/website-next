@@ -4,5 +4,6 @@
   "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js",
   "/accommodation/camping/page": "app/accommodation/camping/page.js",
   "/venue/page": "app/venue/page.js",
-  "/adventures/page": "app/adventures/page.js"
+  "/adventures/page": "app/adventures/page.js",
+  "/fairy-folk-n-roll/page": "app/fairy-folk-n-roll/page.js"
 }

@@ -157,7 +157,7 @@ export default function Adventure() {
               className={
                 `${openIndex === idx
                   ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635]'
-                  : 'w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white to-[#E5E7EB] text-[#202635]'}
+                  : 'w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635]'}
                 `
               }
               style={openIndex === idx ? {} : { borderRadius: 0 }}

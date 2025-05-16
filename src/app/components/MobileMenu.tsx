@@ -50,10 +50,10 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
             </div>
 
             {/* Mobile menu items */}
-            <div className="space-y-3 pb-8 text-center">
+            <div className="pb-8 text-center">
               <div className="space-y-2">
                 <button
-                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/accommodation'; }}
                   type="button"
                 >
@@ -107,9 +107,9 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                 )}
               </div>
 
-              <div className="space-y-2">
+              <div>
                 <button
-                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/adventures'; }}
                   type="button"
                 >
@@ -170,42 +170,42 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="flex flex-col w-full mb-4">
                 <Link 
                   href="/entertainment" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Entertainment
                 </Link>
                 <Link 
                   href="/venue" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Venue Hire
                 </Link>
                 <Link 
                   href="/facilities" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Facilities
                 </Link>
                 <Link 
                   href="/fairy-folk-n-roll" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Fairy Folk 'n Roll
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-medium transition-colors text-center rounded-none"
+                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
@@ -214,7 +214,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
               <Link 
                 href="/booking" 
-                className="inline-block mb-2 px-6 py-3 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-base text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors mx-4"
+                className="inline-block mb-2 px-6 py-3 rounded-full bg-[#0E7D73] text-[#C9DD94] font-normal text-base text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors mx-4"
                 onClick={() => setIsOpen(false)}
               >
                 Book Now
