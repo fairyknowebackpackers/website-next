@@ -42,7 +42,7 @@ export default function CampingPage() {
       {/* Desktop Banner */}
       <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
         <Image
-          src="/images/accommodation/banners/camping-banner.webp"
+          src="/images/accommodation/banners/camping-banner-test.webp"
           alt="Fairy Knowe Accommodation Camping"
           fill
           className="object-cover"
