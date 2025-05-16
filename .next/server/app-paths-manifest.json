@@ -1,8 +1,8 @@
 {
-  "/entertainment/page": "app/entertainment/page.js",
   "/venue/page": "app/venue/page.js",
   "/adventures/page": "app/adventures/page.js",
   "/accommodation/page": "app/accommodation/page.js",
   "/accommodation/camping/page": "app/accommodation/camping/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/entertainment/page": "app/entertainment/page.js"
 }

@@ -18,7 +18,7 @@ export default function Entertainment() {
       schedule: "Every Wednesday 19:30 - 22:30",
       description: "Step into the spotlight and share what you may dare. Whether you're an aspiring artist, poetic wordsmith, comedic genius, or not, the stage is yours to claim and fame is yours to gain.",
       image: "/images/entertainment/open-mic-night-card.webp",
-      mobileImage: "/images/entertainment/open-mic-night-card-mobile.webp"
+      mobileImage: "/images/entertainment/mobile/open-mic-night-card.webp"
     },
     {
       title: "Family Market",
