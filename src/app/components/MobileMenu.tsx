@@ -51,6 +51,14 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
             {/* Mobile menu items */}
             <div className="pb-8 text-center">
+              {/* Home button styled like other main menu items */}
+              <button
+                className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
+                onClick={() => { setIsOpen(false); window.location.href = '/'; }}
+                type="button"
+              >
+                <span className="w-full text-center">Home</span>
+              </button>
               <div className="space-y-2">
                 <button
                   className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
