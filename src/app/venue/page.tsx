@@ -243,51 +243,58 @@ export default function Venue() {
         </div>
       </div>
 
+      {/* Mobile: button list with expandable cards */}
+      <div className="block sm:hidden w-full max-w-full px-0">
+        {eventTypes.map((event, idx) => (
+          <div
+            key={idx}
+            className={
+              `${expandedCard === idx
+                ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635] mx-4'
+                : 'w-full max-w-full border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635]'}
+              `
+            }
+            style={expandedCard === idx ? {} : { borderRadius: 0 }}
+          >
+            <button
+              className="w-full flex flex-col items-center text-left focus:outline-none text-[#202635]"
+              onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
+              aria-expanded={expandedCard === idx}
+            >
+              <div className="py-5 w-full text-center">{event.title}</div>
+            </button>
+            {expandedCard === idx && (
+              <div>
+                <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    width={400}
+                    height={400}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <div className="px-4 pb-4 pt-2">
+                  <p className="mb-4 text-center text-[#202635]">{event.description}</p>
+                  <ul className="space-y-1 text-gray-600 text-left flex-1">
+                    {event.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start text-sm">
+                        <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-900">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
       {/* Main Content */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
-        {/* Mobile: button list with expandable cards */}
-        <div className="flex flex-col gap-4 sm:hidden">
-          {eventTypes.map((event, idx) => (
-            <div key={idx}>
-              <button
-                className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left"
-                onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
-              >
-                <span className="font-bold">{event.title}</span>
-                <svg className={`h-5 w-5 ml-2 transition-transform ${expandedCard === idx ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {expandedCard === idx && (
-                <div className="bg-white rounded-b-xl shadow-sm overflow-hidden border border-t-0 border-gray-200 flex flex-col h-full mt-0">
-                  <div className="relative w-full aspect-square">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      className="object-cover"
-                      sizes="100vw"
-                    />
-                  </div>
-                  <div className="p-4 flex flex-col flex-1">
-                    <h3 className="text-lg font-bold mb-2 text-gray-900 min-h-[2.5rem]">{event.title}</h3>
-                    <p className="text-gray-600 text-sm mb-4">{event.description}</p>
-                    <ul className="space-y-1 text-gray-600 text-left flex-1">
-                      {event.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-sm">
-                          <svg className="h-4 w-4 text-[#073F3A] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="text-gray-900">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
         {/* Desktop: original grid and display */}
         <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {eventTypes.map((event, index) => (

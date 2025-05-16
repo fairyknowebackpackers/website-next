@@ -53,7 +53,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
             <div className="pb-8 text-center">
               <div className="space-y-2">
                 <button
-                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/accommodation'; }}
                   type="button"
                 >
@@ -74,7 +74,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                   </span>
                 </button>
                 {openDropdown === 'accommodation' && (
-                  <div className="grid grid-cols-3 gap-2 mt-5 mb-4">
+                  <div className="grid grid-cols-3 gap-2 mt-5 mb-5">
                     {accommodationLinks.map((link) => (
                       <Link
                         key={link.href}
@@ -109,7 +109,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
 
               <div>
                 <button
-                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => { setIsOpen(false); window.location.href = '/adventures'; }}
                   type="button"
                 >
@@ -130,7 +130,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                   </span>
                 </button>
                 {openDropdown === 'adventures' && (
-                  <div className="grid grid-cols-3 gap-2 mt-5 mb-4">
+                  <div className="grid grid-cols-3 gap-2 mt-5 mb-5">
                     {adventureLinks.map((link) => (
                       <Link
                         key={link.href}

@@ -149,7 +149,7 @@ export default function Accommodation() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
-                <div className="py-3 w-full text-center">{room.name}</div>
+                <div className="py-5 w-full text-center">{room.name}</div>
               </button>
               {openIndex === idx && (
                 <div>

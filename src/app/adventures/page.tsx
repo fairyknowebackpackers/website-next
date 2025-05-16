@@ -43,15 +43,6 @@ const activities = [
     features: ['Well-marked trail', 'Swimming spots', 'Moderate difficulty', 'Beautiful scenery']
   },
   {
-    id: 5,
-    name: 'Bosduif Trail',
-    description: '2 hour loop trail up to breath-taking viewpoints above the Touw River, and back down again.',
-    image: '/images/adventures/cards/desktop/bosduif-trail-card.webp',
-    mobileImage: '/images/adventures/cards/mobile/bosduif-trail-card.webp',
-    category: 'Hiking',
-    features: ['Scenic viewpoints', 'Loop trail', 'Moderate difficulty', 'Forest environment']
-  },
-  {
     id: 6,
     name: 'Brown Hooded Kingfisher Trail',
     description: '2 hour trail crossing multiple times over the Duiwe River.',
@@ -59,6 +50,15 @@ const activities = [
     mobileImage: '/images/adventures/cards/mobile/brown-hooded-kingfisher-trail-card.webp',
     category: 'Hiking',
     features: ['River crossings', 'Bird watching', 'Easy to moderate', 'Shaded route']
+  },
+  {
+    id: 5,
+    name: 'Bosduif Trail',
+    description: '2 hour loop trail up to breath-taking viewpoints above the Touw River, and back down again.',
+    image: '/images/adventures/cards/desktop/bosduif-trail-card.webp',
+    mobileImage: '/images/adventures/cards/mobile/bosduif-trail-card.webp',
+    category: 'Hiking',
+    features: ['Scenic viewpoints', 'Loop trail', 'Moderate difficulty', 'Forest environment']
   },
   {
     id: 7,
@@ -167,7 +167,7 @@ export default function Adventure() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
-                <div className="py-3 w-full text-center">{activity.name}</div>
+                <div className="py-5 w-full text-center">{activity.name}</div>
               </button>
               {openIndex === idx && (
                 <div>

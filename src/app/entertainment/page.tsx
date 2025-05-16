@@ -77,33 +77,39 @@ export default function Entertainment() {
 
       {/* Main Content */}
       {/* Mobile: button list with expandable cards */}
-      <div className="flex flex-col gap-4 px-4 sm:hidden">
+      <div className="block sm:hidden w-full max-w-full px-0">
         {events.map((event, idx) => (
-          <div key={idx}>
+          <div
+            key={idx}
+            className={
+              `${expandedCard === idx
+                ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635] mx-4'
+                : 'w-full max-w-full border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635]'}
+              `
+            }
+            style={expandedCard === idx ? {} : { borderRadius: 0 }}
+          >
             <button
-              className="w-full flex items-center justify-between text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] px-4 py-5 text-base font-medium rounded-xl shadow-md hover:bg-gray-200 transition-colors text-left"
+              className="w-full flex flex-col items-center text-left focus:outline-none text-[#202635]"
               onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
+              aria-expanded={expandedCard === idx}
             >
-              <span className="font-bold">{event.title}</span>
-              <svg className={`h-5 w-5 ml-2 transition-transform ${expandedCard === idx ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
+              <div className="py-5 w-full text-center">{event.title}</div>
             </button>
             {expandedCard === idx && (
-              <div className="bg-white rounded-b-xl shadow-sm overflow-hidden border border-t-0 border-gray-200 flex flex-col h-full mt-0">
-                <div className="relative w-full aspect-square">
+              <div>
+                <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
                   <Image
                     src={event.mobileImage || event.image}
                     alt={event.title}
-                    fill
-                    className="object-cover"
-                    sizes="100vw"
+                    width={400}
+                    height={400}
+                    className="object-cover w-full h-full"
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-1">
-                  <h2 className="text-lg font-bold mb-2 text-gray-900 min-h-[2.5rem]">{event.title}</h2>
-                  <p className="text-gray-600 text-sm mb-4">{event.description}</p>
-                  <p className="text-primary font-semibold mb-2">{event.schedule}</p>
+                <div className="px-4 pb-4 pt-2">
+                  <p className="mb-4 text-center text-[#202635]">{event.description}</p>
+                  <p className="text-primary font-semibold mb-2 text-center">{event.schedule}</p>
                 </div>
               </div>
             )}
