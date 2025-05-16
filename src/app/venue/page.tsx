@@ -22,7 +22,8 @@ const eventTypes = [
       'Wedding planning assistance',
       'Beautiful photo opportunities'
     ],
-    image: '/images/venue-hire/weddings-card.webp'
+    image: '/images/venue-hire/weddings-card.webp',
+    imageMobile: '/images/venue-hire/mobile/weddings-card.webp'
   },
   {
     title: 'Private Parties',
@@ -267,7 +268,7 @@ export default function Venue() {
               <div>
                 <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
                   <Image
-                    src={event.image}
+                    src={event.imageMobile || event.image}
                     alt={event.title}
                     width={400}
                     height={400}
@@ -304,7 +305,7 @@ export default function Venue() {
             >
               <div className="relative h-64 sm:h-[256px]">
                 <Image
-                  src={event.image}
+                  src={event.imageMobile || event.image}
                   alt={event.title}
                   fill
                   className="object-cover"

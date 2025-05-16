@@ -1,7 +1,7 @@
 {
-  "/accommodation/page": "app/accommodation/page.js",
   "/fairy-folk-n-roll/page": "app/fairy-folk-n-roll/page.js",
   "/facilities/page": "app/facilities/page.js",
   "/entertainment/page": "app/entertainment/page.js",
-  "/venue/page": "app/venue/page.js"
+  "/venue/page": "app/venue/page.js",
+  "/adventures/page": "app/adventures/page.js"
 }
