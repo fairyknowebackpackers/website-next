@@ -1,4 +1,5 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
   "/accommodation/page": "app/accommodation/page.js",
   "/accommodation/double-en-suite/page": "app/accommodation/double-en-suite/page.js",
   "/accommodation/camping/page": "app/accommodation/camping/page.js",
