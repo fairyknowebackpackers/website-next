@@ -11,7 +11,8 @@ export default function Entertainment() {
       title: "Live Music Gigs",
       schedule: "Every Friday and Saturday 19:30 - 22:30",
       description: "Experience live performances from local magical musicians and traveling musical magicians. From intimate solos to monstrous full-band spectacles, each a celebration of sound that will leave you spellbound.",
-      image: "/images/entertainment/live-gigs-card.webp"
+      image: "/images/entertainment/live-gigs-card.webp",
+      mobileImage: "/images/entertainment/mobile/live-gigs-card.webp"
     },
     {
       title: "Open Mic Night",
@@ -24,7 +25,8 @@ export default function Entertainment() {
       title: "Family Market",
       schedule: "Every sunny Sunday 10:00 - 14:00",
       description: "Explore our charming family market and discover locally crafted gems, tasty treats, unique garments and one-of-a-kind souvinirs. Connect with locals that bring together a community of creativity.",
-      image: "/images/entertainment/family-market-card.webp"
+      image: "/images/entertainment/family-market-card.webp",
+      mobileImage: "/images/entertainment/mobile/family-market-card.webp"
     }
   ]
 
