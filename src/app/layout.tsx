@@ -50,6 +50,13 @@ export default function RootLayout({
       <head>
         <title>Fairy Knowe Backpackers</title>
         <meta name="description" content="Adventure Backpackers in the heart of the Garden Route" />
+        <link
+          rel="preload"
+          href="/fonts/hestrial.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="font-sans bg-white">
           <nav className="bg-white shadow-lg fixed w-full z-50 h-12">

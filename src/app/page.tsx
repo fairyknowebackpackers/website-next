@@ -3,6 +3,12 @@ import Image from 'next/image'
 import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
 
+// Add font preloading
+export const metadata = {
+  title: 'Fairy Knowe Backpackers',
+  description: 'Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.',
+}
+
 export default function Home() {
   const pages = [
     {
@@ -61,7 +67,8 @@ export default function Home() {
           className="object-cover"
           priority
           quality={85}
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
@@ -78,7 +85,8 @@ export default function Home() {
           className="object-cover"
           priority
           quality={85}
-          sizes="100vw"
+          sizes="(min-width: 768px) 100vw"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
@@ -113,6 +121,7 @@ export default function Home() {
                       className="object-fill md:object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       quality={75}
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
@@ -137,6 +146,7 @@ export default function Home() {
               height={400}
               className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
               priority
+              loading="eager"
             />
           </div>
 
