@@ -10,48 +10,8 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Rolie Twily';
-  src: url('/fonts/Rolie Twily.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Boecklins Universe';
-  src: url('/fonts/Boecklins Universe.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'MagicalSource';
-  src: url('/fonts/MagicalSource_Demo.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 .hestrial-font {
   font-family: 'Hestrial', sans-serif !important;
-}
-
-.rolie-twily-font {
-  font-family: 'Rolie Twily', cursive, sans-serif;
-}
-
-.meditative-font {
-  font-family: 'Meditative', cursive, sans-serif;
-}
-
-.boecklins-font {
-  font-family: 'Boecklins Universe', cursive, sans-serif;
-}
-
-.magicalsource-font {
-  font-family: 'MagicalSource', cursive, sans-serif;
 }
 
 :root {
