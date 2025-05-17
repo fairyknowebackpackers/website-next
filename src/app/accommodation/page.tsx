@@ -149,7 +149,7 @@ export default function Accommodation() {
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                 aria-expanded={openIndex === idx}
               >
-                <div className="py-5 w-full text-center">{room.name}</div>
+                <div className="py-5 w-full text-center magicalsource-font">{room.name}</div>
               </button>
               {openIndex === idx && (
                 <div>
@@ -223,19 +223,6 @@ export default function Accommodation() {
           ))}
         </div>
       </div>
-
-      {/* Logo Section */}
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-center">
-          <Image
-            src="/images/home/logo.webp"
-            alt="Fairy Knowe Logo"
-            width={300}
-            height={300}
-            className="w-48 h-48 object-contain"
-          />
-        </div>
-      </div>
     </div>
   )
-} 
+}
