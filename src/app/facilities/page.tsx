@@ -231,7 +231,7 @@ export default function Facilities() {
 
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Everything you need to keep clean, comfortable, connected, captivated, cozy, fed and feeling good during your stay in the enchanted realms of the wood.
           </p>
@@ -283,31 +283,33 @@ export default function Facilities() {
         ))}
       </div>
       {/* Desktop: original grid */}
-      <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {facilityCategories.map((category) => (
-          <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200 flex flex-col h-full">
-            <div className="relative w-full aspect-square">
-              <Image
-                src={category.image}
-                alt={category.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-              />
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {facilityCategories.map((category) => (
+            <div key={category.id} className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200 flex flex-col h-full">
+              <div className="relative w-full aspect-square">
+                <Image
+                  src={category.image}
+                  alt={category.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+              </div>
+              <div className="p-4 sm:p-6 flex flex-col flex-1">
+                <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 text-gray-900 min-h-[2.5rem] sm:min-h-[3rem]">{category.title}</h2>
+                <ul className="space-y-1 sm:space-y-2 text-gray-600 text-center md:text-left flex-1">
+                  {category.facilities.map((facility) => (
+                    <li key={facility.name} className="flex items-start text-sm sm:text-base">
+                      <span className="mr-1 sm:mr-2">•</span>
+                      <span className="text-gray-900">{facility.name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="p-4 sm:p-6 flex flex-col flex-1">
-              <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 text-gray-900 min-h-[2.5rem] sm:min-h-[3rem]">{category.title}</h2>
-              <ul className="space-y-1 sm:space-y-2 text-gray-600 text-center md:text-left flex-1">
-                {category.facilities.map((facility) => (
-                  <li key={facility.name} className="flex items-start text-sm sm:text-base">
-                    <span className="mr-1 sm:mr-2">•</span>
-                    <span className="text-gray-900">{facility.name}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       {/* General Information Section */}
       <div className="max-w-7xl mx-auto mt-16 mb-12">

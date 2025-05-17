@@ -172,20 +172,29 @@ export default function Adventure() {
               {openIndex === idx && (
                 <div>
                   <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
+                    {/* Mobile Image */}
+                    <Image
+                      src={activity.mobileImage}
+                      alt={activity.name}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full h-full block sm:hidden"
+                    />
+                    {/* Desktop Image */}
                     <Image
                       src={activity.image}
                       alt={activity.name}
                       width={400}
                       height={400}
-                      className="object-cover w-full h-full"
+                      className="object-cover w-full h-full hidden sm:block"
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className="mb-4 text-center text-[#202635]">{activity.description}</p>
-                    <div className="flex justify-center">
+                    <p className="mb-4 text-center text-[#202635] text-sm mt-4">{activity.description}</p>
+                    <div className="flex justify-center mb-4">
                       <Link
                         href={`/adventures/${activity.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}
-                        className="inline-block mb-2 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
+                        className="inline-block mb-3 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
                       >
                         View
                       </Link>

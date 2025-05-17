@@ -138,7 +138,7 @@ export default function Accommodation() {
               key={room.id}
               className={
                 `${openIndex === idx
-                  ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635]'
+                  ? `${idx === roomTypes.length - 1 ? 'mt-4 mb-2' : 'mt-4 mb-4'} rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635]`
                   : 'w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635]'}
                 `
               }
@@ -163,11 +163,11 @@ export default function Accommodation() {
                     />
                   </div>
                   <div className="px-4 pb-4 pt-2">
-                    <p className="mb-4 text-center text-[#202635]">{room.description}</p>
-                    <div className="flex justify-center">
+                    <p className="mb-4 text-center text-[#202635] text-sm mt-4">{room.description}</p>
+                    <div className="flex justify-center mb-4">
                       <Link
                         href={`/accommodation/${room.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="inline-block mb-2 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
+                        className="inline-block mb-3 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
                       >
                         View
                       </Link>
@@ -230,9 +230,9 @@ export default function Accommodation() {
           <Image
             src="/images/home/logo.webp"
             alt="Fairy Knowe Logo"
-            width={200}
-            height={200}
-            className="w-32 h-32 object-contain"
+            width={300}
+            height={300}
+            className="w-48 h-48 object-contain"
           />
         </div>
       </div>
