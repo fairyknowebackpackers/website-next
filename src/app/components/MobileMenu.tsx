@@ -87,7 +87,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="flex flex-col h-full items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                        className={`text-gray-600 hover:text-[#073F3A] block w-screen max-w-none px-0 py-2.5 text-sm hover:bg-gray-50 border-b border-gray-200 transition-colors rounded-none meditative-font ${link === accommodationLinks[accommodationLinks.length - 1] ? '' : ''}`}
                         onClick={() => setIsOpen(false)}
                       >
                         <div className="flex-1 w-full overflow-hidden rounded-xl">
@@ -143,7 +143,7 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="flex flex-col h-full items-center text-gray-600 hover:text-[#073F3A] bg-gradient-to-b from-gray-100 via-white to-gray-200 border border-gray-200 hover:border-[#073F3A] text-[10px] rounded-xl shadow-md hover:bg-gray-200 transition-colors text-center"
+                        className={`text-gray-600 hover:text-[#073F3A] block w-screen max-w-none px-0 py-2.5 text-sm hover:bg-gray-50 border-b border-gray-200 transition-colors rounded-none meditative-font ${link === adventureLinks[adventureLinks.length - 1] ? '' : ''}`}
                         onClick={() => setIsOpen(false)}
                       >
                         <div className="flex-1 w-full overflow-hidden rounded-xl">
@@ -178,42 +178,42 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
               <div className="flex flex-col w-full mb-4">
                 <Link 
                   href="/entertainment" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className={`text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none meditative-font`}
                   onClick={() => setIsOpen(false)}
                 >
                   Entertainment
                 </Link>
                 <Link 
                   href="/venue" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className={`text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none meditative-font`}
                   onClick={() => setIsOpen(false)}
                 >
                   Venue Hire
                 </Link>
                 <Link 
                   href="/facilities" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className={`text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none meditative-font`}
                   onClick={() => setIsOpen(false)}
                 >
                   Facilities
                 </Link>
                 <Link 
                   href="/fairy-folk-n-roll" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className={`text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none meditative-font`}
                   onClick={() => setIsOpen(false)}
                 >
                   Fairy Folk 'n Roll
                 </Link>
                 <Link 
                   href="/gallery" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className={`text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none meditative-font`}
                   onClick={() => setIsOpen(false)}
                 >
                   Gallery
                 </Link>
                 <Link 
                   href="/contact" 
-                  className="w-full text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-b border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal transition-colors text-center rounded-none"
+                  className="w-screen max-w-none relative flex items-center text-gray-900 hover:text-[#073F3A] bg-gradient-to-b from-white via-white to-[#E5E7EB] border-gray-200 hover:border-[#073F3A] px-0 py-5 text-base font-normal shadow-md hover:bg-gray-200 transition-colors rounded-none"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
