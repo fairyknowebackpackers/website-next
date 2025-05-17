@@ -1,7 +1,10 @@
 {
-  "/page": "app/page.js",
-  "/entertainment/page": "app/entertainment/page.js",
-  "/venue/page": "app/venue/page.js",
-  "/facilities/page": "app/facilities/page.js",
-  "/adventures/page": "app/adventures/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/adventures/page": "app/adventures/page.js",
+  "/adventures/kayaking/page": "app/adventures/kayaking/page.js",
+  "/adventures/paragliding/page": "app/adventures/paragliding/page.js",
+  "/adventures/map-of-africa/page": "app/adventures/map-of-africa/page.js",
+  "/adventures/wilderness-beach/page": "app/adventures/wilderness-beach/page.js",
+  "/adventures/half-collared-kingfisher-trail/page": "app/adventures/half-collared-kingfisher-trail/page.js",
+  "/entertainment/page": "app/entertainment/page.js"
 }

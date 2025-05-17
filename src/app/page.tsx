@@ -23,7 +23,7 @@ export default function Home() {
       description: 'Discover exciting activities and adventures in Wilderness.',
       image: '/images/home/adventure-card.webp',
       mobileImage: '/images/home/mobile/adventure-banner.webp',
-      link: '/adventure'
+      link: '/adventures'
     },
     {
       title: 'Entertainment',
