@@ -1,7 +1,8 @@
 {
-  "/accommodation/page": "app/accommodation/page.js",
   "/adventures/page": "app/adventures/page.js",
   "/adventures/kayaking/page": "app/adventures/kayaking/page.js",
   "/adventures/paragliding/page": "app/adventures/paragliding/page.js",
-  "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js"
+  "/adventures/fairy-labyrinth/page": "app/adventures/fairy-labyrinth/page.js",
+  "/entertainment/page": "app/entertainment/page.js",
+  "/venue/page": "app/venue/page.js"
 }
