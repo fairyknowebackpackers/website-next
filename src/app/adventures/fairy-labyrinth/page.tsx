@@ -99,7 +99,7 @@ export default function FairyLabyrinthPage() {
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-            Step into a world of enchantment at the Fairy Labyrinth, a magical 1.5-km trail that winds through an ancient forest filled with towering trees and mystical formations. This easy, family-friendly walk offers a perfect blend of adventure and wonder, with winding paths that lead through a natural maze of giant tree roots and moss-covered rocks. The trail is alive with the sounds of forest birds and the gentle rustling of leaves, creating an atmosphere straight out of a fairy tale. Whether you&apos;re seeking a peaceful nature walk or a magical adventure with children, the Fairy Labyrinth provides an unforgettable experience in the heart of Wilderness&apos;s mystical forests.
+          Take ten minutes of your time to let go of the rambles in your mind, as you amble through the labyrinth, loosen up, unloop and unwind.
           </p>
         </div>
 
@@ -121,19 +121,10 @@ export default function FairyLabyrinthPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Distance: 1.5 km round trip
+                      Meditative walk
                     </li>
                     <li className="text-center md:text-right">
-                      Duration: 45-60 minutes
-                    </li>
-                    <li className="text-center md:text-right">
-                      Difficulty: Easy
-                    </li>
-                    <li className="text-center md:text-right">
-                      Family-friendly trail
-                    </li>
-                    <li className="text-center md:text-right">
-                      Ancient forest setting
+                      Unwind
                     </li>
                   </ul>
                 </div>

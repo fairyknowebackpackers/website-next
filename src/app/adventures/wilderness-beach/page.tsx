@@ -115,18 +115,6 @@ export default function WildernessBeachPage() {
                   <li className="text-center md:text-right">
                     Blue Flag beach status
                   </li>
-                  <li className="text-center md:text-right">
-                    Lifeguards on duty
-                  </li>
-                  <li className="text-center md:text-right">
-                    Perfect for swimming
-                  </li>
-                  <li className="text-center md:text-right">
-                    Beach volleyball available
-                  </li>
-                  <li className="text-center md:text-right">
-                    Stunning sunset views
-                  </li>
                 </ul>
               </div>
               

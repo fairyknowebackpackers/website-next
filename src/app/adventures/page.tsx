@@ -230,11 +230,6 @@ export default function Adventure() {
                           View
                         </Link>
                       </div>
-                      <ul className="pl-0 space-y-1.5 text-center text-xs text-[#202635]" style={{ listStyleType: 'none' }}>
-                        {activity.features.map((feature, index) => (
-                          <li key={`${activity.id}-feature-${index}`}>{feature}</li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
                 )}

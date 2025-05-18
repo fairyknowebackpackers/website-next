@@ -11,6 +11,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/accommodation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/page.js"
+    ],
     "/adventures/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -21,20 +26,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/kayaking/page.js"
     ],
-    "/accommodation/safari-tent/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/safari-tent/page.js"
-    ],
     "/adventures/paragliding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/paragliding/page.js"
     ],
-    "/_not-found/page": [
+    "/adventures/fairy-labyrinth/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/adventures/fairy-labyrinth/page.js"
     ]
   }
 }

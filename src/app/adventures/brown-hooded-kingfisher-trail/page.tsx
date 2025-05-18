@@ -132,7 +132,7 @@ export default function BrownHoodedKingfisherTrailPage() {
               <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                 <li className="text-center md:text-right">
-                  Distance: 4.2 km out-and-back
+                  Distance: 4.2 km There-and-back
                 </li>
                 <li className="text-center md:text-right">
                   Duration: 1.5 hours

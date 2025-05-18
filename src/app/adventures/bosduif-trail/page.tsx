@@ -121,16 +121,13 @@ export default function BosduifTrailPage() {
                       2-hour loop trail
                     </li>
                     <li className="text-center md:text-right">
-                      Moderate difficulty
+                      Tougher difficulty
                     </li>
                     <li className="text-center md:text-right">
-                      Scenic viewpoints
+                      Elevated viewpoints
                     </li>
                     <li className="text-center md:text-right">
-                      Forest environment
-                    </li>
-                    <li className="text-center md:text-right">
-                      River views
+                      Steep ups and down
                     </li>
                   </ul>
                 </div>
