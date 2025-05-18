@@ -107,69 +107,47 @@ export default function WildernessBeachPage() {
         {/* Adventure Safely Section */}
         <div className="mt-8 md:mt-12 mb-8 md:mb-12">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {/* General Info Section - First on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* General Info Section */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center">
+                  <li className="text-center md:text-right">
                     Blue Flag beach status
                   </li>
-                  <li className="text-center">
+                  <li className="text-center md:text-right">
                     Lifeguards on duty
                   </li>
-                  <li className="text-center">
+                  <li className="text-center md:text-right">
                     Perfect for swimming
                   </li>
-                  <li className="text-center">
+                  <li className="text-center md:text-right">
                     Beach volleyball available
                   </li>
-                  <li className="text-center">
+                  <li className="text-center md:text-right">
                     Stunning sunset views
                   </li>
                 </ul>
               </div>
               
-              {/* What to Bring - Second on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+              {/* What to Bring */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center md:text-right">
+                  <li className="text-center md:text-left">
                     Sunscreen and hat
                   </li>
-                  <li className="text-center md:text-right">
+                  <li className="text-center md:text-left">
                     Beach towels
                   </li>
-                  <li className="text-center md:text-right">
+                  <li className="text-center md:text-left">
                     Water bottles
                   </li>
-                  <li className="text-center md:text-right">
+                  <li className="text-center md:text-left">
                     Beach games
                   </li>
-                  <li className="text-center md:text-right">
+                  <li className="text-center md:text-left">
                     Camera
-                  </li>
-                </ul>
-              </div>
-              
-              {/* Adventure Safely - Third on mobile */}
-              <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  <li className="text-center md:text-left">
-                    Swim between flags only
-                  </li>
-                  <li className="text-center md:text-left">
-                    Watch for rip currents
-                  </li>
-                  <li className="text-center md:text-left">
-                    Follow lifeguard instructions
-                  </li>
-                  <li className="text-center md:text-left">
-                    Stay hydrated
-                  </li>
-                  <li className="text-center md:text-left">
-                    Protect from sun exposure
                   </li>
                 </ul>
               </div>

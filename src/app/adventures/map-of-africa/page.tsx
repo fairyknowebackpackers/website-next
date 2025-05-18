@@ -99,7 +99,7 @@ export default function MapOfAfricaPage() {
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
-            Embark on a journey to the iconic Map of Africa viewpoint, where nature has sculpted the landscape into a remarkable resemblance of the African continent. This moderate 6.5-km hike offers breathtaking panoramic views of the Wilderness coastline and the Indian Ocean. The trail winds through indigenous fynbos vegetation, home to a diverse array of bird species and unique plant life. As you reach the viewpoint, you&apos;ll be rewarded with a spectacular vista that perfectly captures the outline of Africa, making it a photographer&apos;s paradise and a must-visit destination for nature enthusiasts.
+          The Map of Africa offers a spellbinding viewpoint, where nature's artistry is unveiled in the form of a river that gracefully sculpts the shape of the African continent into the valley below. Just across the way, another mesmerizing vantage point awaits, offering sweeping views of the ocean's endless expanse, golden sands of the beach, and the picturesque charm of Wilderness itself.
           </p>
         </div>
 
@@ -112,72 +112,49 @@ export default function MapOfAfricaPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4">
-          {/* Safety Information - Replacing Features Section */}
           <div className="mt-8 md:mt-12 mb-8 md:mb-12">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* General Info Section - First on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                {/* General Info Section */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Distance: 6.5 km round trip
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Duration: 2-3 hours
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Difficulty: Moderate
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Panoramic ocean views
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Iconic Map of Africa formation
                     </li>
                   </ul>
                 </div>
                 
-                {/* What to Bring - Second on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                {/* What to Bring */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Sturdy hiking shoes
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Water and snacks
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Sunscreen and hat
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Camera for the views
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Light jacket for wind
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Adventure Safely - Third on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-left">
-                      Stay on marked trails
-                    </li>
-                    <li className="text-center md:text-left">
-                      Check weather conditions
-                    </li>
-                    <li className="text-center md:text-left">
-                      Watch for strong winds
-                    </li>
-                    <li className="text-center md:text-left">
-                      Stay hydrated
-                    </li>
-                    <li className="text-center md:text-left">
-                      Keep safe distance from edges
                     </li>
                   </ul>
                 </div>

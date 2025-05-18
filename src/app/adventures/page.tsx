@@ -13,7 +13,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/kayaking-card.webp',
     mobileImage: '/images/adventures/cards/mobile/kayaking-card.webp',
     category: 'Water Activities',
-    features: ['Equipment provided', 'Life jackets included', 'Moderate fitness required', 'Beautiful scenery']
+    features: ['Life jackets included', 'Moderate fitness required', 'Paddling, hiking and swimming', 'Waterfall']
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/paragliding-card.webp',
     mobileImage: '/images/adventures/cards/mobile/paragliding-card.webp',
     category: 'Air Activities',
-    features: ['Professional instructor', 'All equipment included', 'Weather dependent', 'Camera rental available']
+    features: ['Professional pilots', 'All equipment provided', 'Weather dependent', 'Camera rental available']
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/horseriding-card.webp',
     mobileImage: '/images/adventures/cards/mobile/horseriding-card.webp',
     category: 'Land Activities',
-    features: ['Experienced guides', 'Suitable for beginners', 'Helmets provided', 'Beautiful forest views']
+    features: ['Experienced guide', 'Beginner an/or skilled riders', 'Helmets provided', 'Beautiful forest views']
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/half-collared-kingfisher-trail-card.webp',
     mobileImage: '/images/adventures/cards/mobile/half-collared-kingfisher-trail-card.webp',
     category: 'Hiking',
-    features: ['Well-marked trail', 'Swimming spots', 'Moderate difficulty', 'Beautiful scenery']
+    features: ['There and back trail', 'moderate difficulty', 'Swimming spots', 'Waterfall']
   },
   {
     id: 6,
@@ -49,7 +49,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/brown-hooded-kingfisher-trail-card.webp',
     mobileImage: '/images/adventures/cards/mobile/brown-hooded-kingfisher-trail-card.webp',
     category: 'Hiking',
-    features: ['River crossings', 'Bird watching', 'Easy to moderate', 'Shaded route']
+    features: ['There and back trail', 'Easy difficulty', 'Bird watching', 'River crossings']
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/bosduif-trail-card.webp',
     mobileImage: '/images/adventures/cards/mobile/bosduif-trail-card.webp',
     category: 'Hiking',
-    features: ['Scenic viewpoints', 'Loop trail', 'Moderate difficulty', 'Forest environment']
+    features: ['Loop trail', 'Tougher difficulty', 'Steep ups and downs', 'Elevated viewpoints']
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/woodville-big-tree-card.webp',
     mobileImage: '/images/adventures/cards/mobile/woodville-big-tree-card.webp',
     category: 'Nature',
-    features: ['Historic site', 'Choice of trails', 'Family friendly', 'Forest environment']
+    features: ['Multiple trails', 'Easy difficulty', 'Picnic tables', 'Braai facilities']
   },
   {
     id: 8,
@@ -76,7 +76,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/map-of-africa-card.webp',
     mobileImage: '/images/adventures/cards/mobile/map-of-africa-card.webp',
     category: 'Viewpoints',
-    features: ['Spectacular views', 'Photo opportunity', 'Easy access', 'Paragliding launch site']
+    features: ['Easy access', 'Spectacular views', 'Picnic spot', 'Birds eye view']
   },
   {
     id: 9,
@@ -85,7 +85,7 @@ const activities = [
     image: '/images/adventures/cards/desktop/wilderness-beach-card.webp',
     mobileImage: '/images/adventures/cards/mobile/wilderness-beach-card.webp',
     category: 'Beach',
-    features: ['Blue Flag status', 'Swimming', 'Sunbathing', 'Long walks']
+    features: ['Blue Flag status', 'Swimming', 'Running', 'Relaxing']
   },
   {
     id: 10,
@@ -94,25 +94,25 @@ const activities = [
     image: '/images/adventures/cards/desktop/water-under-the-bridge-card.webp',
     mobileImage: '/images/adventures/cards/mobile/water-under-the-bridge-card.webp',
     category: 'Water Activities',
-    features: ['Close to backpackers', 'Swimming', 'Adventure activity', 'Local favorite']
+    features: ['Close to backpackers', 'Water jump', 'Swimming', 'Local favorite']
   },
   {
     id: 11,
     name: 'Fairy Labyrinth',
     description: 'Something on your mind? Unravel and unwind.',
-    image: '/images/adventures/cards/desktop/fairy-labyrinth-card.webp',
-    mobileImage: '/images/adventures/cards/mobile/fairy-labyrinth-card.webp',
+    image: '/images/adventures/fairy-labyrinth-card.webp',
+    mobileImage: '/images/adventures/fairy-labyrinth-card.webp',
     category: 'Relaxation',
-    features: ['Meditation space', 'Peaceful setting', 'Spiritual experience', 'Garden environment']
+    features: ['Meditatative walk', 'Unwind', 'Intention', 'Garden environment']
   },
   {
     id: 12,
     name: 'Ancient Archives',
-    description: 'Rainy day or just feeling lazy? Swap out an old book for a new one from our extensive library selection.',
+    description: 'Books, books, books in all the nooks.',
     image: '/images/adventures/cards/desktop/ancient-archives-card.webp',
     mobileImage: '/images/adventures/cards/mobile/ancient-archives-card.webp',
     category: 'Indoor Activities',
-    features: ['Book exchange', 'Comfortable seating', 'Wide selection', 'Perfect for rainy days']
+    features: ['Book exchange', 'Over 1500 books', 'Endless adventures', 'Perfect for rainy days']
   }
 ]
 
@@ -267,10 +267,8 @@ export default function Adventure() {
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
-                  <div>
-                    <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{activity.name}</h2>
-                    <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{activity.description}</p>
-                  </div>
+                  <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{activity.name}</h2>
+                  <p className="text-gray-600 mb-6 min-h-[4.5rem] group-hover:text-white transition-colors duration-500 ease-in-out">{activity.description}</p>
                   <div className="mt-auto">
                     <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
                     <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
@@ -290,47 +288,30 @@ export default function Adventure() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-4 text-center dark:text-white">Adventure Safely</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
-            <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">Safety Guidelines</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-              <li className="text-center md:text-right">
-                Always follow guide instructions
-              </li>
-              <li className="text-center md:text-right">
-                Check weather conditions before activities
-              </li>
-              <li className="text-center md:text-right">
-                Wear appropriate clothing and footwear
-              </li>
-              <li className="text-center md:text-right">
-                Stay hydrated and carry water
-              </li>
-              <li className="text-center md:text-right">
-                Inform staff of any medical conditions
-              </li>
-            </ul>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
-            <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-              <li className="text-center md:text-left">
-                Sunscreen and hat
-              </li>
-              <li className="text-center md:text-left">
-                Water and snacks
-              </li>
-              <li className="text-center md:text-left">
-                Comfortable walking shoes
-              </li>
-              <li className="text-center md:text-left">
-                Camera for memories
-              </li>
-              <li className="text-center md:text-left">
-                Small backpack for essentials
-              </li>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none col-span-1 md:col-span-2">
+            <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm mb-4 text-center">
+              <li className="text-center">Always check the weather</li>
+              <li className="text-center">Wear appropriate clothing and footwear</li>
+              <li className="text-center">Stay hydrated and carry water</li>
+              <li className="text-center">Inform staff of any medical need to knows</li>
+              <li className="text-center">Wear a hat on sunny expeditions</li>
+              <li className="text-center">Bring a backpack</li>
+              <li className="text-center">Carry snacks</li>
+              <li className="text-center">Watch out for the big bad wolf</li>
             </ul>
           </div>
         </div>
+      </div>
+      {/* Logo Section */}
+      <div className="mt-12 mb-8 flex justify-center">
+        <Image
+          src="/images/home/logo.webp"
+          alt="Fairy Knowe Backpackers Logo"
+          width={400}
+          height={400}
+          className="w-auto h-auto max-w-[200px] md:max-w-[250px]"
+          priority
+        />
       </div>
     </div>
   )

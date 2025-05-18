@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/accommodation/camping/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/camping/page.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,50 +11,30 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
     "/adventures/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/page.js"
-    ],
-    "/adventures/ancient-archives/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/ancient-archives/page.js"
     ],
     "/adventures/kayaking/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/kayaking/page.js"
     ],
+    "/accommodation/safari-tent/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/safari-tent/page.js"
+    ],
     "/adventures/paragliding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/paragliding/page.js"
     ],
-    "/adventures/map-of-africa/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/adventures/map-of-africa/page.js"
-    ],
-    "/adventures/wilderness-beach/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/wilderness-beach/page.js"
-    ],
-    "/adventures/half-collared-kingfisher-trail/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/adventures/half-collared-kingfisher-trail/page.js"
-    ],
-    "/entertainment/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/entertainment/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

@@ -8,54 +8,54 @@ import ImageGallery from '@/components/ImageGallery'
 // Define gallery images with thumbnails and full-size versions
 const galleryImages = [
   {
-    src: '/images/Adventures/Paragliding/adventure1.webp',
-    alt: 'Paragliding Adventure',
-    fullSize: '/images/Adventures/Paragliding/adventure1.webp'
+    src: '/images/adventures/paragliding/full/adventure1.webp',
+    alt: 'Paragliding Adventure 1',
+    fullSize: '/images/adventures/paragliding/full/adventure1.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure2.webp',
-    alt: 'Paragliding Experience',
-    fullSize: '/images/Adventures/Paragliding/adventure2.webp'
+    src: '/images/adventures/paragliding/full/adventure2.webp',
+    alt: 'Paragliding Adventure 2',
+    fullSize: '/images/adventures/paragliding/full/adventure2.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure3.webp',
-    alt: 'Paragliding Journey',
-    fullSize: '/images/Adventures/Paragliding/adventure3.webp'
+    src: '/images/adventures/paragliding/full/adventure3.webp',
+    alt: 'Paragliding Adventure 3',
+    fullSize: '/images/adventures/paragliding/full/adventure3.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure4.webp',
-    alt: 'Paragliding View',
-    fullSize: '/images/Adventures/Paragliding/adventure4.webp'
+    src: '/images/adventures/paragliding/full/adventure4.webp',
+    alt: 'Paragliding Adventure 4',
+    fullSize: '/images/adventures/paragliding/full/adventure4.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure5.webp',
-    alt: 'Paragliding Adventure',
-    fullSize: '/images/Adventures/Paragliding/adventure5.webp'
+    src: '/images/adventures/paragliding/full/adventure5.webp',
+    alt: 'Paragliding Adventure 5',
+    fullSize: '/images/adventures/paragliding/full/adventure5.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure6.webp',
-    alt: 'Paragliding Experience',
-    fullSize: '/images/Adventures/Paragliding/adventure6.webp'
+    src: '/images/adventures/paragliding/full/adventure6.webp',
+    alt: 'Paragliding Adventure 6',
+    fullSize: '/images/adventures/paragliding/full/adventure6.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure7.webp',
-    alt: 'Paragliding Journey',
-    fullSize: '/images/Adventures/Paragliding/adventure7.webp'
+    src: '/images/adventures/paragliding/full/adventure7.webp',
+    alt: 'Paragliding Adventure 7',
+    fullSize: '/images/adventures/paragliding/full/adventure7.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure8.webp',
-    alt: 'Paragliding View',
-    fullSize: '/images/Adventures/Paragliding/adventure8.webp'
+    src: '/images/adventures/paragliding/full/adventure8.webp',
+    alt: 'Paragliding Adventure 8',
+    fullSize: '/images/adventures/paragliding/full/adventure8.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure9.webp',
-    alt: 'Paragliding Adventure',
-    fullSize: '/images/Adventures/Paragliding/adventure9.webp'
+    src: '/images/adventures/paragliding/full/adventure9.webp',
+    alt: 'Paragliding Adventure 9',
+    fullSize: '/images/adventures/paragliding/full/adventure9.webp'
   },
   {
-    src: '/images/Adventures/Paragliding/adventure10.webp',
-    alt: 'Paragliding Experience',
-    fullSize: '/images/Adventures/Paragliding/adventure10.webp'
+    src: '/images/adventures/paragliding/full/adventure10.webp',
+    alt: 'Paragliding Adventure 10',
+    fullSize: '/images/adventures/paragliding/full/adventure10.webp'
   }
 ]
 
@@ -118,69 +118,47 @@ export default function ParaglidingPage() {
           {/* Safety Information - Replacing Features Section */}
           <div className="mt-8 md:mt-12 mb-8 md:mb-12">
             <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                {/* General Info Section - First on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                {/* General Info Section */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Duration: 15 minutes
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Weather dependent
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Professional instructor
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       All equipment included
                     </li>
-                    <li className="text-center">
+                    <li className="text-center md:text-right">
                       Camera rental available
                     </li>
                   </ul>
                 </div>
                 
-                {/* What to Bring - Second on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+                {/* What to Bring */}
+                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Sunscreen and hat
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Water and snacks
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Comfortable walking shoes
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Camera for memories
                     </li>
-                    <li className="text-center md:text-right">
+                    <li className="text-center md:text-left">
                       Small backpack for essentials
-                    </li>
-                  </ul>
-                </div>
-                
-                {/* Adventure Safely - Third on mobile */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-                  <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                    <li className="text-center md:text-left">
-                      Always follow guide instructions
-                    </li>
-                    <li className="text-center md:text-left">
-                      Check weather conditions before activities
-                    </li>
-                    <li className="text-center md:text-left">
-                      Wear appropriate clothing and footwear
-                    </li>
-                    <li className="text-center md:text-left">
-                      Stay hydrated and carry water
-                    </li>
-                    <li className="text-center md:text-left">
-                      Inform staff of any medical conditions
                     </li>
                   </ul>
                 </div>

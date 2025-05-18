@@ -112,23 +112,23 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pages.map((page) => (
               <Link href={page.link} key={page.title} className="group">
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:scale-105 hover:bg-gradient-to-tl hover:from-[#35946E] hover:to-[#094B44] h-auto md:h-[360px] flex flex-col">
+                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform md:hover:scale-105 md:hover:bg-gradient-to-tl md:hover:from-[#35946E] md:hover:to-[#094B44] h-auto md:h-[360px] flex flex-col">
                   <div className="relative aspect-video md:h-56 flex-shrink-0">
                     <Image
                       src={page.image}
                       alt={page.title}
                       fill
-                      className="object-fill md:object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      className="object-fill md:object-cover transition-transform duration-500 ease-in-out md:group-hover:scale-105"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       quality={75}
                       loading="lazy"
                     />
                   </div>
                   <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
-                    <h2 className="text-3xl md:text-2xl font-bold mb-1 md:mb-2 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out text-center md:text-left">
+                    <h2 className="text-3xl md:text-2xl font-bold mb-1 md:mb-2 text-[#202635] md:group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out text-center md:text-left">
                       {page.title}
                     </h2>
-                    <p className="text-sm md:text-base text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out text-center md:text-left">
+                    <p className="text-sm md:text-base text-gray-600 md:group-hover:text-white transition-colors duration-500 ease-in-out text-center md:text-left">
                       {page.description}
                     </p>
                   </div>

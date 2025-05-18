@@ -126,69 +126,47 @@ export default function BrownHoodedKingfisherTrailPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {/* General Info Section - First on mobile */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-1 md:order-2 shadow-md md:shadow-none">
-              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center">General Info</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            {/* General Info Section */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                <li className="text-center">
+                <li className="text-center md:text-right">
                   Distance: 4.2 km out-and-back
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-right">
                   Duration: 1.5 hours
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-right">
                   Difficulty: Easy
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-right">
                   River crossings
                 </li>
-                <li className="text-center">
+                <li className="text-center md:text-right">
                   Rockpool waterfall
                 </li>
               </ul>
             </div>
             
-            {/* What to Bring - Second on mobile */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-2 md:order-3 shadow-md md:shadow-none">
-              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">What to Bring</h3>
+            {/* What to Bring */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
+              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">What to Bring</h3>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                <li className="text-center md:text-right">
+                <li className="text-center md:text-left">
                   Comfortable walking shoes
                 </li>
-                <li className="text-center md:text-right">
+                <li className="text-center md:text-left">
                   Water and snacks
                 </li>
-                <li className="text-center md:text-right">
+                <li className="text-center md:text-left">
                   Sunscreen and hat
                 </li>
-                <li className="text-center md:text-right">
+                <li className="text-center md:text-left">
                   Camera for memories
                 </li>
-                <li className="text-center md:text-right">
+                <li className="text-center md:text-left">
                   Swimwear if planning to swim
-                </li>
-              </ul>
-            </div>
-            
-            {/* Adventure Safely - Third on mobile */}
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg order-3 md:order-1 shadow-md md:shadow-none">
-              <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-left">Adventure Safely</h3>
-              <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                <li className="text-center md:text-left">
-                  Stay on marked trails
-                </li>
-                <li className="text-center md:text-left">
-                  Check weather conditions before hiking
-                </li>
-                <li className="text-center md:text-left">
-                  Wear appropriate footwear
-                </li>
-                <li className="text-center md:text-left">
-                  Stay hydrated and carry water
-                </li>
-                <li className="text-center md:text-left">
-                  Be cautious near the waterfall
                 </li>
               </ul>
             </div>

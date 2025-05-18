@@ -52,9 +52,9 @@ export default function RootLayout({
         <meta name="description" content="Adventure Backpackers in the heart of the Garden Route" />
         <link
           rel="preload"
-          href="/fonts/hestrial.woff2"
+          href="/fonts/hestrial.ttf"
           as="font"
-          type="font/woff2"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
       </head>
