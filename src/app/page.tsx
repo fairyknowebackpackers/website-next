@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
+import Script from 'next/script'
 
 // Add font preloading
 export const metadata = {
@@ -175,6 +176,14 @@ export default function Home() {
               Book Your Stay Now
             </Link>
           </div>
+          <Script
+            src="https://badge.hotelstatic.com/embed.js"
+            strategy="afterInteractive"
+            data-url="https://www.booking.com/hotel/za/fairy-knowe-backpackers.html"
+            data-size="100"
+            data-position="bottom-right"
+            data-clickable="true"
+          />
         </div>
       </div>
     </div>
