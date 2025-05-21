@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
 import ImageGallery from '@/components/ImageGallery'
 
 // Define gallery images with the new naming convention
@@ -110,11 +109,6 @@ export default function CampingPage() {
                     <p className="text-center">Respect the forest</p>
                   </div>
                 </div>
-                <div className="flex justify-center mt-4 mb-2 sm:hidden">
-                  <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base">
-                    Book Now
-                  </Link>
-                </div>
               </div>
 
               {/* Desktop Order (What's Included, Rules of the Forest, Shared Facilities) */}
@@ -152,13 +146,6 @@ export default function CampingPage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Desktop Book Now Button - Only visible on desktop */}
-          <div className="hidden sm:flex justify-center mt-6 sm:mt-8 mb-8 sm:mb-12">
-            <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors text-base sm:text-lg">
-              Book Now
-            </Link>
           </div>
 
           {/* Logo Section */}

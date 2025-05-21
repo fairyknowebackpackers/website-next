@@ -219,14 +219,6 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
                   Contact
                 </Link>
               </div>
-
-              <Link 
-                href="/booking" 
-                className="inline-block mb-2 px-6 py-3 rounded-full bg-[#0E7D73] text-[#C9DD94] font-normal text-base text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors mx-4"
-                onClick={() => setIsOpen(false)}
-              >
-                Book Now
-              </Link>
             </div>
           </div>
         </div>
