@@ -3,8 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
-import Script from 'next/script'
-import { useEffect, useRef, useState } from 'react'
 
 export default function Home() {
   const pages = [
@@ -51,47 +49,6 @@ export default function Home() {
       link: '/fairy-folk-n-roll'
     }
   ]
-
-  const badgeRef = useRef<HTMLDivElement>(null);
-  const [badgeOffset, setBadgeOffset] = useState(24); // px from bottom
-  const [badgeSize, setBadgeSize] = useState(60); // default size
-
-  useEffect(() => {
-    // Responsive badge size
-    function handleResize() {
-      if (window.innerWidth < 640) {
-        setBadgeSize(30); // mobile
-      } else {
-        setBadgeSize(100); // desktop
-      }
-    }
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  useEffect(() => {
-    function handleScroll() {
-      const footer = document.querySelector('footer');
-      if (!footer || !badgeRef.current) return;
-      const badgeHeight = badgeRef.current.offsetHeight;
-      const footerRect = footer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      if (footerRect.top < windowHeight) {
-        const overlap = windowHeight - footerRect.top;
-        setBadgeOffset(overlap + 24);
-      } else {
-        setBadgeOffset(24);
-      }
-    }
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleScroll);
-    handleScroll();
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
 
   return (
     <div className="min-h-screen">
@@ -212,28 +169,6 @@ export default function Home() {
             >
               Book Your Stay Now
             </Link>
-          </div>
-          {/* Smart Sticky Booking.com Badge */}
-          <div
-            ref={badgeRef}
-            style={{
-              position: 'fixed',
-              right: 16,
-              bottom: badgeOffset,
-              zIndex: 50,
-              pointerEvents: 'auto',
-              display: 'none', // Hide by default
-            }}
-            className="hidden md:block" // Show only on medium screens and up
-          >
-            <Script
-              src="https://badge.hotelstatic.com/embed.js"
-              strategy="afterInteractive"
-              data-url="https://www.booking.com/hotel/za/fairy-knowe-backpackers.html"
-              data-size={badgeSize}
-              data-position="custom"
-              data-clickable="true"
-            />
           </div>
         </div>
       </div>
