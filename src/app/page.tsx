@@ -222,7 +222,9 @@ export default function Home() {
               bottom: badgeOffset,
               zIndex: 50,
               pointerEvents: 'auto',
+              display: 'none', // Hide by default
             }}
+            className="hidden md:block" // Show only on medium screens and up
           >
             <Script
               src="https://badge.hotelstatic.com/embed.js"
