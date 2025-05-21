@@ -1,5 +1,5 @@
 {
-  "/page": "app/page.js",
-  "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
-  "/accommodation/camping/page": "app/accommodation/camping/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/accommodation/camping/page": "app/accommodation/camping/page.js",
+  "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js"
 }
