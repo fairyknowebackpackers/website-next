@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image'
 import Link from 'next/link'
-import MouseGradientCard from '../components/MouseGradientCard'
+import MouseGradientCard from '@/app/components/MouseGradientCard'
 import { useState, useRef, useEffect } from 'react'
 
 const roomTypes = [
@@ -80,6 +80,12 @@ const roomTypes = [
 
 export default function Accommodation() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [imageError, setImageError] = useState<Record<string, boolean>>({});
+
+  const handleImageError = (imagePath: string) => {
+    setImageError(prev => ({ ...prev, [imagePath]: true }));
+  };
+
   return (
     <div>
       {/* Hero Banner */}
@@ -93,6 +99,7 @@ export default function Accommodation() {
           priority
           quality={85}
           sizes="100vw"
+          onError={() => handleImageError('mobile-banner')}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
@@ -110,6 +117,7 @@ export default function Accommodation() {
           priority
           quality={85}
           sizes="100vw"
+          onError={() => handleImageError('desktop-banner')}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
@@ -126,6 +134,16 @@ export default function Accommodation() {
             With cozy beds for up to 50 guests and a sprawling campsite that welcomes twice as many adventurers, 
             we've created a space where lifelong friendships and unforgettable memories are made.
           </p>
+
+          {/* Book Now Button */}
+          <div className="mt-6 flex justify-center">
+            <Link 
+              href="https://book.nightsbridge.com/21082" 
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base"
+            >
+              Book Now
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -206,16 +224,23 @@ export default function Accommodation() {
             >
               <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
                 <div className="relative w-full h-[250px]">
-                  <Image
-                    src={room.image}
-                    alt={room.name}
-                    fill
-                    className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    priority={room.id <= 3}
-                    loading={room.id <= 3 ? 'eager' : 'lazy'}
-                    quality={85}
-                  />
+                  {!imageError[room.image] ? (
+                    <Image
+                      src={room.image}
+                      alt={room.name}
+                      fill
+                      className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={room.id <= 3}
+                      loading={room.id <= 3 ? 'eager' : 'lazy'}
+                      quality={85}
+                      onError={() => handleImageError(room.image)}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                      <span className="text-gray-500">Image not available</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div>

@@ -14,13 +14,15 @@ export default function MouseGradientCard({ children, className = '' }: MouseGra
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (cardRef.current) {
+      if (!cardRef.current) return;
+      
+      try {
         const rect = cardRef.current.getBoundingClientRect()
-        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-        const x = (e.pageX - (rect.left + scrollLeft))
-        const y = (e.pageY - (rect.top + scrollTop))
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
         setMousePosition({ x, y })
+      } catch (error) {
+        console.error('Error calculating mouse position:', error)
       }
     }
 
@@ -36,7 +38,10 @@ export default function MouseGradientCard({ children, className = '' }: MouseGra
       ref={cardRef}
       className={`relative overflow-hidden transform transition-transform duration-500 ease-in-out ${isHovered ? 'scale-105' : ''} ${className}`}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={() => {
+        setIsHovered(false)
+        setMousePosition({ x: 0, y: 0 })
+      }}
       style={{
         backgroundColor: 'rgb(229, 231, 235)'
       }}

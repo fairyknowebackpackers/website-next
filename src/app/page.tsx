@@ -1,8 +1,13 @@
-"use client";
 import Link from 'next/link'
 import Image from 'next/image'
 import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
+
+// Add font preloading
+export const metadata = {
+  title: 'Fairy Knowe Backpackers',
+  description: 'Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.',
+}
 
 export default function Home() {
   const pages = [
