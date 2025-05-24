@@ -88,7 +88,7 @@ export default function Home() {
           sizes="(min-width: 768px) 100vw"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center pt-16">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Fairy Knowe Backpackers
           </h1>
@@ -102,6 +102,16 @@ export default function Home() {
             Your home away from home in the heart of Wilderness, offering comfortable accommodation,
             exciting adventures, and a vibrant social atmosphere.
           </p>
+
+          {/* Book Now Button */}
+          <div className="mt-6 flex justify-center">
+            <Link 
+              href="https://book.nightsbridge.com/21082" 
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              Book Now
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -137,6 +147,15 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Call to Action */}
+          <div className="mt-12 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
+            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience<br />
+              in the beautiful Garden Route, South Africa.
+            </p>
+          </div>
+
           {/* Logo Section */}
           <div className="mt-16 mb-8 flex justify-center">
             <Image
@@ -160,20 +179,6 @@ export default function Home() {
               <br/>
               What am I?
             </p>
-          </div>
-
-          {/* Call to Action */}
-          <div className="mt-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Your Adventure?</h2>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join us at Fairy Knowe Backpackers Lodge for an unforgettable experience in the beautiful Garden Route, South Africa.
-            </p>
-            <Link 
-              href="https://book.nightsbridge.com/21082" 
-              className="inline-block bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Book Your Stay Now
-            </Link>
           </div>
         </div>
       </div>
