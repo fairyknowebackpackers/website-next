@@ -93,6 +93,16 @@ export default function FiveSleeperPage() {
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             Our five sleeper room is the perfect retreat for larger families or groups, offering spacious comfort and privacy.
           </p>
+
+          {/* Book Now Button */}
+          <div className="mt-6 flex justify-center">
+            <Link
+              href="https://book.nightsbridge.com/21082"
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base"
+            >
+              Book Now
+            </Link>
+          </div>
         </div>
 
         {/* Gallery */}
@@ -176,20 +186,6 @@ export default function FiveSleeperPage() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Mobile Book Now Button - Only visible on mobile */}
-        <div className="flex justify-center mt-6 mb-8 sm:hidden">
-          <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base">
-            Book Now
-          </Link>
-        </div>
-
-        {/* Desktop Book Now Button - Only visible on desktop */}
-        <div className="hidden sm:flex justify-center mt-6 sm:mt-8 mb-8 sm:mb-12">
-          <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors text-base sm:text-lg">
-            Book Now
-          </Link>
         </div>
 
         {/* Logo Section */}

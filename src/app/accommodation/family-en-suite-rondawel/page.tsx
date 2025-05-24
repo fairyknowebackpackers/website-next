@@ -93,6 +93,16 @@ export default function FamilyEnSuiteRondawelPage() {
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center">
             The forest's very own penthouse suite - A luxurious traditional African-style round house with modern amenities. Perfect for families seeking a private and authentic experience with all the comforts of home.
           </p>
+
+          {/* Book Now Button */}
+          <div className="mt-6 flex justify-center">
+            <Link
+              href="https://book.nightsbridge.com/21082"
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base"
+            >
+              Book Now
+            </Link>
+          </div>
         </div>
 
         {/* Gallery */}
@@ -178,20 +188,6 @@ export default function FamilyEnSuiteRondawelPage() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Mobile Book Now Button - Only visible on mobile */}
-        <div className="flex justify-center mt-6 mb-8 sm:hidden">
-          <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 py-3 rounded-lg font-semibold transition-colors text-base">
-            Book Now
-          </Link>
-        </div>
-
-        {/* Desktop Book Now Button - Only visible on desktop */}
-        <div className="hidden sm:flex justify-center mt-6 sm:mt-8 mb-8 sm:mb-12">
-          <Link href="https://book.nightsbridge.com/21082" className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors text-base sm:text-lg">
-            Book Now
-          </Link>
         </div>
 
         {/* Logo Section */}
