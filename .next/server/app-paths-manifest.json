@@ -1,7 +1,9 @@
 {
-  "/adventures/page": "app/adventures/page.js",
-  "/page": "app/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/entertainment/page": "app/entertainment/page.js",
   "/venue/page": "app/venue/page.js",
+  "/gallery/page": "app/gallery/page.js",
   "/accommodation/page": "app/accommodation/page.js",
-  "/entertainment/page": "app/entertainment/page.js"
+  "/accommodation/safari-tent/page": "app/accommodation/safari-tent/page.js",
+  "/api/gallery/route": "app/api/gallery/route.js"
 }

@@ -42,6 +42,30 @@ const subcategories: Record<string, string[]> = {
     'Water Under the Bridge',
     'Wilderness Beach',
     'Woodville Big Tree'
+  ].sort(),
+  'Entertainment': [
+    'All Entertainment',
+    'Bar',
+    'Live Music',
+    'Events',
+    'Activities'
+  ].sort(),
+  'Venue Hire': [
+    'All Venues',
+    'Weddings',
+    'Private Parties',
+    'Corporate Events',
+    'Film Crews',
+    'Skill Trades & Workshops',
+    'Expo Events'
+  ].sort(),
+  'Facilities': [
+    'All Facilities',
+    'Kitchen',
+    'Common Areas',
+    'Bathrooms',
+    'Outdoor Spaces',
+    'Parking'
   ].sort()
 };
 
@@ -172,8 +196,8 @@ export default function FilteredGallery() {
         })}
       </div>
 
-      {/* Subcategory Filter Buttons - Only show for Accommodation and Adventures */}
-      {(selectedCategory === 'Accommodation' || selectedCategory === 'Adventures') && (
+      {/* Subcategory Filter Buttons - Show for all categories except 'All' */}
+      {selectedCategory !== 'All' && (
         <div className="flex flex-wrap gap-2 mb-8 justify-center px-4">
           {subcategories[selectedCategory].map((subcategory) => {
             const count = subcategory === 'All'

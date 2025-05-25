@@ -321,7 +321,7 @@ export default function Venue() {
               key={index}
               className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300`}
             >
-              <div className="relative h-64 sm:h-[256px]">
+              <div className="relative aspect-square">
                 <Image
                   src={event.imageMobile || event.image}
                   alt={event.title}

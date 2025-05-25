@@ -129,10 +129,10 @@ export default function WoodvilleBigTreePage() {
                       Difficulty: Easy to Moderate
                     </li>
                     <li className="text-center md:text-right">
-                      Braai facilities
+                      1000-year-old Outeniqua Yellowwood
                     </li>
                     <li className="text-center md:text-right">
-                      Picnic tables
+                      Ancient forest with diverse wildlife
                     </li>
                   </ul>
                 </div>

@@ -121,16 +121,19 @@ export default function WaterUnderTheBridgePage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Close to backpackers
+                      Distance: 2.5 km round trip
                     </li>
                     <li className="text-center md:text-right">
-                      Water jump
+                      Duration: 1-1.5 hours
                     </li>
                     <li className="text-center md:text-right">
-                      Swimming spot
+                      Difficulty: Easy
                     </li>
                     <li className="text-center md:text-right">
-                      Local favorite
+                      Family-friendly trail
+                    </li>
+                    <li className="text-center md:text-right">
+                      Historic railway bridge
                     </li>
                   </ul>
                 </div>

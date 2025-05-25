@@ -232,13 +232,13 @@ export default function HalfCollaredKingfisherTrailPage() {
                 <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                   <li className="text-center md:text-right">
-                    Distance: 7.6 km there-and-back
+                    Distance: 7.6 km out-and-back
                   </li>
                   <li className="text-center md:text-right">
                     Duration: 3 hours
                   </li>
                   <li className="text-center md:text-right">
-                    Difficulty: Easy
+                    Difficulty: Moderate
                   </li>
                   <li className="text-center md:text-right">
                     Wooden boardwalk sections

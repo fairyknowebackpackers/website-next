@@ -120,10 +120,13 @@ export default function KayakingPage() {
                       Difficulty: Moderate
                     </li>
                     <li className="text-center md:text-right">
-                      Life jackets provided
+                      Equipment provided
                     </li>
                     <li className="text-center md:text-right">
-                      Paddling, hiking and swimming
+                      Expert guides included
+                    </li>
+                    <li className="text-center md:text-right">
+                      Wildlife spotting opportunities
                     </li>
                   </ul>
                 </div>

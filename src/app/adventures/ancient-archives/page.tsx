@@ -121,13 +121,19 @@ export default function AncientArchivesPage() {
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     <li className="text-center md:text-right">
-                      Book exchange
+                      Open daily
                     </li>
                     <li className="text-center md:text-right">
-                      Over 1500 books
+                      Quiet reading space
                     </li>
                     <li className="text-center md:text-right">
-                      Endless adventures
+                      Free access
+                    </li>
+                    <li className="text-center md:text-right">
+                      Historical collection
+                    </li>
+                    <li className="text-center md:text-right">
+                      Travel resources
                     </li>
                   </ul>
                 </div>

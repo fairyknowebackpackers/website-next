@@ -144,7 +144,7 @@ export default function Adventure() {
       {/* Desktop Banner */}
       <div className="relative h-[200px] md:h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900 hidden md:block">
         <Image
-          src="/images/Adventures/adventures-banner.webp"
+          src="/images/adventures/adventures-banner.webp"
           alt="Adventures at Fairy Knowe"
           fill
           className="object-cover"

@@ -130,10 +130,10 @@ export default function ParaglidingPage() {
                       Weather dependent
                     </li>
                     <li className="text-center md:text-right">
-                      Professional pilots
+                      Professional instructor
                     </li>
                     <li className="text-center md:text-right">
-                      All equipment provided
+                      All equipment included
                     </li>
                     <li className="text-center md:text-right">
                       Camera rental available

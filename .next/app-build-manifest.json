@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/accommodation/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/page.js"
+      "static/chunks/app/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,10 +11,20 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/accommodation/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/accommodation/page.js"
+    ],
     "/adventures/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/adventures/page.js"
+    ],
+    "/gallery/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/gallery/page.js"
     ],
     "/entertainment/page": [
       "static/chunks/webpack.js",
@@ -26,40 +36,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/venue/page.js"
     ],
-    "/accommodation/camping/page": [
+    "/facilities/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/camping/page.js"
+      "static/chunks/app/facilities/page.js"
     ],
     "/accommodation/safari-tent/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/accommodation/safari-tent/page.js"
     ],
-    "/accommodation/gypsy-caravan/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/gypsy-caravan/page.js"
-    ],
-    "/accommodation/family-en-suite-rondawel/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/accommodation/family-en-suite-rondawel/page.js"
-    ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/facilities/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/facilities/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
