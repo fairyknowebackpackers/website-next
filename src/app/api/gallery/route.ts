@@ -21,96 +21,265 @@ function fileExists(filePath: string): boolean {
 }
 
 export async function GET() {
+  // Temporarily return empty array to reduce build size
+  return NextResponse.json({ images: [] });
+  
+  // Original implementation commented out
+  /*
   try {
-    // Define the base directory for images
-    const baseDir = path.join(process.cwd(), 'public/images');
+    const images: { category: string; src: string; alt: string; fullSize: string; subcategory?: string; }[] = [];
+    const baseDir = path.join(process.cwd(), 'public', 'images');
 
-    // Function to recursively get all image files
-    const getImageFiles = (dir: string, category: string, subcategory: string): any[] => {
-      const files: any[] = [];
-      const items = fs.readdirSync(dir);
-
-      items.forEach(item => {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-
-        // Exclude 'banners' folders
-        if (stat.isDirectory() && item.toLowerCase() === 'banners') {
+    // Process accommodation images
+    const accommodationDir = path.join(baseDir, 'accommodation');
+    if (isValidDirectory(accommodationDir)) {
+      const rooms = fs.readdirSync(accommodationDir);
+      rooms.forEach(room => {
+        // Skip if it's not a directory or is a special file/directory
+        const roomPath = path.join(accommodationDir, room);
+        if (!isValidDirectory(roomPath) || room === 'banners' || room.endsWith('.webp')) {
           return;
         }
 
-        if (stat.isDirectory()) {
-          // If it's a directory, recursively get files from it
-          const newSubcategory = item;
-          files.push(...getImageFiles(fullPath, category, newSubcategory));
-        } else if (stat.isFile() && /\.(jpg|jpeg|png|webp)$/i.test(item)) {
-          // Exclude files with '-card' in the filename
-          if (item.toLowerCase().includes('-card')) {
-            return;
-          }
-          let relativePath = fullPath.replace(process.cwd(), '').replace(/\\/g, '/');
-          // Remove '/public' from the path if present
-          if (relativePath.startsWith('/public')) {
-            relativePath = relativePath.replace('/public', '');
-          }
-          files.push({
-            src: relativePath,
-            alt: item.replace(/\.[^/.]+$/, '').replace(/-/g, ' '),
-            category,
-            subcategory,
-            fullSize: relativePath
+        const thumbnailsPath = path.join(roomPath, 'thumbnails');
+        const fullPath = path.join(roomPath, 'full');
+
+        if (isValidDirectory(thumbnailsPath)) {
+          const thumbnailFiles = fs.readdirSync(thumbnailsPath);
+          
+          thumbnailFiles.forEach(file => {
+            if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
+              // Check if thumbnail exists
+              const thumbnailFile = path.join(thumbnailsPath, file);
+              const fullSizeFile = path.join(fullPath, file);
+
+              // Only add the image if the thumbnail exists
+              if (fileExists(thumbnailFile)) {
+                const fileName = file.replace(/\.[^/.]+$/, "");
+                // Convert room name to proper subcategory name
+                let subcategory = room;
+                if (room === 'double-en-suite') {
+                  subcategory = 'double en suite';
+                } else if (room === 'family-en-suite-rondawel') {
+                  subcategory = 'family en suite rondawel';
+                } else if (room === 'gypsy-caravan') {
+                  subcategory = 'gypsy caravan';
+                } else if (room === 'safari-tent') {
+                  subcategory = 'safari tent';
+                } else if (room === 'mixed-dorm') {
+                  subcategory = 'mixed dorm';
+                } else if (room === 'five-sleeper') {
+                  subcategory = 'five sleeper';
+                } else if (room === 'twin-room') {
+                  subcategory = 'twin room';
+                } else if (room === 'family-room') {
+                  subcategory = 'family room';
+                } else if (room === 'camping') {
+                  subcategory = 'camping';
+                } else {
+                  subcategory = room.replace(/-/g, " ");
+                }
+                const altText = `${subcategory} ${fileName.replace(/[-_]/g, " ")}`;
+                
+                // Use the same image for fullSize if it doesn't exist
+                const fullSizePath = fileExists(fullSizeFile) 
+                  ? `/images/accommodation/${room}/full/${file}`
+                  : `/images/accommodation/${room}/thumbnails/${file}`;
+                
+                images.push({
+                  category: 'Accommodation',
+                  subcategory: subcategory,
+                  src: `/images/accommodation/${room}/thumbnails/${file}`,
+                  alt: altText,
+                  fullSize: fullSizePath
+                });
+              }
+            }
           });
         }
       });
+    }
 
-      return files;
-    };
+    // Process adventures images
+    const adventuresDir = path.join(baseDir, 'adventures');
+    if (isValidDirectory(adventuresDir)) {
+      const adventures = fs.readdirSync(adventuresDir);
+      adventures.forEach(adventure => {
+        // Skip if it's not a directory or is a special file/directory
+        const adventurePath = path.join(adventuresDir, adventure);
+        if (!isValidDirectory(adventurePath) || adventure === 'banners' || adventure.endsWith('.webp')) {
+          return;
+        }
 
-    // Get images from each category directory
-    const categories = ['accommodation', 'adventures', 'entertainment', 'venue-hire', 'facilities'];
-    let allImages: any[] = [];
+        const thumbnailsPath = path.join(adventurePath, 'thumbnails');
+        const fullPath = path.join(adventurePath, 'full');
 
-    categories.forEach(category => {
-      const categoryDir = path.join(baseDir, category);
-      if (fs.existsSync(categoryDir)) {
-        // Only consider first-level subfolders as subcategories
-        const subcategoryFolders = fs.readdirSync(categoryDir).filter(sub => {
-          const subPath = path.join(categoryDir, sub);
-          return fs.statSync(subPath).isDirectory() && sub.toLowerCase() !== 'banners';
-        });
-        subcategoryFolders.forEach(subcategory => {
-          const subcategoryDir = path.join(categoryDir, subcategory);
-          // Only look for images in 'thumbnails' folder for the grid
-          const thumbnailsDir = path.join(subcategoryDir, 'thumbnails');
-          const fullDir = path.join(subcategoryDir, 'full');
-          if (fs.existsSync(thumbnailsDir) && fs.statSync(thumbnailsDir).isDirectory()) {
-            const thumbnailFiles = fs.readdirSync(thumbnailsDir).filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file) && !file.toLowerCase().includes('-card'));
-            thumbnailFiles.forEach(file => {
-              let thumbPath = path.join('/images', category, subcategory, 'thumbnails', file).replace(/\\/g, '/');
-              let fullPath = thumbPath;
-              // Check if a matching file exists in the 'full' folder
-              if (fs.existsSync(fullDir)) {
-                const fullFilePath = path.join(fullDir, file);
-                if (fs.existsSync(fullFilePath)) {
-                  fullPath = path.join('/images', category, subcategory, 'full', file).replace(/\\/g, '/');
-                }
+        if (isValidDirectory(thumbnailsPath)) {
+          const thumbnailFiles = fs.readdirSync(thumbnailsPath);
+          
+          thumbnailFiles.forEach(file => {
+            if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
+              // Check if thumbnail exists
+              const thumbnailFile = path.join(thumbnailsPath, file);
+              const fullSizeFile = path.join(fullPath, file);
+
+              // Only add the image if the thumbnail exists
+              if (fileExists(thumbnailFile)) {
+                const fileName = file.replace(/\.[^/.]+$/, "");
+                const altText = `${adventure.replace(/-/g, " ")} ${fileName.replace(/[-_]/g, " ")}`;
+                
+                // Use the same image for fullSize if it doesn't exist
+                const fullSizePath = fileExists(fullSizeFile) 
+                  ? `/images/adventures/${adventure}/full/${file}`
+                  : `/images/adventures/${adventure}/thumbnails/${file}`;
+                
+                images.push({
+                  category: 'Adventures',
+                  subcategory: adventure.replace(/-/g, " "),
+                  src: `/images/adventures/${adventure}/thumbnails/${file}`,
+                  alt: altText,
+                  fullSize: fullSizePath
+                });
               }
-              allImages.push({
-                src: thumbPath,
-                alt: file.replace(/\.[^/.]+$/, '').replace(/-/g, ' '),
-                category: category.charAt(0).toUpperCase() + category.slice(1),
-                subcategory: subcategory.replace(/-/g, ' '),
-                fullSize: fullPath
+            }
+          });
+        }
+      });
+    }
+
+    // Process venue images
+    const venueDir = path.join(baseDir, 'venue-hire');
+    if (isValidDirectory(venueDir)) {
+      const thumbnailsPath = path.join(venueDir, 'thumbnails');
+      const fullPath = path.join(venueDir, 'full');
+      
+      if (isValidDirectory(thumbnailsPath)) {
+        const thumbnailFiles = fs.readdirSync(thumbnailsPath);
+        
+        thumbnailFiles.forEach(file => {
+          if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
+            // Check if thumbnail exists
+            const thumbnailFile = path.join(thumbnailsPath, file);
+            const fullSizeFile = path.join(fullPath, file);
+
+            // Only add the image if the thumbnail exists
+            if (fileExists(thumbnailFile)) {
+              const fileName = file.replace(/\.[^/.]+$/, "");
+              const altText = `Venue ${fileName.replace(/[-_]/g, " ")}`;
+              
+              // Use the same image for fullSize if it doesn't exist
+              const fullSizePath = fileExists(fullSizeFile) 
+                ? `/images/venue-hire/full/${file}`
+                : `/images/venue-hire/thumbnails/${file}`;
+              
+            images.push({
+                category: 'Venue',
+                src: `/images/venue-hire/thumbnails/${file}`,
+                alt: altText,
+                fullSize: fullSizePath
               });
-            });
+            }
           }
         });
       }
-    });
+    }
 
-    return NextResponse.json({ images: allImages });
+    // Process events images
+    const eventsDir = path.join(baseDir, 'entertainment');
+    if (isValidDirectory(eventsDir)) {
+      const thumbnailsPath = path.join(eventsDir, 'thumbnails');
+      const fullPath = path.join(eventsDir, 'full');
+      
+      if (isValidDirectory(thumbnailsPath)) {
+        const thumbnailFiles = fs.readdirSync(thumbnailsPath);
+        
+        thumbnailFiles.forEach(file => {
+          if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
+            // Check if thumbnail exists
+            const thumbnailFile = path.join(thumbnailsPath, file);
+            const fullSizeFile = path.join(fullPath, file);
+
+            // Only add the image if the thumbnail exists
+            if (fileExists(thumbnailFile)) {
+              const fileName = file.replace(/\.[^/.]+$/, "");
+              const altText = `Event ${fileName.replace(/[-_]/g, " ")}`;
+              
+              // Use the same image for fullSize if it doesn't exist
+              const fullSizePath = fileExists(fullSizeFile) 
+                ? `/images/entertainment/full/${file}`
+                : `/images/entertainment/thumbnails/${file}`;
+              
+              images.push({
+                category: 'Events',
+                src: `/images/entertainment/thumbnails/${file}`,
+                alt: altText,
+                fullSize: fullSizePath
+              });
+            }
+          }
+        });
+      }
+    }
+
+    // Process facilities images
+    const facilitiesDir = path.join(baseDir, 'facilities');
+    if (isValidDirectory(facilitiesDir)) {
+      const thumbnailsPath = path.join(facilitiesDir, 'thumbnails');
+      const fullPath = path.join(facilitiesDir, 'full');
+      
+      if (isValidDirectory(thumbnailsPath)) {
+        const thumbnailFiles = fs.readdirSync(thumbnailsPath);
+        
+        thumbnailFiles.forEach(file => {
+          if (file.match(/\.(jpg|jpeg|png|webp)$/i) && !file.includes('-card')) {
+            // Check if thumbnail exists
+            const thumbnailFile = path.join(thumbnailsPath, file);
+            const fullSizeFile = path.join(fullPath, file);
+
+            // Only add the image if the thumbnail exists
+            if (fileExists(thumbnailFile)) {
+              const fileName = file.replace(/\.[^/.]+$/, "");
+              const altText = `Facility ${fileName.replace(/[-_]/g, " ")}`;
+              
+              // Use the same image for fullSize if it doesn't exist
+              const fullSizePath = fileExists(fullSizeFile) 
+                ? `/images/facilities/full/${file}`
+                : `/images/facilities/thumbnails/${file}`;
+              
+              images.push({
+                category: 'Facilities',
+                src: `/images/facilities/thumbnails/${file}`,
+                alt: altText,
+                fullSize: fullSizePath
+              });
+            }
+          }
+        });
+      }
+    }
+
+    // Log the number of images found and their categories
+    console.log(`Found ${images.length} images in total`);
+    const categoryCounts = images.reduce((acc, img) => {
+      acc[img.category] = (acc[img.category] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    console.log('Images per category:', categoryCounts);
+
+    // Log subcategory counts for debugging
+    const subcategoryCounts = images.reduce((acc, img) => {
+      if (img.subcategory) {
+        const key = `${img.category} - ${img.subcategory}`;
+        acc[key] = (acc[key] || 0) + 1;
+      }
+      return acc;
+    }, {} as Record<string, number>);
+    console.log('Images per subcategory:', subcategoryCounts);
+
+    return NextResponse.json({ images });
   } catch (error) {
-    console.error('Error loading gallery images:', error);
-    return NextResponse.json({ error: 'Failed to load gallery images' }, { status: 500 });
+    console.error('Error reading gallery images:', error);
+    return NextResponse.json({ images: [] });
   }
+  */
 } 
