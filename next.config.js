@@ -12,6 +12,7 @@ const nextConfig = {
       },
     ],
     unoptimized: true,
+    formats: ['image/webp'],
   },
   // Add case sensitive routing to false to handle case mismatches
   experimental: {
