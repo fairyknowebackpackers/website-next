@@ -107,7 +107,7 @@ export default function Home() {
           <div className="mt-6 flex justify-center">
             <Link 
               href="https://book.nightsbridge.com/21082" 
-              className="bg-[#0E7D73] hover:bg-[#073F3A] text-[#C9DD94] hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[#0E7D73] hover:bg-[#073F3A] text-white hover:text-[#00FF7F] px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Book Now
             </Link>
