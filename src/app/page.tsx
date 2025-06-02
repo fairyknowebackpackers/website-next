@@ -129,7 +129,8 @@ export default function Home() {
                       alt={page.title}
                       fill
                       className="object-fill md:object-cover transition-transform duration-500 ease-in-out md:group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      width={380}
+                      height={214}
                       quality={75}
                       loading="lazy"
                     />
