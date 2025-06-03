@@ -77,12 +77,12 @@ export default function Home() {
         </div>
       </div>
       {/* Desktop Banner */}
-      <div className="relative h-[329px] md:h-[500px] w-full mb-12 bg-gray-900 hidden md:block">
+      <div className="relative h-[463px] w-full mb-12 bg-gray-900 hidden md:block">
         <Image
           src="/images/home/home-banner.webp"
           alt="Fairy Knowe Home"
-          fill
-          className="object-fit"
+          width={1920}
+          height={463}
           priority
           loading="eager"
         />
