@@ -4,7 +4,6 @@ const nextConfig = {
   output: 'standalone',
   trailingSlash: true,
   images: {
-    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
