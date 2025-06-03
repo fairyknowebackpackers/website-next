@@ -108,15 +108,14 @@ export default function Accommodation() {
         </div>
       </div>
       {/* Desktop Banner */}
-      <div className="relative h-[300px] lg:h-[500px] w-full mb-12 bg-gray-900 hidden md:block">
+      <div className="relative h-[329px] w-full mb-12 bg-gray-900 hidden md:block">
         <Image
           src="/images/accommodation/banner.webp"
           alt="Fairy Knowe Accommodation"
           fill
-          className="object-cover"
+          className="object-fit"
           priority
           quality={85}
-          sizes="100vw"
           onError={() => handleImageError('desktop-banner')}
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
