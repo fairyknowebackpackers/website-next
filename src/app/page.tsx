@@ -122,14 +122,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pages.map((page) => (
               <Link href={page.link} key={page.title} className="group">
-                <div className="bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform md:hover:scale-105 md:hover:bg-gradient-to-tl md:hover:from-[#35946E] md:hover:to-[#094B44] flex flex-col">
+                <div className="rel bg-[#E5E7EB] text-[#202635] rounded-lg shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform md:hover:scale-105 md:hover:bg-gradient-to-tl md:hover:from-[#35946E] md:hover:to-[#094B44] flex flex-col">
                     <Image
                       src={page.image}
                       alt={page.title}
-                      className="object-fill md:object-cover transition-transform duration-500 ease-in-out md:group-hover:scale-105"
-                      width={380}
-                      height={214}
+                      className="object:cover w:full transition-transform duration-500 ease-in-out md:group-hover:scale-105"
+                      width={401}
+                      height={190}
                       quality={75}
+                      sizes="(max-width: 480px) 288px, 401px"
                       loading="lazy"
                     />
                   <div className="p-4 md:p-6 flex-1 flex flex-col justify-between">
