@@ -85,7 +85,8 @@ export default function Home() {
           className="object-cover"
           priority
           quality={85}
-          sizes="(min-width: 768px) 100vw"
+          srcset="image-400w.jpg 400w, image-800w.jpg 800w, image-1200w.jpg 1200w"
+          sizes="(max-width: 600px) 400px, (max-width: 900px) 800px, 1200px"
           loading="eager"
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center pt-16">
