@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Hero from '../components/Hero';
 import ResponsiveBanner from './components/ResponsiveBanner'
 // import GalleryCarousel from './components/GalleryCarousel'
 
@@ -77,7 +78,7 @@ export default function Home() {
         </div>
       </div>
       {/* Desktop Banner */}
-      <div className="relative w-full mb-12 bg-gray-900 hidden md:block">
+      {/* <div className="relative w-full mb-12 bg-gray-900 hidden md:block">
         <Image
           src="/images/home/home-banner.webp"
           alt="Fairy Knowe Home"
@@ -85,16 +86,21 @@ export default function Home() {
           height={463}
           priority
           loading="eager"
+          sizes="(max-width: 768px) 768px, (max-width: 768px) 768px, 480px"
+
         />
         <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center pt-16">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
             Fairy Knowe Backpackers
           </h1>
         </div>
-      </div>
-
+      </div> */}
+      <Hero
+        imageUrl="/images/home/home-banner.webp"
+        title="Fairy Knowe Backpackers"
+      />
       {/* Additional Description */}
-      <div className="mb-8">
+      <div className="my-8">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-xs md:text-base text-gray-600 max-w-3xl mx-auto text-center leading-relaxed">
             Your home away from home in the heart of Wilderness, offering comfortable accommodation,
