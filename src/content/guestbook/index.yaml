@@ -1,0 +1,199 @@
+menu:
+  - name: Sunrize
+    price: '50'
+    availability: 8am-10am
+    summary: >-
+      The simple fairy - 2 eggs, bacon, tomato served with 2 slices of toast and
+      jam.
+  - name: Omelette
+    price: '75'
+    availability: 8am-10am
+    summary: >-
+      The hungry fairy - 3 eggs, bacon, tomato, mushrooms, cheese, onions and
+      peppers, served with juice, muffin, 2 slices of toast and jam.
+  - name: Fruity
+    price: '70'
+    availability: 8am-10am
+    summary: >-
+      The healthy fairy - muesli, yoghurt and fruit, served with juice and a
+      muffin.
+  - name: Toastie and chips
+    price: '55'
+    availability: All day
+    summary: Cheese, tomato and onion, served with a side of chips.
+  - name: Plate of chips
+    price: '25'
+    availability: All day
+    summary: A full plate of chips, served with a selection of condiments.
+info:
+  - title: Check-in
+    summary: Check-in is at 2pm and a R100 key deposit is required upon arrival.
+  - title: Guest rules
+    summary: >-
+      No loud music. Please be respectful to our other guests and neighbours.
+
+      No fires anywhere on the property except for the designated fireplace.
+
+      Please tidy up after yourself in the campgrounds and when using the
+      bathrooms or kitchen.
+  - title: Safety information
+    summary: >-
+      We have 24 hour security, but as we are a backpackers, we ask that guests
+      remain diligent with their possessions. Using the public charging station
+      in the reception or dorms is at your own risk. Private rooms and dorms
+      have safes, which we recommend using to store your valuables, or ask us at
+      reception to store in the big safe.
+  - title: Loadshedding
+    summary: >-
+      We usually have our generator running during load shedding, which keeps
+      the bottom bar & reception lights and internet running. We also have
+      rechargeable lamps for the top guest kitchen. Click here to view the load
+      shedding schedule for wilderness.
+  - title: Operating times
+    summary: |-
+      Office Hours: 8am to 8pm / Check Out: 10am
+      Breakfast: 8am to 10am / Day Menu: 10am to 4pm
+      Dinners: Around 7pm (signup by 5pm)
+  - title: Kayak rentals
+    summary: 'We have ample kayaks available for hire from our reception. '
+  - title: Wifi
+    summary: >-
+      Wifi is available via the main reception (Fairy Knowe), via the bar (Fairy
+      Knowe Bar) and via the main house (Fairy Knowe Home). The password for all
+      three is 12345678.
+restuarants:
+  - name: Ilali
+    website: https://ilalirestaurant.co.za
+    phone: 044 877 0808
+    email: reservations@ilalirestaurant.co.za
+    tags:
+      - pizza
+      - tapas
+    image: '@assets/restuarants/0/image.jpeg'
+  - name: Pomodora
+    phone: 044 877 1403
+    email: pomodoro@etime.co.za
+    tags:
+      - pizza
+      - pasta
+    image: '@assets/restuarants/1/image.jpeg'
+  - name: Green Shed
+    website: https://greenshed.co.za
+    phone: 044 333 0207
+    email: info@greenshed.co.za
+    tags:
+      - coffee
+      - smoothies
+    image: '@assets/restuarants/2/image.jpg'
+  - name: The Girls
+    phone: 044 877 0445
+    email: thegirlsonthesquare@gmail.com
+    tags:
+      - sushi
+      - seafood
+    image: '@assets/restuarants/3/image.jpg'
+  - name: Pollocks
+    phone: 044 877 0481
+    email: jamiepollock1234@gmail.com
+    tags:
+      - burgers
+      - pizza
+    image: '@assets/restuarants/4/image.jpg'
+  - name: The Village Pub
+    phone: 083 409 7373
+    email: drostdy62@gmail.com
+    tags:
+      - burgers
+      - sandwiches
+    image: '@assets/restuarants/5/image.jpg'
+  - name: Serendipity
+    website: https://serendipitywilderness.com
+    phone: 044 877 0433
+    email: restaurant@serendipitywilderness.com
+    tags:
+      - gourmet
+      - fusion
+    image: '@assets/restuarants/6/image.jpg'
+  - name: Blue Olive
+    website: https://blueoliverestaurant.co.za
+    phone: 044 877 0731
+    email: info@BlueOliveRestaurant.co.za
+    tags:
+      - pasta
+      - meat
+    image: '@assets/restuarants/7/image.jpeg'
+  - name: Salinas
+    website: https://salinas.co.za
+    phone: 044 877 0001
+    email: info@salinas.co.za
+    tags:
+      - seafood
+      - sushi
+    image: '@assets/restuarants/8/image.jpg'
+beaches:
+  - name: Leentjiesklip
+    image: '@assets/beaches/0/image.webp'
+  - name: Wilderness
+    image: '@assets/beaches/1/image.webp'
+  - name: Victoria Bay
+    image: '@assets/beaches/2/image.webp'
+  - name: Kleinkrantz
+    image: '@assets/beaches/3/image.webp'
+  - name: Swartvlei
+    image: '@assets/beaches/4/image.webp'
+hikes:
+  - name: Half-collared kingfisher
+    summary: >-
+      A delightful stroll on the western bank of the Touw river. For a more
+      taxing return journey, with rewarding views, try the Bosduif Loop. Total
+      distance is 3.8km.
+  - name: Brown-hooded kingfisher
+    summary: Features river valley, rocks and cliffs, waterfalls and view sites.
+  - name: The big tree
+    summary: >-
+      Features a 800+ year old Yellowwood tree and an awesome half hour circular
+      route.
+  - name: Giant kingfisher
+    summary: >-
+      A moderate trail which takes you to the Touw River Waterfall. The first
+      half is tricky, but the second half has a new easy boardwalk. You can also
+      reach the second half by crossing over from the Half Collared Kingfisher
+      trail or by canoeing from the backpackers.
+  - name: Pied kingfisher
+    summary: >-
+      A unique opportunity to see water birds up close as the boardwalk takes
+      one over the water and right into the territory of the birds.
+  - name: Groeneweide forest
+    summary: >-
+      There are three different ways to go: the biggest one is 15kn (5 and a
+      half hours), the middle is 11km (4 hours) and the shortest is 7km (2 and a
+      half hours). Features tall forest, streams and swimming spots.
+  - name: Cape dune mole-rat
+    summary: >-
+      Features lake, fynbos, dunes, birds, birds and animal life. Total distance
+      is 6km.
+contacts:
+  - name: Lorcan (GM)
+    phone: 060 419 4940
+  - name: Police Station
+    phone: 044 877 0011
+  - name: Fire Department
+    phone: 044 801 6300
+  - name: George Hospital
+    phone: 044 874 5122
+  - name: Whatsapp a Cab
+    phone: 079 992 2072
+  - name: Ambulance
+    phone: '10177'
+  - name: Snakes
+    phone: '0835610519'
+  - name: Sea Rescue
+    phone: 044 877 0668
+  - name: Doctor
+    phone: 044 889 0119
+  - name: Clinic
+    phone: 044 814 1355
+  - name: Pharmacy
+    phone: 044 877 0621
+  - name: SA Tourism
+    phone: 083 123 6789

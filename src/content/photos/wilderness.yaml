@@ -1,0 +1,17 @@
+title: Wilderness
+path: wilderness
+summary: >-
+  Photos of Wilderness and the surrounding areas. With the ocean on our doorstop
+  and wild indigenous forest and mountains to our back. We are perfectly
+  situated to explore all that Wilderness has to offer.
+images:
+  - image: src/images/wilderness/images/0/image.webp
+  - image: src/images/wilderness/images/1/image.webp
+  - image: src/images/wilderness/images/2/image.webp
+  - image: src/images/wilderness/images/3/image.webp
+  - image: src/images/wilderness/images/4/image.webp
+  - image: src/images/wilderness/images/5/image.webp
+  - image: src/images/wilderness/images/6/image.webp
+  - image: src/images/wilderness/images/7/image.webp
+image: src/images/wilderness/image.webp
+published: true

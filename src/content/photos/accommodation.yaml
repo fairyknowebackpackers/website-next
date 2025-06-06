@@ -1,0 +1,15 @@
+title: Accommodation
+path: accommodation
+summary: >-
+  We have a full range of comfortable, excellently maintained rooms, including a
+  Family En-Suite, Double En-Suites, Private Double Rooms, a Twin Room, Dorms,
+  as well as ample camping space.
+images:
+  - image: src/images/accommodation/images/0/images.jpg
+  - image: src/images/accommodation/images/1/images.jpg
+  - image: src/images/accommodation/images/2/images.jpg
+  - image: src/images/accommodation/images/3/images.jpg
+  - image: src/images/accommodation/images/4/images.jpg
+  - image: src/images/accommodation/images/5/images.jpg
+image: src/images/accommodation/image.jpg
+published: true

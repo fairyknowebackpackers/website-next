@@ -1,0 +1,40 @@
+branding:
+  logo: '@assets/branding/logo.svg'
+  favicon: '@assets/branding/favicon.png'
+navigation:
+  - page: accommodation
+    title: Our guest accommodation
+  - page: adventures
+    title: Adventure center in Wilderness
+  - page: events
+    title: Upcoming events at Fairy Knowe Backpackers
+  - page: photos
+    title: Photos of the backpackers
+  - page: contact
+    title: Get in touch
+socials:
+  - label: Instagram
+    title: Follow us on Instagram
+    url: https://instagram.com/fairyknowebackpackers
+    icon: '@assets/socials/0/icon.svg'
+  - label: Youtube
+    title: Follow us on Youtube
+    url: https://www.youtube.com/@fairyfolknroll
+    icon: '@assets/socials/1/icon.svg'
+  - label: Whatsapp
+    title: Send us a message on Whatsapp
+    url: https://wa.me/+27834438384
+    icon: '@assets/socials/2/icon.svg'
+site_title: Fairy Knowe Backpackers
+site_description: Adventure Backpackers in the heart of the Garden Route
+site_keywords: backpackers, garden route, accommodation, wilderness, adventure center
+site_image: '@assets/site_image.webp'
+contact:
+  address: |-
+    Fairy Knowe Backpackers
+    Dumbleton Road, Wilderness
+  phone: '+27834438384'
+  email: info@wildernessbackpackers.com
+footer_text: >-
+  1 Dumbleton Road, Wilderness, 6560. info@wildernessbackpackers.com - Call us
+  on 083 443 8384

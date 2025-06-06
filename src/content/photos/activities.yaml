@@ -1,0 +1,17 @@
+title: Activities
+path: activities
+summary: >-
+  Fairy Knowe Backpackers and Adventure Center sits on the border of the
+  Wilderness National Park. Our team is ready to advise you on land, air and
+  water adventures available year round!
+images:
+  - image: src/images/activities/birding-thumb.webp
+  - image: src/images/activities/canyoning-thumb.webp
+  - image: src/images/activities/hiking-thumb.webp
+  - image: src/images/activities/horse-riding-thumb.webp
+  - image: src/images/activities/kayaking-thumb.webp
+  - image: src/images/activities/paragliding-thumb.webp
+  - image: src/images/activities/supping-thumb.webp
+  - image: src/images/activities/treetop-thumb.webp
+image: src/images/activities/hiking-thumb.webp
+published: true
