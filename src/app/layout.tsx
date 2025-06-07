@@ -150,6 +150,18 @@ export default function RootLayout({
           {children}
         </main>
 
+      {/* Logo Section */}
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-center">
+          <Image
+            src="/images/home/logo.webp"
+            alt="Fairy Knowe Logo"
+            width={300}
+            height={300}
+            className="w-48 h-48 object-contain"
+          />
+        </div>
+      </div>
         <footer className="relative mt-2">
           {/* Mobile Footer Content */}
           <div className="relative sm:hidden bg-white pb-2">

@@ -38,3 +38,12 @@ body {
 .gradient-exit {
   transition: background-image 1.5s ease-out;
 } 
+
+details > summary::-webkit-details-marker { 
+  display: none; 
+}
+
+summary {
+  display: block;
+  list-style: none;
+}

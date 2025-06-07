@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
-import createMDX from '@next/mdx'
 
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
       {
@@ -13,8 +11,4 @@ const nextConfig = {
   },
 }
 
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-})
-
-module.exports = withMDX(nextConfig)
+module.exports = nextConfig
