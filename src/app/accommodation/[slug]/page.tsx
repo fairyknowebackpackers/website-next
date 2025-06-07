@@ -43,7 +43,7 @@ export default async function PostPage({
   return (
     <div className="min-h-screen">
       <Hero
-        imageUrl={fields.image}
+        imageUrl={fields.banner}
         title={fields.title}
       />
 
@@ -82,11 +82,9 @@ export default async function PostPage({
                 <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
                   <h3 className="text-lg font-semibold mb-3 text-center">What's Included</h3>
                   <div className="space-y-2 text-gray-600 dark:text-gray-300 text-xs">
-                    <p className="text-center">Private spots</p>
-                    <p className="text-center">Communal spots</p>
-                    <p className="text-center">Shaded spots</p>
-                    <p className="text-center">Sunny spots</p>
-                    <p className="text-center">Access to all facilities</p>
+                  {fields.features.map((feature, index) => (
+                    <p className="text-center" key={index}>{feature}</p>
+                  ))}
                   </div>
                 </div>
 
@@ -117,11 +115,9 @@ export default async function PostPage({
                 <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg">
                   <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-center sm:text-left">What's Included</h3>
                   <div className="space-y-2 text-gray-600 dark:text-gray-300 text-xs sm:text-sm">
-                    <p className="text-center sm:text-left">Private spots</p>
-                    <p className="text-center sm:text-left">Communal spots</p>
-                    <p className="text-center sm:text-left">Shaded spots</p>
-                    <p className="text-center sm:text-left">Sunny spots</p>
-                    <p className="text-center sm:text-left">Access to all facilities</p>
+                    {fields.features.map((feature, index) => (
+                    <p className="text-center sm:text-left" key={index}>{feature}</p>
+                  ))}
                   </div>
                 </div>
 

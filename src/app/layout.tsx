@@ -15,7 +15,7 @@ const accommodationLinks = [
   { href: '/accommodation/family-room', label: 'Family Room' },
   { href: '/accommodation/five-sleeper', label: 'Five Sleeper' },
   { href: '/accommodation/double-en-suite', label: 'Double En-suite' },
-  { href: '/accommodation/family-en-suite-rondawel', label: 'Family En-suite Rondawel' }
+  { href: '/accommodation/family-en-suite', label: 'Family En-suite' }
 ]
 
 const adventureLinks = [

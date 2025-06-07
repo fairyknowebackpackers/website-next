@@ -1,3 +1,5 @@
 {
-  "/accommodation/[slug]/page": "app/accommodation/[slug]/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/accommodation/[slug]/page": "app/accommodation/[slug]/page.js",
+  "/accommodation/page": "app/accommodation/page.js"
 }
