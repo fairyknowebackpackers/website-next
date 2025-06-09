@@ -16,8 +16,8 @@ export default function Accommodation() {
     <div>
       {/* Hero */}
       <Hero
-        imageUrl="/images/activities/banner.webp"
-        title="Activities"
+        imageUrl="/images/accommodation/banner.webp"
+        title="Accommodation"
       />
       {/* Description */}
       <div className="py-8">
