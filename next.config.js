@@ -2,7 +2,7 @@
 
 const nextConfig = {
   output: 'standalone',
-  trailingSlash: false,
+  trailingSlash: true,
   turbopack: {
     resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
   },
