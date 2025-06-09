@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://wildernessbackpackers.com",
+  url: "https://wildernessbackpackers.com",
   logo: "/images/home/logo.webp",
   name: "Fairy Knowe Backpackers",
   legalName: "Fairy Knowe Backpackers",
