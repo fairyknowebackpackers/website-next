@@ -65,7 +65,7 @@ export default function Accommodation() {
                   </Link>
                 </div>
                 <ul className="pl-0 space-y-1.5 text-center text-xs text-[#202635]" style={{ listStyleType: 'none' }}>
-                  {post.fields.features.map((feature, index) => (
+                  {post.fields.features.map((feature: string, index: number) => (
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
@@ -104,7 +104,7 @@ export default function Accommodation() {
                   <div className="mt-auto">
                     <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
                     <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
-                      {post.fields.features.map((feature, index) => (
+                      {post.fields.features.map((feature: string, index: number) => (
                         <li key={`${post.fields.id}-feature-${index}`}>{feature}</li>
                       ))}
                     </ul>

@@ -67,7 +67,7 @@ export default async function PostPage({
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md md:shadow-none">
                   <h3 className="text-lg font-semibold mb-4 dark:text-white text-center md:text-right">General Info</h3>
                   <ul className="space-y-2 text-gray-600 dark:text-gray-300 text-sm">
-                  {fields.features.map((feature, index) => (
+                  {fields.features.map((feature: string, index: number) => (
                     <li key={index} className="text-center md:text-right">{feature}</li>
                   ))}
                   </ul>
