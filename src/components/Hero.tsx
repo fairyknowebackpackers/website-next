@@ -13,8 +13,7 @@ const Hero = ({ imageUrl, title } : HeroProps) => {
         <Image
           src={imageUrl}
           alt={title}
-          layout="fill"
-          objectFit="cover"
+          fill
           priority
         />
       </div>

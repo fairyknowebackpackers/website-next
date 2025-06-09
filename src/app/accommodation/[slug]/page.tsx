@@ -15,20 +15,6 @@ function getPostBySlug(slug: string):FusionItemType {
   return post.getItem();
 }
 
-// Define gallery images with the new naming convention
-const galleryImages = [
-  {
-    src: '/images/accommodation/camping/thumbnails/camping1.webp',
-    alt: 'Camping Ground Overview',
-    fullSize: '/images/accommodation/camping/full/camping1.webp'
-  },
-  {
-    src: '/images/accommodation/camping/thumbnails/camping2.webp',
-    alt: 'Tent Setup Area',
-    fullSize: '/images/accommodation/camping/full/camping2.webp'
-  }
-]
-
 export default async function PostPage({
   params,
 }: {

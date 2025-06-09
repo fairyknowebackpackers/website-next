@@ -9,81 +9,6 @@ function getAccommodation() {
   return collection.getItemsArray();
 }
 
-const roomTypes = [
-  {
-    id: 1,
-    name: 'Camping',
-    description: 'Bring your own tent and enjoy our beautiful campsite with access to shared facilities.',
-    image: '/images/accommodation/camping-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/camping-card.webp',
-    features: ['Shared bathroom facilities', 'Kitchen access', 'Sunny or shaded camping grounds']
-  },
-  {
-    id: 2,
-    name: 'Safari Tent',
-    description: 'Experience glamping in our comfortable safari tent, perfect for those who want to be close to nature.',
-    image: '/images/accommodation/safari-tent-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/safari-tent-card.webp',
-    features: ['Double bed', 'Shared bathroom facilities', 'Electricity']
-  },
-  {
-    id: 3,
-    name: 'Gypsy Caravan',
-    description: 'Stay in our unique and charming gypsy caravan for a truly magical experience.',
-    image: '/images/accommodation/gypsy-caravan-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/gypsy-caravan-card.webp',
-    features: ['Double bed + two sleeper couches', 'Secluded privacy', 'Electricity']
-  },
-  {
-    id: 4,
-    name: 'Mixed Dorm',
-    description: 'Comfortable bunk beds in our mixed dormitory, perfect for solo travelers and backpackers.',
-    image: '/images/accommodation/mixed-dorm-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/mixed-dorm-card.webp',
-    features: ['Bunk beds', 'Shared bathroom facilities', 'Towels available']
-  },
-  {
-    id: 5,
-    name: 'Twin Room',
-    description: 'Cozy room with two single beds, ideal for friends traveling together.',
-    image: '/images/accommodation/twin-room-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/twin-room-card.webp',
-    features: ['Two single beds', 'Shared bathroom facilities', 'Fresh linen']
-  },
-  {
-    id: 6,
-    name: 'Family Room',
-    description: 'Spacious room perfect for families, featuring multiple beds and shared facilities.',
-    image: '/images/accommodation/family-room-card.webp',
-    features: ['Double bed + bunk bed', 'Shared bathroom facilities', 'Family friendly']
-  },
-  {
-    id: 7,
-    name: 'Five Sleeper',
-    description: 'Large room that comfortably accommodates up to five people, perfect for groups or families.',
-    image: '/images/accommodation/five-sleeper-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/five-sleeper-card.webp',
-    features: ['Double bed + bunk bed + single bed', 'Shared bathroom facilities', 'Spacious layout']
-  },
-  {
-    id: 8,
-    name: 'Double En-suite',
-    description: 'Private room with a queen size bed and en-suite bathroom for added comfort.',
-    image: '/images/accommodation/double-ensuite-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/double-en-suite-card.webp',
-    features: ['Queen bed', 'Private bathroom', 'Extra comfort']
-  },
-  {
-    id: 9,
-    name: 'Family En-suite Rondawel',
-    description: 'Traditional round African house with modern amenities, perfect for families seeking a unique stay.',
-    image: '/images/accommodation/family-en-suite-rondawel-card.webp',
-    mobileImage: '/images/accommodation/mobile-banners/family-en-suite-rondawel-card.webp',
-    features: ['Queen bed + bunk bed', 'Private bathroom', 'Secluded privacy']
-  }
-]
-
-
 export default function Accommodation() {
   const posts = getAccommodation();
 
@@ -91,8 +16,8 @@ export default function Accommodation() {
     <div>
       {/* Hero */}
       <Hero
-        imageUrl="/images/home/mobile/accommodation-banner.webp"
-        title="Accommodation"
+        imageUrl="/images/activities/banner.webp"
+        title="Activities"
       />
       {/* Description */}
       <div className="py-8">
@@ -116,31 +41,31 @@ export default function Accommodation() {
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Mobile Expandable List */}
         <div className="block sm:hidden">
-          {posts.map((room, index) => {
+          {posts.map((post, index) => {
             return (
               <details key={index} className="w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635] px-2 py-3 text-center">
-              <summary>{room.fields.title}</summary>
+              <summary>{post.fields.title}</summary>
               <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
                 <Image
-                  src={room.fields.image}
-                  alt={room.fields.title}
+                  src={post.fields.image}
+                  alt={post.fields.title}
                   width={400}
                   height={400}
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="px-4 pb-4 pt-2">
-                <p className="mb-4 text-center text-[#202635] text-sm mt-4">{room.fields.summary}</p>
+                <p className="mb-4 text-center text-[#202635] text-sm mt-4">{post.fields.summary}</p>
                 <div className="flex justify-center mb-4">
                   <Link
-                    href={`/accommodation/${room.fields.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={`/accommodation/${post.fields.title.toLowerCase().replace(/\s+/g, '-')}`}
                     className="inline-block mb-3 px-6 py-2 rounded-full bg-[#0E7D73] text-[#C9DD94] font-semibold text-sm text-center shadow hover:bg-[#073F3A] hover:text-[#00FF7F] transition-colors"
                   >
                     View
                   </Link>
                 </div>
                 <ul className="pl-0 space-y-1.5 text-center text-xs text-[#202635]" style={{ listStyleType: 'none' }}>
-                  {room.fields.features.map((feature, index) => (
+                  {post.fields.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
                   ))}
                 </ul>
@@ -152,35 +77,35 @@ export default function Accommodation() {
       </div>
         {/* Desktop Grid */}
         <div className="hidden sm:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((room, index) => (
+          {posts.map((post, index) => (
             <div key={index}>
             <Link 
-              href={`/accommodation/${room.fields.title.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/accommodation/${post.fields.title.toLowerCase().replace(/\s+/g, '-')}`}
               className="group"
             >
               <MouseGradientCard className="bg-[#F3F4F6] text-[#202635] rounded-lg shadow-lg overflow-hidden flex flex-col h-full transition-all duration-500 ease-in-out transform hover:scale-105">
                 <div className="relative w-full h-[250px]">
                     <Image
-                      src={room.fields.image}
-                      alt={room.fields.title}
+                      src={post.fields.image}
+                      alt={post.fields.title}
                       fill
                       className="object-cover w-full transition-transform duration-500 ease-in-out group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      priority={room.fields.id <= 3}
-                      loading={room.fields.id <= 3 ? 'eager' : 'lazy'}
+                      priority={post.fields.id <= 3}
+                      loading={post.fields.id <= 3 ? 'eager' : 'lazy'}
                       quality={85}
                     />
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div>
-                    <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{room.fields.title}</h2>
-                    <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{room.fields.summary}</p>
+                    <h2 className="text-2xl font-bold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">{post.fields.title}</h2>
+                    <p className="text-gray-600 mb-6 min-h-[3rem] group-hover:text-white transition-colors duration-500 ease-in-out">{post.fields.summary}</p>
                   </div>
                   <div className="mt-auto">
                     <h3 className="font-semibold mb-3 text-[#202635] group-hover:text-[#00FF7F] transition-colors duration-500 ease-in-out">Features:</h3>
                     <ul className="list-disc pl-5 space-y-1.5 text-gray-600 group-hover:text-white transition-colors duration-500 ease-in-out">
-                      {room.fields.features.map((feature, index) => (
-                        <li key={`${room.fields.id}-feature-${index}`}>{feature}</li>
+                      {post.fields.features.map((feature, index) => (
+                        <li key={`${post.fields.id}-feature-${index}`}>{feature}</li>
                       ))}
                     </ul>
                   </div>
