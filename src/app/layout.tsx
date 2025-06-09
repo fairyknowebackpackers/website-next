@@ -6,6 +6,17 @@ import MobileMenu from './components/MobileMenu'
 import type { Viewport, Metadata } from "next";
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://wildernessbackpackers.com",
+  logo: "/images/home/logo.webp",
+  name: "Fairy Knowe Backpackers",
+  legalName: "Fairy Knowe Backpackers",
+  telephone: "+27834438384",
+  sameAs: ["https://www.linkedin.com/company/fairy-knowe-backpackers/"],
+}
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -115,6 +126,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+      <script
+          key="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
       <body className="font-sans bg-white">
         <nav className="bg-white shadow-lg fixed w-full z-50 h-12">
           <div className="max-w-7xl mx-auto px-4">
