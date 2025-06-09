@@ -13,13 +13,13 @@
       "static/chunks/_e69f0d32._.js",
       "static/chunks/_92b5e931._.js"
     ],
-    "/accommodation/page": [
+    "/adventures/[slug]/page": [
       "static/chunks/[root-of-the-server]__404369a3._.css",
       "static/chunks/2b70e_next_dist_8b7ad5a1._.js",
       "static/chunks/src_app_components_MobileMenu_tsx_1c8fe1b3._.js",
       "static/chunks/src_app_layout_tsx_bfb1ea95._.js",
-      "static/chunks/src_app_components_MouseGradientCard_tsx_a2cbf4d0._.js",
-      "static/chunks/src_app_accommodation_page_tsx_2b795f07._.js",
+      "static/chunks/_49589a7f._.js",
+      "static/chunks/src_app_adventures_[slug]_page_tsx_2b795f07._.js",
       "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_8dde0a97._.js",
       "static/chunks/2b70e_next_dist_compiled_d2fe6374._.js",
       "static/chunks/2b70e_next_dist_client_fc8623e5._.js",
