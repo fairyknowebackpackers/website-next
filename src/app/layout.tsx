@@ -49,14 +49,6 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     capable: true
   },
-  verification: {
-    google: "YOUR_DATA",
-    yandex: ["YOUR_DATA"],
-    other: {
-      "msvalidate.01": ["YOUR_DATA"],
-      "facebook-domain-verification": ["YOUR_DATA"]
-    }
-  },
   icons: {
     icon: [
       {
@@ -107,7 +99,7 @@ const accommodationLinks = [
 const adventureLinks = [
   { href: '/adventures/kayaking', label: 'Kayaking' },
   { href: '/adventures/paragliding', label: 'Paragliding' },
-  { href: '/adventures/horseriding', label: 'Horseriding' },
+  { href: '/adventures/horse-riding', label: 'Horse Riding' },
   { href: '/adventures/half-collared-kingfisher-trail', label: 'Half Collared Kingfisher Trail' },
   { href: '/adventures/brown-hooded-kingfisher-trail', label: 'Brown Hooded Kingfisher Trail' },
   { href: '/adventures/bosduif-trail', label: 'Bosduif Trail' },
