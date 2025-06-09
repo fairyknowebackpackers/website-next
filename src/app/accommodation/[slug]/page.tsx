@@ -6,6 +6,7 @@ import FusionCollection from "fusionable/FusionCollection";
 import { FusionFieldsType, FusionItemType } from "fusionable/FusionItem";
 import Showdown from 'showdown';
 
+
 function getPostBySlug(slug: string):FusionItemType {
   const collection = new FusionCollection().loadFromDir('content/accommodation');
   const post = collection.getOneBySlug(slug);

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wildernessbackpackers.com
+
+# Sitemaps
+Sitemap: https://wildernessbackpackers.com/sitemap.xml
