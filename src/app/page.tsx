@@ -1,14 +1,55 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import Hero from '../components/Hero';
-import ResponsiveBanner from './components/ResponsiveBanner'
-// import GalleryCarousel from './components/GalleryCarousel'
-
-// Add font preloading
-export const metadata = {
-  title: 'Fairy Knowe Backpackers',
-  description: 'Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.',
-}
+import { Metadata } from "next";
+ 
+export const metadata: Metadata = {
+  title: "Fairy Knowe Backpackers",
+  description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+  keywords: [
+    "backpackers",
+    "wilderness",
+    "fairy knowe",
+    "garden route",
+    "wilderness accommodation",
+    "wilderness adventures"
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com",
+    type: "website",
+    title: "Fairy Knowe Backpackers",
+    description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    images: [
+      {
+        url: "/images/home/home-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fairy Knowe Backpackers",
+    description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/home/home-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com"
+  }
+};
 
 export default function Home() {
   const pages = [
@@ -58,43 +99,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Banner */}
-      {/* Mobile Banner */}
-      <div className="relative w-full aspect-[9/5] mb-8 bg-gray-900 block md:hidden">
-        <Image
-          src="/images/home/mobile/home-banner.webp"
-          alt="Fairy Knowe Home Mobile Banner"
-          fill
-          className="object-fit"
-          priority
-          quality={85}
-          sizes="(max-width: 768px) 100vw, 480px"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
-            Fairy Knowe<br />Backpackers
-          </h1>
-        </div>
-      </div>
-      {/* Desktop Banner */}
-      {/* <div className="relative w-full mb-12 bg-gray-900 hidden md:block">
-        <Image
-          src="/images/home/home-banner.webp"
-          alt="Fairy Knowe Home"
-          width={1920}
-          height={463}
-          priority
-          loading="eager"
-          sizes="(max-width: 768px) 768px, (max-width: 768px) 768px, 480px"
-
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center pt-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
-            Fairy Knowe Backpackers
-          </h1>
-        </div>
-      </div> */}
       <Hero
         imageUrl="/images/home/home-banner.webp"
         title="Fairy Knowe Backpackers"
