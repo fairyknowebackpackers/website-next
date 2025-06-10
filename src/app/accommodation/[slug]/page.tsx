@@ -5,10 +5,11 @@ import Hero from '../../../components/Hero';
 import FusionCollection from "fusionable/FusionCollection";
 import { FusionFieldsType, FusionItemType } from "fusionable/FusionItem";
 import Showdown from 'showdown';
+import path from 'path';
 
-
-function getPostBySlug(slug: string):FusionItemType {
-  const collection = new FusionCollection().loadFromDir('content/accommodation');
+function getPostBySlug(slug: string): FusionItemType {
+  const contentPath = path.join(process.cwd(), 'content/accommodation');
+  const collection = new FusionCollection().loadFromDir(contentPath);
   const post = collection.getOneBySlug(slug);
   if (!post) {
     throw new Error('Post not found');
