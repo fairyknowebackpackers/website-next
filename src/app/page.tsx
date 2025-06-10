@@ -101,7 +101,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Hero
         imageUrl="/images/home/home-banner.webp"
-        title="Fairy Knowe Backpackers"
+        title="Fairy Knowe Backpackers, Adventure Center & Events Venue"
       />
       {/* Additional Description */}
       <div className="my-8">
