@@ -1,8 +1,55 @@
-"use client"
-
 import Image from 'next/image'
 import Link from 'next/link'
 import Hero from '../../components/Hero';
+import { Metadata } from "next";
+ 
+export const metadata: Metadata = {
+  title: "Entertainment at Fairy Knowe Backpackers",
+  description:
+    "From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.",
+  keywords: [
+    "entertainment",
+    "live music",
+    "local musicians",
+    "bar",
+    "entertainment",
+    ""
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com/entertainment/",
+    type: "website",
+    title: "Entertainment at Fairy Knowe Backpackers",
+    description:
+    "From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.",
+    images: [
+      {
+        url: "/images/entertainment/live-gigs-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "Entertainment at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facilities at Fairy Knowe Backpackers",
+    description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/entertainment/live-gigs-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "Entertainment at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com/entertainment/"
+  }
+};
 
 export default function Entertainment() {
   const events = [

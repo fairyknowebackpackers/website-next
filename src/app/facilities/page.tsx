@@ -1,5 +1,54 @@
 import Image from 'next/image'
 import Hero from '../../components/Hero';
+import { Metadata } from "next";
+ 
+export const metadata: Metadata = {
+  title: "Facilities at Fairy Knowe Backpackers",
+  description:
+    "Everything you need to keep clean, comfortable, connected, captivated, cozy, fed and feeling good during your stay in the enchanted realms of the wood.",
+  keywords: [
+    "backpackers",
+    "wilderness",
+    "guest accommodation",
+    "bnb",
+    "facilities",
+    ""
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com/facilities/",
+    type: "website",
+    title: "Facilities at Fairy Knowe Backpackers",
+    description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    images: [
+      {
+        url: "/images/home/home-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Facilities at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Facilities at Fairy Knowe Backpackers",
+    description:
+    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/home/home-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Facilities at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com/facilities/"
+  }
+};
 
 const facilityCategories = [
   {
