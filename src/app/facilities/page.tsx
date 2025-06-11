@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
     images: [
       {
-        url: "/images/home/home-banner.webp",
+        url: "/images/facilities/facilities-banner.webp",
         width: 1200,
         height: 630,
         alt: "Facilities at Fairy Knowe Backpackers"
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     site: "@fairyknowe",
     images: [
       {
-        url: "/images/home/home-banner.webp",
+        url: "/images/facilities/facilities-banner.webp",
         width: 1200,
         height: 630,
         alt: "Facilities at Fairy Knowe Backpackers"

@@ -1,5 +1,53 @@
 import Hero from '../../components/Hero';
-
+import { Metadata } from "next";
+ 
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "From magical nights with musical delights to whimsical days spent hunting for treasure at the fairy family market.",
+  keywords: [
+    "backpackers",
+    "wilderness",
+    "places to stay",
+    "contact us",
+    "say hello",
+    ""
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com/contact/",
+    type: "website",
+    title: "Contact Us",
+    description:
+    "Contact us to book your stay and adventures",
+    images: [
+      {
+        url: "/images/contact/contact-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us",
+    description:
+    "Contact us to book your stay and adventures",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/contact/contact-banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Us"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com/contact/"
+  }
+};
 export default function Contact() {
   return (
     <div className="min-h-screen">

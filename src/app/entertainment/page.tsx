@@ -6,7 +6,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Entertainment at Fairy Knowe Backpackers",
   description:
-    "From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.",
+    "From magical nights with musical delights to whimsical days spent hunting for treasure at the fairy family market.",
   keywords: [
     "entertainment",
     "live music",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Entertainment at Fairy Knowe Backpackers",
     description:
-    "From magical nights with all sorts of musical delights to whimsical days spent hunting for treasure at the fairy family market of leisure, there's always a sprinkle of wonder waiting at the Knowe for your pleasure.",
+    "From magical nights with musical delights to whimsical days spent hunting for treasure at the fairy family market.",
     images: [
       {
         url: "/images/entertainment/live-gigs-card.webp",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Facilities at Fairy Knowe Backpackers",
+    title: "Entertainment at Fairy Knowe Backpackers",
     description:
-    "Your home away from home in the heart of Wilderness, offering comfortable accommodation, exciting adventures, and a vibrant social atmosphere.",
+    "From magical nights with musical delights to whimsical days spent hunting for treasure at the fairy family market.",
     creator: "@fairyknowe",
     site: "@fairyknowe",
     images: [

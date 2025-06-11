@@ -1,25 +1,64 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+import Hero from '../../components/Hero';
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Fairy Folk n Roll",
+  description:
+    "Discover local talent meets global audiences on our YouTube channel. Experience live music performances in our enchanted milkwood forest, where artistry and nature create unique musical magic.",
+  keywords: [
+    "backpackers",
+    "wilderness",
+    "guest accommodation",
+    "bnb",
+    "facilities",
+    ""
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com/fairy-folk-n-roll/",
+    type: "website",
+    title: "Fairy Folk n Roll",
+    description:
+    "Discover local talent meets global audiences on our YouTube channel. Experience live music performances in our enchanted milkwood forest, where artistry and nature create unique musical magic.",
+    images: [
+      {
+        url: "/images/ffr/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Fairy Folk n Roll"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fairy Folk n Roll",
+    description:
+    "Discover local talent meets global audiences on our YouTube channel. Experience live music performances in our enchanted milkwood forest, where artistry and nature create unique musical magic.",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/ffr/banner.webp",
+        width: 1200,
+        height: 630,
+        alt: "Fairy Folk n Roll"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com/fairy-folk-n-roll/"
+  }
+};
 export default function FairyFolkNRoll() {
   return (
     <div>
       {/* Hero Banner */}
-      <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full mb-12 bg-gray-900">
-        <Image
-          src="/images/Fairy Folk 'n Roll/Fairy Folk 'n Roll Banner.webp"
-          alt="Fairy Folk 'n Roll at Fairy Knowe"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white mb-6 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font">
-            Fairy Folk 'n Roll
-          </h1>
-        </div>
-      </div>
-
+      <Hero
+        imageUrl="/images/ffr/banner.webp"
+        title="Fairy Folk 'n Roll at Fairy Knowe"
+      />
+      
       {/* Description */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 dark:text-white">Fairy Folk 'n Roll</h1>

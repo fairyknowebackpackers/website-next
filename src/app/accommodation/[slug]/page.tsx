@@ -6,6 +6,7 @@ import FusionCollection from "fusionable/FusionCollection";
 import { FusionFieldsType, FusionItemType } from "fusionable/FusionItem";
 import Showdown from 'showdown';
 import path from 'path';
+import { Metadata } from "next";
 
 function getPostBySlug(slug: string): FusionItemType {
   const contentPath = path.join(process.cwd(), 'content/accommodation');
@@ -15,6 +16,62 @@ function getPostBySlug(slug: string): FusionItemType {
     throw new Error('Post not found');
   }
   return post.getItem();
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
+  const fields: FusionFieldsType = post.fields;
+
+  return {
+    title: fields.title,
+    description: fields.summary || fields.description,
+    keywords: [
+      "backpackers",
+      "wilderness",
+      "guest accommodation",
+      "bnb",
+      "facilities",
+      fields.title.toLowerCase(),
+      ...(fields.keywords || [])
+    ],
+    openGraph: {
+      url: `https://wildernessbackpackers.com/accommodation/${slug}/`,
+      type: "website",
+      title: fields.title,
+      description: fields.summary || fields.description,
+      images: [
+        {
+          url: fields.banner || "/images/default-banner.webp",
+          width: 1200,
+          height: 630,
+          alt: fields.title
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fields.title,
+      description: fields.summary || fields.description,
+      creator: "@fairyknowe",
+      site: "@fairyknowe",
+      images: [
+        {
+          url: fields.banner || "/images/default-banner.webp",
+          width: 1200,
+          height: 630,
+          alt: fields.title
+        }
+      ]
+    },
+    alternates: {
+      canonical: `https://wildernessbackpackers.com/accommodation/${slug}/`
+    }
+  };
 }
 
 export default async function PostPage({
@@ -136,4 +193,4 @@ export default async function PostPage({
       </div>
     </div>
   )
-} 
+}

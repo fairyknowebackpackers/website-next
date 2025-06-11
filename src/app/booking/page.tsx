@@ -1,6 +1,55 @@
 'use client'
 
 import { useState } from 'react'
+import { Metadata } from "next";
+ 
+export const metadata: Metadata = {
+  title: "Book your stay at Fairy Knowe Backpackers",
+  description:
+    "Reserve your booking online to secure your stay.",
+  keywords: [
+    "reservations",
+    "booking form",
+    "backpackers wilderness",
+    "garden route",
+    "book your stay",
+    ""
+  ],
+  openGraph: {
+    url: "https://wildernessbackpackers.com/entertainment/",
+    type: "website",
+    title: "Book your stay at Fairy Knowe Backpackers",
+    description:
+    "Reserve your booking online to secure your stay.",
+    images: [
+      {
+        url: "/images/entertainment/live-gigs-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "Book your stay at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Book your stay at Fairy Knowe Backpackers",
+    description:
+    "Reserve your booking online to secure your stay.",
+    creator: "@fairyknowe",
+    site: "@fairyknowe",
+    images: [
+      {
+        url: "/images/entertainment/live-gigs-card.webp",
+        width: 1200,
+        height: 630,
+        alt: "Book your stay at Fairy Knowe Backpackers"
+      }
+    ]
+  },
+  alternates: {
+    canonical: "https://wildernessbackpackers.com/booking/"
+  }
+};
 
 const roomTypes = [
   { id: 'camping', name: 'Camping' },
