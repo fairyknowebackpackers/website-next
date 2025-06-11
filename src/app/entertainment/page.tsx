@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useRef, useEffect } from 'react'
+import Hero from '../../components/Hero';
 
 export default function Entertainment() {
   const [expandedCard, setExpandedCard] = useState<number | null>(null);
@@ -33,41 +34,10 @@ export default function Entertainment() {
   return (
     <div>
       {/* Hero Banner */}
-      {/* Mobile Banner */}
-      <div className="relative w-full aspect-[9/5] mb-6 bg-gray-900 block md:hidden">
-        <Image
-          src="/images/home/mobile/entertainment-banner.webp"
-          alt="Fairy Knowe Entertainment Mobile Banner"
-          fill
-          className="object-cover"
-          priority
-          quality={85}
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
-            Entertainment
-          </h1>
-        </div>
-      </div>
-      {/* Desktop Banner */}
-      <div className="relative h-[300px] lg:h-[500px] w-full mb-6 bg-gray-900 hidden md:block">
-        <Image
-          src="/images/entertainment/entertainment-banner.webp"
-          alt="Fairy Knowe Entertainment"
-          fill
-          className="object-cover"
-          priority
-          quality={85}
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,1)] hestrial-font px-4 text-center">
-            Entertainment
-          </h1>
-        </div>
-      </div>
-
+      <Hero
+        imageUrl="/images/entertainment/entertainment-banner.webp"
+        title="Entertainment"
+      />
       {/* Content Section */}
       <div className="pt-2 pb-8 sm:pt-4 sm:pb-12 px-4">
         <div className="max-w-5xl mx-auto px-4">
@@ -92,56 +62,7 @@ export default function Entertainment() {
           }, [expandedCard]);
 
           return (
-            <div
-              key={idx}
-              ref={cardRef}
-              className={
-                `${expandedCard === idx
-                  ? 'mt-4 mb-4 rounded-xl shadow-lg border overflow-hidden bg-white text-[#202635] mx-4'
-                  : 'w-full max-w-full border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635]'}
-                `
-              }
-              style={expandedCard === idx ? {} : { borderRadius: 0 }}
-            >
-              <button
-                className="w-full flex flex-col items-center text-left focus:outline-none text-[#202635]"
-                onClick={() => setExpandedCard(expandedCard === idx ? null : idx)}
-                aria-expanded={expandedCard === idx}
-              >
-                <div className="py-5 w-full text-center">{event.title}</div>
-              </button>
-              {expandedCard === idx && (
-                <div>
-                  <div className="w-full aspect-square overflow-hidden rounded-t-xl rounded-b-xl">
-                    <Image
-                      src={event.mobileImage || event.image}
-                      alt={event.title}
-                      width={400}
-                      height={400}
-                      className="object-cover w-full h-full"
-                    />
-                  </div>
-                  <div className="px-4 pb-4 pt-2">
-                    <p className="mb-4 text-center text-[#202635] text-sm mt-4">{event.description}</p>
-                    {event.schedule && (() => {
-                      const match = event.schedule.match(/^(.*?)(\d.*)$/);
-                      if (match) {
-                        return (
-                          <>
-                            <p className="text-primary font-semibold mb-0 text-center text-sm">{match[1].trim()}</p>
-                            <p className="text-primary font-semibold mb-2 text-center text-sm">{match[2].trim()}</p>
-                          </>
-                        );
-                      } else {
-                        return (
-                          <p className="text-primary font-semibold mb-2 text-center text-sm">{event.schedule}</p>
-                        );
-                      }
-                    })()}
-                  </div>
-                </div>
-              )}
-            </div>
+            
           )
         })}
       </div>
