@@ -25,7 +25,7 @@ export async function GET() {
   return NextResponse.json({ images: [] });
   
   // Original implementation commented out
-  /*
+
   try {
     const images: { category: string; src: string; alt: string; fullSize: string; subcategory?: string; }[] = [];
     const baseDir = path.join(process.cwd(), 'public', 'images');
@@ -281,5 +281,4 @@ export async function GET() {
     console.error('Error reading gallery images:', error);
     return NextResponse.json({ images: [] });
   }
-  */
 } 
