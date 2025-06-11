@@ -3,6 +3,7 @@ import './globals.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import MobileMenu from './components/MobileMenu'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Viewport, Metadata } from "next";
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -358,6 +359,7 @@ export default function RootLayout({
             />
           </div>
         </footer>
+        <SpeedInsights />
       </body>
     </html>
   )
