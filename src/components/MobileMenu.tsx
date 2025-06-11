@@ -121,13 +121,6 @@ export default function MobileMenu({ accommodationLinks, adventureLinks }: Mobil
             Fairy Folk 'n Roll
           </Link>
           <Link 
-            href="/gallery" 
-            className="text-gray-900 hover:text-[#073F3A] block w-screen max-w-none px-0 py-3 text-base font-medium bg-gray-50 hover:bg-gray-100 border-b border-gray-200 transition-colors rounded-none"
-            onClick={() => setIsOpen(false)}
-          >
-            Gallery
-          </Link>
-          <Link 
             href="/booking" 
             className="text-white bg-[#073F3A] hover:bg-[#052A26] block px-4 py-3 rounded-lg text-base font-medium text-center transition-colors"
             onClick={() => setIsOpen(false)}

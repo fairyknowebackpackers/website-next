@@ -183,9 +183,6 @@ export default function RootLayout({
                   <Link href="/facilities/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                     Facilities
                   </Link>
-                  <Link href="/gallery/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
-                    Gallery
-                  </Link>
                   <div className="ml-auto">
                     <Link href="/fairy-folk-n-roll/" title="Fairy Folk 'n Roll" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       <span className="bg-gray-200 px-3 py-1.5 rounded-full hover:bg-gray-300 transition-colors">#fairyfolknroll</span>
