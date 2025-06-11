@@ -13,7 +13,9 @@ export const metadata: Metadata = {
     "venue hire",
     "wedding venue",
     "magical forest setting",
-    "fairy knowe backpackers"
+    "fairy knowe backpackers",
+    "corporate retreats",
+    "film crews"
   ],
   openGraph: {
     url: "https://wildernessbackpackers.com/venue/",
