@@ -2,11 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useRef, useEffect } from 'react'
 import Hero from '../../components/Hero';
 
 export default function Entertainment() {
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
   const events = [
     {
       title: "Live Music Gigs",
@@ -50,19 +48,21 @@ export default function Entertainment() {
       {/* Main Content */}
       {/* Mobile: button list with expandable cards */}
       <div className="block sm:hidden w-full max-w-full px-0">
-        {events.map((event, idx) => {
-          const cardRef = useRef<HTMLDivElement>(null);
-
-          useEffect(() => {
-            if (expandedCard === idx && cardRef.current) {
-              const offset = 56; // px, adjust as needed
-              const top = cardRef.current.getBoundingClientRect().top + window.scrollY - offset;
-              window.scrollTo({ top, behavior: 'smooth' });
-            }
-          }, [expandedCard]);
-
+        {events.map((event, index) => {
           return (
-            
+            <details key={index} className="w-screen max-w-none -mx-4 border-b-0 border-l-0 border-r-0 border-t last:border-b rounded-none shadow-none bg-gradient-to-b from-white via-white to-[#E5E7EB] text-[#202635] px-2 py-3 text-center">
+              <summary>{event.title}</summary>
+              <div className="relative h-[256px]">
+                <Image
+                  src={event.image}
+                  alt={event.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">{event.description}</p>
+              <p className="text-primary font-semibold">{event.schedule}</p>
+            </details>
           )
         })}
       </div>
