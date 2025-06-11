@@ -15,7 +15,6 @@ const structuredData = {
   name: "Fairy Knowe Backpackers",
   legalName: "Fairy Knowe Backpackers",
   telephone: "+27834438384",
-  sameAs: ["https://www.linkedin.com/company/fairy-knowe-backpackers/"],
 }
 
 export const viewport: Viewport = {
@@ -56,60 +55,35 @@ export const metadata: Metadata = {
         url: "/favicon.ico",
         type: "image/x-icon"
       },
-      // {
-      //   url: "/favicon-16x16.png",
-      //   sizes: "16x16",
-      //   type: "image/png"
-      // }
-      // add favicon-32x32.png, favicon-96x96.png, android-chrome-192x192.png
     ],
-    // shortcut: [
-    //   {
-    //     url: "/favicon.ico",
-    //     type: "image/x-icon"
-    //   }
-    // ],
-    // apple: [
-    //   {
-    //     url: "/apple-icon-57x57.png",
-    //     sizes: "57x57",
-    //     type: "image/png"
-    //   },
-    //   {
-    //     url: "/apple-icon-60x60.png",
-    //     sizes: "60x60",
-    //     type: "image/png"
-    //   }
-    //   // add apple-icon-72x72.png, apple-icon-76x76.png, apple-icon-114x114.png, apple-icon-120x120.png, apple-icon-144x144.png, apple-icon-152x152.png, apple-icon-180x180.png
-    // ]
   }
 };
 
 const accommodationLinks = [
-  { href: '/accommodation/camping', label: 'Camping' },
-  { href: '/accommodation/safari-tent', label: 'Safari Tent' },
-  { href: '/accommodation/gypsy-caravan', label: 'Gypsy Caravan' },
-  { href: '/accommodation/mixed-dorm', label: 'Mixed Dorm' },
-  { href: '/accommodation/twin-room', label: 'Twin Room' },
-  { href: '/accommodation/family-room', label: 'Family Room' },
-  { href: '/accommodation/five-sleeper', label: 'Five Sleeper' },
-  { href: '/accommodation/double-en-suite', label: 'Double En-suite' },
-  { href: '/accommodation/family-en-suite', label: 'Family En-suite' }
+  { href: '/accommodation/camping/', label: 'Camping' },
+  { href: '/accommodation/safari-tent/', label: 'Safari Tent' },
+  { href: '/accommodation/gypsy-caravan/', label: 'Gypsy Caravan' },
+  { href: '/accommodation/mixed-dorm/', label: 'Mixed Dorm' },
+  { href: '/accommodation/twin-room/', label: 'Twin Room' },
+  { href: '/accommodation/family-room/', label: 'Family Room' },
+  { href: '/accommodation/five-sleeper/', label: 'Five Sleeper' },
+  { href: '/accommodation/double-en-suite/', label: 'Double En-suite' },
+  { href: '/accommodation/family-en-suite/', label: 'Family En-suite' }
 ]
 
 const adventureLinks = [
-  { href: '/adventures/kayaking', label: 'Kayaking' },
-  { href: '/adventures/paragliding', label: 'Paragliding' },
-  { href: '/adventures/horse-riding', label: 'Horse Riding' },
-  { href: '/adventures/half-collared-kingfisher-trail', label: 'Half Collared Kingfisher Trail' },
-  { href: '/adventures/brown-hooded-kingfisher-trail', label: 'Brown Hooded Kingfisher Trail' },
-  { href: '/adventures/bosduif-trail', label: 'Bosduif Trail' },
-  { href: '/adventures/woodville-big-tree', label: 'Woodville Big Tree' },
-  { href: '/adventures/map-of-africa', label: 'Map of Africa' },
-  { href: '/adventures/wilderness-beach', label: 'Wilderness Beach' },
-  { href: '/adventures/water-under-the-bridge', label: 'Water Under the Bridge' },
-  { href: '/adventures/fairy-labyrinth', label: 'Fairy Labyrinth' },
-  { href: '/adventures/ancient-archives', label: 'Ancient Archives' },
+  { href: '/adventures/kayaking/', label: 'Kayaking' },
+  { href: '/adventures/paragliding/', label: 'Paragliding' },
+  { href: '/adventures/horse-riding/', label: 'Horse Riding' },
+  { href: '/adventures/half-collared-kingfisher-trail/', label: 'Half Collared Kingfisher Trail' },
+  { href: '/adventures/brown-hooded-kingfisher-trail/', label: 'Brown Hooded Kingfisher Trail' },
+  { href: '/adventures/bosduif-trail/', label: 'Bosduif Trail' },
+  { href: '/adventures/woodville-big-tree/', label: 'Woodville Big Tree' },
+  { href: '/adventures/map-of-africa/', label: 'Map of Africa' },
+  { href: '/adventures/wilderness-beach/', label: 'Wilderness Beach' },
+  { href: '/adventures/water-under-the-bridge/', label: 'Water Under the Bridge' },
+  { href: '/adventures/fairy-labyrinth/', label: 'Fairy Labyrinth' },
+  { href: '/adventures/ancient-archives/', label: 'Ancient Archives' },
 ]
 
 export default function RootLayout({
@@ -152,7 +126,7 @@ export default function RootLayout({
                 <div className="flex justify-center items-center w-full space-x-4">
                   {/* Accommodation Dropdown */}
                   <div className="relative group">
-                    <Link href="/accommodation" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
+                    <Link href="/accommodation/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
                       Accommodation
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -213,7 +187,7 @@ export default function RootLayout({
                     Gallery
                   </Link>
                   <div className="ml-auto">
-                    <Link href="/fairy-folk-n-roll" title="Fairy Folk 'n Roll" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                    <Link href="/fairy-folk-n-roll/" title="Fairy Folk 'n Roll" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                       <span className="bg-gray-200 px-3 py-1.5 rounded-full hover:bg-gray-300 transition-colors">#fairyfolknroll</span>
                     </Link>
                   </div>
