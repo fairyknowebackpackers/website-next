@@ -21,14 +21,13 @@ function fileExists(filePath: string): boolean {
 }
 
 export async function GET() {
-  // Temporarily return empty array to reduce build size
-  return NextResponse.json({ images: [] });
-  
-  // Original implementation commented out
-
   try {
     const images: { category: string; src: string; alt: string; fullSize: string; subcategory?: string; }[] = [];
     const baseDir = path.join(process.cwd(), 'public', 'images');
+
+    // Log the base directory to help with debugging
+    console.log('Base directory:', baseDir);
+    console.log('Base directory exists:', isValidDirectory(baseDir));
 
     // Process accommodation images
     const accommodationDir = path.join(baseDir, 'accommodation');
@@ -172,8 +171,8 @@ export async function GET() {
                 ? `/images/venue-hire/full/${file}`
                 : `/images/venue-hire/thumbnails/${file}`;
               
-            images.push({
-                category: 'Venue',
+              images.push({
+                category: 'Venue Hire',
                 src: `/images/venue-hire/thumbnails/${file}`,
                 alt: altText,
                 fullSize: fullSizePath
@@ -202,7 +201,7 @@ export async function GET() {
             // Only add the image if the thumbnail exists
             if (fileExists(thumbnailFile)) {
               const fileName = file.replace(/\.[^/.]+$/, "");
-              const altText = `Event ${fileName.replace(/[-_]/g, " ")}`;
+              const altText = `Entertainment ${fileName.replace(/[-_]/g, " ")}`;
               
               // Use the same image for fullSize if it doesn't exist
               const fullSizePath = fileExists(fullSizeFile) 
@@ -210,7 +209,7 @@ export async function GET() {
                 : `/images/entertainment/thumbnails/${file}`;
               
               images.push({
-                category: 'Events',
+                category: 'Entertainment',
                 src: `/images/entertainment/thumbnails/${file}`,
                 alt: altText,
                 fullSize: fullSizePath
@@ -281,4 +280,4 @@ export async function GET() {
     console.error('Error reading gallery images:', error);
     return NextResponse.json({ images: [] });
   }
-} 
+}

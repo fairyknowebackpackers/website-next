@@ -140,7 +140,7 @@ export default function RootLayout({
                       alt="Fairy Knowe Backpackers"
                       priority
                       width={32}
-                      height={32}
+                      height={41}
                       className="object-contain mt-1"
                     />
                   </div>
