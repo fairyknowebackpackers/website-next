@@ -136,12 +136,12 @@ export default function RootLayout({
                 <Link href="/" className="flex items-center" title="Fairy Knowe Backpackers">
                   <div className="relative w-12 h-12">
                     <Image
-                      src="/images/home/logo-icon.png"
+                      src="/images/home/logo-icon.webp"
                       alt="Fairy Knowe Backpackers"
                       priority
                       width={32}
                       height={41}
-                      className="object-contain mt-1"
+                      className="mt-1"
                     />
                   </div>
                 </Link>
@@ -177,7 +177,7 @@ export default function RootLayout({
 
                   {/* Adventures Dropdown */}
                   <div className="relative group">
-                    <Link href="/adventures" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
+                    <Link href="/adventures/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap inline-flex items-center">
                       Adventures
                       <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -200,16 +200,16 @@ export default function RootLayout({
                     </div>
                   </div>
 
-                  <Link href="/entertainment" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                  <Link href="/entertainment/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                     Entertainment
                   </Link>
-                  <Link href="/venue" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                  <Link href="/venue/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                     Venue Hire
                   </Link>
-                  <Link href="/facilities" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                  <Link href="/facilities/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                     Facilities
                   </Link>
-                  <Link href="/gallery" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
+                  <Link href="/gallery/" className="text-gray-900 hover:text-primary px-2 py-2 rounded-md text-sm font-medium whitespace-nowrap">
                     Gallery
                   </Link>
                   <div className="ml-auto">
@@ -241,7 +241,6 @@ export default function RootLayout({
             alt="Fairy Knowe Logo"
             width={300}
             height={300}
-            className="w-48 h-48 object-contain"
           />
         </div>
       </div>
